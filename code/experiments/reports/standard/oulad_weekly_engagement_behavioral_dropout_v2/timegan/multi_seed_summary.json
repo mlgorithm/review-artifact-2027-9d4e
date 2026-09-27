@@ -1,0 +1,230 @@
+{
+  "data_provenance": {
+    "clean_learners": 32593,
+    "clean_rows": 930857,
+    "columns": [
+      "learner_id",
+      "order",
+      "course_id",
+      "module_id",
+      "presentation_id",
+      "dominant_activity",
+      "engaged",
+      "registered",
+      "click_bin",
+      "active_days_bin",
+      "gap_bin",
+      "dropout",
+      "failure",
+      "final_result",
+      "gender",
+      "region",
+      "highest_education",
+      "imd_band",
+      "age_band",
+      "disability",
+      "previous_attempt_bin",
+      "studied_credits_bin"
+    ],
+    "dataset": "oulad_weekly_engagement",
+    "dropout_learners": 10156,
+    "failure_learners": 7052,
+    "main_sha256": "3f947f8d1558b56be4a08b01b72745abbe1e67f853c79f6ff99993a4b18b77f7",
+    "physical_student_overlap": 0,
+    "post_withdrawal_weeks_excluded": true,
+    "prefix_weeks_for_outcome_tasks": 4,
+    "preprocessing_script_sha256": "8dab2557e6a2b66349e4a9669716e705d423da807c322bd21092f0e5e24b506b",
+    "primary_binary_signal": "engaged",
+    "raw_zip": "experiments/data/datasets/oulad/raw/oulad.zip",
+    "raw_zip_sha256": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+    "representation": "explicit_course_week_panel",
+    "runtime": {
+      "pandas": "2.3.3",
+      "platform": "macOS-26.5.2-arm64-arm-64bit",
+      "python": "3.12.13"
+    },
+    "split_seed": 20260703,
+    "split_unit": "physical_student_id",
+    "terminal_outcomes": [
+      "dropout",
+      "failure",
+      "final_result"
+    ],
+    "test_learners": 6521,
+    "test_rows": 187324,
+    "test_sha256": "2eaedd7116dfbdc7210f946e467366402236c9e4593ee05aaaf6e46828203029",
+    "train_learners": 26072,
+    "train_ratio": 0.8,
+    "train_rows": 743533,
+    "train_sha256": "05ddd41785f35de664ab7e9532fd36a62705712611b10e0be61bdbb28f5c3cfd",
+    "zero_activity_weeks_retained": true
+  },
+  "dataset": "oulad_weekly_engagement_behavioral_dropout_v2",
+  "dataset_key": "oulad_weekly",
+  "experiment_arm": "standard",
+  "final_audit": {
+    "issues": [],
+    "rq1_metric_count": 17,
+    "scope": "standard_arm_rq1_only",
+    "seed_report_count": 3,
+    "status": "passed"
+  },
+  "metric_summary": {
+    "rq1.average_fidelity.modeled_value_marginal_js_mean": {
+      "max": 0.33453782041896385,
+      "mean": 0.16047992946784015,
+      "min": 0.07183722651442129,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.12308456785197806
+    },
+    "rq1.average_fidelity.primary_signal_rate_error": {
+      "max": 0.6148225519661725,
+      "mean": 0.34937358664934764,
+      "min": 0.2157267449772708,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.1877022742483066
+    },
+    "rq1.average_fidelity.skill_frequency_js": {
+      "max": 0.4103912311975085,
+      "mean": 0.22215204434000668,
+      "min": 0.12477002649089093,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.13313185698066085
+    },
+    "rq1.cross_signal_dependence.prespecified_signal_nmi_mae": {
+      "max": 0.4324896337135608,
+      "mean": 0.20119156295961207,
+      "min": 0.07842060780916611,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.1636557767432073
+    },
+    "rq1.subgroup_fidelity.future_primary_signal_rate_mae": {
+      "max": 0.3452144552400222,
+      "mean": 0.22045955620159638,
+      "min": 0.15578248114631124,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.08823501535925526
+    },
+    "rq1.subgroup_fidelity.learner_share_mae": {
+      "max": 0.5333333333333333,
+      "mean": 0.26005555555555554,
+      "min": 0.11149999999999999,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.19348137690712391
+    },
+    "rq1.tail_fidelity.late_disengagement.prevalence_error": {
+      "max": 0.06735194845044493,
+      "mean": 0.0557686406873274,
+      "min": 0.04291960724148511,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.010014535115377409
+    },
+    "rq1.tail_fidelity.late_disengagement.primary_signal_curve_mae": {
+      "max": 0.0540724983421255,
+      "mean": 0.0510685095784445,
+      "min": 0.04806452081476349,
+      "missing_runs": 1,
+      "n": 2,
+      "std": 0.003003988763681003
+    },
+    "rq1.tail_fidelity.rare_activity_path.prevalence_error": {
+      "max": 0.04464559680883707,
+      "mean": 0.042587194435921044,
+      "min": 0.041231972997852105,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0014796518624505786
+    },
+    "rq1.tail_fidelity.rare_activity_path.primary_signal_curve_mae": {
+      "max": 0.12839942340116092,
+      "mean": 0.126251067179771,
+      "min": 0.12410271095838107,
+      "missing_runs": 1,
+      "n": 2,
+      "std": 0.0021483562213899243
+    },
+    "rq1.tail_fidelity.reengagement.prevalence_error": {
+      "max": 0.04318809450751765,
+      "mean": 0.028498005523166618,
+      "min": 0.002224608775698067,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.018621341786179472
+    },
+    "rq1.tail_fidelity.reengagement.primary_signal_curve_mae": {
+      "max": 0.12763900612401563,
+      "mean": 0.126377265565891,
+      "min": 0.12511552500776635,
+      "missing_runs": 1,
+      "n": 2,
+      "std": 0.001261740558124641
+    },
+    "rq1.temporal_fidelity.correctness_autocorrelation_mae": {
+      "max": 0.4893223367523265,
+      "mean": 0.3582297366464739,
+      "min": 0.2829664109877383,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0930353801465109
+    },
+    "rq1.temporal_fidelity.correctness_curve_mae": {
+      "max": 0.5434777777777777,
+      "mean": 0.2853333333333333,
+      "min": 0.15581944444444445,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.18253604341351795
+    },
+    "rq1.temporal_fidelity.correctness_transition_js": {
+      "max": 0.5206538426985137,
+      "mean": 0.22145606305775545,
+      "min": 0.0715559531899725,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.21156492185613185
+    },
+    "rq1.temporal_fidelity.inter_event_time_js": {
+      "max": 0.7598186925839088,
+      "mean": 0.31522483271912083,
+      "min": 0.0883834053484849,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.3143972302985182
+    },
+    "rq1.temporal_fidelity.skill_trigram_js": {
+      "max": 0.5937330540944544,
+      "mean": 0.4070874195704952,
+      "min": 0.3076937644939714,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.13207144464748116
+    }
+  },
+  "metric_summary_scope": "publication_rq1_only",
+  "model": "timegan",
+  "publication_reports": [
+    "experiments/reports/standard/oulad_weekly_engagement_behavioral_dropout_v2/timegan/seed_20260703/generation_evaluation_report.json",
+    "experiments/reports/standard/oulad_weekly_engagement_behavioral_dropout_v2/timegan/seed_20260704/generation_evaluation_report.json",
+    "experiments/reports/standard/oulad_weekly_engagement_behavioral_dropout_v2/timegan/seed_20260705/generation_evaluation_report.json"
+  ],
+  "publication_schema_version": "publication_metrics_v2",
+  "research_question": "RQ1",
+  "schema_version": "standard_rq1_report_v1",
+  "seeds": [
+    20260703,
+    20260704,
+    20260705
+  ],
+  "source_dataset": "oulad_weekly_engagement",
+  "source_snapshot": {
+    "summary_report": "experiments/reports/standard_vs_tail_targeted/oulad_weekly_engagement/timegan/multi_seed_summary.json",
+    "summary_report_sha256": "d419f08139b1f67df1b470b272cabe4668a9fc9a67500da0d0fc50d8b7e7ad30"
+  }
+}

@@ -1,0 +1,55 @@
+experiment:
+  name: proposal_final_benchmark
+  seeds: [20260703, 20260704, 20260705]
+  tail_oversample: 3
+
+# Locked paper benchmark: two tutoring datasets plus OULAD weekly as the
+# empirical engagement, dropout, and course-outcome dataset.
+datasets:
+  - assistments
+  - ednet
+  - oulad_weekly
+
+core_models:
+  - markov_ngram
+  - sequence_vae_timevae
+  - timegan
+
+auxiliary_models:
+  - block_bootstrap
+
+# Locked production settings. The runner exports these values so a final matrix
+# cannot silently depend on a user's shell environment.
+environment:
+  VAE_WINDOW: "20"
+  VAE_HIDDEN: "256"
+  VAE_LATENT: "16"
+  # Shared neural exposure/representation contract with TimeGAN.
+  VAE_EPOCHS: "50"
+  VAE_TARGET_STEPS: "4000"
+  VAE_BATCH: "200"
+  VAE_LR: "0.001"
+  VAE_BETA: "1.0"
+  VAE_MAX_VOCAB: "100"
+  VAE_SAMPLE_TEMP: "1.0"
+  # CPU is the portable reference device used by the reported VAE runs.
+  VAE_DEVICE: "cpu"
+  TIMEGAN_WINDOW: "20"
+  TIMEGAN_MAX_VOCAB: "100"
+  # Compute-constrained full-data profile. TIMEGAN_N_ITER is an epoch ceiling;
+  # effective epochs are chosen per arm so no fit exceeds approximately 4,000
+  # full-data batch updates. This prevents larger and tail-oversampled inputs
+  # from silently receiving several times more optimization than smaller ones.
+  TIMEGAN_N_ITER: "50"
+  TIMEGAN_TARGET_STEPS: "4000"
+  TIMEGAN_BATCH: "200"
+  TIMEGAN_N_ITER_PRINT: "10"
+  TIMEGAN_GENERATOR_LAYERS: "1"
+  TIMEGAN_GENERATOR_HIDDEN: "50"
+  TIMEGAN_DISCRIMINATOR_LAYERS: "1"
+  TIMEGAN_DISCRIMINATOR_HIDDEN: "50"
+  TIMEGAN_ENCODER_MAX_CLUSTERS: "20"
+  TIMEGAN_MODE: "RNN"
+  # SynthCity 0.2.12 moves float64 arrays before casting and therefore cannot
+  # run its TimeGAN plugin on MPS. Keep the external model unpatched on CPU.
+  TIMEGAN_DEVICE: "cpu"

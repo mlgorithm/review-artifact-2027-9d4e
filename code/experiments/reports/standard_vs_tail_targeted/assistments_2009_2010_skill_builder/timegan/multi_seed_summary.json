@@ -1,0 +1,2892 @@
+{
+  "curated_snapshot": {
+    "evaluator_rerun": false,
+    "generator_retrained": false,
+    "metric_values_changed": false,
+    "paths_portabilized": true,
+    "promotion_script": "experiments/scripts/promote_final_reports.py",
+    "promotion_script_sha256": "d3b616fa0f80fbe01b68c967ae447604053416f0776867f46b4cfdc7fa87cdff",
+    "source_report": "experiments/runs/standard_vs_tail_targeted/evaluation/assistments_2009_2010_skill_builder/timegan/multi_seed_summary.json",
+    "source_report_sha256": "93a7adf4be31d8b448ef15163687ccfc1cbb20af15f7006cdd7237ff9294b801",
+    "targeted_provenance_embedded": true
+  },
+  "data_provenance": {
+    "generation_columns": [
+      "learner_id",
+      "order",
+      "skill_id",
+      "correct",
+      "attempt_bin",
+      "hint_bin",
+      "response_time_bin",
+      "opportunity_bin"
+    ],
+    "runtime": {
+      "config_path": "experiments/configs/assistments_preprocessing.yaml",
+      "config_sha256": "079175cbee2556c0dbedfbc81e5c4cd7c60775651ed9f69d0fc0bf204c9825c6",
+      "pandas": "2.3.3",
+      "platform": "macOS-26.5.2-arm64-arm-64bit",
+      "preprocessing_script_sha256": "9297f401f810fe7fd7d01675d4deac22545a10506506102597178db688c31735",
+      "python": "3.9.6",
+      "pyyaml": "6.0.3"
+    },
+    "test_generation_sha256": "e526befa3097065abdde78b65f7a51033e958caac705b8502eb14f74b1390360",
+    "test_rows": 64742,
+    "test_source": "experiments/data/datasets/assistments/clean_test.csv",
+    "test_source_sha256": "e63c08b711fba7401fa97c27fbacff941b965a5f1695a916c84873ddece466b7",
+    "train_generation_sha256": "cc432ce7d6876541305b63bf149d825fbfd5ee47ea6fc4a65a15c75f048b2138",
+    "train_rows": 282118,
+    "train_source": "experiments/data/datasets/assistments/clean_train.csv",
+    "train_source_sha256": "bf3a2fa391f44ecbe4c161829f253c2e7845320035933c3193af20e51b09d5be"
+  },
+  "dataset": "assistments_2009_2010_skill_builder",
+  "experiment_design": "standard_vs_tail_targeted",
+  "ignore_columns": [
+    "learner_id",
+    "order"
+  ],
+  "metric_summary": {
+    "rq1.average_fidelity.modeled_value_marginal_js_mean": {
+      "max": 0.2592060594128211,
+      "mean": 0.1906935963073689,
+      "min": 0.06020866171509298,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.09230540428113558
+    },
+    "rq1.average_fidelity.primary_signal_rate_error": {
+      "max": 0.35699165340266725,
+      "mean": 0.3035522932126888,
+      "min": 0.1981986634610844,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.07449886778439335
+    },
+    "rq1.average_fidelity.skill_frequency_js": {
+      "max": 0.5468837180684899,
+      "mean": 0.41012359910752494,
+      "min": 0.14497773782887485,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.1875176051484922
+    },
+    "rq1.cross_signal_dependence.prespecified_signal_nmi_mae": {
+      "max": 0.12031371753814171,
+      "mean": 0.10289613813212635,
+      "min": 0.09377538720822877,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.012320680888142359
+    },
+    "rq1.detectability.detectability_auc": {
+      "max": 0.9826312455555556,
+      "mean": 0.9672056240740741,
+      "min": 0.9370059183333331,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.02135607322376925
+    },
+    "rq1.subgroup_fidelity.future_hint_rate_mae": {
+      "max": 0.16013221872986372,
+      "mean": 0.1347601727763766,
+      "min": 0.08420739776732489,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0357462953453521
+    },
+    "rq1.subgroup_fidelity.future_primary_signal_rate_mae": {
+      "max": 0.33960241529869023,
+      "mean": 0.29303031962449444,
+      "min": 0.20062385350732717,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.06534193291104155
+    },
+    "rq1.subgroup_fidelity.learner_share_mae": {
+      "max": 0.3881180793046166,
+      "mean": 0.3320222623698491,
+      "min": 0.23253841590401234,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0705367457235496
+    },
+    "rq1.tail_fidelity.high_hint_use.prevalence_error": {
+      "max": 0.04199475065616798,
+      "mean": 0.04180033051424128,
+      "min": 0.04141149023038787,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0002749516015112448
+    },
+    "rq1.tail_fidelity.late_failure.prevalence_error": {
+      "max": 0.026538349372995044,
+      "mean": 0.023719257315057845,
+      "min": 0.018081073199183437,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.00398679822191307
+    },
+    "rq1.tail_fidelity.late_failure.primary_signal_curve_mae": {
+      "max": 0.08988253126184166,
+      "mean": 0.08988253126184166,
+      "min": 0.08988253126184166,
+      "missing_runs": 2,
+      "n": 1,
+      "std": 0.0
+    },
+    "rq1.tail_fidelity.persistent_failure.prevalence_error": {
+      "max": 0.024496937882764653,
+      "mean": 0.024496937882764653,
+      "min": 0.024496937882764653,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq1.tail_fidelity.rapid_guessing.prevalence_error": {
+      "max": 0.025663458734324875,
+      "mean": 0.025663458734324875,
+      "min": 0.025663458734324875,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq1.tail_fidelity.rare_skill_path.prevalence_error": {
+      "max": 0.3872849227179936,
+      "mean": 0.15786915524448333,
+      "min": 0.03849518810148731,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.16226617661206907
+    },
+    "rq1.tail_fidelity.rare_skill_path.primary_signal_curve_mae": {
+      "max": 0.30878243512974046,
+      "mean": 0.17426653938499806,
+      "min": 0.03975064364025568,
+      "missing_runs": 1,
+      "n": 2,
+      "std": 0.1345158957447424
+    },
+    "rq1.tail_fidelity.recovery.prevalence_error": {
+      "max": 0.033245844269466314,
+      "mean": 0.0296490716438223,
+      "min": 0.022455526392534265,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.005086604627958055
+    },
+    "rq1.tail_fidelity.recovery.primary_signal_curve_mae": {
+      "max": 0.08039881987250408,
+      "mean": 0.08039881987250408,
+      "min": 0.08039881987250408,
+      "missing_runs": 2,
+      "n": 1,
+      "std": 0.0
+    },
+    "rq1.temporal_fidelity.correct_hint_cross_correlation_mae": {
+      "max": 0.44561992365993636,
+      "mean": 0.35065725472035986,
+      "min": 0.16116972622845016,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.1339880355597571
+    },
+    "rq1.temporal_fidelity.correctness_autocorrelation_mae": {
+      "max": 0.20409764804680455,
+      "mean": 0.18807600908261815,
+      "min": 0.16101816695087098,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.01924073384152284
+    },
+    "rq1.temporal_fidelity.correctness_curve_mae": {
+      "max": 0.38615118265579923,
+      "mean": 0.330703637962378,
+      "min": 0.22329164320019407,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.07596505973641061
+    },
+    "rq1.temporal_fidelity.correctness_transition_js": {
+      "max": 0.32627574341814897,
+      "mean": 0.23656817929638854,
+      "min": 0.0653122402130821,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.12114203948373142
+    },
+    "rq1.temporal_fidelity.skill_trigram_js": {
+      "max": 0.7679711739594146,
+      "mean": 0.7653415826823782,
+      "min": 0.7619818543538477,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0024990414722289556
+    },
+    "rq2.downstream_utility.arms.real_plus_synthetic.auprc": {
+      "max": 0.8216338941221369,
+      "mean": 0.8145898008451901,
+      "min": 0.8013758575523444,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.009350482993934185
+    },
+    "rq2.downstream_utility.arms.real_plus_synthetic.auroc": {
+      "max": 0.7382642531712016,
+      "mean": 0.7334649297199851,
+      "min": 0.724663009790826,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.006232390621956721
+    },
+    "rq2.downstream_utility.arms.real_plus_tail_targeted_synthetic.auprc": {
+      "max": 0.8212811776429891,
+      "mean": 0.8176378776581888,
+      "min": 0.8107994696980102,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.004838945242626269
+    },
+    "rq2.downstream_utility.arms.real_plus_tail_targeted_synthetic.auroc": {
+      "max": 0.7378732063710092,
+      "mean": 0.735845272741356,
+      "min": 0.732102882736343,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.002649362087931807
+    },
+    "rq2.downstream_utility.arms.real_train.auprc": {
+      "max": 0.8232109318442457,
+      "mean": 0.8232109318442457,
+      "min": 0.8232109318442457,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.downstream_utility.arms.real_train.auroc": {
+      "max": 0.7383865356219796,
+      "mean": 0.7383865356219795,
+      "min": 0.7383865356219796,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 1.1102230246251565e-16
+    },
+    "rq2.downstream_utility.arms.synthetic_train.auprc": {
+      "max": 0.713723327759946,
+      "mean": 0.6629775971894712,
+      "min": 0.6219290787394155,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.03809700758582921
+    },
+    "rq2.downstream_utility.arms.synthetic_train.auroc": {
+      "max": 0.6144682355605833,
+      "mean": 0.5259211946146346,
+      "min": 0.45196508916798905,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0671391078082506
+    },
+    "rq2.downstream_utility.arms.tail_targeted_synthetic.auprc": {
+      "max": 0.7021750132133131,
+      "mean": 0.6612368536671024,
+      "min": 0.6351550017543902,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.029308165999306943
+    },
+    "rq2.downstream_utility.arms.tail_targeted_synthetic.auroc": {
+      "max": 0.6001451650131826,
+      "mean": 0.5209507209706278,
+      "min": 0.470731018791279,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.05666661015751476
+    },
+    "rq2.downstream_utility.real_plus_synthetic_gain_over_real.auprc": {
+      "max": -0.0015770377221087095,
+      "mean": -0.008621130999055518,
+      "min": -0.021835074291901235,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.009350482993934185
+    },
+    "rq2.downstream_utility.real_plus_synthetic_gain_over_real.auroc": {
+      "max": -0.0001222824507780551,
+      "mean": -0.004921605901994604,
+      "min": -0.01372352583115366,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.006232390621956721
+    },
+    "rq2.downstream_utility.synthetic_utility_gap.auprc": {
+      "max": 0.20128185310483016,
+      "mean": 0.1602333346547745,
+      "min": 0.1094876040842997,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.03809700758582921
+    },
+    "rq2.downstream_utility.synthetic_utility_gap.auroc": {
+      "max": 0.2864214464539906,
+      "mean": 0.21246534100734496,
+      "min": 0.12391830006139637,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.06713910780825058
+    },
+    "rq2.downstream_utility.tail_targeted_tstr_gain.auprc": {
+      "max": 0.024451467294188456,
+      "mean": -0.0017407435223687484,
+      "min": -0.018125383314661847,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.01871431518008033
+    },
+    "rq2.downstream_utility.tail_targeted_tstr_gain.auroc": {
+      "max": 0.04001088993943264,
+      "mean": -0.004970473644006916,
+      "min": -0.04059924032405271,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.03356686438440988
+    },
+    "rq2.downstream_utility.targeted_augmentation_gain_over_real.auprc": {
+      "max": -0.0019297542012565172,
+      "mean": -0.00557305418605684,
+      "min": -0.012411462146235452,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.004838945242626269
+    },
+    "rq2.downstream_utility.targeted_augmentation_gain_over_real.auroc": {
+      "max": -0.0005133292509704734,
+      "mean": -0.002541262880623618,
+      "min": -0.0062836528856365925,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.002649362087931807
+    },
+    "rq2.learner_level_outcome_tasks.persistent_failure_prediction.arms.real_plus_synthetic.auprc": {
+      "max": 0.1561963839390176,
+      "mean": 0.13494479897032827,
+      "min": 0.1204685524125843,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.01535248936019659
+    },
+    "rq2.learner_level_outcome_tasks.persistent_failure_prediction.arms.real_plus_synthetic.auroc": {
+      "max": 0.7291182170542636,
+      "mean": 0.7280038759689923,
+      "min": 0.7264534883720931,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0011307216449750574
+    },
+    "rq2.learner_level_outcome_tasks.persistent_failure_prediction.arms.real_train.auprc": {
+      "max": 0.13454822619524834,
+      "mean": 0.13454822619524834,
+      "min": 0.13454822619524834,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.learner_level_outcome_tasks.persistent_failure_prediction.arms.real_train.auroc": {
+      "max": 0.7011143410852714,
+      "mean": 0.7011143410852713,
+      "min": 0.7011143410852714,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 1.1102230246251565e-16
+    },
+    "rq2.learner_level_outcome_tasks.persistent_failure_prediction.real_plus_synthetic_gain_over_real.auprc": {
+      "max": 0.02164815774376927,
+      "mean": 0.0003965727750799286,
+      "min": -0.014079673782664032,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.01535248936019659
+    },
+    "rq2.learner_level_outcome_tasks.persistent_failure_prediction.real_plus_synthetic_gain_over_real.auroc": {
+      "max": 0.02800387596899223,
+      "mean": 0.026889534883720922,
+      "min": 0.02533914728682174,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0011307216449750574
+    },
+    "rq2.learner_level_outcome_tasks.recovery_prediction.arms.real_plus_synthetic.auprc": {
+      "max": 0.4386682829026786,
+      "mean": 0.43044003468709224,
+      "min": 0.41398353825591944,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.011636500221054497
+    },
+    "rq2.learner_level_outcome_tasks.recovery_prediction.arms.real_plus_synthetic.auroc": {
+      "max": 0.689745378444367,
+      "mean": 0.6759097779327986,
+      "min": 0.6482385769096617,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.01956649388703622
+    },
+    "rq2.learner_level_outcome_tasks.recovery_prediction.arms.real_train.auprc": {
+      "max": 0.4386682829026786,
+      "mean": 0.4386682829026786,
+      "min": 0.4386682829026786,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.learner_level_outcome_tasks.recovery_prediction.arms.real_train.auroc": {
+      "max": 0.689745378444367,
+      "mean": 0.6897453784443671,
+      "min": 0.689745378444367,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 1.1102230246251565e-16
+    },
+    "rq2.learner_level_outcome_tasks.recovery_prediction.arms.synthetic_train.auprc": {
+      "max": 0.37377006234215243,
+      "mean": 0.37377006234215243,
+      "min": 0.37377006234215243,
+      "missing_runs": 2,
+      "n": 1,
+      "std": 0.0
+    },
+    "rq2.learner_level_outcome_tasks.recovery_prediction.arms.synthetic_train.auroc": {
+      "max": 0.5786536449250087,
+      "mean": 0.5786536449250087,
+      "min": 0.5786536449250087,
+      "missing_runs": 2,
+      "n": 1,
+      "std": 0.0
+    },
+    "rq2.learner_level_outcome_tasks.recovery_prediction.arms.tail_targeted_synthetic.auprc": {
+      "max": 0.2592734727077683,
+      "mean": 0.2592734727077683,
+      "min": 0.2592734727077683,
+      "missing_runs": 2,
+      "n": 1,
+      "std": 0.0
+    },
+    "rq2.learner_level_outcome_tasks.recovery_prediction.arms.tail_targeted_synthetic.auroc": {
+      "max": 0.46485873735612143,
+      "mean": 0.46485873735612143,
+      "min": 0.46485873735612143,
+      "missing_runs": 2,
+      "n": 1,
+      "std": 0.0
+    },
+    "rq2.learner_level_outcome_tasks.recovery_prediction.real_plus_synthetic_gain_over_real.auprc": {
+      "max": 0.0,
+      "mean": -0.008228248215586395,
+      "min": -0.024684744646759182,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.011636500221054495
+    },
+    "rq2.learner_level_outcome_tasks.recovery_prediction.real_plus_synthetic_gain_over_real.auroc": {
+      "max": 0.0,
+      "mean": -0.013835600511568439,
+      "min": -0.04150680153470532,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.01956649388703622
+    },
+    "rq2.learner_level_outcome_tasks.recovery_prediction.synthetic_utility_gap.auprc": {
+      "max": 0.06489822056052619,
+      "mean": 0.06489822056052619,
+      "min": 0.06489822056052619,
+      "missing_runs": 2,
+      "n": 1,
+      "std": 0.0
+    },
+    "rq2.learner_level_outcome_tasks.recovery_prediction.synthetic_utility_gap.auroc": {
+      "max": 0.1110917335193583,
+      "mean": 0.1110917335193583,
+      "min": 0.1110917335193583,
+      "missing_runs": 2,
+      "n": 1,
+      "std": 0.0
+    },
+    "rq2.privacy_risk.standard.exact_duplicate_rate": {
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.privacy_risk.standard.mean_nearest_neighbor_distance": {
+      "max": 0.9194812920285141,
+      "mean": 0.8614402008241883,
+      "min": 0.8278283687055484,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.04121210269664355
+    },
+    "rq2.privacy_risk.standard.membership_inference_attack_advantage": {
+      "max": 0.002233502538071086,
+      "mean": 0.0011150592216582211,
+      "min": 0.0,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0009118267327972192
+    },
+    "rq2.privacy_risk.standard.near_duplicate_rate": {
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.privacy_risk.tail_targeted.exact_duplicate_rate": {
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.privacy_risk.tail_targeted.mean_nearest_neighbor_distance": {
+      "max": 0.9084096784088882,
+      "mean": 0.8676433698504473,
+      "min": 0.8399361509125848,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.029439891963518715
+    },
+    "rq2.privacy_risk.tail_targeted.membership_inference_attack_advantage": {
+      "max": 0.04229314720812183,
+      "mean": 0.022094331641285974,
+      "min": 0.0,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.017318050526995234
+    },
+    "rq2.privacy_risk.tail_targeted.near_duplicate_rate": {
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.privacy_risk.tail_targeted_minus_standard_risk.exact_duplicate_rate_risk_delta": {
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.privacy_risk.tail_targeted_minus_standard_risk.mean_nearest_exposure_risk_delta": {
+      "max": 0.011071613619625942,
+      "mean": -0.0062031690262590216,
+      "min": -0.017573338491366663,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.012417237024159115
+    },
+    "rq2.privacy_risk.tail_targeted_minus_standard_risk.membership_inference_attack_advantage_risk_delta": {
+      "max": 0.04005964467005074,
+      "mean": 0.020979272419627753,
+      "min": -0.0011116751269035774,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.01694239389157514
+    },
+    "rq2.privacy_risk.tail_targeted_minus_standard_risk.near_duplicate_rate_risk_delta": {
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.tail_learnability.high_hint_use.arms.real_plus_synthetic.auprc": {
+      "max": 0.43501455809453904,
+      "mean": 0.43016045550936594,
+      "min": 0.4205467512231965,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.006798024967136241
+    },
+    "rq2.tail_learnability.high_hint_use.arms.real_plus_synthetic.auroc": {
+      "max": 0.8635837613190972,
+      "mean": 0.8583437514078479,
+      "min": 0.8494053250439249,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.006351678360629669
+    },
+    "rq2.tail_learnability.high_hint_use.arms.real_plus_tail_targeted_synthetic.auprc": {
+      "max": 0.4397239755210393,
+      "mean": 0.43272537420554874,
+      "min": 0.42453472172187007,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.006258013382034179
+    },
+    "rq2.tail_learnability.high_hint_use.arms.real_plus_tail_targeted_synthetic.auroc": {
+      "max": 0.8629755710231113,
+      "mean": 0.8577989142676938,
+      "min": 0.8475427422624678,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.007252317205262265
+    },
+    "rq2.tail_learnability.high_hint_use.arms.real_train.auprc": {
+      "max": 0.4399197753693036,
+      "mean": 0.4399197753693036,
+      "min": 0.4399197753693036,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.tail_learnability.high_hint_use.arms.real_train.auroc": {
+      "max": 0.8696910055412893,
+      "mean": 0.8696910055412893,
+      "min": 0.8696910055412893,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.tail_learnability.high_hint_use.arms.synthetic_train.auprc": {
+      "max": 0.24808778839744206,
+      "mean": 0.15496370710112742,
+      "min": 0.09239954287873674,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.06713240075575527
+    },
+    "rq2.tail_learnability.high_hint_use.arms.synthetic_train.auroc": {
+      "max": 0.6865877145560211,
+      "mean": 0.5438417916835608,
+      "min": 0.44990454791188,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.10260424198458433
+    },
+    "rq2.tail_learnability.high_hint_use.arms.tail_targeted_synthetic.auprc": {
+      "max": 0.193825240490119,
+      "mean": 0.12497430162112393,
+      "min": 0.08989231221785088,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.04868791674755983
+    },
+    "rq2.tail_learnability.high_hint_use.arms.tail_targeted_synthetic.auroc": {
+      "max": 0.5938978240302744,
+      "mean": 0.4969111816912195,
+      "min": 0.43796881335315585,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.06910855798854004
+    },
+    "rq2.tail_learnability.high_hint_use.real_plus_synthetic_gain_over_real.auprc": {
+      "max": -0.004905217274764562,
+      "mean": -0.009759319859937684,
+      "min": -0.019373024146107087,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.006798024967136241
+    },
+    "rq2.tail_learnability.high_hint_use.real_plus_synthetic_gain_over_real.auroc": {
+      "max": -0.00610724422219211,
+      "mean": -0.011347254133441398,
+      "min": -0.020285680497364456,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.006351678360629669
+    },
+    "rq2.tail_learnability.high_hint_use.synthetic_utility_gap.auprc": {
+      "max": 0.34752023249056685,
+      "mean": 0.28495606826817615,
+      "min": 0.19183198697186155,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.06713240075575527
+    },
+    "rq2.tail_learnability.high_hint_use.synthetic_utility_gap.auroc": {
+      "max": 0.4197864576294093,
+      "mean": 0.32584921385772847,
+      "min": 0.18310329098526823,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.10260424198458433
+    },
+    "rq2.tail_learnability.high_hint_use.tail_targeted_tstr_gain.auprc": {
+      "max": -0.001194190723334862,
+      "mean": -0.029989405480003502,
+      "min": -0.054262547907323044,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.021899763882528296
+    },
+    "rq2.tail_learnability.high_hint_use.tail_targeted_tstr_gain.auroc": {
+      "max": 0.008962359778348361,
+      "mean": -0.04693060999234133,
+      "min": -0.09268989052574672,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.04211344790079916
+    },
+    "rq2.tail_learnability.high_hint_use.targeted_augmentation_gain_over_real.auprc": {
+      "max": -0.00019579984826428865,
+      "mean": -0.00719440116375486,
+      "min": -0.015385053647433533,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.006258013382034179
+    },
+    "rq2.tail_learnability.high_hint_use.targeted_augmentation_gain_over_real.auroc": {
+      "max": -0.006715434518178021,
+      "mean": -0.011892091273595437,
+      "min": -0.022148263278821467,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.007252317205262265
+    },
+    "rq2.tail_learnability.late_failure.arms.real_plus_synthetic.auprc": {
+      "max": 0.738561895982689,
+      "mean": 0.7269111909094242,
+      "min": 0.7064712520643723,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.014500352397887767
+    },
+    "rq2.tail_learnability.late_failure.arms.real_plus_synthetic.auroc": {
+      "max": 0.7418007202881153,
+      "mean": 0.7343737494997998,
+      "min": 0.7200560224089635,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.010126528305378475
+    },
+    "rq2.tail_learnability.late_failure.arms.real_plus_tail_targeted_synthetic.auprc": {
+      "max": 0.7359056993559129,
+      "mean": 0.723933703222217,
+      "min": 0.7079235441743764,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.011775124116593594
+    },
+    "rq2.tail_learnability.late_failure.arms.real_plus_tail_targeted_synthetic.auroc": {
+      "max": 0.7413125250100041,
+      "mean": 0.7354888622115513,
+      "min": 0.7266506602641056,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.006353904530148551
+    },
+    "rq2.tail_learnability.late_failure.arms.real_train.auprc": {
+      "max": 0.7467286352231772,
+      "mean": 0.7467286352231772,
+      "min": 0.7467286352231772,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.tail_learnability.late_failure.arms.real_train.auroc": {
+      "max": 0.7450900360144057,
+      "mean": 0.7450900360144056,
+      "min": 0.7450900360144057,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 1.1102230246251565e-16
+    },
+    "rq2.tail_learnability.late_failure.arms.synthetic_train.auprc": {
+      "max": 0.5922922648756512,
+      "mean": 0.5569449347384529,
+      "min": 0.4875458723552953,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.04907539803350207
+    },
+    "rq2.tail_learnability.late_failure.arms.synthetic_train.auroc": {
+      "max": 0.6259623849539816,
+      "mean": 0.5803174603174602,
+      "min": 0.5032733093237295,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.054787990664773065
+    },
+    "rq2.tail_learnability.late_failure.arms.tail_targeted_synthetic.auprc": {
+      "max": 0.5479020022223877,
+      "mean": 0.5160310287613951,
+      "min": 0.4951271574173084,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.022898385062154237
+    },
+    "rq2.tail_learnability.late_failure.arms.tail_targeted_synthetic.auroc": {
+      "max": 0.5676110444177671,
+      "mean": 0.5376817393624117,
+      "min": 0.5015526210484194,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.027322238656967986
+    },
+    "rq2.tail_learnability.late_failure.real_plus_synthetic_gain_over_real.auprc": {
+      "max": -0.008166739240488274,
+      "mean": -0.019817444313752874,
+      "min": -0.040257383158804894,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.014500352397887765
+    },
+    "rq2.tail_learnability.late_failure.real_plus_synthetic_gain_over_real.auroc": {
+      "max": -0.0032893157262904316,
+      "mean": -0.010716286514605803,
+      "min": -0.025034013605442218,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.010126528305378475
+    },
+    "rq2.tail_learnability.late_failure.synthetic_utility_gap.auprc": {
+      "max": 0.25918276286788194,
+      "mean": 0.1897837004847244,
+      "min": 0.154436370347526,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.04907539803350207
+    },
+    "rq2.tail_learnability.late_failure.synthetic_utility_gap.auroc": {
+      "max": 0.24181672669067622,
+      "mean": 0.1647725756969454,
+      "min": 0.11912765106042411,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.054787990664773065
+    },
+    "rq2.tail_learnability.late_failure.tail_targeted_tstr_gain.auprc": {
+      "max": 0.060356129867092434,
+      "mean": -0.040913905977057664,
+      "min": -0.09716510745834284,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.07175540229454191
+    },
+    "rq2.tail_learnability.late_failure.tail_targeted_tstr_gain.auroc": {
+      "max": 0.06433773509403762,
+      "mean": -0.042635720955048674,
+      "min": -0.12440976390556224,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0790892424629097
+    },
+    "rq2.tail_learnability.late_failure.targeted_augmentation_gain_over_real.auprc": {
+      "max": -0.01082293586726435,
+      "mean": -0.022794932000960316,
+      "min": -0.03880509104880081,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.011775124116593594
+    },
+    "rq2.tail_learnability.late_failure.targeted_augmentation_gain_over_real.auroc": {
+      "max": -0.0037775110044016014,
+      "mean": -0.009601173802854376,
+      "min": -0.01843937575030008,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.006353904530148551
+    },
+    "rq2.tail_learnability.persistent_failure.arms.real_plus_synthetic.auprc": {
+      "max": 0.1824165073971884,
+      "mean": 0.15411832718486693,
+      "min": 0.13131276010790896,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.021221448992983644
+    },
+    "rq2.tail_learnability.persistent_failure.arms.real_plus_synthetic.auroc": {
+      "max": 0.8055795847750865,
+      "mean": 0.7799644367550943,
+      "min": 0.749543444828912,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.02312767961779148
+    },
+    "rq2.tail_learnability.persistent_failure.arms.real_plus_tail_targeted_synthetic.auprc": {
+      "max": 0.14741579585216597,
+      "mean": 0.14394130908652372,
+      "min": 0.13964572861078495,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.003224813420387368
+    },
+    "rq2.tail_learnability.persistent_failure.arms.real_plus_tail_targeted_synthetic.auroc": {
+      "max": 0.8098808150711265,
+      "mean": 0.7861639753940791,
+      "min": 0.7485101883890811,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.026922943504915416
+    },
+    "rq2.tail_learnability.persistent_failure.arms.real_train.auprc": {
+      "max": 0.14362446678856103,
+      "mean": 0.14362446678856103,
+      "min": 0.14362446678856103,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.tail_learnability.persistent_failure.arms.real_train.auroc": {
+      "max": 0.8221597462514418,
+      "mean": 0.8221597462514417,
+      "min": 0.8221597462514418,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 1.1102230246251565e-16
+    },
+    "rq2.tail_learnability.persistent_failure.arms.synthetic_train.auprc": {
+      "max": 0.17778813396558102,
+      "mean": 0.08333259515768256,
+      "min": 0.029797846309119486,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.06698838007860065
+    },
+    "rq2.tail_learnability.persistent_failure.arms.synthetic_train.auroc": {
+      "max": 0.7276768550557478,
+      "mean": 0.5594723183391003,
+      "min": 0.4573241061130334,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.11984776654607636
+    },
+    "rq2.tail_learnability.persistent_failure.arms.tail_targeted_synthetic.auprc": {
+      "max": 0.1445418574422077,
+      "mean": 0.06308008762217783,
+      "min": 0.02210634666616104,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.05760251114733181
+    },
+    "rq2.tail_learnability.persistent_failure.arms.tail_targeted_synthetic.auroc": {
+      "max": 0.6090926566705113,
+      "mean": 0.45932654107394594,
+      "min": 0.3585399846212995,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.10799200056238566
+    },
+    "rq2.tail_learnability.persistent_failure.real_plus_synthetic_gain_over_real.auprc": {
+      "max": 0.03879204060862737,
+      "mean": 0.010493860396305899,
+      "min": -0.012311706680652068,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.021221448992983644
+    },
+    "rq2.tail_learnability.persistent_failure.real_plus_synthetic_gain_over_real.auroc": {
+      "max": -0.016580161476355326,
+      "mean": -0.04219530949634761,
+      "min": -0.07261630142252984,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.023127679617791476
+    },
+    "rq2.tail_learnability.persistent_failure.synthetic_utility_gap.auprc": {
+      "max": 0.11382662047944155,
+      "mean": 0.06029187163087848,
+      "min": -0.03416366717701999,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.06698838007860065
+    },
+    "rq2.tail_learnability.persistent_failure.synthetic_utility_gap.auroc": {
+      "max": 0.3648356401384084,
+      "mean": 0.2626874279123415,
+      "min": 0.09448289119569409,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.11984776654607636
+    },
+    "rq2.tail_learnability.persistent_failure.tail_targeted_tstr_gain.auprc": {
+      "max": -0.007205787550954766,
+      "mean": -0.02025250753550473,
+      "min": -0.03324627652337331,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.010631051040441238
+    },
+    "rq2.tail_learnability.persistent_failure.tail_targeted_tstr_gain.auroc": {
+      "max": -0.04697712418300648,
+      "mean": -0.10014577726515443,
+      "min": -0.13487600922722032,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.03817970689650979
+    },
+    "rq2.tail_learnability.persistent_failure.targeted_augmentation_gain_over_real.auprc": {
+      "max": 0.003791329063604937,
+      "mean": 0.0003168422979627124,
+      "min": -0.003978738177776081,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.003224813420387368
+    },
+    "rq2.tail_learnability.persistent_failure.targeted_augmentation_gain_over_real.auroc": {
+      "max": -0.012278931180315311,
+      "mean": -0.03599577085736264,
+      "min": -0.07364955786236071,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.026922943504915413
+    },
+    "rq2.tail_learnability.rapid_guessing.arms.real_plus_synthetic.auprc": {
+      "max": 0.32554495612531253,
+      "mean": 0.317086046227953,
+      "min": 0.3026130287984747,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0102825236781236
+    },
+    "rq2.tail_learnability.rapid_guessing.arms.real_plus_synthetic.auroc": {
+      "max": 0.8746405980448534,
+      "mean": 0.8621706813196175,
+      "min": 0.8408328541307265,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.015159612223148466
+    },
+    "rq2.tail_learnability.rapid_guessing.arms.real_plus_tail_targeted_synthetic.auprc": {
+      "max": 0.32402475973583,
+      "mean": 0.31607998919882935,
+      "min": 0.3064897595767559,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.007252572387099106
+    },
+    "rq2.tail_learnability.rapid_guessing.arms.real_plus_tail_targeted_synthetic.auroc": {
+      "max": 0.872492173024088,
+      "mean": 0.8652482269503547,
+      "min": 0.8512954443805507,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.009868525443556922
+    },
+    "rq2.tail_learnability.rapid_guessing.arms.real_train.auprc": {
+      "max": 0.34086476224871176,
+      "mean": 0.34086476224871176,
+      "min": 0.34086476224871176,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.tail_learnability.rapid_guessing.arms.real_train.auroc": {
+      "max": 0.8809900325857773,
+      "mean": 0.8809900325857773,
+      "min": 0.8809900325857773,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.tail_learnability.rapid_guessing.arms.synthetic_train.auprc": {
+      "max": 0.21696517833344905,
+      "mean": 0.12962567029886005,
+      "min": 0.0724389270905191,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.06273675820221025
+    },
+    "rq2.tail_learnability.rapid_guessing.arms.synthetic_train.auroc": {
+      "max": 0.7123586352309756,
+      "mean": 0.5301285327881072,
+      "min": 0.40314516644303877,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.13214233161522482
+    },
+    "rq2.tail_learnability.rapid_guessing.arms.tail_targeted_synthetic.auprc": {
+      "max": 0.1562683234626723,
+      "mean": 0.10168883773999314,
+      "min": 0.06319601434608924,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.039662738262616425
+    },
+    "rq2.tail_learnability.rapid_guessing.arms.tail_targeted_synthetic.auroc": {
+      "max": 0.5951297041722573,
+      "mean": 0.4676910953506698,
+      "min": 0.3013146124848253,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.12306893881652495
+    },
+    "rq2.tail_learnability.rapid_guessing.real_plus_synthetic_gain_over_real.auprc": {
+      "max": -0.015319806123399227,
+      "mean": -0.02377871602075878,
+      "min": -0.03825173345023708,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0102825236781236
+    },
+    "rq2.tail_learnability.rapid_guessing.real_plus_synthetic_gain_over_real.auroc": {
+      "max": -0.006349434540923959,
+      "mean": -0.018819351266159856,
+      "min": -0.040157178455050846,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.015159612223148466
+    },
+    "rq2.tail_learnability.rapid_guessing.synthetic_utility_gap.auprc": {
+      "max": 0.2684258351581926,
+      "mean": 0.2112390919498517,
+      "min": 0.1238995839152627,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.06273675820221024
+    },
+    "rq2.tail_learnability.rapid_guessing.synthetic_utility_gap.auroc": {
+      "max": 0.4778448661427386,
+      "mean": 0.35086149979767006,
+      "min": 0.1686313973548017,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.13214233161522482
+    },
+    "rq2.tail_learnability.rapid_guessing.tail_targeted_tstr_gain.auprc": {
+      "max": 0.013163248320698762,
+      "mean": -0.027936832558866923,
+      "min": -0.06069685487077675,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.030724541152503268
+    },
+    "rq2.tail_learnability.rapid_guessing.tail_targeted_tstr_gain.auroc": {
+      "max": 0.10348380295188808,
+      "mean": -0.06243743743743744,
+      "min": -0.17356718420548206,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.11955721977685405
+    },
+    "rq2.tail_learnability.rapid_guessing.targeted_augmentation_gain_over_real.auprc": {
+      "max": -0.016840002512881758,
+      "mean": -0.02478477304988243,
+      "min": -0.03437500267195587,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.007252572387099106
+    },
+    "rq2.tail_learnability.rapid_guessing.targeted_augmentation_gain_over_real.auroc": {
+      "max": -0.008497859561689358,
+      "mean": -0.015741805635422674,
+      "min": -0.029694588205226635,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.009868525443556922
+    },
+    "rq2.tail_learnability.rare_skill_path.arms.real_plus_synthetic.auprc": {
+      "max": 0.9015795107859513,
+      "mean": 0.8878211074636942,
+      "min": 0.863971356085826,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.016930638975375518
+    },
+    "rq2.tail_learnability.rare_skill_path.arms.real_plus_synthetic.auroc": {
+      "max": 0.7134414049307667,
+      "mean": 0.7093887200270178,
+      "min": 0.7056737588652482,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.003180107371794599
+    },
+    "rq2.tail_learnability.rare_skill_path.arms.real_plus_tail_targeted_synthetic.auprc": {
+      "max": 0.9075042848383956,
+      "mean": 0.8950328825799665,
+      "min": 0.8760495060228434,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.01364197284202854
+    },
+    "rq2.tail_learnability.rare_skill_path.arms.real_plus_tail_targeted_synthetic.auroc": {
+      "max": 0.7292018462231229,
+      "mean": 0.7158805208450598,
+      "min": 0.7047731622199707,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.010095094092971484
+    },
+    "rq2.tail_learnability.rare_skill_path.arms.real_train.auprc": {
+      "max": 0.9009482365279129,
+      "mean": 0.9009482365279129,
+      "min": 0.9009482365279129,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.tail_learnability.rare_skill_path.arms.real_train.auroc": {
+      "max": 0.7239108409321175,
+      "mean": 0.7239108409321174,
+      "min": 0.7239108409321175,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 1.1102230246251565e-16
+    },
+    "rq2.tail_learnability.rare_skill_path.arms.synthetic_train.auprc": {
+      "max": 0.8683196385843709,
+      "mean": 0.810282350034842,
+      "min": 0.7508671472151802,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.04795967693809269
+    },
+    "rq2.tail_learnability.rare_skill_path.arms.synthetic_train.auroc": {
+      "max": 0.6626702690532479,
+      "mean": 0.5167548500881834,
+      "min": 0.3668242710795902,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.12081198826244778
+    },
+    "rq2.tail_learnability.rare_skill_path.arms.tail_targeted_synthetic.auprc": {
+      "max": 0.8534650261503745,
+      "mean": 0.8048602729094109,
+      "min": 0.7768657127273082,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.034500712530457694
+    },
+    "rq2.tail_learnability.rare_skill_path.arms.tail_targeted_synthetic.auroc": {
+      "max": 0.6419565462118654,
+      "mean": 0.5161356898945552,
+      "min": 0.43847799166948104,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.08977990824873837
+    },
+    "rq2.tail_learnability.rare_skill_path.real_plus_synthetic_gain_over_real.auprc": {
+      "max": 0.000631274258038439,
+      "mean": -0.013127129064218609,
+      "min": -0.03697688044208691,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.016930638975375518
+    },
+    "rq2.tail_learnability.rare_skill_path.real_plus_synthetic_gain_over_real.auroc": {
+      "max": -0.010469436001350862,
+      "mean": -0.01452212090509967,
+      "min": -0.01823708206686936,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.003180107371794599
+    },
+    "rq2.tail_learnability.rare_skill_path.synthetic_utility_gap.auprc": {
+      "max": 0.15008108931273267,
+      "mean": 0.0906658864930709,
+      "min": 0.032628597943542004,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.04795967693809269
+    },
+    "rq2.tail_learnability.rare_skill_path.synthetic_utility_gap.auroc": {
+      "max": 0.35708656985252735,
+      "mean": 0.20715599084393407,
+      "min": 0.061240571878869665,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.12081198826244777
+    },
+    "rq2.tail_learnability.rare_skill_path.tail_targeted_tstr_gain.auprc": {
+      "max": 0.033382932635369844,
+      "mean": -0.0054220771254310796,
+      "min": -0.034794551577666644,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.028621342621258577
+    },
+    "rq2.tail_learnability.rare_skill_path.tail_targeted_tstr_gain.auroc": {
+      "max": 0.10114826072272881,
+      "mean": -0.0006191601936283245,
+      "min": -0.08229201846223128,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.07622522588954138
+    },
+    "rq2.tail_learnability.rare_skill_path.targeted_augmentation_gain_over_real.auprc": {
+      "max": 0.006556048310482732,
+      "mean": -0.005915353947946437,
+      "min": -0.024898730505069522,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.013641972842028538
+    },
+    "rq2.tail_learnability.rare_skill_path.targeted_augmentation_gain_over_real.auroc": {
+      "max": 0.005291005291005346,
+      "mean": -0.008030320087057693,
+      "min": -0.01913767871214689,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.010095094092971484
+    },
+    "rq2.tail_learnability.recovery.arms.real_plus_synthetic.auprc": {
+      "max": 0.7375433773961133,
+      "mean": 0.7339511427424803,
+      "min": 0.7296438423511419,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0032643685186789346
+    },
+    "rq2.tail_learnability.recovery.arms.real_plus_synthetic.auroc": {
+      "max": 0.7259675405742821,
+      "mean": 0.7230545151893466,
+      "min": 0.721057012068248,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0021066495221605955
+    },
+    "rq2.tail_learnability.recovery.arms.real_plus_tail_targeted_synthetic.auprc": {
+      "max": 0.7390249428430884,
+      "mean": 0.7329552542967482,
+      "min": 0.7236790439901235,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.006662606559535129
+    },
+    "rq2.tail_learnability.recovery.arms.real_plus_tail_targeted_synthetic.auroc": {
+      "max": 0.7296920516021641,
+      "mean": 0.7242682757664033,
+      "min": 0.7185393258426966,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.004558191994233193
+    },
+    "rq2.tail_learnability.recovery.arms.real_train.auprc": {
+      "max": 0.7444827844984065,
+      "mean": 0.7444827844984067,
+      "min": 0.7444827844984065,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 1.1102230246251565e-16
+    },
+    "rq2.tail_learnability.recovery.arms.real_train.auroc": {
+      "max": 0.7328547648772367,
+      "mean": 0.7328547648772367,
+      "min": 0.7328547648772367,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.tail_learnability.recovery.arms.synthetic_train.auprc": {
+      "max": 0.6346388129662176,
+      "mean": 0.591294708938959,
+      "min": 0.5590612242661228,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.031838942353239134
+    },
+    "rq2.tail_learnability.recovery.arms.synthetic_train.auroc": {
+      "max": 0.602434456928839,
+      "mean": 0.5224441670134554,
+      "min": 0.47598834789846023,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.056807130838344516
+    },
+    "rq2.tail_learnability.recovery.arms.tail_targeted_synthetic.auprc": {
+      "max": 0.6662846600558301,
+      "mean": 0.615485308978231,
+      "min": 0.5283609007015229,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.06188900378362926
+    },
+    "rq2.tail_learnability.recovery.arms.tail_targeted_synthetic.auroc": {
+      "max": 0.6117977528089887,
+      "mean": 0.560708836177001,
+      "min": 0.4586766541822722,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0721476722910594
+    },
+    "rq2.tail_learnability.recovery.real_plus_synthetic_gain_over_real.auprc": {
+      "max": -0.006939407102293238,
+      "mean": -0.01053164175592621,
+      "min": -0.014838942147264667,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0032643685186789346
+    },
+    "rq2.tail_learnability.recovery.real_plus_synthetic_gain_over_real.auroc": {
+      "max": -0.00688722430295452,
+      "mean": -0.009800249687890025,
+      "min": -0.011797752808988649,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0021066495221605955
+    },
+    "rq2.tail_learnability.recovery.synthetic_utility_gap.auprc": {
+      "max": 0.18542156023228373,
+      "mean": 0.15318807555944766,
+      "min": 0.10984397153218894,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.031838942353239134
+    },
+    "rq2.tail_learnability.recovery.synthetic_utility_gap.auroc": {
+      "max": 0.25686641697877644,
+      "mean": 0.21041059786378127,
+      "min": 0.13042030794839765,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.056807130838344516
+    },
+    "rq2.tail_learnability.recovery.tail_targeted_tstr_gain.auprc": {
+      "max": 0.08610057047129382,
+      "mean": 0.024190600039272054,
+      "min": -0.03070032356459995,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.047941370274380224
+    },
+    "rq2.tail_learnability.recovery.tail_targeted_tstr_gain.auroc": {
+      "max": 0.1356637536412818,
+      "mean": 0.038264669163545595,
+      "min": -0.030233042030794743,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.07074321516025557
+    },
+    "rq2.tail_learnability.recovery.targeted_augmentation_gain_over_real.auprc": {
+      "max": -0.005457841655318152,
+      "mean": -0.011527530201658346,
+      "min": -0.020803740508283042,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.006662606559535129
+    },
+    "rq2.tail_learnability.recovery.targeted_augmentation_gain_over_real.auroc": {
+      "max": -0.0031627132750725595,
+      "mean": -0.008586489110833484,
+      "min": -0.014315439034540023,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.004558191994233193
+    },
+    "rq2.tail_targeting_fidelity_gain.high_hint_use.prevalence_error_reduction": {
+      "max": 0.0,
+      "mean": -9.721007096335128e-05,
+      "min": -0.00029163021289005386,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0001374758007556224
+    },
+    "rq2.tail_targeting_fidelity_gain.late_failure.prevalence_error_reduction": {
+      "max": 0.0,
+      "mean": -0.0023330417031204435,
+      "min": -0.006999125109361331,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0032994192181349555
+    },
+    "rq2.tail_targeting_fidelity_gain.persistent_failure.prevalence_error_reduction": {
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.tail_targeting_fidelity_gain.rapid_guessing.prevalence_error_reduction": {
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.tail_targeting_fidelity_gain.rare_skill_path.prevalence_error_reduction": {
+      "max": 0.189559638378536,
+      "mean": 0.06172839506172839,
+      "min": -0.004082822980460775,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.09040358902016694
+    },
+    "rq2.tail_targeting_fidelity_gain.rare_skill_path.primary_signal_curve_mae_reduction": {
+      "max": 0.0,
+      "mean": -0.03804646773685287,
+      "min": -0.07609293547370574,
+      "missing_runs": 1,
+      "n": 2,
+      "std": 0.03804646773685287
+    },
+    "rq2.tail_targeting_fidelity_gain.recovery.prevalence_error_reduction": {
+      "max": 0.0,
+      "mean": -0.002819092057937201,
+      "min": -0.008457276173811604,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.003986798221913069
+    }
+  },
+  "metric_summary_scope": "publication_only",
+  "model": "timegan",
+  "publication_schema_version": "publication_metrics_v2",
+  "publication_status_summary": {
+    "rq2.learner_level_outcome_tasks.persistent_failure_prediction": {
+      "counts": {
+        "completed_with_model_collapse": 3
+      },
+      "seeds_by_status": {
+        "completed_with_model_collapse": [
+          20260703,
+          20260704,
+          20260705
+        ]
+      }
+    },
+    "rq2.learner_level_outcome_tasks.persistent_failure_prediction.non_estimable_arms.synthetic_train": {
+      "counts": {
+        "not_estimable_model_collapse": 3
+      },
+      "seeds_by_status": {
+        "not_estimable_model_collapse": [
+          20260703,
+          20260704,
+          20260705
+        ]
+      }
+    },
+    "rq2.learner_level_outcome_tasks.persistent_failure_prediction.non_estimable_arms.tail_targeted_synthetic": {
+      "counts": {
+        "not_estimable_model_collapse": 3
+      },
+      "seeds_by_status": {
+        "not_estimable_model_collapse": [
+          20260703,
+          20260704,
+          20260705
+        ]
+      }
+    },
+    "rq2.learner_level_outcome_tasks.recovery_prediction": {
+      "counts": {
+        "completed": 1,
+        "completed_with_model_collapse": 2
+      },
+      "seeds_by_status": {
+        "completed": [
+          20260704
+        ],
+        "completed_with_model_collapse": [
+          20260703,
+          20260705
+        ]
+      }
+    },
+    "rq2.learner_level_outcome_tasks.recovery_prediction.non_estimable_arms.synthetic_train": {
+      "counts": {
+        "not_estimable_model_collapse": 2
+      },
+      "seeds_by_status": {
+        "not_estimable_model_collapse": [
+          20260703,
+          20260705
+        ]
+      }
+    },
+    "rq2.learner_level_outcome_tasks.recovery_prediction.non_estimable_arms.tail_targeted_synthetic": {
+      "counts": {
+        "not_estimable_model_collapse": 2
+      },
+      "seeds_by_status": {
+        "not_estimable_model_collapse": [
+          20260703,
+          20260705
+        ]
+      }
+    }
+  },
+  "rare_group_metric_refresh": {
+    "generator_retrained": false,
+    "script": "experiments/scripts/refresh_rare_group_metrics.py",
+    "script_sha256": "812341d438d507c31d0aa4cc118afbd48fa95f1b8c1d1a3830d2d6a19cb81929",
+    "synthetic_artifacts_changed": false,
+    "tail_reference_scope": "complete_real_train",
+    "trajectory_curve": "learner_equal_ten_position_linear_interpolation"
+  },
+  "runs": [
+    {
+      "data_provenance": {
+        "generation_columns": [
+          "learner_id",
+          "order",
+          "skill_id",
+          "correct",
+          "attempt_bin",
+          "hint_bin",
+          "response_time_bin",
+          "opportunity_bin"
+        ],
+        "runtime": {
+          "config_path": "experiments/configs/assistments_preprocessing.yaml",
+          "config_sha256": "079175cbee2556c0dbedfbc81e5c4cd7c60775651ed9f69d0fc0bf204c9825c6",
+          "pandas": "2.3.3",
+          "platform": "macOS-26.5.2-arm64-arm-64bit",
+          "preprocessing_script_sha256": "9297f401f810fe7fd7d01675d4deac22545a10506506102597178db688c31735",
+          "python": "3.9.6",
+          "pyyaml": "6.0.3"
+        },
+        "test_generation_sha256": "e526befa3097065abdde78b65f7a51033e958caac705b8502eb14f74b1390360",
+        "test_rows": 64742,
+        "test_source": "experiments/data/datasets/assistments/clean_test.csv",
+        "test_source_sha256": "e63c08b711fba7401fa97c27fbacff941b965a5f1695a916c84873ddece466b7",
+        "train_generation_sha256": "cc432ce7d6876541305b63bf149d825fbfd5ee47ea6fc4a65a15c75f048b2138",
+        "train_rows": 282118,
+        "train_source": "experiments/data/datasets/assistments/clean_train.csv",
+        "train_source_sha256": "bf3a2fa391f44ecbe4c161829f253c2e7845320035933c3193af20e51b09d5be"
+      },
+      "dataset": "assistments_2009_2010_skill_builder",
+      "evaluation_report": "experiments/runs/standard_vs_tail_targeted/evaluation/assistments_2009_2010_skill_builder/timegan/seed_20260703/generation_evaluation_report.json",
+      "experiment_design": "standard_vs_tail_targeted",
+      "generation_metadata": {
+        "adapter_configuration": {
+          "batch_size": 200,
+          "device": "cpu",
+          "discriminator_n_layers_hidden": 1,
+          "discriminator_n_units_hidden": 50,
+          "encoder_max_clusters": 20,
+          "generator_n_layers_hidden": 1,
+          "generator_n_units_hidden": 50,
+          "max_vocab": 100,
+          "mode": "RNN",
+          "n_iter": 50,
+          "n_iter_print": 10,
+          "target_steps": 4000,
+          "window": 20
+        },
+        "adapter_normalized_invariants": false,
+        "column_vocab_sizes": {
+          "attempt_bin": 5,
+          "correct": 2,
+          "hint_bin": 4,
+          "opportunity_bin": 5,
+          "response_time_bin": 6,
+          "skill_id": 101
+        },
+        "columns": [
+          "learner_id",
+          "order",
+          "skill_id",
+          "correct",
+          "attempt_bin",
+          "hint_bin",
+          "response_time_bin",
+          "opportunity_bin"
+        ],
+        "external_library": "synthcity",
+        "external_library_version": "0.2.12",
+        "external_plugin": "timegan",
+        "external_plugin_class": "TimeGANPlugin",
+        "external_sampling_api": "TimeGANPlugin.cov_model.generate",
+        "framework": "synthcity",
+        "generator_script": "synthetic_generation.generator_scripts.timegan",
+        "generator_script_path": "experiments/synthetic_generation/generator_scripts/timegan.py",
+        "generator_script_sha256": "24c2b6bebecaed5d3fc7f07c9fb631dacd8303c82f99245e609e5d2fd3415836",
+        "generator_source_bundle_sha256": "b0fc0185002561c48a4b266cb14131bb78bab01f00cb8428018bec46509fc333",
+        "generator_source_files_sha256": {
+          "experiments/synthetic_generation/generator_scripts/__init__.py": "204bd9955fd11043132a1490eac7cacfcfb7cb97a49329fa41973e02ae47919b",
+          "experiments/synthetic_generation/generator_scripts/block_bootstrap.py": "dbfceda662432d8a7982f6d4e2de69943aa1558cccf052f9b1b751c32034cd0b",
+          "experiments/synthetic_generation/generator_scripts/common.py": "8273839ab1ccacf56e3cce5b466558a32c6a2932cec37a293b7ef97486ca0f56",
+          "experiments/synthetic_generation/generator_scripts/markov_ngram.py": "bc496eeae237f045cea6fa5b6f9118cffaa462cdce6f4c80f78d0a52f73ea6e1",
+          "experiments/synthetic_generation/generator_scripts/sequence_vae_timevae.py": "1a916def82b547825ccb009f5d9f40b85e113cede5f97c9aa171680cbe3d1660",
+          "experiments/synthetic_generation/generator_scripts/timegan.py": "24c2b6bebecaed5d3fc7f07c9fb631dacd8303c82f99245e609e5d2fd3415836",
+          "experiments/synthetic_generation/run_generator.py": "2f529075f78816bd22b0d697fba33552f1b1e572070b5ebfad8a0de334b53b5b"
+        },
+        "length_model": {
+          "fitted_learner_count": 3429,
+          "fitted_log_mean": 3.244985550080458,
+          "fitted_log_std": 1.524051071589591,
+          "learner_count": 3429,
+          "length_cap": 1502,
+          "max_sampled_length": 1502,
+          "method": "mean_calibrated_truncated_lognormal",
+          "shape_override": false,
+          "synthetic_rows_from_length_model": 282118,
+          "target_rows": 282118
+        },
+        "method": "synthcity_timegan_fixed_window_adapter",
+        "model": "timegan",
+        "output": "experiments/outputs/assistments/timegan/seed_20260703/synth_generation.csv",
+        "padded_training_rows": 36182,
+        "pipeline_added_columns": [],
+        "pipeline_normalized_output": "experiments/outputs/assistments/timegan/seed_20260703/synth_generation.csv",
+        "pipeline_script_path": "experiments/pipeline.py",
+        "pipeline_script_sha256": "cdd21ac9bcb4d74996cc80b7d6df9c81d331d1c8a3f05d76b1ba65a7e7569467",
+        "seed": 20260703,
+        "standard_artifact_reuse": {
+          "artifact_sha256": "cd5e55fd7fc959e2cd79d4ea64305e9703532b7040e8432b9755d5d3505dd7b5",
+          "reused": true,
+          "source_namespace": "standard",
+          "validation": "artifact, generator source, dataset provenance, and normalization matched"
+        },
+        "static_columns_inferred_from_train": [],
+        "synthetic_learners": 3429,
+        "synthetic_output_sha256": "cd5e55fd7fc959e2cd79d4ea64305e9703532b7040e8432b9755d5d3505dd7b5",
+        "synthetic_rows": 282118,
+        "tail_targeted": {
+          "oversample": 3,
+          "synthetic_rows": 282118,
+          "tail_selection": {
+            "base_learners": 3429,
+            "base_rows": 282118,
+            "candidate_learners_by_group": {
+              "high_hint_use": 144,
+              "late_failure": 91,
+              "persistent_failure": 84,
+              "persistent_misconception": 1134,
+              "rapid_guessing": 88,
+              "rare_skill_path": 167,
+              "recovery": 114
+            },
+            "candidate_tail_groups": [
+              "high_hint_use",
+              "late_failure",
+              "persistent_failure",
+              "persistent_misconception",
+              "rapid_guessing",
+              "rare_skill_path",
+              "recovery"
+            ],
+            "eligible_tail_groups": [
+              "high_hint_use",
+              "late_failure",
+              "long_inactivity",
+              "persistent_failure",
+              "persistent_misconception",
+              "rapid_guessing",
+              "rare_skill_path",
+              "recovery"
+            ],
+            "excluded_observed_tail_groups": {
+              "long_trajectory": "shared_trajectory_length_sampler",
+              "short_trajectory": "shared_trajectory_length_sampler"
+            },
+            "excluded_target_groups": {
+              "persistent_misconception": "learner_prevalence_0.330709_exceeds_target_ceiling_0.100000"
+            },
+            "implemented_tail_groups": [
+              "high_hint_use",
+              "late_failure",
+              "persistent_failure",
+              "rapid_guessing",
+              "rare_skill_path",
+              "recovery"
+            ],
+            "maximum_percentile_tail_prevalence": 0.1,
+            "maximum_target_group_prevalence": 0.1,
+            "oversample": 3,
+            "oversampled_train_rows": 311268,
+            "quantile": 0.05,
+            "selected_learners_by_group": {
+              "high_hint_use": 144,
+              "late_failure": 91,
+              "persistent_failure": 84,
+              "rapid_guessing": 88,
+              "rare_skill_path": 167,
+              "recovery": 114
+            },
+            "selected_tail_learner_fraction": 0.1589384660250802,
+            "selected_tail_learners": 545,
+            "selected_tail_rows": 14575,
+            "selection_contract": "maximum_10_percent_per_target_group",
+            "selection_policy": "proposal_aligned_generator_attributable_tails",
+            "status": "completed",
+            "tail_learner_set_sha256": "9f4ca52eaf25ee70b0df49641ffd045889fcd08ba673e234fcf4ca5d18e64d31",
+            "unavailable_percentile_tail_groups": {}
+          },
+          "train_rows": 311268
+        },
+        "train_learners": 3429,
+        "train_rows": 282118,
+        "training_budget": {
+          "batch_size": 200,
+          "batches_per_epoch": 80,
+          "effective_epochs": 50,
+          "max_epochs": 50,
+          "projected_batch_steps": 4000,
+          "target_batch_steps": 4000,
+          "training_windows": 15915
+        },
+        "training_windows": 15915,
+        "trajectory_boundaries": "learner_isolated_fixed_windows",
+        "unused_xgboost_import_stubbed": true
+      },
+      "ignore_columns": [
+        "learner_id",
+        "order"
+      ],
+      "model": "timegan",
+      "seed": 20260703,
+      "standard_artifact_reuse_namespace": "standard",
+      "standard_artifact_reused": true,
+      "standard_synthetic": "experiments/outputs/standard/assistments/timegan/seed_20260703/synth_generation.csv",
+      "tail_targeted_generation_metadata": {
+        "adapter_configuration": {
+          "batch_size": 199,
+          "device": "cpu",
+          "discriminator_n_layers_hidden": 1,
+          "discriminator_n_units_hidden": 50,
+          "encoder_max_clusters": 20,
+          "generator_n_layers_hidden": 1,
+          "generator_n_units_hidden": 50,
+          "max_vocab": 100,
+          "mode": "RNN",
+          "n_iter": 43,
+          "n_iter_print": 10,
+          "target_steps": 4000,
+          "window": 20
+        },
+        "adapter_normalized_invariants": false,
+        "column_vocab_sizes": {
+          "attempt_bin": 5,
+          "correct": 2,
+          "hint_bin": 4,
+          "opportunity_bin": 5,
+          "response_time_bin": 6,
+          "skill_id": 101
+        },
+        "columns": [
+          "learner_id",
+          "order",
+          "skill_id",
+          "correct",
+          "attempt_bin",
+          "hint_bin",
+          "response_time_bin",
+          "opportunity_bin"
+        ],
+        "data_provenance": {
+          "generation_columns": [
+            "learner_id",
+            "order",
+            "skill_id",
+            "correct",
+            "attempt_bin",
+            "hint_bin",
+            "response_time_bin",
+            "opportunity_bin"
+          ],
+          "runtime": {
+            "config_path": "experiments/configs/assistments_preprocessing.yaml",
+            "config_sha256": "079175cbee2556c0dbedfbc81e5c4cd7c60775651ed9f69d0fc0bf204c9825c6",
+            "pandas": "2.3.3",
+            "platform": "macOS-26.5.2-arm64-arm-64bit",
+            "preprocessing_script_sha256": "9297f401f810fe7fd7d01675d4deac22545a10506506102597178db688c31735",
+            "python": "3.9.6",
+            "pyyaml": "6.0.3"
+          },
+          "test_generation_sha256": "e526befa3097065abdde78b65f7a51033e958caac705b8502eb14f74b1390360",
+          "test_rows": 64742,
+          "test_source": "experiments/data/datasets/assistments/clean_test.csv",
+          "test_source_sha256": "e63c08b711fba7401fa97c27fbacff941b965a5f1695a916c84873ddece466b7",
+          "train_generation_sha256": "cc432ce7d6876541305b63bf149d825fbfd5ee47ea6fc4a65a15c75f048b2138",
+          "train_rows": 282118,
+          "train_source": "experiments/data/datasets/assistments/clean_train.csv",
+          "train_source_sha256": "bf3a2fa391f44ecbe4c161829f253c2e7845320035933c3193af20e51b09d5be"
+        },
+        "experiment_design": "standard_vs_tail_targeted",
+        "external_library": "synthcity",
+        "external_library_version": "0.2.12",
+        "external_plugin": "timegan",
+        "external_plugin_class": "TimeGANPlugin",
+        "external_sampling_api": "TimeGANPlugin.cov_model.generate",
+        "framework": "synthcity",
+        "generation_arm": "tail_targeted",
+        "generator_script": "synthetic_generation.generator_scripts.timegan",
+        "generator_script_path": "experiments/synthetic_generation/generator_scripts/timegan.py",
+        "generator_script_sha256": "24c2b6bebecaed5d3fc7f07c9fb631dacd8303c82f99245e609e5d2fd3415836",
+        "generator_source_bundle_sha256": "b0fc0185002561c48a4b266cb14131bb78bab01f00cb8428018bec46509fc333",
+        "generator_source_files_sha256": {
+          "experiments/synthetic_generation/generator_scripts/__init__.py": "204bd9955fd11043132a1490eac7cacfcfb7cb97a49329fa41973e02ae47919b",
+          "experiments/synthetic_generation/generator_scripts/block_bootstrap.py": "dbfceda662432d8a7982f6d4e2de69943aa1558cccf052f9b1b751c32034cd0b",
+          "experiments/synthetic_generation/generator_scripts/common.py": "8273839ab1ccacf56e3cce5b466558a32c6a2932cec37a293b7ef97486ca0f56",
+          "experiments/synthetic_generation/generator_scripts/markov_ngram.py": "bc496eeae237f045cea6fa5b6f9118cffaa462cdce6f4c80f78d0a52f73ea6e1",
+          "experiments/synthetic_generation/generator_scripts/sequence_vae_timevae.py": "1a916def82b547825ccb009f5d9f40b85e113cede5f97c9aa171680cbe3d1660",
+          "experiments/synthetic_generation/generator_scripts/timegan.py": "24c2b6bebecaed5d3fc7f07c9fb631dacd8303c82f99245e609e5d2fd3415836",
+          "experiments/synthetic_generation/run_generator.py": "2f529075f78816bd22b0d697fba33552f1b1e572070b5ebfad8a0de334b53b5b"
+        },
+        "length_model": {
+          "fitted_learner_count": 4519,
+          "fitted_log_mean": 3.0685260183986713,
+          "fitted_log_std": 1.4773663954770642,
+          "learner_count": 3429,
+          "length_cap": 1368,
+          "max_sampled_length": 1368,
+          "method": "mean_calibrated_truncated_lognormal",
+          "shape_override": true,
+          "synthetic_rows_from_length_model": 282118,
+          "target_rows": 282118
+        },
+        "method": "synthcity_timegan_fixed_window_adapter",
+        "model": "timegan",
+        "orchestration_adjustments": {
+          "timegan_batch_safety": {
+            "effective_batch_size": 199,
+            "full_training_data_retained": true,
+            "reason": "avoid_external_synthcity_timegan_singleton_minibatch",
+            "requested_batch_size": 200,
+            "training_windows": 18001,
+            "window": 20
+          }
+        },
+        "output": "experiments/outputs/tail_targeted/assistments/timegan/seed_20260703/synth_generation.csv",
+        "padded_training_rows": 48752,
+        "pipeline_added_columns": [],
+        "pipeline_normalized_output": "experiments/outputs/tail_targeted/assistments/timegan/seed_20260703/synth_generation.csv",
+        "pipeline_script_path": "experiments/pipeline.py",
+        "pipeline_script_sha256": "db16104fd429b2aa35e1215c3897b3295ddc22ef7344bfc8338df1d7bfccb15a",
+        "seed": 20260703,
+        "static_columns_inferred_from_train": [],
+        "synthetic_learners": 3429,
+        "synthetic_output_sha256": "7e0fa8935fe140ee3c1b6bdd01b07bd746be7ce91baf049533d166ff3bbf973a",
+        "synthetic_rows": 282118,
+        "tail_selection": {
+          "base_learners": 3429,
+          "base_rows": 282118,
+          "candidate_learners_by_group": {
+            "high_hint_use": 144,
+            "late_failure": 91,
+            "persistent_failure": 84,
+            "persistent_misconception": 1134,
+            "rapid_guessing": 88,
+            "rare_skill_path": 167,
+            "recovery": 114
+          },
+          "candidate_tail_groups": [
+            "high_hint_use",
+            "late_failure",
+            "persistent_failure",
+            "persistent_misconception",
+            "rapid_guessing",
+            "rare_skill_path",
+            "recovery"
+          ],
+          "eligible_tail_groups": [
+            "high_hint_use",
+            "late_failure",
+            "long_inactivity",
+            "persistent_failure",
+            "persistent_misconception",
+            "rapid_guessing",
+            "rare_skill_path",
+            "recovery"
+          ],
+          "excluded_observed_tail_groups": {
+            "long_trajectory": "shared_trajectory_length_sampler",
+            "short_trajectory": "shared_trajectory_length_sampler"
+          },
+          "excluded_target_groups": {
+            "persistent_misconception": "learner_prevalence_0.330709_exceeds_target_ceiling_0.100000"
+          },
+          "implemented_tail_groups": [
+            "high_hint_use",
+            "late_failure",
+            "persistent_failure",
+            "rapid_guessing",
+            "rare_skill_path",
+            "recovery"
+          ],
+          "maximum_percentile_tail_prevalence": 0.1,
+          "maximum_target_group_prevalence": 0.1,
+          "oversample": 3,
+          "oversampled_train_rows": 311268,
+          "quantile": 0.05,
+          "selected_learners_by_group": {
+            "high_hint_use": 144,
+            "late_failure": 91,
+            "persistent_failure": 84,
+            "rapid_guessing": 88,
+            "rare_skill_path": 167,
+            "recovery": 114
+          },
+          "selected_tail_learner_fraction": 0.1589384660250802,
+          "selected_tail_learners": 545,
+          "selected_tail_rows": 14575,
+          "selection_contract": "maximum_10_percent_per_target_group",
+          "selection_policy": "proposal_aligned_generator_attributable_tails",
+          "status": "completed",
+          "tail_learner_set_sha256": "9f4ca52eaf25ee70b0df49641ffd045889fcd08ba673e234fcf4ca5d18e64d31",
+          "unavailable_percentile_tail_groups": {}
+        },
+        "train_learners": 4519,
+        "train_rows": 311268,
+        "training_budget": {
+          "batch_size": 199,
+          "batches_per_epoch": 91,
+          "effective_epochs": 43,
+          "max_epochs": 50,
+          "projected_batch_steps": 3913,
+          "target_batch_steps": 4000,
+          "training_windows": 18001
+        },
+        "training_windows": 18001,
+        "trajectory_boundaries": "learner_isolated_fixed_windows",
+        "unused_xgboost_import_stubbed": true
+      },
+      "tail_targeted_synthetic": "experiments/outputs/tail_targeted/assistments/timegan/seed_20260703/synth_generation.csv",
+      "test": "experiments/data/datasets/assistments/test.csv",
+      "train": "experiments/data/datasets/assistments/train.csv"
+    },
+    {
+      "data_provenance": {
+        "generation_columns": [
+          "learner_id",
+          "order",
+          "skill_id",
+          "correct",
+          "attempt_bin",
+          "hint_bin",
+          "response_time_bin",
+          "opportunity_bin"
+        ],
+        "runtime": {
+          "config_path": "experiments/configs/assistments_preprocessing.yaml",
+          "config_sha256": "079175cbee2556c0dbedfbc81e5c4cd7c60775651ed9f69d0fc0bf204c9825c6",
+          "pandas": "2.3.3",
+          "platform": "macOS-26.5.2-arm64-arm-64bit",
+          "preprocessing_script_sha256": "9297f401f810fe7fd7d01675d4deac22545a10506506102597178db688c31735",
+          "python": "3.9.6",
+          "pyyaml": "6.0.3"
+        },
+        "test_generation_sha256": "e526befa3097065abdde78b65f7a51033e958caac705b8502eb14f74b1390360",
+        "test_rows": 64742,
+        "test_source": "experiments/data/datasets/assistments/clean_test.csv",
+        "test_source_sha256": "e63c08b711fba7401fa97c27fbacff941b965a5f1695a916c84873ddece466b7",
+        "train_generation_sha256": "cc432ce7d6876541305b63bf149d825fbfd5ee47ea6fc4a65a15c75f048b2138",
+        "train_rows": 282118,
+        "train_source": "experiments/data/datasets/assistments/clean_train.csv",
+        "train_source_sha256": "bf3a2fa391f44ecbe4c161829f253c2e7845320035933c3193af20e51b09d5be"
+      },
+      "dataset": "assistments_2009_2010_skill_builder",
+      "evaluation_report": "experiments/runs/standard_vs_tail_targeted/evaluation/assistments_2009_2010_skill_builder/timegan/seed_20260704/generation_evaluation_report.json",
+      "experiment_design": "standard_vs_tail_targeted",
+      "generation_metadata": {
+        "adapter_configuration": {
+          "batch_size": 200,
+          "device": "cpu",
+          "discriminator_n_layers_hidden": 1,
+          "discriminator_n_units_hidden": 50,
+          "encoder_max_clusters": 20,
+          "generator_n_layers_hidden": 1,
+          "generator_n_units_hidden": 50,
+          "max_vocab": 100,
+          "mode": "RNN",
+          "n_iter": 50,
+          "n_iter_print": 10,
+          "target_steps": 4000,
+          "window": 20
+        },
+        "adapter_normalized_invariants": false,
+        "column_vocab_sizes": {
+          "attempt_bin": 5,
+          "correct": 2,
+          "hint_bin": 4,
+          "opportunity_bin": 5,
+          "response_time_bin": 6,
+          "skill_id": 101
+        },
+        "columns": [
+          "learner_id",
+          "order",
+          "skill_id",
+          "correct",
+          "attempt_bin",
+          "hint_bin",
+          "response_time_bin",
+          "opportunity_bin"
+        ],
+        "external_library": "synthcity",
+        "external_library_version": "0.2.12",
+        "external_plugin": "timegan",
+        "external_plugin_class": "TimeGANPlugin",
+        "external_sampling_api": "TimeGANPlugin.cov_model.generate",
+        "framework": "synthcity",
+        "generator_script": "synthetic_generation.generator_scripts.timegan",
+        "generator_script_path": "experiments/synthetic_generation/generator_scripts/timegan.py",
+        "generator_script_sha256": "24c2b6bebecaed5d3fc7f07c9fb631dacd8303c82f99245e609e5d2fd3415836",
+        "generator_source_bundle_sha256": "b0fc0185002561c48a4b266cb14131bb78bab01f00cb8428018bec46509fc333",
+        "generator_source_files_sha256": {
+          "experiments/synthetic_generation/generator_scripts/__init__.py": "204bd9955fd11043132a1490eac7cacfcfb7cb97a49329fa41973e02ae47919b",
+          "experiments/synthetic_generation/generator_scripts/block_bootstrap.py": "dbfceda662432d8a7982f6d4e2de69943aa1558cccf052f9b1b751c32034cd0b",
+          "experiments/synthetic_generation/generator_scripts/common.py": "8273839ab1ccacf56e3cce5b466558a32c6a2932cec37a293b7ef97486ca0f56",
+          "experiments/synthetic_generation/generator_scripts/markov_ngram.py": "bc496eeae237f045cea6fa5b6f9118cffaa462cdce6f4c80f78d0a52f73ea6e1",
+          "experiments/synthetic_generation/generator_scripts/sequence_vae_timevae.py": "1a916def82b547825ccb009f5d9f40b85e113cede5f97c9aa171680cbe3d1660",
+          "experiments/synthetic_generation/generator_scripts/timegan.py": "24c2b6bebecaed5d3fc7f07c9fb631dacd8303c82f99245e609e5d2fd3415836",
+          "experiments/synthetic_generation/run_generator.py": "2f529075f78816bd22b0d697fba33552f1b1e572070b5ebfad8a0de334b53b5b"
+        },
+        "length_model": {
+          "fitted_learner_count": 3429,
+          "fitted_log_mean": 3.244985550080458,
+          "fitted_log_std": 1.524051071589591,
+          "learner_count": 3429,
+          "length_cap": 1502,
+          "max_sampled_length": 1502,
+          "method": "mean_calibrated_truncated_lognormal",
+          "shape_override": false,
+          "synthetic_rows_from_length_model": 282118,
+          "target_rows": 282118
+        },
+        "method": "synthcity_timegan_fixed_window_adapter",
+        "model": "timegan",
+        "output": "experiments/outputs/assistments/timegan/seed_20260704/synth_generation.csv",
+        "padded_training_rows": 36182,
+        "pipeline_added_columns": [],
+        "pipeline_normalized_output": "experiments/outputs/assistments/timegan/seed_20260704/synth_generation.csv",
+        "pipeline_script_path": "experiments/pipeline.py",
+        "pipeline_script_sha256": "cdd21ac9bcb4d74996cc80b7d6df9c81d331d1c8a3f05d76b1ba65a7e7569467",
+        "seed": 20260704,
+        "standard_artifact_reuse": {
+          "artifact_sha256": "190abfb7799db3d00db78dc38fc9c90da8b7c72b84667d4dd09ac322c90cda25",
+          "reused": true,
+          "source_namespace": "standard",
+          "validation": "artifact, generator source, dataset provenance, and normalization matched"
+        },
+        "static_columns_inferred_from_train": [],
+        "synthetic_learners": 3429,
+        "synthetic_output_sha256": "190abfb7799db3d00db78dc38fc9c90da8b7c72b84667d4dd09ac322c90cda25",
+        "synthetic_rows": 282118,
+        "tail_targeted": {
+          "oversample": 3,
+          "synthetic_rows": 282118,
+          "tail_selection": {
+            "base_learners": 3429,
+            "base_rows": 282118,
+            "candidate_learners_by_group": {
+              "high_hint_use": 144,
+              "late_failure": 91,
+              "persistent_failure": 84,
+              "persistent_misconception": 1134,
+              "rapid_guessing": 88,
+              "rare_skill_path": 167,
+              "recovery": 114
+            },
+            "candidate_tail_groups": [
+              "high_hint_use",
+              "late_failure",
+              "persistent_failure",
+              "persistent_misconception",
+              "rapid_guessing",
+              "rare_skill_path",
+              "recovery"
+            ],
+            "eligible_tail_groups": [
+              "high_hint_use",
+              "late_failure",
+              "long_inactivity",
+              "persistent_failure",
+              "persistent_misconception",
+              "rapid_guessing",
+              "rare_skill_path",
+              "recovery"
+            ],
+            "excluded_observed_tail_groups": {
+              "long_trajectory": "shared_trajectory_length_sampler",
+              "short_trajectory": "shared_trajectory_length_sampler"
+            },
+            "excluded_target_groups": {
+              "persistent_misconception": "learner_prevalence_0.330709_exceeds_target_ceiling_0.100000"
+            },
+            "implemented_tail_groups": [
+              "high_hint_use",
+              "late_failure",
+              "persistent_failure",
+              "rapid_guessing",
+              "rare_skill_path",
+              "recovery"
+            ],
+            "maximum_percentile_tail_prevalence": 0.1,
+            "maximum_target_group_prevalence": 0.1,
+            "oversample": 3,
+            "oversampled_train_rows": 311268,
+            "quantile": 0.05,
+            "selected_learners_by_group": {
+              "high_hint_use": 144,
+              "late_failure": 91,
+              "persistent_failure": 84,
+              "rapid_guessing": 88,
+              "rare_skill_path": 167,
+              "recovery": 114
+            },
+            "selected_tail_learner_fraction": 0.1589384660250802,
+            "selected_tail_learners": 545,
+            "selected_tail_rows": 14575,
+            "selection_contract": "maximum_10_percent_per_target_group",
+            "selection_policy": "proposal_aligned_generator_attributable_tails",
+            "status": "completed",
+            "tail_learner_set_sha256": "9f4ca52eaf25ee70b0df49641ffd045889fcd08ba673e234fcf4ca5d18e64d31",
+            "unavailable_percentile_tail_groups": {}
+          },
+          "train_rows": 311268
+        },
+        "train_learners": 3429,
+        "train_rows": 282118,
+        "training_budget": {
+          "batch_size": 200,
+          "batches_per_epoch": 80,
+          "effective_epochs": 50,
+          "max_epochs": 50,
+          "projected_batch_steps": 4000,
+          "target_batch_steps": 4000,
+          "training_windows": 15915
+        },
+        "training_windows": 15915,
+        "trajectory_boundaries": "learner_isolated_fixed_windows",
+        "unused_xgboost_import_stubbed": true
+      },
+      "ignore_columns": [
+        "learner_id",
+        "order"
+      ],
+      "model": "timegan",
+      "seed": 20260704,
+      "standard_artifact_reuse_namespace": "standard",
+      "standard_artifact_reused": true,
+      "standard_synthetic": "experiments/outputs/standard/assistments/timegan/seed_20260704/synth_generation.csv",
+      "tail_targeted_generation_metadata": {
+        "adapter_configuration": {
+          "batch_size": 199,
+          "device": "cpu",
+          "discriminator_n_layers_hidden": 1,
+          "discriminator_n_units_hidden": 50,
+          "encoder_max_clusters": 20,
+          "generator_n_layers_hidden": 1,
+          "generator_n_units_hidden": 50,
+          "max_vocab": 100,
+          "mode": "RNN",
+          "n_iter": 43,
+          "n_iter_print": 10,
+          "target_steps": 4000,
+          "window": 20
+        },
+        "adapter_normalized_invariants": false,
+        "column_vocab_sizes": {
+          "attempt_bin": 5,
+          "correct": 2,
+          "hint_bin": 4,
+          "opportunity_bin": 5,
+          "response_time_bin": 6,
+          "skill_id": 101
+        },
+        "columns": [
+          "learner_id",
+          "order",
+          "skill_id",
+          "correct",
+          "attempt_bin",
+          "hint_bin",
+          "response_time_bin",
+          "opportunity_bin"
+        ],
+        "data_provenance": {
+          "generation_columns": [
+            "learner_id",
+            "order",
+            "skill_id",
+            "correct",
+            "attempt_bin",
+            "hint_bin",
+            "response_time_bin",
+            "opportunity_bin"
+          ],
+          "runtime": {
+            "config_path": "experiments/configs/assistments_preprocessing.yaml",
+            "config_sha256": "079175cbee2556c0dbedfbc81e5c4cd7c60775651ed9f69d0fc0bf204c9825c6",
+            "pandas": "2.3.3",
+            "platform": "macOS-26.5.2-arm64-arm-64bit",
+            "preprocessing_script_sha256": "9297f401f810fe7fd7d01675d4deac22545a10506506102597178db688c31735",
+            "python": "3.9.6",
+            "pyyaml": "6.0.3"
+          },
+          "test_generation_sha256": "e526befa3097065abdde78b65f7a51033e958caac705b8502eb14f74b1390360",
+          "test_rows": 64742,
+          "test_source": "experiments/data/datasets/assistments/clean_test.csv",
+          "test_source_sha256": "e63c08b711fba7401fa97c27fbacff941b965a5f1695a916c84873ddece466b7",
+          "train_generation_sha256": "cc432ce7d6876541305b63bf149d825fbfd5ee47ea6fc4a65a15c75f048b2138",
+          "train_rows": 282118,
+          "train_source": "experiments/data/datasets/assistments/clean_train.csv",
+          "train_source_sha256": "bf3a2fa391f44ecbe4c161829f253c2e7845320035933c3193af20e51b09d5be"
+        },
+        "experiment_design": "standard_vs_tail_targeted",
+        "external_library": "synthcity",
+        "external_library_version": "0.2.12",
+        "external_plugin": "timegan",
+        "external_plugin_class": "TimeGANPlugin",
+        "external_sampling_api": "TimeGANPlugin.cov_model.generate",
+        "framework": "synthcity",
+        "generation_arm": "tail_targeted",
+        "generator_script": "synthetic_generation.generator_scripts.timegan",
+        "generator_script_path": "experiments/synthetic_generation/generator_scripts/timegan.py",
+        "generator_script_sha256": "24c2b6bebecaed5d3fc7f07c9fb631dacd8303c82f99245e609e5d2fd3415836",
+        "generator_source_bundle_sha256": "b0fc0185002561c48a4b266cb14131bb78bab01f00cb8428018bec46509fc333",
+        "generator_source_files_sha256": {
+          "experiments/synthetic_generation/generator_scripts/__init__.py": "204bd9955fd11043132a1490eac7cacfcfb7cb97a49329fa41973e02ae47919b",
+          "experiments/synthetic_generation/generator_scripts/block_bootstrap.py": "dbfceda662432d8a7982f6d4e2de69943aa1558cccf052f9b1b751c32034cd0b",
+          "experiments/synthetic_generation/generator_scripts/common.py": "8273839ab1ccacf56e3cce5b466558a32c6a2932cec37a293b7ef97486ca0f56",
+          "experiments/synthetic_generation/generator_scripts/markov_ngram.py": "bc496eeae237f045cea6fa5b6f9118cffaa462cdce6f4c80f78d0a52f73ea6e1",
+          "experiments/synthetic_generation/generator_scripts/sequence_vae_timevae.py": "1a916def82b547825ccb009f5d9f40b85e113cede5f97c9aa171680cbe3d1660",
+          "experiments/synthetic_generation/generator_scripts/timegan.py": "24c2b6bebecaed5d3fc7f07c9fb631dacd8303c82f99245e609e5d2fd3415836",
+          "experiments/synthetic_generation/run_generator.py": "2f529075f78816bd22b0d697fba33552f1b1e572070b5ebfad8a0de334b53b5b"
+        },
+        "length_model": {
+          "fitted_learner_count": 4519,
+          "fitted_log_mean": 3.0685260183986713,
+          "fitted_log_std": 1.4773663954770642,
+          "learner_count": 3429,
+          "length_cap": 1368,
+          "max_sampled_length": 1368,
+          "method": "mean_calibrated_truncated_lognormal",
+          "shape_override": true,
+          "synthetic_rows_from_length_model": 282118,
+          "target_rows": 282118
+        },
+        "method": "synthcity_timegan_fixed_window_adapter",
+        "model": "timegan",
+        "orchestration_adjustments": {
+          "timegan_batch_safety": {
+            "effective_batch_size": 199,
+            "full_training_data_retained": true,
+            "reason": "avoid_external_synthcity_timegan_singleton_minibatch",
+            "requested_batch_size": 200,
+            "training_windows": 18001,
+            "window": 20
+          }
+        },
+        "output": "experiments/outputs/tail_targeted/assistments/timegan/seed_20260704/synth_generation.csv",
+        "padded_training_rows": 48752,
+        "pipeline_added_columns": [],
+        "pipeline_normalized_output": "experiments/outputs/tail_targeted/assistments/timegan/seed_20260704/synth_generation.csv",
+        "pipeline_script_path": "experiments/pipeline.py",
+        "pipeline_script_sha256": "db16104fd429b2aa35e1215c3897b3295ddc22ef7344bfc8338df1d7bfccb15a",
+        "seed": 20260704,
+        "static_columns_inferred_from_train": [],
+        "synthetic_learners": 3429,
+        "synthetic_output_sha256": "b5e52d7aaa77c3269dcc5b8e6a03a157edbacf4b59f87d3472b990e76f22cf71",
+        "synthetic_rows": 282118,
+        "tail_selection": {
+          "base_learners": 3429,
+          "base_rows": 282118,
+          "candidate_learners_by_group": {
+            "high_hint_use": 144,
+            "late_failure": 91,
+            "persistent_failure": 84,
+            "persistent_misconception": 1134,
+            "rapid_guessing": 88,
+            "rare_skill_path": 167,
+            "recovery": 114
+          },
+          "candidate_tail_groups": [
+            "high_hint_use",
+            "late_failure",
+            "persistent_failure",
+            "persistent_misconception",
+            "rapid_guessing",
+            "rare_skill_path",
+            "recovery"
+          ],
+          "eligible_tail_groups": [
+            "high_hint_use",
+            "late_failure",
+            "long_inactivity",
+            "persistent_failure",
+            "persistent_misconception",
+            "rapid_guessing",
+            "rare_skill_path",
+            "recovery"
+          ],
+          "excluded_observed_tail_groups": {
+            "long_trajectory": "shared_trajectory_length_sampler",
+            "short_trajectory": "shared_trajectory_length_sampler"
+          },
+          "excluded_target_groups": {
+            "persistent_misconception": "learner_prevalence_0.330709_exceeds_target_ceiling_0.100000"
+          },
+          "implemented_tail_groups": [
+            "high_hint_use",
+            "late_failure",
+            "persistent_failure",
+            "rapid_guessing",
+            "rare_skill_path",
+            "recovery"
+          ],
+          "maximum_percentile_tail_prevalence": 0.1,
+          "maximum_target_group_prevalence": 0.1,
+          "oversample": 3,
+          "oversampled_train_rows": 311268,
+          "quantile": 0.05,
+          "selected_learners_by_group": {
+            "high_hint_use": 144,
+            "late_failure": 91,
+            "persistent_failure": 84,
+            "rapid_guessing": 88,
+            "rare_skill_path": 167,
+            "recovery": 114
+          },
+          "selected_tail_learner_fraction": 0.1589384660250802,
+          "selected_tail_learners": 545,
+          "selected_tail_rows": 14575,
+          "selection_contract": "maximum_10_percent_per_target_group",
+          "selection_policy": "proposal_aligned_generator_attributable_tails",
+          "status": "completed",
+          "tail_learner_set_sha256": "9f4ca52eaf25ee70b0df49641ffd045889fcd08ba673e234fcf4ca5d18e64d31",
+          "unavailable_percentile_tail_groups": {}
+        },
+        "train_learners": 4519,
+        "train_rows": 311268,
+        "training_budget": {
+          "batch_size": 199,
+          "batches_per_epoch": 91,
+          "effective_epochs": 43,
+          "max_epochs": 50,
+          "projected_batch_steps": 3913,
+          "target_batch_steps": 4000,
+          "training_windows": 18001
+        },
+        "training_windows": 18001,
+        "trajectory_boundaries": "learner_isolated_fixed_windows",
+        "unused_xgboost_import_stubbed": true
+      },
+      "tail_targeted_synthetic": "experiments/outputs/tail_targeted/assistments/timegan/seed_20260704/synth_generation.csv",
+      "test": "experiments/data/datasets/assistments/test.csv",
+      "train": "experiments/data/datasets/assistments/train.csv"
+    },
+    {
+      "data_provenance": {
+        "generation_columns": [
+          "learner_id",
+          "order",
+          "skill_id",
+          "correct",
+          "attempt_bin",
+          "hint_bin",
+          "response_time_bin",
+          "opportunity_bin"
+        ],
+        "runtime": {
+          "config_path": "experiments/configs/assistments_preprocessing.yaml",
+          "config_sha256": "079175cbee2556c0dbedfbc81e5c4cd7c60775651ed9f69d0fc0bf204c9825c6",
+          "pandas": "2.3.3",
+          "platform": "macOS-26.5.2-arm64-arm-64bit",
+          "preprocessing_script_sha256": "9297f401f810fe7fd7d01675d4deac22545a10506506102597178db688c31735",
+          "python": "3.9.6",
+          "pyyaml": "6.0.3"
+        },
+        "test_generation_sha256": "e526befa3097065abdde78b65f7a51033e958caac705b8502eb14f74b1390360",
+        "test_rows": 64742,
+        "test_source": "experiments/data/datasets/assistments/clean_test.csv",
+        "test_source_sha256": "e63c08b711fba7401fa97c27fbacff941b965a5f1695a916c84873ddece466b7",
+        "train_generation_sha256": "cc432ce7d6876541305b63bf149d825fbfd5ee47ea6fc4a65a15c75f048b2138",
+        "train_rows": 282118,
+        "train_source": "experiments/data/datasets/assistments/clean_train.csv",
+        "train_source_sha256": "bf3a2fa391f44ecbe4c161829f253c2e7845320035933c3193af20e51b09d5be"
+      },
+      "dataset": "assistments_2009_2010_skill_builder",
+      "evaluation_report": "experiments/runs/standard_vs_tail_targeted/evaluation/assistments_2009_2010_skill_builder/timegan/seed_20260705/generation_evaluation_report.json",
+      "experiment_design": "standard_vs_tail_targeted",
+      "generation_metadata": {
+        "adapter_configuration": {
+          "batch_size": 200,
+          "device": "cpu",
+          "discriminator_n_layers_hidden": 1,
+          "discriminator_n_units_hidden": 50,
+          "encoder_max_clusters": 20,
+          "generator_n_layers_hidden": 1,
+          "generator_n_units_hidden": 50,
+          "max_vocab": 100,
+          "mode": "RNN",
+          "n_iter": 50,
+          "n_iter_print": 10,
+          "target_steps": 4000,
+          "window": 20
+        },
+        "adapter_normalized_invariants": false,
+        "column_vocab_sizes": {
+          "attempt_bin": 5,
+          "correct": 2,
+          "hint_bin": 4,
+          "opportunity_bin": 5,
+          "response_time_bin": 6,
+          "skill_id": 101
+        },
+        "columns": [
+          "learner_id",
+          "order",
+          "skill_id",
+          "correct",
+          "attempt_bin",
+          "hint_bin",
+          "response_time_bin",
+          "opportunity_bin"
+        ],
+        "external_library": "synthcity",
+        "external_library_version": "0.2.12",
+        "external_plugin": "timegan",
+        "external_plugin_class": "TimeGANPlugin",
+        "external_sampling_api": "TimeGANPlugin.cov_model.generate",
+        "framework": "synthcity",
+        "generator_script": "synthetic_generation.generator_scripts.timegan",
+        "generator_script_path": "experiments/synthetic_generation/generator_scripts/timegan.py",
+        "generator_script_sha256": "24c2b6bebecaed5d3fc7f07c9fb631dacd8303c82f99245e609e5d2fd3415836",
+        "generator_source_bundle_sha256": "b0fc0185002561c48a4b266cb14131bb78bab01f00cb8428018bec46509fc333",
+        "generator_source_files_sha256": {
+          "experiments/synthetic_generation/generator_scripts/__init__.py": "204bd9955fd11043132a1490eac7cacfcfb7cb97a49329fa41973e02ae47919b",
+          "experiments/synthetic_generation/generator_scripts/block_bootstrap.py": "dbfceda662432d8a7982f6d4e2de69943aa1558cccf052f9b1b751c32034cd0b",
+          "experiments/synthetic_generation/generator_scripts/common.py": "8273839ab1ccacf56e3cce5b466558a32c6a2932cec37a293b7ef97486ca0f56",
+          "experiments/synthetic_generation/generator_scripts/markov_ngram.py": "bc496eeae237f045cea6fa5b6f9118cffaa462cdce6f4c80f78d0a52f73ea6e1",
+          "experiments/synthetic_generation/generator_scripts/sequence_vae_timevae.py": "1a916def82b547825ccb009f5d9f40b85e113cede5f97c9aa171680cbe3d1660",
+          "experiments/synthetic_generation/generator_scripts/timegan.py": "24c2b6bebecaed5d3fc7f07c9fb631dacd8303c82f99245e609e5d2fd3415836",
+          "experiments/synthetic_generation/run_generator.py": "2f529075f78816bd22b0d697fba33552f1b1e572070b5ebfad8a0de334b53b5b"
+        },
+        "length_model": {
+          "fitted_learner_count": 3429,
+          "fitted_log_mean": 3.244985550080458,
+          "fitted_log_std": 1.524051071589591,
+          "learner_count": 3429,
+          "length_cap": 1502,
+          "max_sampled_length": 1502,
+          "method": "mean_calibrated_truncated_lognormal",
+          "shape_override": false,
+          "synthetic_rows_from_length_model": 282118,
+          "target_rows": 282118
+        },
+        "method": "synthcity_timegan_fixed_window_adapter",
+        "model": "timegan",
+        "output": "experiments/outputs/assistments/timegan/seed_20260705/synth_generation.csv",
+        "padded_training_rows": 36182,
+        "pipeline_added_columns": [],
+        "pipeline_normalized_output": "experiments/outputs/assistments/timegan/seed_20260705/synth_generation.csv",
+        "pipeline_script_path": "experiments/pipeline.py",
+        "pipeline_script_sha256": "cdd21ac9bcb4d74996cc80b7d6df9c81d331d1c8a3f05d76b1ba65a7e7569467",
+        "seed": 20260705,
+        "standard_artifact_reuse": {
+          "artifact_sha256": "9c35e45c9fd937305dd212c8abc503878afa19f135f569273964e8928f524677",
+          "reused": true,
+          "source_namespace": "standard",
+          "validation": "artifact, generator source, dataset provenance, and normalization matched"
+        },
+        "static_columns_inferred_from_train": [],
+        "synthetic_learners": 3429,
+        "synthetic_output_sha256": "9c35e45c9fd937305dd212c8abc503878afa19f135f569273964e8928f524677",
+        "synthetic_rows": 282118,
+        "tail_targeted": {
+          "oversample": 3,
+          "synthetic_rows": 282118,
+          "tail_selection": {
+            "base_learners": 3429,
+            "base_rows": 282118,
+            "candidate_learners_by_group": {
+              "high_hint_use": 144,
+              "late_failure": 91,
+              "persistent_failure": 84,
+              "persistent_misconception": 1134,
+              "rapid_guessing": 88,
+              "rare_skill_path": 167,
+              "recovery": 114
+            },
+            "candidate_tail_groups": [
+              "high_hint_use",
+              "late_failure",
+              "persistent_failure",
+              "persistent_misconception",
+              "rapid_guessing",
+              "rare_skill_path",
+              "recovery"
+            ],
+            "eligible_tail_groups": [
+              "high_hint_use",
+              "late_failure",
+              "long_inactivity",
+              "persistent_failure",
+              "persistent_misconception",
+              "rapid_guessing",
+              "rare_skill_path",
+              "recovery"
+            ],
+            "excluded_observed_tail_groups": {
+              "long_trajectory": "shared_trajectory_length_sampler",
+              "short_trajectory": "shared_trajectory_length_sampler"
+            },
+            "excluded_target_groups": {
+              "persistent_misconception": "learner_prevalence_0.330709_exceeds_target_ceiling_0.100000"
+            },
+            "implemented_tail_groups": [
+              "high_hint_use",
+              "late_failure",
+              "persistent_failure",
+              "rapid_guessing",
+              "rare_skill_path",
+              "recovery"
+            ],
+            "maximum_percentile_tail_prevalence": 0.1,
+            "maximum_target_group_prevalence": 0.1,
+            "oversample": 3,
+            "oversampled_train_rows": 311268,
+            "quantile": 0.05,
+            "selected_learners_by_group": {
+              "high_hint_use": 144,
+              "late_failure": 91,
+              "persistent_failure": 84,
+              "rapid_guessing": 88,
+              "rare_skill_path": 167,
+              "recovery": 114
+            },
+            "selected_tail_learner_fraction": 0.1589384660250802,
+            "selected_tail_learners": 545,
+            "selected_tail_rows": 14575,
+            "selection_contract": "maximum_10_percent_per_target_group",
+            "selection_policy": "proposal_aligned_generator_attributable_tails",
+            "status": "completed",
+            "tail_learner_set_sha256": "9f4ca52eaf25ee70b0df49641ffd045889fcd08ba673e234fcf4ca5d18e64d31",
+            "unavailable_percentile_tail_groups": {}
+          },
+          "train_rows": 311268
+        },
+        "train_learners": 3429,
+        "train_rows": 282118,
+        "training_budget": {
+          "batch_size": 200,
+          "batches_per_epoch": 80,
+          "effective_epochs": 50,
+          "max_epochs": 50,
+          "projected_batch_steps": 4000,
+          "target_batch_steps": 4000,
+          "training_windows": 15915
+        },
+        "training_windows": 15915,
+        "trajectory_boundaries": "learner_isolated_fixed_windows",
+        "unused_xgboost_import_stubbed": true
+      },
+      "ignore_columns": [
+        "learner_id",
+        "order"
+      ],
+      "model": "timegan",
+      "seed": 20260705,
+      "standard_artifact_reuse_namespace": "standard",
+      "standard_artifact_reused": true,
+      "standard_synthetic": "experiments/outputs/standard/assistments/timegan/seed_20260705/synth_generation.csv",
+      "tail_targeted_generation_metadata": {
+        "adapter_configuration": {
+          "batch_size": 199,
+          "device": "cpu",
+          "discriminator_n_layers_hidden": 1,
+          "discriminator_n_units_hidden": 50,
+          "encoder_max_clusters": 20,
+          "generator_n_layers_hidden": 1,
+          "generator_n_units_hidden": 50,
+          "max_vocab": 100,
+          "mode": "RNN",
+          "n_iter": 43,
+          "n_iter_print": 10,
+          "target_steps": 4000,
+          "window": 20
+        },
+        "adapter_normalized_invariants": false,
+        "column_vocab_sizes": {
+          "attempt_bin": 5,
+          "correct": 2,
+          "hint_bin": 4,
+          "opportunity_bin": 5,
+          "response_time_bin": 6,
+          "skill_id": 101
+        },
+        "columns": [
+          "learner_id",
+          "order",
+          "skill_id",
+          "correct",
+          "attempt_bin",
+          "hint_bin",
+          "response_time_bin",
+          "opportunity_bin"
+        ],
+        "data_provenance": {
+          "generation_columns": [
+            "learner_id",
+            "order",
+            "skill_id",
+            "correct",
+            "attempt_bin",
+            "hint_bin",
+            "response_time_bin",
+            "opportunity_bin"
+          ],
+          "runtime": {
+            "config_path": "experiments/configs/assistments_preprocessing.yaml",
+            "config_sha256": "079175cbee2556c0dbedfbc81e5c4cd7c60775651ed9f69d0fc0bf204c9825c6",
+            "pandas": "2.3.3",
+            "platform": "macOS-26.5.2-arm64-arm-64bit",
+            "preprocessing_script_sha256": "9297f401f810fe7fd7d01675d4deac22545a10506506102597178db688c31735",
+            "python": "3.9.6",
+            "pyyaml": "6.0.3"
+          },
+          "test_generation_sha256": "e526befa3097065abdde78b65f7a51033e958caac705b8502eb14f74b1390360",
+          "test_rows": 64742,
+          "test_source": "experiments/data/datasets/assistments/clean_test.csv",
+          "test_source_sha256": "e63c08b711fba7401fa97c27fbacff941b965a5f1695a916c84873ddece466b7",
+          "train_generation_sha256": "cc432ce7d6876541305b63bf149d825fbfd5ee47ea6fc4a65a15c75f048b2138",
+          "train_rows": 282118,
+          "train_source": "experiments/data/datasets/assistments/clean_train.csv",
+          "train_source_sha256": "bf3a2fa391f44ecbe4c161829f253c2e7845320035933c3193af20e51b09d5be"
+        },
+        "experiment_design": "standard_vs_tail_targeted",
+        "external_library": "synthcity",
+        "external_library_version": "0.2.12",
+        "external_plugin": "timegan",
+        "external_plugin_class": "TimeGANPlugin",
+        "external_sampling_api": "TimeGANPlugin.cov_model.generate",
+        "framework": "synthcity",
+        "generation_arm": "tail_targeted",
+        "generator_script": "synthetic_generation.generator_scripts.timegan",
+        "generator_script_path": "experiments/synthetic_generation/generator_scripts/timegan.py",
+        "generator_script_sha256": "24c2b6bebecaed5d3fc7f07c9fb631dacd8303c82f99245e609e5d2fd3415836",
+        "generator_source_bundle_sha256": "b0fc0185002561c48a4b266cb14131bb78bab01f00cb8428018bec46509fc333",
+        "generator_source_files_sha256": {
+          "experiments/synthetic_generation/generator_scripts/__init__.py": "204bd9955fd11043132a1490eac7cacfcfb7cb97a49329fa41973e02ae47919b",
+          "experiments/synthetic_generation/generator_scripts/block_bootstrap.py": "dbfceda662432d8a7982f6d4e2de69943aa1558cccf052f9b1b751c32034cd0b",
+          "experiments/synthetic_generation/generator_scripts/common.py": "8273839ab1ccacf56e3cce5b466558a32c6a2932cec37a293b7ef97486ca0f56",
+          "experiments/synthetic_generation/generator_scripts/markov_ngram.py": "bc496eeae237f045cea6fa5b6f9118cffaa462cdce6f4c80f78d0a52f73ea6e1",
+          "experiments/synthetic_generation/generator_scripts/sequence_vae_timevae.py": "1a916def82b547825ccb009f5d9f40b85e113cede5f97c9aa171680cbe3d1660",
+          "experiments/synthetic_generation/generator_scripts/timegan.py": "24c2b6bebecaed5d3fc7f07c9fb631dacd8303c82f99245e609e5d2fd3415836",
+          "experiments/synthetic_generation/run_generator.py": "2f529075f78816bd22b0d697fba33552f1b1e572070b5ebfad8a0de334b53b5b"
+        },
+        "length_model": {
+          "fitted_learner_count": 4519,
+          "fitted_log_mean": 3.0685260183986713,
+          "fitted_log_std": 1.4773663954770642,
+          "learner_count": 3429,
+          "length_cap": 1368,
+          "max_sampled_length": 1368,
+          "method": "mean_calibrated_truncated_lognormal",
+          "shape_override": true,
+          "synthetic_rows_from_length_model": 282118,
+          "target_rows": 282118
+        },
+        "method": "synthcity_timegan_fixed_window_adapter",
+        "model": "timegan",
+        "orchestration_adjustments": {
+          "timegan_batch_safety": {
+            "effective_batch_size": 199,
+            "full_training_data_retained": true,
+            "reason": "avoid_external_synthcity_timegan_singleton_minibatch",
+            "requested_batch_size": 200,
+            "training_windows": 18001,
+            "window": 20
+          }
+        },
+        "output": "experiments/outputs/tail_targeted/assistments/timegan/seed_20260705/synth_generation.csv",
+        "padded_training_rows": 48752,
+        "pipeline_added_columns": [],
+        "pipeline_normalized_output": "experiments/outputs/tail_targeted/assistments/timegan/seed_20260705/synth_generation.csv",
+        "pipeline_script_path": "experiments/pipeline.py",
+        "pipeline_script_sha256": "db16104fd429b2aa35e1215c3897b3295ddc22ef7344bfc8338df1d7bfccb15a",
+        "seed": 20260705,
+        "static_columns_inferred_from_train": [],
+        "synthetic_learners": 3429,
+        "synthetic_output_sha256": "c852c8a68df172fc17c3c480b2b546d93e2b649df74fe62d527aa9666482710b",
+        "synthetic_rows": 282118,
+        "tail_selection": {
+          "base_learners": 3429,
+          "base_rows": 282118,
+          "candidate_learners_by_group": {
+            "high_hint_use": 144,
+            "late_failure": 91,
+            "persistent_failure": 84,
+            "persistent_misconception": 1134,
+            "rapid_guessing": 88,
+            "rare_skill_path": 167,
+            "recovery": 114
+          },
+          "candidate_tail_groups": [
+            "high_hint_use",
+            "late_failure",
+            "persistent_failure",
+            "persistent_misconception",
+            "rapid_guessing",
+            "rare_skill_path",
+            "recovery"
+          ],
+          "eligible_tail_groups": [
+            "high_hint_use",
+            "late_failure",
+            "long_inactivity",
+            "persistent_failure",
+            "persistent_misconception",
+            "rapid_guessing",
+            "rare_skill_path",
+            "recovery"
+          ],
+          "excluded_observed_tail_groups": {
+            "long_trajectory": "shared_trajectory_length_sampler",
+            "short_trajectory": "shared_trajectory_length_sampler"
+          },
+          "excluded_target_groups": {
+            "persistent_misconception": "learner_prevalence_0.330709_exceeds_target_ceiling_0.100000"
+          },
+          "implemented_tail_groups": [
+            "high_hint_use",
+            "late_failure",
+            "persistent_failure",
+            "rapid_guessing",
+            "rare_skill_path",
+            "recovery"
+          ],
+          "maximum_percentile_tail_prevalence": 0.1,
+          "maximum_target_group_prevalence": 0.1,
+          "oversample": 3,
+          "oversampled_train_rows": 311268,
+          "quantile": 0.05,
+          "selected_learners_by_group": {
+            "high_hint_use": 144,
+            "late_failure": 91,
+            "persistent_failure": 84,
+            "rapid_guessing": 88,
+            "rare_skill_path": 167,
+            "recovery": 114
+          },
+          "selected_tail_learner_fraction": 0.1589384660250802,
+          "selected_tail_learners": 545,
+          "selected_tail_rows": 14575,
+          "selection_contract": "maximum_10_percent_per_target_group",
+          "selection_policy": "proposal_aligned_generator_attributable_tails",
+          "status": "completed",
+          "tail_learner_set_sha256": "9f4ca52eaf25ee70b0df49641ffd045889fcd08ba673e234fcf4ca5d18e64d31",
+          "unavailable_percentile_tail_groups": {}
+        },
+        "train_learners": 4519,
+        "train_rows": 311268,
+        "training_budget": {
+          "batch_size": 199,
+          "batches_per_epoch": 91,
+          "effective_epochs": 43,
+          "max_epochs": 50,
+          "projected_batch_steps": 3913,
+          "target_batch_steps": 4000,
+          "training_windows": 18001
+        },
+        "training_windows": 18001,
+        "trajectory_boundaries": "learner_isolated_fixed_windows",
+        "unused_xgboost_import_stubbed": true
+      },
+      "tail_targeted_synthetic": "experiments/outputs/tail_targeted/assistments/timegan/seed_20260705/synth_generation.csv",
+      "test": "experiments/data/datasets/assistments/test.csv",
+      "train": "experiments/data/datasets/assistments/train.csv"
+    }
+  ],
+  "seeds": [
+    20260703,
+    20260704,
+    20260705
+  ],
+  "summary_report": "experiments/reports/standard_vs_tail_targeted/assistments_2009_2010_skill_builder/timegan/multi_seed_summary.json",
+  "test": "experiments/data/datasets/assistments/test.csv",
+  "train": "experiments/data/datasets/assistments/train.csv"
+}

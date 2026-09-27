@@ -1,0 +1,120 @@
+dataset: assistments_2009_2010_skill_builder
+
+raw_path: experiments/data/datasets/assistments/raw/assistments_2009_2010_skill_builder_corrected.csv
+processed_dir: experiments/data/datasets/assistments
+encoding: latin1
+
+target: correct
+
+split:
+  method: stable_hash_by_learner
+  train_ratio: 0.8
+  test_ratio: 0.2
+  seed: 20260703
+  learner_column: user_id
+
+columns:
+  learner_id: user_id
+  order: order_id
+  item_id: problem_id
+  skill_id: skill_id
+  skill_name: skill_name
+  target: correct
+  attempt_count: attempt_count
+  hint_count: hint_count
+  hint_total: hint_total
+  response_time: ms_first_response
+  opportunity: opportunity
+
+cleaning:
+  required_columns:
+    - user_id
+    - order_id
+    - problem_id
+    - correct
+  binary_columns:
+    - correct
+  nonnegative_columns:
+    - attempt_count
+    - hint_count
+    - hint_total
+    - ms_first_response
+    - opportunity
+  drop_duplicate_subset:
+    - user_id
+    - order_id
+    - problem_id
+    - skill_id
+
+ignore_columns:
+  - "Unnamed: 0"
+  - answer_text
+  - answer_id
+  - first_action
+  - bottom_hint
+  - overlap_time
+  - teacher_id
+  - school_id
+  - student_class_id
+  - original
+  - opportunity_original
+  - base_sequence_id
+  - type
+
+xy:
+  target: correct
+  passthrough_current_columns:
+    - problem_id
+    - skill_id
+    - skill_name
+    - assignment_id
+    - assistment_id
+    - sequence_id
+    - position
+    - template_id
+    - answer_type
+    - tutor_mode
+    - opportunity
+  history_columns:
+    - attempt_count
+    - hint_count
+    - hint_total
+    - ms_first_response
+  min_history: 1
+
+generation:
+  source_columns:
+    learner_id: user_id
+    order: order_id
+    skill_id: skill_id
+    correct: correct
+    attempt_count: attempt_count
+    hint_count: hint_count
+    response_time: ms_first_response
+    opportunity: opportunity
+  output_columns:
+    - learner_id
+    - order
+    - skill_id
+    - correct
+    - attempt_bin
+    - hint_bin
+    - response_time_bin
+    - opportunity_bin
+  binning:
+    attempt_count:
+      output: attempt_bin
+      bins: [0, 1, 2, 3, 5]
+      labels: ["0", "1", "2", "3-4", "5+"]
+    hint_count:
+      output: hint_bin
+      bins: [0, 1, 2, 3]
+      labels: ["0", "1", "2", "3+"]
+    response_time:
+      output: response_time_bin
+      bins: [0, 5000, 15000, 30000, 60000]
+      labels: ["0-5s", "5-15s", "15-30s", "30-60s", "60s+"]
+    opportunity:
+      output: opportunity_bin
+      bins: [0, 1, 2, 5, 10, 20]
+      labels: ["0", "1", "2-4", "5-9", "10-19", "20+"]

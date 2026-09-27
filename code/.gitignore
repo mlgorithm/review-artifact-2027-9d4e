@@ -1,0 +1,31 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local environments
+.venv/
+venv/
+env/
+
+# Dataset files live locally or in external storage.
+experiments/data/datasets/**
+!experiments/data/datasets/
+!experiments/data/datasets/README.md
+
+# Generated synthetic datasets and pipeline artifacts.
+experiments/outputs/**
+!experiments/outputs/
+!experiments/outputs/.gitkeep
+
+# Local experiment reports and manifests. Curated, immutable report snapshots
+# belong under experiments/reports/ instead.
+experiments/runs/**
+!experiments/runs/
+!experiments/runs/.gitkeep
+
+# Superseded development snapshots stay local. Only active curated snapshots
+# under experiments/reports/standard* are published.
+experiments/reports/archive/**

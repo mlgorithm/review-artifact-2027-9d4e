@@ -1,0 +1,1584 @@
+{
+  "dataset": "oulad_weekly_engagement_behavioral_dropout_v2",
+  "dataset_key": "oulad_weekly",
+  "diagnostics": {
+    "cross_signal_dependence": {
+      "columns": [
+        "course_id",
+        "module_id",
+        "presentation_id",
+        "dominant_activity",
+        "engaged",
+        "registered",
+        "click_bin",
+        "active_days_bin",
+        "gap_bin",
+        "dropout",
+        "failure",
+        "final_result",
+        "gender",
+        "region",
+        "highest_education",
+        "imd_band",
+        "age_band",
+        "disability",
+        "previous_attempt_bin",
+        "studied_credits_bin"
+      ],
+      "nmi_mae": 0.028247316895401883,
+      "pairwise_nmi": {
+        "active_days_bin__age_band": {
+          "abs_error": 0.004753438939315246,
+          "real": 0.004850159270214127,
+          "synthetic": 9.672033089888106e-05
+        },
+        "active_days_bin__disability": {
+          "abs_error": 3.4466291928047306e-06,
+          "real": 9.033572011436305e-05,
+          "synthetic": 8.688909092155831e-05
+        },
+        "active_days_bin__dropout": {
+          "abs_error": 0.00301503132880992,
+          "real": 0.004623300419442094,
+          "synthetic": 0.0016082690906321744
+        },
+        "active_days_bin__failure": {
+          "abs_error": 0.0809349181454021,
+          "real": 0.08492074294715632,
+          "synthetic": 0.0039858248017542106
+        },
+        "active_days_bin__final_result": {
+          "abs_error": 0.055016481806175216,
+          "real": 0.07409893260243824,
+          "synthetic": 0.019082450796263025
+        },
+        "active_days_bin__gap_bin": {
+          "abs_error": 0.1495378148487642,
+          "real": 0.1496467573864881,
+          "synthetic": 0.0001089425377239174
+        },
+        "active_days_bin__gender": {
+          "abs_error": 0.005795926710784891,
+          "real": 0.0057959551860769795,
+          "synthetic": 2.8475292088278868e-08
+        },
+        "active_days_bin__highest_education": {
+          "abs_error": 0.0050983552991957165,
+          "real": 0.005401187126888945,
+          "synthetic": 0.0003028318276932285
+        },
+        "active_days_bin__imd_band": {
+          "abs_error": 0.0025806248527543998,
+          "real": 0.0031410968323368907,
+          "synthetic": 0.0005604719795824909
+        },
+        "active_days_bin__previous_attempt_bin": {
+          "abs_error": 0.004196237217859401,
+          "real": 0.004335472115888674,
+          "synthetic": 0.00013923489802927276
+        },
+        "active_days_bin__region": {
+          "abs_error": 0.0014458000046117638,
+          "real": 0.0015392136099295459,
+          "synthetic": 9.341360531778217e-05
+        },
+        "active_days_bin__studied_credits_bin": {
+          "abs_error": 0.005319465564476579,
+          "real": 0.005636287157287115,
+          "synthetic": 0.00031682159281053575
+        },
+        "age_band__disability": {
+          "abs_error": 0.0012863576275239685,
+          "real": 0.0020062671303929104,
+          "synthetic": 0.0007199095028689419
+        },
+        "age_band__previous_attempt_bin": {
+          "abs_error": 0.0003757639777553773,
+          "real": 0.0007591824375157444,
+          "synthetic": 0.0011349464152711217
+        },
+        "age_band__studied_credits_bin": {
+          "abs_error": 0.0008690836606551158,
+          "real": 0.003276963739061977,
+          "synthetic": 0.002407880078406861
+        },
+        "click_bin__active_days_bin": {
+          "abs_error": 0.328863832347016,
+          "real": 0.6028564616140465,
+          "synthetic": 0.9317202939610625
+        },
+        "click_bin__age_band": {
+          "abs_error": 0.004236242620221908,
+          "real": 0.004648619220189557,
+          "synthetic": 0.0004123765999676489
+        },
+        "click_bin__disability": {
+          "abs_error": 6.679417757955977e-05,
+          "real": 6.571870488294955e-05,
+          "synthetic": 0.0001325128824625093
+        },
+        "click_bin__dropout": {
+          "abs_error": 0.00251514126689276,
+          "real": 0.0042752970084073616,
+          "synthetic": 0.0017601557415146015
+        },
+        "click_bin__failure": {
+          "abs_error": 0.0743800568031538,
+          "real": 0.07809373065912158,
+          "synthetic": 0.0037136738559677765
+        },
+        "click_bin__final_result": {
+          "abs_error": 0.04998812504252585,
+          "real": 0.06794809528525712,
+          "synthetic": 0.017959970242731268
+        },
+        "click_bin__gap_bin": {
+          "abs_error": 0.13210911454045743,
+          "real": 0.13238173518519908,
+          "synthetic": 0.0002726206447416611
+        },
+        "click_bin__gender": {
+          "abs_error": 0.005537330894573331,
+          "real": 0.005841263661031192,
+          "synthetic": 0.00030393276645786015
+        },
+        "click_bin__highest_education": {
+          "abs_error": 0.0035462894460446216,
+          "real": 0.004331125536702824,
+          "synthetic": 0.0007848360906582021
+        },
+        "click_bin__imd_band": {
+          "abs_error": 0.0006008001616813435,
+          "real": 0.002729126536310525,
+          "synthetic": 0.0021283263746291817
+        },
+        "click_bin__previous_attempt_bin": {
+          "abs_error": 0.0033621150248905655,
+          "real": 0.004296836696297227,
+          "synthetic": 0.0009347216714066619
+        },
+        "click_bin__region": {
+          "abs_error": 0.000259453333402837,
+          "real": 0.0013382623315433876,
+          "synthetic": 0.0015977156649462246
+        },
+        "click_bin__studied_credits_bin": {
+          "abs_error": 0.003804972023720568,
+          "real": 0.004645571510949575,
+          "synthetic": 0.0008405994872290077
+        },
+        "course_id__active_days_bin": {
+          "abs_error": 0.015474518098192358,
+          "real": 0.01623359877189937,
+          "synthetic": 0.000759080673707011
+        },
+        "course_id__age_band": {
+          "abs_error": 0.0028111167537543252,
+          "real": 0.015472688708257173,
+          "synthetic": 0.012661571954502848
+        },
+        "course_id__click_bin": {
+          "abs_error": 0.0206945210872882,
+          "real": 0.022938085748750028,
+          "synthetic": 0.0022435646614618267
+        },
+        "course_id__disability": {
+          "abs_error": 0.002959407045001028,
+          "real": 0.004267715944274855,
+          "synthetic": 0.007227122989275883
+        },
+        "course_id__dominant_activity": {
+          "abs_error": 0.0724770661212402,
+          "real": 0.0724770661212402,
+          "synthetic": 0.0
+        },
+        "course_id__dropout": {
+          "abs_error": 0.0010084947278819322,
+          "real": 0.010090884549219822,
+          "synthetic": 0.011099379277101754
+        },
+        "course_id__engaged": {
+          "abs_error": 0.010241287849794506,
+          "real": 0.011000368523501516,
+          "synthetic": 0.000759080673707011
+        },
+        "course_id__failure": {
+          "abs_error": 0.0021279936763939564,
+          "real": 0.009324815325428303,
+          "synthetic": 0.007196821649034346
+        },
+        "course_id__final_result": {
+          "abs_error": 0.0005380751072618407,
+          "real": 0.0182747564428296,
+          "synthetic": 0.01773668133556776
+        },
+        "course_id__gap_bin": {
+          "abs_error": 0.006229181627816046,
+          "real": 0.010628467282526283,
+          "synthetic": 0.004399285654710237
+        },
+        "course_id__gender": {
+          "abs_error": 0.027586364868381008,
+          "real": 0.14096470233403444,
+          "synthetic": 0.16855106720241544
+        },
+        "course_id__highest_education": {
+          "abs_error": 0.0017544228577180652,
+          "real": 0.024596617426513843,
+          "synthetic": 0.022842194568795778
+        },
+        "course_id__imd_band": {
+          "abs_error": 0.0010673372711546454,
+          "real": 0.02065391750765863,
+          "synthetic": 0.021721254778813277
+        },
+        "course_id__module_id": {
+          "abs_error": 0.05109277648425903,
+          "real": 0.7734254129064811,
+          "synthetic": 0.7223326364222221
+        },
+        "course_id__presentation_id": {
+          "abs_error": 0.04766027309612375,
+          "real": 0.6679855726841382,
+          "synthetic": 0.7156458457802619
+        },
+        "course_id__previous_attempt_bin": {
+          "abs_error": 0.011033997336365658,
+          "real": 0.03557119228817501,
+          "synthetic": 0.024537194951809355
+        },
+        "course_id__region": {
+          "abs_error": 0.0038130851288665085,
+          "real": 0.03274068554629635,
+          "synthetic": 0.02892760041742984
+        },
+        "course_id__registered": {
+          "abs_error": 0.0018117918395505177,
+          "real": 0.0018117918395505177,
+          "synthetic": 0.0
+        },
+        "course_id__studied_credits_bin": {
+          "abs_error": 0.027146664202532006,
+          "real": 0.16533172181664646,
+          "synthetic": 0.13818505761411445
+        },
+        "disability__previous_attempt_bin": {
+          "abs_error": 0.004529983462922963,
+          "real": 0.007253967343152107,
+          "synthetic": 0.0027239838802291427
+        },
+        "disability__studied_credits_bin": {
+          "abs_error": 2.5348572314790735e-05,
+          "real": 0.003236690186249797,
+          "synthetic": 0.003211341613935006
+        },
+        "dominant_activity__active_days_bin": {
+          "abs_error": 0.46705113266400944,
+          "real": 0.46705113266400944,
+          "synthetic": 0.0
+        },
+        "dominant_activity__age_band": {
+          "abs_error": 0.004069032763683233,
+          "real": 0.004069032763683233,
+          "synthetic": 0.0
+        },
+        "dominant_activity__click_bin": {
+          "abs_error": 0.5015539361296568,
+          "real": 0.5015539361296568,
+          "synthetic": 0.0
+        },
+        "dominant_activity__disability": {
+          "abs_error": 0.0007030098047274875,
+          "real": 0.0007030098047274875,
+          "synthetic": 0.0
+        },
+        "dominant_activity__dropout": {
+          "abs_error": 0.003885080309059901,
+          "real": 0.003885080309059901,
+          "synthetic": 0.0
+        },
+        "dominant_activity__engaged": {
+          "abs_error": 0.6332217950714646,
+          "real": 0.6332217950714646,
+          "synthetic": 0.0
+        },
+        "dominant_activity__failure": {
+          "abs_error": 0.07049855627273174,
+          "real": 0.07049855627273174,
+          "synthetic": 0.0
+        },
+        "dominant_activity__final_result": {
+          "abs_error": 0.06078321848698295,
+          "real": 0.06078321848698295,
+          "synthetic": 0.0
+        },
+        "dominant_activity__gap_bin": {
+          "abs_error": 0.11926864688350992,
+          "real": 0.11926864688350992,
+          "synthetic": 0.0
+        },
+        "dominant_activity__gender": {
+          "abs_error": 0.009271656210495197,
+          "real": 0.009271656210495197,
+          "synthetic": 0.0
+        },
+        "dominant_activity__highest_education": {
+          "abs_error": 0.004474072192166383,
+          "real": 0.004474072192166383,
+          "synthetic": 0.0
+        },
+        "dominant_activity__imd_band": {
+          "abs_error": 0.003531480073631196,
+          "real": 0.003531480073631196,
+          "synthetic": 0.0
+        },
+        "dominant_activity__previous_attempt_bin": {
+          "abs_error": 0.00426692625815453,
+          "real": 0.00426692625815453,
+          "synthetic": 0.0
+        },
+        "dominant_activity__region": {
+          "abs_error": 0.00243719294955174,
+          "real": 0.00243719294955174,
+          "synthetic": 0.0
+        },
+        "dominant_activity__registered": {
+          "abs_error": 0.016987746169243118,
+          "real": 0.016987746169243118,
+          "synthetic": 0.0
+        },
+        "dominant_activity__studied_credits_bin": {
+          "abs_error": 0.006291965289844968,
+          "real": 0.006291965289844968,
+          "synthetic": 0.0
+        },
+        "dropout__age_band": {
+          "abs_error": 0.00045576142989443836,
+          "real": 0.0008451812747672982,
+          "synthetic": 0.00038941984487285983
+        },
+        "dropout__disability": {
+          "abs_error": 0.001423031208413329,
+          "real": 0.0015941266938105524,
+          "synthetic": 0.00017109548539722338
+        },
+        "dropout__failure": {
+          "abs_error": 0.07856322117111932,
+          "real": 0.08179594416410442,
+          "synthetic": 0.16035916533522374
+        },
+        "dropout__final_result": {
+          "abs_error": 0.1665081996734168,
+          "real": 0.5230768619182841,
+          "synthetic": 0.6895850615917009
+        },
+        "dropout__gender": {
+          "abs_error": 0.0010385705414337793,
+          "real": 0.0010404984100000742,
+          "synthetic": 1.9278685662949008e-06
+        },
+        "dropout__highest_education": {
+          "abs_error": 0.0006573774218557419,
+          "real": 0.0015060170218150004,
+          "synthetic": 0.0008486395999592586
+        },
+        "dropout__imd_band": {
+          "abs_error": 6.620914555739233e-05,
+          "real": 0.0022183204587948218,
+          "synthetic": 0.0021521113132374294
+        },
+        "dropout__previous_attempt_bin": {
+          "abs_error": 0.0016489274929584702,
+          "real": 0.002431737548805743,
+          "synthetic": 0.0007828100558472727
+        },
+        "dropout__region": {
+          "abs_error": 0.0006187676778689399,
+          "real": 0.0016001197383815413,
+          "synthetic": 0.0022188874162504812
+        },
+        "dropout__studied_credits_bin": {
+          "abs_error": 0.004169936686064657,
+          "real": 0.007255726167153383,
+          "synthetic": 0.003085789481088726
+        },
+        "engaged__active_days_bin": {
+          "abs_error": 0.28604138054338424,
+          "real": 0.7139586194566018,
+          "synthetic": 0.999999999999986
+        },
+        "engaged__age_band": {
+          "abs_error": 0.0033462057207720515,
+          "real": 0.0034429260516709325,
+          "synthetic": 9.672033089888106e-05
+        },
+        "engaged__click_bin": {
+          "abs_error": 0.2528801492511181,
+          "real": 0.6788401447099444,
+          "synthetic": 0.9317202939610625
+        },
+        "engaged__disability": {
+          "abs_error": 7.319617904594935e-05,
+          "real": 1.369291187560896e-05,
+          "synthetic": 8.688909092155831e-05
+        },
+        "engaged__dropout": {
+          "abs_error": 0.0024983018950289065,
+          "real": 0.004106570985661081,
+          "synthetic": 0.0016082690906321744
+        },
+        "engaged__failure": {
+          "abs_error": 0.10494327413516044,
+          "real": 0.10892909893691466,
+          "synthetic": 0.0039858248017542106
+        },
+        "engaged__final_result": {
+          "abs_error": 0.07262744360981131,
+          "real": 0.09170989440607434,
+          "synthetic": 0.019082450796263025
+        },
+        "engaged__gap_bin": {
+          "abs_error": 0.17955728991629794,
+          "real": 0.17966623245402186,
+          "synthetic": 0.0001089425377239174
+        },
+        "engaged__gender": {
+          "abs_error": 0.003728055717170565,
+          "real": 0.0037280841924626535,
+          "synthetic": 2.8475292088278868e-08
+        },
+        "engaged__highest_education": {
+          "abs_error": 0.005118800900304633,
+          "real": 0.005421632727997861,
+          "synthetic": 0.0003028318276932285
+        },
+        "engaged__imd_band": {
+          "abs_error": 0.0029589253996393965,
+          "real": 0.0035193973792218875,
+          "synthetic": 0.0005604719795824909
+        },
+        "engaged__previous_attempt_bin": {
+          "abs_error": 0.0048100589109867364,
+          "real": 0.004949293809016009,
+          "synthetic": 0.00013923489802927276
+        },
+        "engaged__region": {
+          "abs_error": 0.0011235824189697236,
+          "real": 0.0012169960242875057,
+          "synthetic": 9.341360531778217e-05
+        },
+        "engaged__registered": {
+          "abs_error": 0.026827481778837748,
+          "real": 0.026827481778837748,
+          "synthetic": 0.0
+        },
+        "engaged__studied_credits_bin": {
+          "abs_error": 0.004307932906841014,
+          "real": 0.00462475449965155,
+          "synthetic": 0.00031682159281053575
+        },
+        "failure__age_band": {
+          "abs_error": 0.0039489056414564894,
+          "real": 0.004563607960547339,
+          "synthetic": 0.0006147023190908492
+        },
+        "failure__disability": {
+          "abs_error": 0.000231890115664655,
+          "real": 0.000268395293616878,
+          "synthetic": 3.650517795222299e-05
+        },
+        "failure__final_result": {
+          "abs_error": 0.06955260041602074,
+          "real": 0.7055705287933542,
+          "synthetic": 0.6360179283773335
+        },
+        "failure__gender": {
+          "abs_error": 2.4974514199643566e-05,
+          "real": 2.7870954720970598e-05,
+          "synthetic": 5.2845468920614164e-05
+        },
+        "failure__highest_education": {
+          "abs_error": 0.011006376032289699,
+          "real": 0.011490389267471573,
+          "synthetic": 0.0004840132351818738
+        },
+        "failure__imd_band": {
+          "abs_error": 0.0028136228378628546,
+          "real": 0.005111135433334709,
+          "synthetic": 0.002297512595471855
+        },
+        "failure__previous_attempt_bin": {
+          "abs_error": 0.004846569726333344,
+          "real": 0.007363627267003563,
+          "synthetic": 0.002517057540670218
+        },
+        "failure__region": {
+          "abs_error": 0.001058578910910633,
+          "real": 0.0033182377931571493,
+          "synthetic": 0.002259658882246516
+        },
+        "failure__studied_credits_bin": {
+          "abs_error": 0.0006545049812334606,
+          "real": 0.001038800212296061,
+          "synthetic": 0.0003842952310626004
+        },
+        "final_result__age_band": {
+          "abs_error": 0.005899581850853751,
+          "real": 0.007860295377215358,
+          "synthetic": 0.001960713526361607
+        },
+        "final_result__disability": {
+          "abs_error": 0.002652441709355918,
+          "real": 0.0027872283144481954,
+          "synthetic": 0.00013478660509227774
+        },
+        "final_result__gender": {
+          "abs_error": 0.001075309285554902,
+          "real": 0.0011416369167135839,
+          "synthetic": 6.632763115868194e-05
+        },
+        "final_result__highest_education": {
+          "abs_error": 0.01358896109867407,
+          "real": 0.01575678724482417,
+          "synthetic": 0.002167826146150099
+        },
+        "final_result__imd_band": {
+          "abs_error": 0.004065164603691431,
+          "real": 0.007922345845010854,
+          "synthetic": 0.003857181241319423
+        },
+        "final_result__previous_attempt_bin": {
+          "abs_error": 0.008782105701248457,
+          "real": 0.011497760198292815,
+          "synthetic": 0.002715654497044358
+        },
+        "final_result__region": {
+          "abs_error": 5.405449741158544e-05,
+          "real": 0.004301885121611474,
+          "synthetic": 0.004247830624199888
+        },
+        "final_result__studied_credits_bin": {
+          "abs_error": 0.002812939443891044,
+          "real": 0.006250990106541155,
+          "synthetic": 0.003438050662650111
+        },
+        "gap_bin__age_band": {
+          "abs_error": 0.0027771608448637275,
+          "real": 0.003258169646657891,
+          "synthetic": 0.00048100880179416334
+        },
+        "gap_bin__disability": {
+          "abs_error": 0.00013284634836568623,
+          "real": 4.2466356495359e-05,
+          "synthetic": 0.00017531270486104524
+        },
+        "gap_bin__dropout": {
+          "abs_error": 0.008017818570808726,
+          "real": 0.01315030467821857,
+          "synthetic": 0.005132486107409843
+        },
+        "gap_bin__failure": {
+          "abs_error": 0.09880029671843311,
+          "real": 0.12087697731030249,
+          "synthetic": 0.022076680591869374
+        },
+        "gap_bin__final_result": {
+          "abs_error": 0.00616220424914346,
+          "real": 0.10719799149323787,
+          "synthetic": 0.10103578724409441
+        },
+        "gap_bin__gender": {
+          "abs_error": 0.00263441113607311,
+          "real": 0.002891294717373398,
+          "synthetic": 0.0002568835813002879
+        },
+        "gap_bin__highest_education": {
+          "abs_error": 0.003935784853680271,
+          "real": 0.005566763924481567,
+          "synthetic": 0.0016309790708012959
+        },
+        "gap_bin__imd_band": {
+          "abs_error": 0.0002383766143261327,
+          "real": 0.0038304532722097297,
+          "synthetic": 0.0040688298865358625
+        },
+        "gap_bin__previous_attempt_bin": {
+          "abs_error": 0.0032317843586628487,
+          "real": 0.004717601912228323,
+          "synthetic": 0.0014858175535654747
+        },
+        "gap_bin__region": {
+          "abs_error": 0.0009651598416191808,
+          "real": 0.0018505090702321458,
+          "synthetic": 0.000885349228612965
+        },
+        "gap_bin__studied_credits_bin": {
+          "abs_error": 0.002848463638743309,
+          "real": 0.0037901364796991614,
+          "synthetic": 0.0009416728409558526
+        },
+        "gender__age_band": {
+          "abs_error": 0.0023154461109943297,
+          "real": 0.005489522538234163,
+          "synthetic": 0.0031740764272398334
+        },
+        "gender__disability": {
+          "abs_error": 0.0013754422967662385,
+          "real": 0.002027552062625563,
+          "synthetic": 0.0006521097658593245
+        },
+        "gender__highest_education": {
+          "abs_error": 0.0015869649390978131,
+          "real": 0.007264670317921925,
+          "synthetic": 0.005677705378824112
+        },
+        "gender__imd_band": {
+          "abs_error": 0.0010433390674960998,
+          "real": 0.006773749708461686,
+          "synthetic": 0.007817088775957786
+        },
+        "gender__previous_attempt_bin": {
+          "abs_error": 0.0004376694588431962,
+          "real": 0.0015139351551831713,
+          "synthetic": 0.0010762656963399751
+        },
+        "gender__region": {
+          "abs_error": 0.001526901419960821,
+          "real": 0.006007975996918849,
+          "synthetic": 0.004481074576958028
+        },
+        "gender__studied_credits_bin": {
+          "abs_error": 0.004805677443206086,
+          "real": 0.006409125847627816,
+          "synthetic": 0.0016034484044217304
+        },
+        "highest_education__age_band": {
+          "abs_error": 0.030283059216065906,
+          "real": 0.031995965813950665,
+          "synthetic": 0.0017129065978847586
+        },
+        "highest_education__disability": {
+          "abs_error": 0.007647286449996817,
+          "real": 0.009395475947534598,
+          "synthetic": 0.0017481894975377803
+        },
+        "highest_education__imd_band": {
+          "abs_error": 0.014151112833424725,
+          "real": 0.019140781155874864,
+          "synthetic": 0.004989668322450139
+        },
+        "highest_education__previous_attempt_bin": {
+          "abs_error": 0.0014662003283338046,
+          "real": 0.001125729119562829,
+          "synthetic": 0.0025919294478966336
+        },
+        "highest_education__studied_credits_bin": {
+          "abs_error": 0.003448038282342388,
+          "real": 0.008087912624036124,
+          "synthetic": 0.004639874341693736
+        },
+        "imd_band__age_band": {
+          "abs_error": 0.003432937293178299,
+          "real": 0.005749993013140201,
+          "synthetic": 0.002317055719961902
+        },
+        "imd_band__disability": {
+          "abs_error": 0.001749382818917308,
+          "real": 0.005092276146585102,
+          "synthetic": 0.0033428933276677944
+        },
+        "imd_band__previous_attempt_bin": {
+          "abs_error": 0.0002336548741410172,
+          "real": 0.005058823082528588,
+          "synthetic": 0.005292477956669605
+        },
+        "imd_band__studied_credits_bin": {
+          "abs_error": 0.0017246925026700541,
+          "real": 0.0035174840246106195,
+          "synthetic": 0.0017927915219405654
+        },
+        "module_id__active_days_bin": {
+          "abs_error": 0.01823694840467152,
+          "real": 0.018621121213506318,
+          "synthetic": 0.00038417280883479705
+        },
+        "module_id__age_band": {
+          "abs_error": 0.004155138650201163,
+          "real": 0.016736981021507735,
+          "synthetic": 0.012581842371306572
+        },
+        "module_id__click_bin": {
+          "abs_error": 0.025889909400147192,
+          "real": 0.027347443608328744,
+          "synthetic": 0.001457534208181551
+        },
+        "module_id__disability": {
+          "abs_error": 0.0032531919731709474,
+          "real": 0.0023771292085233223,
+          "synthetic": 0.00563032118169427
+        },
+        "module_id__dominant_activity": {
+          "abs_error": 0.07529491020565995,
+          "real": 0.07529491020565995,
+          "synthetic": 0.0
+        },
+        "module_id__dropout": {
+          "abs_error": 0.0025738077538933705,
+          "real": 0.01054316511843554,
+          "synthetic": 0.01311697287232891
+        },
+        "module_id__engaged": {
+          "abs_error": 0.012447551565536707,
+          "real": 0.012831724374371503,
+          "synthetic": 0.00038417280883479705
+        },
+        "module_id__failure": {
+          "abs_error": 0.0022812662802622597,
+          "real": 0.005166354132790269,
+          "synthetic": 0.0028850878525280093
+        },
+        "module_id__final_result": {
+          "abs_error": 0.0016782310589982044,
+          "real": 0.014023975554317673,
+          "synthetic": 0.015702206613315877
+        },
+        "module_id__gap_bin": {
+          "abs_error": 0.00873027527266672,
+          "real": 0.010871427282619832,
+          "synthetic": 0.0021411520099531116
+        },
+        "module_id__gender": {
+          "abs_error": 0.04807555942237743,
+          "real": 0.18022880204590042,
+          "synthetic": 0.22830436146827784
+        },
+        "module_id__highest_education": {
+          "abs_error": 0.0025937319383083184,
+          "real": 0.023278713269006816,
+          "synthetic": 0.020684981330698498
+        },
+        "module_id__imd_band": {
+          "abs_error": 0.00018222414453808282,
+          "real": 0.012420994885941195,
+          "synthetic": 0.012603219030479278
+        },
+        "module_id__presentation_id": {
+          "abs_error": 0.020319269763290543,
+          "real": 0.08592414625998025,
+          "synthetic": 0.06560487649668971
+        },
+        "module_id__previous_attempt_bin": {
+          "abs_error": 0.00749457845952194,
+          "real": 0.02729672614020018,
+          "synthetic": 0.019802147680678242
+        },
+        "module_id__region": {
+          "abs_error": 0.006175765259343217,
+          "real": 0.022426393471242544,
+          "synthetic": 0.016250628211899328
+        },
+        "module_id__registered": {
+          "abs_error": 0.0011547748283362567,
+          "real": 0.0011547748283362567,
+          "synthetic": 0.0
+        },
+        "module_id__studied_credits_bin": {
+          "abs_error": 0.021528326596738978,
+          "real": 0.20404305131098807,
+          "synthetic": 0.1825147247142491
+        },
+        "presentation_id__active_days_bin": {
+          "abs_error": 0.0018195889484569079,
+          "real": 0.0018478271379402142,
+          "synthetic": 2.8238189483306286e-05
+        },
+        "presentation_id__age_band": {
+          "abs_error": 0.000651909497699205,
+          "real": 0.0016601190908815816,
+          "synthetic": 0.0010082095931823766
+        },
+        "presentation_id__click_bin": {
+          "abs_error": 0.0016926419990685566,
+          "real": 0.0017984608972003151,
+          "synthetic": 0.00010581889813175867
+        },
+        "presentation_id__disability": {
+          "abs_error": 0.0001422520916671082,
+          "real": 0.0008546332180827555,
+          "synthetic": 0.0009968853097498637
+        },
+        "presentation_id__dominant_activity": {
+          "abs_error": 0.009054199998263766,
+          "real": 0.009054199998263766,
+          "synthetic": 0.0
+        },
+        "presentation_id__dropout": {
+          "abs_error": 0.00240415756025481,
+          "real": 0.0028049684195858206,
+          "synthetic": 0.00040081085933101046
+        },
+        "presentation_id__engaged": {
+          "abs_error": 0.0015531873248277501,
+          "real": 0.0015814255143110564,
+          "synthetic": 2.8238189483306286e-05
+        },
+        "presentation_id__failure": {
+          "abs_error": 0.0008450850679800042,
+          "real": 0.00520166011780168,
+          "synthetic": 0.004356575049821676
+        },
+        "presentation_id__final_result": {
+          "abs_error": 0.004236695296045209,
+          "real": 0.008852286904630012,
+          "synthetic": 0.004615591608584804
+        },
+        "presentation_id__gap_bin": {
+          "abs_error": 0.0014572190743506264,
+          "real": 0.001901834366478567,
+          "synthetic": 0.0004446152921279405
+        },
+        "presentation_id__gender": {
+          "abs_error": 0.0004014273905513753,
+          "real": 0.003678655196041411,
+          "synthetic": 0.004080082586592786
+        },
+        "presentation_id__highest_education": {
+          "abs_error": 0.0006427462436371526,
+          "real": 0.0028591898603220747,
+          "synthetic": 0.0035019361039592273
+        },
+        "presentation_id__imd_band": {
+          "abs_error": 0.00013663597301399877,
+          "real": 0.0028431515021892523,
+          "synthetic": 0.0027065155291752536
+        },
+        "presentation_id__previous_attempt_bin": {
+          "abs_error": 0.0049017432288585615,
+          "real": 0.008407706438665489,
+          "synthetic": 0.003505963209806927
+        },
+        "presentation_id__region": {
+          "abs_error": 0.003600862814269079,
+          "real": 0.004190234419802069,
+          "synthetic": 0.007791097234071148
+        },
+        "presentation_id__registered": {
+          "abs_error": 0.0008696904413474399,
+          "real": 0.0008696904413474399,
+          "synthetic": 0.0
+        },
+        "presentation_id__studied_credits_bin": {
+          "abs_error": 0.010697227648933352,
+          "real": 0.025858496765386547,
+          "synthetic": 0.015161269116453196
+        },
+        "previous_attempt_bin__studied_credits_bin": {
+          "abs_error": 0.025798438520439608,
+          "real": 0.0378743405163492,
+          "synthetic": 0.01207590199590959
+        },
+        "region__age_band": {
+          "abs_error": 0.0006943650235656969,
+          "real": 0.00421385976496288,
+          "synthetic": 0.004908224788528577
+        },
+        "region__disability": {
+          "abs_error": 0.004764369712487381,
+          "real": 0.007419769811368487,
+          "synthetic": 0.0026554000988811065
+        },
+        "region__highest_education": {
+          "abs_error": 0.01761896181157307,
+          "real": 0.02247681244177928,
+          "synthetic": 0.004857850630206208
+        },
+        "region__imd_band": {
+          "abs_error": 0.05668715974464875,
+          "real": 0.06520967762738279,
+          "synthetic": 0.008522517882734037
+        },
+        "region__previous_attempt_bin": {
+          "abs_error": 0.003322498596674753,
+          "real": 0.00870172818111019,
+          "synthetic": 0.005379229584435437
+        },
+        "region__studied_credits_bin": {
+          "abs_error": 0.0021932941754963346,
+          "real": 0.009689941995362336,
+          "synthetic": 0.007496647819866002
+        },
+        "registered__active_days_bin": {
+          "abs_error": 0.019153711854316368,
+          "real": 0.019153711854316368,
+          "synthetic": 0.0
+        },
+        "registered__age_band": {
+          "abs_error": 7.417555239327113e-05,
+          "real": 7.417555239327113e-05,
+          "synthetic": 0.0
+        },
+        "registered__click_bin": {
+          "abs_error": 0.01821157161294961,
+          "real": 0.01821157161294961,
+          "synthetic": 0.0
+        },
+        "registered__disability": {
+          "abs_error": 0.00022436812631400978,
+          "real": 0.00022436812631400978,
+          "synthetic": 0.0
+        },
+        "registered__dropout": {
+          "abs_error": 0.09160785183197862,
+          "real": 0.09160785183197862,
+          "synthetic": 0.0
+        },
+        "registered__failure": {
+          "abs_error": 0.009896572003660568,
+          "real": 0.009896572003660568,
+          "synthetic": 0.0
+        },
+        "registered__final_result": {
+          "abs_error": 0.04791794766334651,
+          "real": 0.04791794766334651,
+          "synthetic": 0.0
+        },
+        "registered__gap_bin": {
+          "abs_error": 0.05944403997373354,
+          "real": 0.05944403997373354,
+          "synthetic": 0.0
+        },
+        "registered__gender": {
+          "abs_error": 2.2230451185420797e-05,
+          "real": 2.2230451185420797e-05,
+          "synthetic": 0.0
+        },
+        "registered__highest_education": {
+          "abs_error": 0.0002513842738686133,
+          "real": 0.0002513842738686133,
+          "synthetic": 0.0
+        },
+        "registered__imd_band": {
+          "abs_error": 0.0004819000821654145,
+          "real": 0.0004819000821654145,
+          "synthetic": 0.0
+        },
+        "registered__previous_attempt_bin": {
+          "abs_error": 0.00016686248597382237,
+          "real": 0.00016686248597382237,
+          "synthetic": 0.0
+        },
+        "registered__region": {
+          "abs_error": 0.0008498143420893806,
+          "real": 0.0008498143420893806,
+          "synthetic": 0.0
+        },
+        "registered__studied_credits_bin": {
+          "abs_error": 0.004525016062686955,
+          "real": 0.004525016062686955,
+          "synthetic": 0.0
+        }
+      },
+      "real_sample_rows": 100000,
+      "synthetic_sample_rows": 100000
+    },
+    "dataset_sizes": {
+      "real_test_learners": 4000,
+      "real_test_rows": 114177,
+      "real_train_learners": 4000,
+      "real_train_rows": 114507,
+      "synthetic_learners": 4000,
+      "synthetic_rows": 115831
+    },
+    "distinguishability": {
+      "accuracy": 0.9771833333333333,
+      "auroc": 0.9926250616666666,
+      "detectability_auc": 0.9926250616666666,
+      "evaluated_real_rows": 100000,
+      "evaluated_synthetic_rows": 100000,
+      "max_rows_per_class": 100000,
+      "note": "detectability_auc=max(raw_auroc, 1-raw_auroc): 0.5 means chance-level separation (good fidelity); 1.0 means trivially separable (poor fidelity).",
+      "raw_auroc": 0.9926250616666666,
+      "real_rows": 743533,
+      "real_test_learners": 6622,
+      "real_train_learners": 15466,
+      "split_unit": "learner",
+      "status": "completed",
+      "synthetic_rows": 743533,
+      "synthetic_test_learners": 7292,
+      "synthetic_train_learners": 17039
+    },
+    "diversity_coverage": {
+      "real_skill_trigram_entropy": 6.388164403843409,
+      "skill_trigram_coverage": 0.0011376564277588168,
+      "skill_trigram_entropy_abs_error": 6.388164403843409,
+      "skill_trigram_jaccard": 0.0011376564277588168,
+      "skill_trigram_precision": 1.0,
+      "synthetic_skill_trigram_entropy": -0.0,
+      "unique_synthetic_full_trajectory_rate": 0.998,
+      "unique_synthetic_projected_trajectory_rate": 0.03925,
+      "unique_synthetic_skill_path_count": 51
+    },
+    "evaluation_sampling": {
+      "max_learners_per_split": 4000,
+      "max_rows_per_split": 120000,
+      "note": "Rare-group fidelity, primary downstream models, and explicit outcome tasks use complete frames; memory-heavy diagnostics use the recorded whole-learner samples.",
+      "real_test": {
+        "evaluated_learners": 4000,
+        "evaluated_rows": 114177,
+        "original_learners": 6521,
+        "original_rows": 187324,
+        "whole_learner_sample": true
+      },
+      "real_train": {
+        "evaluated_learners": 4000,
+        "evaluated_rows": 114507,
+        "original_learners": 26072,
+        "original_rows": 743533,
+        "whole_learner_sample": true
+      },
+      "scope": "fidelity_temporal_dependence_subgroup_privacy_diversity_lightweight_utility",
+      "synthetic": {
+        "evaluated_learners": 4000,
+        "evaluated_rows": 115831,
+        "original_learners": 26072,
+        "original_rows": 743533,
+        "whole_learner_sample": true
+      },
+      "tail_fidelity": {
+        "real_test": {
+          "evaluated_learners": 6521,
+          "evaluated_rows": 187324,
+          "original_learners": 6521,
+          "original_rows": 187324,
+          "sampling_applied": false,
+          "whole_learner_sample": true
+        },
+        "real_train": {
+          "evaluated_learners": 26072,
+          "evaluated_rows": 743533,
+          "original_learners": 26072,
+          "original_rows": 743533,
+          "sampling_applied": false,
+          "whole_learner_sample": true
+        },
+        "reference": "complete_real_train",
+        "scope": "complete_frames",
+        "synthetic": {
+          "evaluated_learners": 26072,
+          "evaluated_rows": 743533,
+          "original_learners": 26072,
+          "original_rows": 743533,
+          "sampling_applied": false,
+          "whole_learner_sample": true
+        }
+      }
+    },
+    "global_fidelity": {
+      "all_value_marginals": {
+        "by_column": {
+          "active_days_bin": {
+            "jensen_shannon_divergence": 0.4053079485794211,
+            "real_unique_count": 4,
+            "synthetic_unique_count": 2,
+            "total_variation": 0.6148225519661725
+          },
+          "age_band": {
+            "jensen_shannon_divergence": 0.000684514240405472,
+            "real_unique_count": 3,
+            "synthetic_unique_count": 3,
+            "total_variation": 0.019652502798678202
+          },
+          "click_bin": {
+            "jensen_shannon_divergence": 0.40480452266816797,
+            "real_unique_count": 5,
+            "synthetic_unique_count": 5,
+            "total_variation": 0.6148225519661725
+          },
+          "course_id": {
+            "jensen_shannon_divergence": 0.11764757923075775,
+            "real_unique_count": 22,
+            "synthetic_unique_count": 22,
+            "total_variation": 0.37262912082341776
+          },
+          "disability": {
+            "jensen_shannon_divergence": 0.00031847965614853393,
+            "real_unique_count": 2,
+            "synthetic_unique_count": 2,
+            "total_variation": 0.012256877475000476
+          },
+          "dominant_activity": {
+            "jensen_shannon_divergence": 0.4103912311975085,
+            "real_unique_count": 19,
+            "synthetic_unique_count": 1,
+            "total_variation": 0.6159448767324268
+          },
+          "dropout": {
+            "jensen_shannon_divergence": 0.047338511567409564,
+            "real_unique_count": 2,
+            "synthetic_unique_count": 2,
+            "total_variation": 0.20221283819595567
+          },
+          "engaged": {
+            "jensen_shannon_divergence": 0.40473749232334477,
+            "real_unique_count": 2,
+            "synthetic_unique_count": 2,
+            "total_variation": 0.6148225519661725
+          },
+          "failure": {
+            "jensen_shannon_divergence": 0.004557603410642968,
+            "real_unique_count": 2,
+            "synthetic_unique_count": 2,
+            "total_variation": 0.06880049566178376
+          },
+          "final_result": {
+            "jensen_shannon_divergence": 0.04738201298592691,
+            "real_unique_count": 4,
+            "synthetic_unique_count": 4,
+            "total_variation": 0.20221283819595565
+          },
+          "gap_bin": {
+            "jensen_shannon_divergence": 0.7598186925839088,
+            "real_unique_count": 4,
+            "synthetic_unique_count": 4,
+            "total_variation": 0.9092215117907982
+          },
+          "gender": {
+            "jensen_shannon_divergence": 0.03721424907657518,
+            "real_unique_count": 2,
+            "synthetic_unique_count": 2,
+            "total_variation": 0.22355598630619403
+          },
+          "highest_education": {
+            "jensen_shannon_divergence": 0.0021409417392044524,
+            "real_unique_count": 5,
+            "synthetic_unique_count": 5,
+            "total_variation": 0.047697558546553734
+          },
+          "imd_band": {
+            "jensen_shannon_divergence": 0.005957222186856526,
+            "real_unique_count": 11,
+            "synthetic_unique_count": 11,
+            "total_variation": 0.06648076579758203
+          },
+          "module_id": {
+            "jensen_shannon_divergence": 0.10540724423957804,
+            "real_unique_count": 7,
+            "synthetic_unique_count": 7,
+            "total_variation": 0.36380509472443723
+          },
+          "presentation_id": {
+            "jensen_shannon_divergence": 0.0020069207478899155,
+            "real_unique_count": 4,
+            "synthetic_unique_count": 4,
+            "total_variation": 0.04735292834517705
+          },
+          "previous_attempt_bin": {
+            "jensen_shannon_divergence": 0.00018586969119464359,
+            "real_unique_count": 4,
+            "synthetic_unique_count": 4,
+            "total_variation": 0.006217348944325249
+          },
+          "region": {
+            "jensen_shannon_divergence": 0.0031080768977510735,
+            "real_unique_count": 13,
+            "synthetic_unique_count": 13,
+            "total_variation": 0.05457173834736631
+          },
+          "registered": {
+            "jensen_shannon_divergence": 0.0017313124714056821,
+            "real_unique_count": 2,
+            "synthetic_unique_count": 1,
+            "total_variation": 0.0034583038591527024
+          },
+          "studied_credits_bin": {
+            "jensen_shannon_divergence": 0.008563081853282372,
+            "real_unique_count": 4,
+            "synthetic_unique_count": 4,
+            "total_variation": 0.06092623295025458
+          }
+        },
+        "jensen_shannon_divergence_mean": 0.138465175367369,
+        "total_variation_mean": 0.25607323376967883
+      },
+      "correctness_by_skill_mae": 0.9474274907771713,
+      "correctness_rate_error": 0.6148225519661725,
+      "sequence_length_histogram_tv": 0.74525,
+      "sequence_length_wasserstein": 11.1625,
+      "skill_frequency_js": 0.4103912311975085,
+      "skill_frequency_total_variation": 0.6159448767324268
+    },
+    "primary_binary_signal": "engaged",
+    "primary_binary_signal_semantics": "weekly_engagement",
+    "subgroup_fidelity": {
+      "behavior_window": "events_after_first_2",
+      "by_subgroup": {
+        "high": {
+          "abs_error": {
+            "learner_share": 0.62025
+          },
+          "real": {
+            "future_correctness_rate": 0.6986215127946173,
+            "learner_share": 0.62025,
+            "mean_length": 32.72309552599758
+          },
+          "synthetic": {
+            "future_correctness_rate": null,
+            "learner_share": 0.0,
+            "mean_length": null
+          }
+        },
+        "low": {
+          "abs_error": {
+            "future_correctness_rate": 0.2600994898060573,
+            "learner_share": 0.7999999999999999,
+            "mean_length": 15.363864378625504
+          },
+          "real": {
+            "future_correctness_rate": 0.2612057256295058,
+            "learner_share": 0.19725,
+            "mean_length": 13.603295310519645
+          },
+          "synthetic": {
+            "future_correctness_rate": 0.001106235823448481,
+            "learner_share": 0.99725,
+            "mean_length": 28.96715968914515
+          }
+        },
+        "mid": {
+          "abs_error": {
+            "future_correctness_rate": 0.4303294206739871,
+            "learner_share": 0.17975,
+            "mean_length": 5.39701120797011
+          },
+          "real": {
+            "future_correctness_rate": 0.4303294206739871,
+            "learner_share": 0.1825,
+            "mean_length": 30.942465753424656
+          },
+          "synthetic": {
+            "future_correctness_rate": 0.0,
+            "learner_share": 0.00275,
+            "mean_length": 25.545454545454547
+          }
+        }
+      },
+      "future_correctness_rate_mae_across_subgroups": 0.3452144552400222,
+      "learner_share_mae_across_subgroups": 0.5333333333333333,
+      "length_mae_across_subgroups": 10.380437793297807,
+      "partition": "by_fixed_prefix_performance",
+      "performance_reference": {
+        "high_cutoff": 1.0,
+        "low_cutoff": 0.5,
+        "prefix_length": 2
+      },
+      "subgroup_column": null
+    },
+    "tail_fidelity": {
+      "evaluated_real_learners": 26072,
+      "evaluated_synthetic_learners": 26072,
+      "implemented_tail_groups": [
+        "dropout",
+        "late_failure",
+        "persistent_misconception",
+        "rare_skill_path",
+        "recovery"
+      ],
+      "maximum_percentile_tail_prevalence": 0.1,
+      "operational_note": "Late failure and recovery are correctness-trajectory definitions. Dropout is emitted only when an explicit completion/non-participation outcome is supplied.",
+      "tail_prevalence_error": {
+        "dropout": 0.010854556612457822,
+        "late_failure": 0.06735194845044493,
+        "persistent_misconception": 0.29008131328628417,
+        "rare_skill_path": 0.04464559680883707,
+        "recovery": 0.002224608775698067
+      },
+      "tail_prevalence_error_ci": {
+        "dropout": {
+          "ci_high": 0.01875862994783675,
+          "ci_low": 0.0027165158023934157,
+          "n_boot": 200
+        },
+        "late_failure": {
+          "ci_high": 0.07057859005830008,
+          "ci_low": 0.06439283522552931,
+          "n_boot": 200
+        },
+        "persistent_misconception": {
+          "ci_high": 0.2955690012273703,
+          "ci_low": 0.28369994630254675,
+          "n_boot": 200
+        },
+        "rare_skill_path": {
+          "ci_high": 0.04711280300705738,
+          "ci_low": 0.041998120589137766,
+          "n_boot": 200
+        },
+        "recovery": {
+          "ci_high": 0.002805691930039891,
+          "ci_low": 0.0017643448910708806,
+          "n_boot": 200
+        }
+      },
+      "tail_prevalence_mae": 0.0830316047867444,
+      "tail_prevalence_real": {
+        "dropout": 0.3130561521939245,
+        "late_failure": 0.06735194845044493,
+        "persistent_misconception": 0.7099186867137158,
+        "rare_skill_path": 0.04464559680883707,
+        "recovery": 0.002224608775698067
+      },
+      "tail_prevalence_synthetic": {
+        "dropout": 0.3022015955814667,
+        "late_failure": 0.0,
+        "persistent_misconception": 1.0,
+        "rare_skill_path": 0.0,
+        "recovery": 0.0
+      },
+      "tail_reference": {
+        "fast_response_cutoff": null,
+        "fast_response_cutoff_inclusive": true,
+        "high_gap_cutoff": null,
+        "high_gap_cutoff_inclusive": true,
+        "high_hint_cutoff": null,
+        "high_hint_cutoff_inclusive": true,
+        "long_cutoff": null,
+        "long_cutoff_inclusive": true,
+        "low_correctness_cutoff": null,
+        "low_correctness_cutoff_inclusive": true,
+        "maximum_percentile_tail_prevalence": 0.1,
+        "quantile": 0.05,
+        "rapid_guessing_max_primary_signal_rate": 0.5,
+        "rare_path_cutoff": -6.209683237866479,
+        "rare_path_cutoff_inclusive": true,
+        "rare_path_transition_model": "global_add_one_smoothed_log2_probability",
+        "short_cutoff": null,
+        "short_cutoff_inclusive": true,
+        "transition_floor_logp": -19.452977170850424,
+        "transition_model_sha256": "5ba5e40f151d31216df1be4f9c8bfeb50e8856fbbf7869fbcfb1431b90a75295",
+        "transition_observation_count": 717461,
+        "transition_vocabulary_size": 216,
+        "unavailable_percentile_tail_groups": {
+          "long_inactivity": "coarse_tie_minimum_nonempty_prevalence_0.469469_exceeds_0.100000",
+          "long_trajectory": "coarse_tie_minimum_nonempty_prevalence_0.278230_exceeds_0.100000",
+          "persistent_failure": "coarse_tie_minimum_nonempty_prevalence_0.139268_exceeds_0.100000",
+          "short_trajectory": "coarse_tie_minimum_nonempty_prevalence_0.107126_exceeds_0.100000"
+        }
+      },
+      "tail_reference_scope": "complete_real_train",
+      "tail_reference_split": "real_train",
+      "tail_shape": {
+        "by_tail_group": {
+          "dropout": {
+            "correctness_curve_mae": 0.38721991246686704,
+            "correctness_curve_mae_ci": {
+              "ci_high": 0.44486851851851844,
+              "ci_low": 0.3610388888888888,
+              "n_boot": 200
+            },
+            "exploratory": false,
+            "real_learners": 8162,
+            "synthetic_learners": 7879
+          },
+          "late_failure": {
+            "correctness_curve_mae": 0.4951025056947608,
+            "exploratory": true,
+            "real_learners": 1756,
+            "synthetic_learners": 0
+          },
+          "persistent_misconception": {
+            "correctness_curve_mae": 0.5473639374771803,
+            "correctness_curve_mae_ci": {
+              "ci_high": 0.5807259259259259,
+              "ci_low": 0.5224222222222223,
+              "n_boot": 200
+            },
+            "exploratory": false,
+            "real_learners": 18509,
+            "synthetic_learners": 26072
+          },
+          "rare_skill_path": {
+            "correctness_curve_mae": 0.8416380297823597,
+            "exploratory": true,
+            "real_learners": 1164,
+            "synthetic_learners": 0
+          },
+          "recovery": {
+            "correctness_curve_mae": 0.496168582375479,
+            "exploratory": true,
+            "real_learners": 58,
+            "synthetic_learners": 0
+          }
+        },
+        "correctness_curve_mae_mean": 0.46729192497202365
+      },
+      "unavailable_percentile_tail_groups": {
+        "long_inactivity": "coarse_tie_minimum_nonempty_prevalence_0.469469_exceeds_0.100000",
+        "long_trajectory": "coarse_tie_minimum_nonempty_prevalence_0.278230_exceeds_0.100000",
+        "persistent_failure": "coarse_tie_minimum_nonempty_prevalence_0.139268_exceeds_0.100000",
+        "short_trajectory": "coarse_tie_minimum_nonempty_prevalence_0.107126_exceeds_0.100000"
+      },
+      "unsupported_proposal_tail_groups": []
+    },
+    "temporal_fidelity": {
+      "correct_streak_wasserstein": 3.9893887945670627,
+      "correctness_autocorrelation_mae": 0.4893223367523265,
+      "correctness_autocorrelation_real": {
+        "1": 0.5272837435280674,
+        "2": 0.47797896698363773,
+        "3": 0.45934838685245855
+      },
+      "correctness_autocorrelation_synthetic": {
+        "1": -0.0011234096400599967,
+        "2": -0.0011140536553013558,
+        "3": -0.0011184495974545627
+      },
+      "correctness_curve_mae": 0.5434777777777777,
+      "correctness_transition_js": 0.5206538426985137,
+      "correctness_transition_tv": 0.7307136349968602,
+      "failure_streak_wasserstein": 25.03581279404261,
+      "inter_event_time_js": 0.7598186925839088,
+      "inter_event_time_total_variation": 0.9092215117907982,
+      "skill_trigram_js": 0.5937330540944544
+    }
+  },
+  "evaluation_seed": 20260703,
+  "experiment_arm": "standard",
+  "final_audit": {
+    "checks": [
+      "source strict audit passed",
+      "publication.metrics.rq1 is present",
+      "active standard artifact hash matches generation metadata",
+      "generation seed matches"
+    ],
+    "issues": [],
+    "scope": "standard_arm_rq1_only",
+    "status": "passed"
+  },
+  "generation_seed": 20260705,
+  "model": "timegan",
+  "publication": {
+    "direction_contract": {
+      "detectability_auc": "closer_to_0.5_is_better",
+      "fidelity_errors": "lower_is_better"
+    },
+    "excluded_from_publication": {
+      "distinguishability": "Detector includes independently postprocessed columns; excluded from model comparison.",
+      "diversity_uniqueness_rates": "Novelty is not monotonic quality; retained only in the raw diagnostic report.",
+      "omitted_standard_tail_groups": {
+        "dropout": "Synthetic dropout prevalence/shape is set by the common outcome postprocessor.",
+        "late_failure": "Rare-group prevalence is retained, but trajectory shape is not estimable because fewer than 10 real or synthetic tail learners are available.",
+        "persistent_misconception": "Weekly activity categories do not define a pedagogical misconception.",
+        "rare_skill_path": "Rare-group prevalence is retained, but trajectory shape is not estimable because fewer than 10 real or synthetic tail learners are available.",
+        "recovery": "Rare-group prevalence is retained, but trajectory shape is not estimable because fewer than 10 real or synthetic tail learners are available."
+      },
+      "raw_diagnostic_aggregates": "Unfiltered all-column marginals/NMI, detector accuracy, and minimum-NN extremes are not table metrics.",
+      "raw_test_fidelity_duplicates": "Held-out real data is reserved for downstream generalization; primary fidelity is against real train.",
+      "sequence_length_model_ranking": "All generators use the same trajectory-length sampler, so length metrics are pipeline diagnostics.",
+      "short_and_long_trajectory_tails": "Shared length sampler prevents attribution to a generator architecture."
+    },
+    "metrics": {
+      "rq1": {
+        "average_fidelity": {
+          "modeled_value_marginal_js_mean": 0.33453782041896385,
+          "primary_signal_rate_error": 0.6148225519661725,
+          "skill_frequency_js": 0.4103912311975085
+        },
+        "cross_signal_dependence": {
+          "prespecified_signal_nmi_mae": 0.4324896337135608
+        },
+        "detectability": {},
+        "subgroup_fidelity": {
+          "future_primary_signal_rate_mae": 0.3452144552400222,
+          "learner_share_mae": 0.5333333333333333
+        },
+        "tail_fidelity": {
+          "late_disengagement": {
+            "prevalence_error": 0.06735194845044493,
+            "prevalence_error_ci": {
+              "ci_high": 0.07057859005830008,
+              "ci_low": 0.06439283522552931,
+              "n_boot": 200
+            },
+            "primary_signal_curve_mae_status": "not_estimable",
+            "real_learners": 1756,
+            "source_tail_group": "late_failure",
+            "synthetic_learners": 0
+          },
+          "rare_activity_path": {
+            "prevalence_error": 0.04464559680883707,
+            "prevalence_error_ci": {
+              "ci_high": 0.04711280300705738,
+              "ci_low": 0.041998120589137766,
+              "n_boot": 200
+            },
+            "primary_signal_curve_mae_status": "not_estimable",
+            "real_learners": 1164,
+            "source_tail_group": "rare_skill_path",
+            "synthetic_learners": 0
+          },
+          "reengagement": {
+            "prevalence_error": 0.002224608775698067,
+            "prevalence_error_ci": {
+              "ci_high": 0.002805691930039891,
+              "ci_low": 0.0017643448910708806,
+              "n_boot": 200
+            },
+            "primary_signal_curve_mae_status": "not_estimable",
+            "real_learners": 58,
+            "source_tail_group": "recovery",
+            "synthetic_learners": 0
+          }
+        },
+        "temporal_fidelity": {
+          "correctness_autocorrelation_mae": 0.4893223367523265,
+          "correctness_curve_mae": 0.5434777777777777,
+          "correctness_transition_js": 0.5206538426985137,
+          "inter_event_time_js": 0.7598186925839088,
+          "skill_trigram_js": 0.5937330540944544
+        }
+      }
+    },
+    "research_question_mapping": {
+      "rq1": "Average, temporal, dependence, subgroup, and rare-pathway preservation."
+    },
+    "schema_version": "publication_metrics_v2",
+    "selection_metadata": {
+      "modeled_marginal_columns": [
+        "active_days_bin",
+        "click_bin",
+        "course_id",
+        "dominant_activity"
+      ],
+      "prespecified_dependence_pairs": [
+        "click_bin__active_days_bin",
+        "dominant_activity__active_days_bin",
+        "dominant_activity__click_bin"
+      ],
+      "raw_report_retained_for_diagnostics": true
+    },
+    "status": "completed"
+  },
+  "research_question": {
+    "id": "RQ1",
+    "scope": "Preservation of average learner behaviour and rare educational pathways by unmodified synthetic trajectory generators."
+  },
+  "schema_version": "standard_rq1_report_v1",
+  "source_dataset": "oulad_weekly_engagement",
+  "source_snapshot": {
+    "report": "experiments/reports/standard_vs_tail_targeted/oulad_weekly_engagement/timegan/seed_20260705/generation_evaluation_report.json",
+    "report_sha256": "c6a66fbd44e7bfa5c119225472fae8cc49b327b2da50d509f5bba9b4d4ecda2c",
+    "source_final_audit": {
+      "issues": [],
+      "status": "passed",
+      "strict_mode": true
+    }
+  },
+  "standard_artifact": {
+    "generation_metadata": "experiments/outputs/standard/oulad_weekly/timegan/seed_20260705/generation_metadata.json",
+    "generation_metadata_sha256": "a3dd13f6eb4fac79ca636a3386f27dc7beaa395f0217bdaf4b2f163973606de7",
+    "standard_provenance": "experiments/outputs/standard/oulad_weekly/timegan/seed_20260705/standard_provenance.json",
+    "standard_provenance_sha256": "bc8fd16dbbc43bc85fcdab38ccbe396b078127ba30984cf382062691f7a9b0c8",
+    "synthetic_csv": "experiments/outputs/standard/oulad_weekly/timegan/seed_20260705/synth_generation.csv",
+    "synthetic_csv_sha256": "6242635fbba0b87d36b2fc4cfc2738cfc6ae753d69f78c33e462be40d163b3eb"
+  }
+}

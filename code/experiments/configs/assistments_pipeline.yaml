@@ -1,0 +1,110 @@
+# Initial ASSISTments experiment configuration.
+
+dataset:
+  name: assistments
+  unit: learner_trajectory
+  processed_dir: experiments/data/datasets/assistments
+  split:
+    train: real_train
+    test: real_test
+
+artifacts:
+  train: train.csv
+  test: test.csv
+  train_supervised: train_supervised.csv
+  test_supervised: test_supervised.csv
+  train_generation: train_generation.csv
+  test_generation: test_generation.csv
+  downstream_report: downstream_report.json
+  pipeline_report: pipeline_report.json
+  synthetic_dir: synthetic
+  evaluation_dir: evaluation
+
+columns:
+  learner: learner_id
+  order: order
+  skill: skill
+  correct: correct
+  hint: hint
+  attempts: attempts
+
+generation_columns:
+  learner: learner_id
+  order: order
+  skill: skill_id
+  correct: correct
+  hint: hint_bin
+  attempts: attempt_bin
+  # Optional signals used by the tail metrics. response_time drives the Table-3
+  # rapid-guessing tail; subgroup names a static demographic for subgroup
+  # fidelity (empty here -- ASSISTments carries no demographics, so subgroup
+  # fidelity falls back to prior-performance terciles).
+  response_time: response_time_bin
+  subgroup: ""
+
+synthetic_generation:
+  # Core three-model comparison (statistical / encoder / adversarial) plus the
+  # auxiliary bootstrap baseline. timegan is provided by the pinned external
+  # SynthCity dependency; sequence_vae_timevae uses the pinned PyTorch backend.
+  generators:
+    - markov_ngram          # core statistical (Markov/n-gram)
+    - sequence_vae_timevae  # core encoder-based (sequence VAE / TimeVAE)
+    - timegan               # core adversarial (external SynthCity TimeGAN)
+    - block_bootstrap       # auxiliary sanity baseline
+  output:
+    dataset: synth_generation.csv
+    metadata: generation_metadata.json
+
+evaluation:
+  inputs:
+    - real_train
+    - real_test
+    - synthetic_dataset
+  metric_families:
+    - global_fidelity
+    - temporal_fidelity
+    - tail_fidelity            # prevalence error + tail-shape curve
+    - cross_signal_dependence
+    - subgroup_fidelity
+    - downstream_utility_models # ML models + augmentation + tail learnability
+    - downstream_utility_tasks  # learner-level rare-outcome prediction
+    - privacy_memorization      # global + per-tail (privacy-tail conflict)
+    - diversity_coverage
+    - distinguishability
+
+# Tail groups are produced by evaluation.metrics.tail_labels using percentile
+# cut-points (top/bottom 5%) fixed on real_train, per Table 3. Groups that need
+# a signal absent from the schema (long_inactivity needs an inter-event gap) are
+# skipped automatically.
+tail_groups:
+  define_from: real_train
+  quantile: 0.05
+  candidates:
+    - persistent_failure
+    - persistent_misconception
+    - high_hint_use
+    - rapid_guessing
+    - recovery
+    - late_failure
+    - rare_skill_path
+    - short_trajectory
+    - long_trajectory
+  schema_dependent:
+    - long_inactivity   # requires an inter-event-gap column (absent in ASSISTments)
+
+downstream_tasks:
+  primary:
+    - next_response_correctness   # sliced by tail group -> tail learnability (delta_tail)
+  secondary:                      # learner-level, implemented in evaluation.learner_tasks
+    - persistent_failure_prediction
+    - recovery_prediction
+
+downstream_models:
+  task: next_response_correctness
+  target: correct
+  group_column: skill_id
+  seed: 20260703
+  models:
+    - group_mean_baseline
+    - logistic_regression
+    - hist_gradient_boosting

@@ -1,0 +1,18 @@
+pandas==2.3.3
+PyYAML==6.0.3
+# SynthCity 0.2.12, the external TimeGAN provider, requires NumPy <2 and
+# PyTorch >=2.1,<2.3. Keeping these pins together prevents an invalid resolver
+# environment for the locked benchmark.
+numpy==1.26.4
+scikit-learn==1.6.1
+scipy==1.13.1
+gdown==5.2.2
+EduData==0.0.18
+
+synthcity==0.2.12
+torch==2.2.2
+# Match PyTorch 2.2.2 explicitly; SynthCity's broad transitive requirements
+# otherwise make pip backtrack across many incompatible releases.
+torchvision==0.17.2
+torchtext==0.17.2
+opacus==1.4.1

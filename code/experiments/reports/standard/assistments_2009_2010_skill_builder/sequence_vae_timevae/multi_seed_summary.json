@@ -1,0 +1,247 @@
+{
+  "data_provenance": {
+    "generation_columns": [
+      "learner_id",
+      "order",
+      "skill_id",
+      "correct",
+      "attempt_bin",
+      "hint_bin",
+      "response_time_bin",
+      "opportunity_bin"
+    ],
+    "runtime": {
+      "config_path": "experiments/configs/assistments_preprocessing.yaml",
+      "config_sha256": "079175cbee2556c0dbedfbc81e5c4cd7c60775651ed9f69d0fc0bf204c9825c6",
+      "pandas": "2.3.3",
+      "platform": "macOS-26.5.2-arm64-arm-64bit",
+      "preprocessing_script_sha256": "9297f401f810fe7fd7d01675d4deac22545a10506506102597178db688c31735",
+      "python": "3.9.6",
+      "pyyaml": "6.0.3"
+    },
+    "test_generation_sha256": "e526befa3097065abdde78b65f7a51033e958caac705b8502eb14f74b1390360",
+    "test_rows": 64742,
+    "test_source": "experiments/data/datasets/assistments/clean_test.csv",
+    "test_source_sha256": "e63c08b711fba7401fa97c27fbacff941b965a5f1695a916c84873ddece466b7",
+    "train_generation_sha256": "cc432ce7d6876541305b63bf149d825fbfd5ee47ea6fc4a65a15c75f048b2138",
+    "train_rows": 282118,
+    "train_source": "experiments/data/datasets/assistments/clean_train.csv",
+    "train_source_sha256": "bf3a2fa391f44ecbe4c161829f253c2e7845320035933c3193af20e51b09d5be"
+  },
+  "dataset": "assistments_2009_2010_skill_builder",
+  "dataset_key": "assistments",
+  "experiment_arm": "standard",
+  "final_audit": {
+    "issues": [],
+    "rq1_metric_count": 23,
+    "scope": "standard_arm_rq1_only",
+    "seed_report_count": 3,
+    "status": "passed"
+  },
+  "metric_summary": {
+    "rq1.average_fidelity.modeled_value_marginal_js_mean": {
+      "max": 0.0002768344687973203,
+      "mean": 0.0002533177834623226,
+      "min": 0.0002348885326089485,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 1.749813100273568e-05
+    },
+    "rq1.average_fidelity.primary_signal_rate_error": {
+      "max": 0.0018881101592275185,
+      "mean": 0.0012035891900871547,
+      "min": 1.1321622124582653e-05,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0008461437071451022
+    },
+    "rq1.average_fidelity.skill_frequency_js": {
+      "max": 0.0013079793558293568,
+      "mean": 0.0012583529372957622,
+      "min": 0.001189642475247443,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 5.01601094105562e-05
+    },
+    "rq1.cross_signal_dependence.prespecified_signal_nmi_mae": {
+      "max": 0.09930201458945283,
+      "mean": 0.09928856770272637,
+      "min": 0.09927185183862268,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 1.2528967614559344e-05
+    },
+    "rq1.detectability.detectability_auc": {
+      "max": 0.8510957672222222,
+      "mean": 0.8500292977777778,
+      "min": 0.8493312961111111,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0007660139045438557
+    },
+    "rq1.subgroup_fidelity.future_hint_rate_mae": {
+      "max": 0.05337514688721878,
+      "mean": 0.05154963047892991,
+      "min": 0.04966003237098135,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0015173658788314658
+    },
+    "rq1.subgroup_fidelity.future_primary_signal_rate_mae": {
+      "max": 0.06789599732886882,
+      "mean": 0.06606851988472079,
+      "min": 0.06439065958909511,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0014349534570429886
+    },
+    "rq1.subgroup_fidelity.learner_share_mae": {
+      "max": 0.09908982966493685,
+      "mean": 0.09067139783100019,
+      "min": 0.08555512306930768,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.005998624934364601
+    },
+    "rq1.tail_fidelity.high_hint_use.prevalence_error": {
+      "max": 0.04141149023038787,
+      "mean": 0.03898123845630407,
+      "min": 0.035287255759696705,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0026550987233882896
+    },
+    "rq1.tail_fidelity.high_hint_use.primary_signal_curve_mae": {
+      "max": 0.5031300322061192,
+      "mean": 0.5031300322061192,
+      "min": 0.5031300322061192,
+      "missing_runs": 2,
+      "n": 1,
+      "std": 0.0
+    },
+    "rq1.tail_fidelity.late_failure.prevalence_error": {
+      "max": 0.017497812773403325,
+      "mean": 0.008457276173811609,
+      "min": 0.0005832604257801112,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.00695442777195292
+    },
+    "rq1.tail_fidelity.late_failure.primary_signal_curve_mae": {
+      "max": 0.09036196778132269,
+      "mean": 0.072971521249883,
+      "min": 0.05119325119325119,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.016288786250164847
+    },
+    "rq1.tail_fidelity.persistent_failure.prevalence_error": {
+      "max": 0.024496937882764653,
+      "mean": 0.023719257315057838,
+      "min": 0.022455526392534265,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0009014891120341892
+    },
+    "rq1.tail_fidelity.rapid_guessing.prevalence_error": {
+      "max": 0.02537182852143482,
+      "mean": 0.024594147953728007,
+      "min": 0.02391367745698454,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0005992431226760949
+    },
+    "rq1.tail_fidelity.rare_skill_path.prevalence_error": {
+      "max": 0.9442986293379995,
+      "mean": 0.9365218236609313,
+      "min": 0.9268008165645961,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.007274535601776887
+    },
+    "rq1.tail_fidelity.rare_skill_path.primary_signal_curve_mae": {
+      "max": 0.05871798008367923,
+      "mean": 0.05319671030228793,
+      "min": 0.04845373752740704,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.004226344242664463
+    },
+    "rq1.tail_fidelity.recovery.prevalence_error": {
+      "max": 0.02274715660542432,
+      "mean": 0.010304267522115291,
+      "min": 0.0005832604257801147,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.009250803735487754
+    },
+    "rq1.tail_fidelity.recovery.primary_signal_curve_mae": {
+      "max": 0.08999350227420405,
+      "mean": 0.06933876304213067,
+      "min": 0.05106372252470257,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.015981847250668223
+    },
+    "rq1.temporal_fidelity.correct_hint_cross_correlation_mae": {
+      "max": 0.4473272903056972,
+      "mean": 0.4437002831694438,
+      "min": 0.4418781750183043,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.002564690964316976
+    },
+    "rq1.temporal_fidelity.correctness_autocorrelation_mae": {
+      "max": 0.20279917604194034,
+      "mean": 0.20170429556995337,
+      "min": 0.20061331423933051,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0008923786033236117
+    },
+    "rq1.temporal_fidelity.correctness_curve_mae": {
+      "max": 0.03126877062499731,
+      "mean": 0.02720787464983032,
+      "min": 0.02466277178166785,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0029020712990264234
+    },
+    "rq1.temporal_fidelity.correctness_transition_js": {
+      "max": 0.010231411158336402,
+      "mean": 0.01002134520057,
+      "min": 0.009690676669268483,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.00023665330827232753
+    },
+    "rq1.temporal_fidelity.skill_trigram_js": {
+      "max": 0.8665969026226168,
+      "mean": 0.8634501610282177,
+      "min": 0.8590535325559626,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.003203880032731222
+    }
+  },
+  "metric_summary_scope": "publication_rq1_only",
+  "model": "sequence_vae_timevae",
+  "publication_reports": [
+    "experiments/reports/standard/assistments_2009_2010_skill_builder/sequence_vae_timevae/seed_20260703/generation_evaluation_report.json",
+    "experiments/reports/standard/assistments_2009_2010_skill_builder/sequence_vae_timevae/seed_20260704/generation_evaluation_report.json",
+    "experiments/reports/standard/assistments_2009_2010_skill_builder/sequence_vae_timevae/seed_20260705/generation_evaluation_report.json"
+  ],
+  "publication_schema_version": "publication_metrics_v2",
+  "research_question": "RQ1",
+  "schema_version": "standard_rq1_report_v1",
+  "seeds": [
+    20260703,
+    20260704,
+    20260705
+  ],
+  "source_dataset": "assistments_2009_2010_skill_builder",
+  "source_snapshot": {
+    "summary_report": "experiments/reports/standard_vs_tail_targeted/assistments_2009_2010_skill_builder/sequence_vae_timevae/multi_seed_summary.json",
+    "summary_report_sha256": "4e31d37165dbba21f7da1623a17c74d0d4623dfbe6b0171fe5cfcecb76570cbf"
+  }
+}

@@ -1,0 +1,2822 @@
+{
+  "curated_snapshot": {
+    "evaluator_rerun": false,
+    "generator_retrained": false,
+    "metric_values_changed": false,
+    "paths_portabilized": true,
+    "promotion_script": "experiments/scripts/promote_final_reports.py",
+    "promotion_script_sha256": "d3b616fa0f80fbe01b68c967ae447604053416f0776867f46b4cfdc7fa87cdff",
+    "source_report": "experiments/runs/standard_vs_tail_targeted/evaluation/assistments_2009_2010_skill_builder/sequence_vae_timevae/multi_seed_summary.json",
+    "source_report_sha256": "debf7f3b613136b2b7d028a836ef125517f6204c28eaddf1b84ef7536c788dcc",
+    "targeted_provenance_embedded": true
+  },
+  "data_provenance": {
+    "generation_columns": [
+      "learner_id",
+      "order",
+      "skill_id",
+      "correct",
+      "attempt_bin",
+      "hint_bin",
+      "response_time_bin",
+      "opportunity_bin"
+    ],
+    "runtime": {
+      "config_path": "experiments/configs/assistments_preprocessing.yaml",
+      "config_sha256": "079175cbee2556c0dbedfbc81e5c4cd7c60775651ed9f69d0fc0bf204c9825c6",
+      "pandas": "2.3.3",
+      "platform": "macOS-26.5.2-arm64-arm-64bit",
+      "preprocessing_script_sha256": "9297f401f810fe7fd7d01675d4deac22545a10506506102597178db688c31735",
+      "python": "3.9.6",
+      "pyyaml": "6.0.3"
+    },
+    "test_generation_sha256": "e526befa3097065abdde78b65f7a51033e958caac705b8502eb14f74b1390360",
+    "test_rows": 64742,
+    "test_source": "experiments/data/datasets/assistments/clean_test.csv",
+    "test_source_sha256": "e63c08b711fba7401fa97c27fbacff941b965a5f1695a916c84873ddece466b7",
+    "train_generation_sha256": "cc432ce7d6876541305b63bf149d825fbfd5ee47ea6fc4a65a15c75f048b2138",
+    "train_rows": 282118,
+    "train_source": "experiments/data/datasets/assistments/clean_train.csv",
+    "train_source_sha256": "bf3a2fa391f44ecbe4c161829f253c2e7845320035933c3193af20e51b09d5be"
+  },
+  "dataset": "assistments_2009_2010_skill_builder",
+  "experiment_design": "standard_vs_tail_targeted",
+  "ignore_columns": [
+    "learner_id",
+    "order"
+  ],
+  "metric_summary": {
+    "rq1.average_fidelity.modeled_value_marginal_js_mean": {
+      "max": 0.0002768344687973203,
+      "mean": 0.0002533177834623226,
+      "min": 0.0002348885326089485,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 1.749813100273568e-05
+    },
+    "rq1.average_fidelity.primary_signal_rate_error": {
+      "max": 0.0018881101592275185,
+      "mean": 0.0012035891900871547,
+      "min": 1.1321622124582653e-05,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0008461437071451022
+    },
+    "rq1.average_fidelity.skill_frequency_js": {
+      "max": 0.0013079793558293568,
+      "mean": 0.0012583529372957622,
+      "min": 0.001189642475247443,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 5.01601094105562e-05
+    },
+    "rq1.cross_signal_dependence.prespecified_signal_nmi_mae": {
+      "max": 0.09930201458945283,
+      "mean": 0.09928856770272637,
+      "min": 0.09927185183862268,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 1.2528967614559344e-05
+    },
+    "rq1.detectability.detectability_auc": {
+      "max": 0.8510957672222222,
+      "mean": 0.8500292977777778,
+      "min": 0.8493312961111111,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0007660139045438557
+    },
+    "rq1.subgroup_fidelity.future_hint_rate_mae": {
+      "max": 0.05337514688721878,
+      "mean": 0.05154963047892991,
+      "min": 0.04966003237098135,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0015173658788314658
+    },
+    "rq1.subgroup_fidelity.future_primary_signal_rate_mae": {
+      "max": 0.06789599732886882,
+      "mean": 0.06606851988472079,
+      "min": 0.06439065958909511,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0014349534570429886
+    },
+    "rq1.subgroup_fidelity.learner_share_mae": {
+      "max": 0.09908982966493685,
+      "mean": 0.09067139783100019,
+      "min": 0.08555512306930768,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.005998624934364601
+    },
+    "rq1.tail_fidelity.high_hint_use.prevalence_error": {
+      "max": 0.04141149023038787,
+      "mean": 0.03898123845630407,
+      "min": 0.035287255759696705,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0026550987233882896
+    },
+    "rq1.tail_fidelity.high_hint_use.primary_signal_curve_mae": {
+      "max": 0.5031300322061192,
+      "mean": 0.5031300322061192,
+      "min": 0.5031300322061192,
+      "missing_runs": 2,
+      "n": 1,
+      "std": 0.0
+    },
+    "rq1.tail_fidelity.late_failure.prevalence_error": {
+      "max": 0.017497812773403325,
+      "mean": 0.008457276173811609,
+      "min": 0.0005832604257801112,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.00695442777195292
+    },
+    "rq1.tail_fidelity.late_failure.primary_signal_curve_mae": {
+      "max": 0.09036196778132269,
+      "mean": 0.072971521249883,
+      "min": 0.05119325119325119,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.016288786250164847
+    },
+    "rq1.tail_fidelity.persistent_failure.prevalence_error": {
+      "max": 0.024496937882764653,
+      "mean": 0.023719257315057838,
+      "min": 0.022455526392534265,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0009014891120341892
+    },
+    "rq1.tail_fidelity.rapid_guessing.prevalence_error": {
+      "max": 0.02537182852143482,
+      "mean": 0.024594147953728007,
+      "min": 0.02391367745698454,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0005992431226760949
+    },
+    "rq1.tail_fidelity.rare_skill_path.prevalence_error": {
+      "max": 0.9442986293379995,
+      "mean": 0.9365218236609313,
+      "min": 0.9268008165645961,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.007274535601776887
+    },
+    "rq1.tail_fidelity.rare_skill_path.primary_signal_curve_mae": {
+      "max": 0.05871798008367923,
+      "mean": 0.05319671030228793,
+      "min": 0.04845373752740704,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.004226344242664463
+    },
+    "rq1.tail_fidelity.recovery.prevalence_error": {
+      "max": 0.02274715660542432,
+      "mean": 0.010304267522115291,
+      "min": 0.0005832604257801147,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.009250803735487754
+    },
+    "rq1.tail_fidelity.recovery.primary_signal_curve_mae": {
+      "max": 0.08999350227420405,
+      "mean": 0.06933876304213067,
+      "min": 0.05106372252470257,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.015981847250668223
+    },
+    "rq1.temporal_fidelity.correct_hint_cross_correlation_mae": {
+      "max": 0.4473272903056972,
+      "mean": 0.4437002831694438,
+      "min": 0.4418781750183043,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.002564690964316976
+    },
+    "rq1.temporal_fidelity.correctness_autocorrelation_mae": {
+      "max": 0.20279917604194034,
+      "mean": 0.20170429556995337,
+      "min": 0.20061331423933051,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0008923786033236117
+    },
+    "rq1.temporal_fidelity.correctness_curve_mae": {
+      "max": 0.03126877062499731,
+      "mean": 0.02720787464983032,
+      "min": 0.02466277178166785,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0029020712990264234
+    },
+    "rq1.temporal_fidelity.correctness_transition_js": {
+      "max": 0.010231411158336402,
+      "mean": 0.01002134520057,
+      "min": 0.009690676669268483,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.00023665330827232753
+    },
+    "rq1.temporal_fidelity.skill_trigram_js": {
+      "max": 0.8665969026226168,
+      "mean": 0.8634501610282177,
+      "min": 0.8590535325559626,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.003203880032731222
+    },
+    "rq2.downstream_utility.arms.real_plus_synthetic.auprc": {
+      "max": 0.8190286553319239,
+      "mean": 0.8186805308701887,
+      "min": 0.8183589556065508,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.00027404753295844677
+    },
+    "rq2.downstream_utility.arms.real_plus_synthetic.auroc": {
+      "max": 0.7333880727488754,
+      "mean": 0.7327437331691226,
+      "min": 0.731993142102919,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0005744126916755047
+    },
+    "rq2.downstream_utility.arms.real_plus_tail_targeted_synthetic.auprc": {
+      "max": 0.8189460710796965,
+      "mean": 0.818587445821051,
+      "min": 0.8180631600823707,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.00037900352090161236
+    },
+    "rq2.downstream_utility.arms.real_plus_tail_targeted_synthetic.auroc": {
+      "max": 0.7331052295894229,
+      "mean": 0.7325706433484709,
+      "min": 0.7318270878398835,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0005423176800185049
+    },
+    "rq2.downstream_utility.arms.real_train.auprc": {
+      "max": 0.8232109318442457,
+      "mean": 0.8232109318442457,
+      "min": 0.8232109318442457,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.downstream_utility.arms.real_train.auroc": {
+      "max": 0.7383865356219796,
+      "mean": 0.7383865356219795,
+      "min": 0.7383865356219796,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 1.1102230246251565e-16
+    },
+    "rq2.downstream_utility.arms.synthetic_train.auprc": {
+      "max": 0.6495043253820854,
+      "mean": 0.6453420865532313,
+      "min": 0.6374925606306237,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.005553838774213513
+    },
+    "rq2.downstream_utility.arms.synthetic_train.auroc": {
+      "max": 0.5179662263707843,
+      "mean": 0.5055841479917985,
+      "min": 0.4848196107167419,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.014773258390019863
+    },
+    "rq2.downstream_utility.arms.tail_targeted_synthetic.auprc": {
+      "max": 0.6691887197649795,
+      "mean": 0.6594336475471959,
+      "min": 0.6400696521515624,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.013692542450717611
+    },
+    "rq2.downstream_utility.arms.tail_targeted_synthetic.auroc": {
+      "max": 0.53749519904525,
+      "mean": 0.5175720715849198,
+      "min": 0.48696587954084236,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.02196814260195905
+    },
+    "rq2.downstream_utility.real_plus_synthetic_gain_over_real.auprc": {
+      "max": -0.004182276512321725,
+      "mean": -0.004530400974056954,
+      "min": -0.004851976237694844,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.00027404753295844677
+    },
+    "rq2.downstream_utility.real_plus_synthetic_gain_over_real.auroc": {
+      "max": -0.004998462873104237,
+      "mean": -0.00564280245285705,
+      "min": -0.006393393519060653,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0005744126916755047
+    },
+    "rq2.downstream_utility.synthetic_utility_gap.auprc": {
+      "max": 0.185718371213622,
+      "mean": 0.17786884529101432,
+      "min": 0.1737066064621603,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.005553838774213513
+    },
+    "rq2.downstream_utility.synthetic_utility_gap.auroc": {
+      "max": 0.25356692490523774,
+      "mean": 0.23280238763018116,
+      "min": 0.22042030925119538,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.014773258390019863
+    },
+    "rq2.downstream_utility.tail_targeted_tstr_gain.auprc": {
+      "max": 0.020159346117994525,
+      "mean": 0.014091560993964617,
+      "min": 0.002577091520938768,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.008145906823966667
+    },
+    "rq2.downstream_utility.tail_targeted_tstr_gain.auroc": {
+      "max": 0.02352859215738079,
+      "mean": 0.011987923593121305,
+      "min": 0.0021462688241004613,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.008811580398904785
+    },
+    "rq2.downstream_utility.targeted_augmentation_gain_over_real.auprc": {
+      "max": -0.004264860764549128,
+      "mean": -0.004623486023194697,
+      "min": -0.005147771761874975,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.00037900352090161236
+    },
+    "rq2.downstream_utility.targeted_augmentation_gain_over_real.auroc": {
+      "max": -0.005281306032556721,
+      "mean": -0.00581589227350876,
+      "min": -0.006559447782096162,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0005423176800185049
+    },
+    "rq2.learner_level_outcome_tasks.persistent_failure_prediction.arms.real_plus_synthetic.auprc": {
+      "max": 0.20611731564896707,
+      "mean": 0.19638550359974116,
+      "min": 0.1841937876703002,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.00911769762907172
+    },
+    "rq2.learner_level_outcome_tasks.persistent_failure_prediction.arms.real_plus_synthetic.auroc": {
+      "max": 0.7931686046511629,
+      "mean": 0.7731104651162791,
+      "min": 0.7627906976744186,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.014185232375926806
+    },
+    "rq2.learner_level_outcome_tasks.persistent_failure_prediction.arms.real_train.auprc": {
+      "max": 0.13454822619524834,
+      "mean": 0.13454822619524834,
+      "min": 0.13454822619524834,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.learner_level_outcome_tasks.persistent_failure_prediction.arms.real_train.auroc": {
+      "max": 0.7011143410852714,
+      "mean": 0.7011143410852713,
+      "min": 0.7011143410852714,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 1.1102230246251565e-16
+    },
+    "rq2.learner_level_outcome_tasks.persistent_failure_prediction.arms.synthetic_train.auprc": {
+      "max": 0.0815713098158351,
+      "mean": 0.06810266527544878,
+      "min": 0.05463402073506245,
+      "missing_runs": 1,
+      "n": 2,
+      "std": 0.013468644540386328
+    },
+    "rq2.learner_level_outcome_tasks.persistent_failure_prediction.arms.synthetic_train.auroc": {
+      "max": 0.6972383720930233,
+      "mean": 0.5538154069767443,
+      "min": 0.4103924418604651,
+      "missing_runs": 1,
+      "n": 2,
+      "std": 0.1434229651162791
+    },
+    "rq2.learner_level_outcome_tasks.persistent_failure_prediction.arms.tail_targeted_synthetic.auprc": {
+      "max": 0.08344165892912411,
+      "mean": 0.06302665818742968,
+      "min": 0.03164602304385809,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.022522297508121267
+    },
+    "rq2.learner_level_outcome_tasks.persistent_failure_prediction.arms.tail_targeted_synthetic.auroc": {
+      "max": 0.5404554263565892,
+      "mean": 0.4810804263565891,
+      "min": 0.3708575581395348,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.07801704302098153
+    },
+    "rq2.learner_level_outcome_tasks.persistent_failure_prediction.real_plus_synthetic_gain_over_real.auprc": {
+      "max": 0.07156908945371873,
+      "mean": 0.061837277404492824,
+      "min": 0.049645561475051864,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.00911769762907172
+    },
+    "rq2.learner_level_outcome_tasks.persistent_failure_prediction.real_plus_synthetic_gain_over_real.auroc": {
+      "max": 0.09205426356589153,
+      "mean": 0.07199612403100775,
+      "min": 0.061676356589147274,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.014185232375926806
+    },
+    "rq2.learner_level_outcome_tasks.persistent_failure_prediction.synthetic_utility_gap.auprc": {
+      "max": 0.07991420546018589,
+      "mean": 0.06644556091979956,
+      "min": 0.052976916379413236,
+      "missing_runs": 1,
+      "n": 2,
+      "std": 0.013468644540386328
+    },
+    "rq2.learner_level_outcome_tasks.persistent_failure_prediction.synthetic_utility_gap.auroc": {
+      "max": 0.2907218992248063,
+      "mean": 0.14729893410852718,
+      "min": 0.003875968992248069,
+      "missing_runs": 1,
+      "n": 2,
+      "std": 0.1434229651162791
+    },
+    "rq2.learner_level_outcome_tasks.recovery_prediction.arms.real_plus_synthetic.auprc": {
+      "max": 0.41644299686143893,
+      "mean": 0.381636241073875,
+      "min": 0.34196730246735907,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.030598342876630633
+    },
+    "rq2.learner_level_outcome_tasks.recovery_prediction.arms.real_plus_synthetic.auroc": {
+      "max": 0.6519009417509591,
+      "mean": 0.6363794907568887,
+      "min": 0.61056853854203,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.018375658995635643
+    },
+    "rq2.learner_level_outcome_tasks.recovery_prediction.arms.real_train.auprc": {
+      "max": 0.4386682829026786,
+      "mean": 0.4386682829026786,
+      "min": 0.4386682829026786,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.learner_level_outcome_tasks.recovery_prediction.arms.real_train.auroc": {
+      "max": 0.689745378444367,
+      "mean": 0.6897453784443671,
+      "min": 0.689745378444367,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 1.1102230246251565e-16
+    },
+    "rq2.learner_level_outcome_tasks.recovery_prediction.arms.synthetic_train.auprc": {
+      "max": 0.34794348492809907,
+      "mean": 0.3079521279733724,
+      "min": 0.26156841109137874,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.03555099664945666
+    },
+    "rq2.learner_level_outcome_tasks.recovery_prediction.arms.synthetic_train.auroc": {
+      "max": 0.5771712591559122,
+      "mean": 0.5099407045692362,
+      "min": 0.4737530519707011,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.047585556052474595
+    },
+    "rq2.learner_level_outcome_tasks.recovery_prediction.arms.tail_targeted_synthetic.auprc": {
+      "max": 0.3304740257835262,
+      "mean": 0.29841419105479217,
+      "min": 0.28081311864867137,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.022705994513792075
+    },
+    "rq2.learner_level_outcome_tasks.recovery_prediction.arms.tail_targeted_synthetic.auroc": {
+      "max": 0.569672131147541,
+      "mean": 0.5012207882804325,
+      "min": 0.46067317753749565,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.04867687111188331
+    },
+    "rq2.learner_level_outcome_tasks.recovery_prediction.real_plus_synthetic_gain_over_real.auprc": {
+      "max": -0.02222528604123969,
+      "mean": -0.057032041828803594,
+      "min": -0.09670098043531955,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.030598342876630633
+    },
+    "rq2.learner_level_outcome_tasks.recovery_prediction.real_plus_synthetic_gain_over_real.auroc": {
+      "max": -0.03784443669340787,
+      "mean": -0.0533658876874783,
+      "min": -0.07917683990233704,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.018375658995635643
+    },
+    "rq2.learner_level_outcome_tasks.recovery_prediction.synthetic_utility_gap.auprc": {
+      "max": 0.17709987181129988,
+      "mean": 0.13071615492930624,
+      "min": 0.09072479797457955,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.03555099664945666
+    },
+    "rq2.learner_level_outcome_tasks.recovery_prediction.synthetic_utility_gap.auroc": {
+      "max": 0.2159923264736659,
+      "mean": 0.1798046738751308,
+      "min": 0.11257411928845484,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.047585556052474595
+    },
+    "rq2.privacy_risk.standard.exact_duplicate_rate": {
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.privacy_risk.standard.mean_nearest_neighbor_distance": {
+      "max": 0.9677960714990107,
+      "mean": 0.965734963048928,
+      "min": 0.9641178259080272,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0015341024627731098
+    },
+    "rq2.privacy_risk.standard.membership_inference_attack_advantage": {
+      "max": 0.032597715736040644,
+      "mean": 0.023471235194585455,
+      "min": 0.010341370558375695,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.009516881083087493
+    },
+    "rq2.privacy_risk.standard.near_duplicate_rate": {
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.privacy_risk.tail_targeted.exact_duplicate_rate": {
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.privacy_risk.tail_targeted.mean_nearest_neighbor_distance": {
+      "max": 0.9704883369736522,
+      "mean": 0.9677480446097357,
+      "min": 0.9655889322103345,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0020419548431296003
+    },
+    "rq2.privacy_risk.tail_targeted.membership_inference_attack_advantage": {
+      "max": 0.06577918781725889,
+      "mean": 0.041224196277495816,
+      "min": 0.006446700507614311,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.025277931180358038
+    },
+    "rq2.privacy_risk.tail_targeted.near_duplicate_rate": {
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.privacy_risk.tail_targeted_minus_standard_risk.exact_duplicate_rate_risk_delta": {
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.privacy_risk.tail_targeted_minus_standard_risk.mean_nearest_exposure_risk_delta": {
+      "max": -0.0014711063023072901,
+      "mean": -0.0020130815608075947,
+      "min": -0.0026922654746415198,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0005078891561274962
+    },
+    "rq2.privacy_risk.tail_targeted_minus_standard_risk.membership_inference_attack_advantage_risk_delta": {
+      "max": 0.041105329949238545,
+      "mean": 0.017752961082910357,
+      "min": -0.02102791878172572,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.027612368764554873
+    },
+    "rq2.privacy_risk.tail_targeted_minus_standard_risk.near_duplicate_rate_risk_delta": {
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.tail_learnability.high_hint_use.arms.real_plus_synthetic.auprc": {
+      "max": 0.4255354395921474,
+      "mean": 0.4170110259272308,
+      "min": 0.4057060440858996,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.008330662281538302
+    },
+    "rq2.tail_learnability.high_hint_use.arms.real_plus_synthetic.auroc": {
+      "max": 0.8602471617786187,
+      "mean": 0.8591279226922556,
+      "min": 0.857818624138397,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.001000513440983141
+    },
+    "rq2.tail_learnability.high_hint_use.arms.real_plus_tail_targeted_synthetic.auprc": {
+      "max": 0.39718067541966096,
+      "mean": 0.3914261771323615,
+      "min": 0.3841748112373372,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.005414091814179907
+    },
+    "rq2.tail_learnability.high_hint_use.arms.real_plus_tail_targeted_synthetic.auroc": {
+      "max": 0.8547861197459115,
+      "mean": 0.8493602739108889,
+      "min": 0.8422717596972564,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.005242496317580324
+    },
+    "rq2.tail_learnability.high_hint_use.arms.real_train.auprc": {
+      "max": 0.4399197753693036,
+      "mean": 0.4399197753693036,
+      "min": 0.4399197753693036,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.tail_learnability.high_hint_use.arms.real_train.auroc": {
+      "max": 0.8696910055412893,
+      "mean": 0.8696910055412893,
+      "min": 0.8696910055412893,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.tail_learnability.high_hint_use.arms.synthetic_train.auprc": {
+      "max": 0.11606377759822648,
+      "mean": 0.1086269723835784,
+      "min": 0.09645629365994912,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.008676424970256141
+    },
+    "rq2.tail_learnability.high_hint_use.arms.synthetic_train.auroc": {
+      "max": 0.5642274293823489,
+      "mean": 0.5343979479208902,
+      "min": 0.5063184214082985,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.023673614818709828
+    },
+    "rq2.tail_learnability.high_hint_use.arms.tail_targeted_synthetic.auprc": {
+      "max": 0.12560699143160697,
+      "mean": 0.10421071094711894,
+      "min": 0.08065148921183213,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.018416623488918024
+    },
+    "rq2.tail_learnability.high_hint_use.arms.tail_targeted_synthetic.auroc": {
+      "max": 0.5666728611974591,
+      "mean": 0.48716324278055595,
+      "min": 0.4215392282740911,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.06005858444525596
+    },
+    "rq2.tail_learnability.high_hint_use.real_plus_synthetic_gain_over_real.auprc": {
+      "max": -0.014384335777156199,
+      "mean": -0.022908749442072773,
+      "min": -0.03421373128340399,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.008330662281538302
+    },
+    "rq2.tail_learnability.high_hint_use.real_plus_synthetic_gain_over_real.auroc": {
+      "max": -0.0094438437626706,
+      "mean": -0.010563082849033623,
+      "min": -0.011872381402892263,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.001000513440983141
+    },
+    "rq2.tail_learnability.high_hint_use.synthetic_utility_gap.auprc": {
+      "max": 0.3434634817093545,
+      "mean": 0.3312928029857252,
+      "min": 0.3238559977710771,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.00867642497025615
+    },
+    "rq2.tail_learnability.high_hint_use.synthetic_utility_gap.auroc": {
+      "max": 0.3633725841329908,
+      "mean": 0.335293057620399,
+      "min": 0.3054635761589404,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.02367361481870983
+    },
+    "rq2.tail_learnability.high_hint_use.tail_targeted_tstr_gain.auprc": {
+      "max": 0.029150697771657852,
+      "mean": -0.004416261436459438,
+      "min": -0.03270935668072744,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.025528112804578267
+    },
+    "rq2.tail_learnability.high_hint_use.tail_targeted_tstr_gain.auroc": {
+      "max": 0.06035443978916055,
+      "mean": -0.04723470514033429,
+      "min": -0.11110876469793213,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.07652086486725836
+    },
+    "rq2.tail_learnability.high_hint_use.targeted_augmentation_gain_over_real.auprc": {
+      "max": -0.042739099949642645,
+      "mean": -0.048493598236942104,
+      "min": -0.05574496413196639,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.005414091814179907
+    },
+    "rq2.tail_learnability.high_hint_use.targeted_augmentation_gain_over_real.auroc": {
+      "max": -0.014904885795377854,
+      "mean": -0.020330731630400483,
+      "min": -0.02741924584403288,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.005242496317580324
+    },
+    "rq2.tail_learnability.late_failure.arms.real_plus_synthetic.auprc": {
+      "max": 0.7526658064216603,
+      "mean": 0.7488401819867626,
+      "min": 0.746704312751622,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0027112489337088206
+    },
+    "rq2.tail_learnability.late_failure.arms.real_plus_synthetic.auroc": {
+      "max": 0.7437535014005601,
+      "mean": 0.7420034680538882,
+      "min": 0.7385834333733494,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.002418550418857631
+    },
+    "rq2.tail_learnability.late_failure.arms.real_plus_tail_targeted_synthetic.auprc": {
+      "max": 0.7564799604223039,
+      "mean": 0.7548389511498504,
+      "min": 0.7535875096054748,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.001212542835810623
+    },
+    "rq2.tail_learnability.late_failure.arms.real_plus_tail_targeted_synthetic.auroc": {
+      "max": 0.7454821928771509,
+      "mean": 0.7448846205148727,
+      "min": 0.7445538215286115,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0004233551431212925
+    },
+    "rq2.tail_learnability.late_failure.arms.real_train.auprc": {
+      "max": 0.7467286352231772,
+      "mean": 0.7467286352231772,
+      "min": 0.7467286352231772,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.tail_learnability.late_failure.arms.real_train.auroc": {
+      "max": 0.7450900360144057,
+      "mean": 0.7450900360144056,
+      "min": 0.7450900360144057,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 1.1102230246251565e-16
+    },
+    "rq2.tail_learnability.late_failure.arms.synthetic_train.auprc": {
+      "max": 0.5801310667106352,
+      "mean": 0.5607683071489818,
+      "min": 0.5458337518379854,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.014347664073118258
+    },
+    "rq2.tail_learnability.late_failure.arms.synthetic_train.auroc": {
+      "max": 0.5340856342537015,
+      "mean": 0.5326797385620915,
+      "min": 0.5313485394157663,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0011186619144826376
+    },
+    "rq2.tail_learnability.late_failure.arms.tail_targeted_synthetic.auprc": {
+      "max": 0.5785941088058826,
+      "mean": 0.5402024678845073,
+      "min": 0.4776173504581334,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.04463234746723033
+    },
+    "rq2.tail_learnability.late_failure.arms.tail_targeted_synthetic.auroc": {
+      "max": 0.5538935574229692,
+      "mean": 0.5149899959983993,
+      "min": 0.4492356942777111,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.04675495531933909
+    },
+    "rq2.tail_learnability.late_failure.real_plus_synthetic_gain_over_real.auprc": {
+      "max": 0.005937171198483027,
+      "mean": 0.002111546763585418,
+      "min": -2.432247155526035e-05,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.002711248933708821
+    },
+    "rq2.tail_learnability.late_failure.real_plus_synthetic_gain_over_real.auroc": {
+      "max": -0.0013365346138456413,
+      "mean": -0.0030865679605174647,
+      "min": -0.006506602641056292,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.002418550418857631
+    },
+    "rq2.tail_learnability.late_failure.synthetic_utility_gap.auprc": {
+      "max": 0.2008948833851918,
+      "mean": 0.18596032807419538,
+      "min": 0.16659756851254204,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.014347664073118258
+    },
+    "rq2.tail_learnability.late_failure.synthetic_utility_gap.auroc": {
+      "max": 0.2137414965986394,
+      "mean": 0.2124102974523142,
+      "min": 0.21100440176070423,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0011186619144826376
+    },
+    "rq2.tail_learnability.late_failure.tail_targeted_tstr_gain.auprc": {
+      "max": 0.018562192551520473,
+      "mean": -0.020565839264474545,
+      "min": -0.0787227524401915,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.041933788085996446
+    },
+    "rq2.tail_learnability.late_failure.tail_targeted_tstr_gain.auroc": {
+      "max": 0.0212885154061625,
+      "mean": -0.01768974256369214,
+      "min": -0.08211284513805522,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.04588783737411264
+    },
+    "rq2.tail_learnability.late_failure.targeted_augmentation_gain_over_real.auprc": {
+      "max": 0.009751325199126692,
+      "mean": 0.008110315926673328,
+      "min": 0.006858874382297597,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.001212542835810623
+    },
+    "rq2.tail_learnability.late_failure.targeted_augmentation_gain_over_real.auroc": {
+      "max": 0.00039215686274518546,
+      "mean": -0.00020541549953304963,
+      "min": -0.0005362144857942175,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.00042335514312129253
+    },
+    "rq2.tail_learnability.persistent_failure.arms.real_plus_synthetic.auprc": {
+      "max": 0.1314773444236861,
+      "mean": 0.12124109526695147,
+      "min": 0.11540476819946678,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.007261836884904418
+    },
+    "rq2.tail_learnability.persistent_failure.arms.real_plus_synthetic.auroc": {
+      "max": 0.794814494425221,
+      "mean": 0.7884067025503012,
+      "min": 0.7830642060745867,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0048558184889497345
+    },
+    "rq2.tail_learnability.persistent_failure.arms.real_plus_tail_targeted_synthetic.auprc": {
+      "max": 0.1161037460052658,
+      "mean": 0.10842929820049592,
+      "min": 0.10277746032183718,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.005625281368606736
+    },
+    "rq2.tail_learnability.persistent_failure.arms.real_plus_tail_targeted_synthetic.auroc": {
+      "max": 0.7778258362168398,
+      "mean": 0.7557910419069588,
+      "min": 0.7341407151095732,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.017836447945901092
+    },
+    "rq2.tail_learnability.persistent_failure.arms.real_train.auprc": {
+      "max": 0.14362446678856103,
+      "mean": 0.14362446678856103,
+      "min": 0.14362446678856103,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.tail_learnability.persistent_failure.arms.real_train.auroc": {
+      "max": 0.8221597462514418,
+      "mean": 0.8221597462514417,
+      "min": 0.8221597462514418,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 1.1102230246251565e-16
+    },
+    "rq2.tail_learnability.persistent_failure.arms.synthetic_train.auprc": {
+      "max": 0.0442813936163358,
+      "mean": 0.036055522172505454,
+      "min": 0.02704643317709607,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.007057905148855702
+    },
+    "rq2.tail_learnability.persistent_failure.arms.synthetic_train.auroc": {
+      "max": 0.579632833525567,
+      "mean": 0.5409778290401127,
+      "min": 0.4639801999231065,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.05444569503963447
+    },
+    "rq2.tail_learnability.persistent_failure.arms.tail_targeted_synthetic.auprc": {
+      "max": 0.038018296160956935,
+      "mean": 0.030228989297419517,
+      "min": 0.023706397391904326,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0059110651427392415
+    },
+    "rq2.tail_learnability.persistent_failure.arms.tail_targeted_synthetic.auroc": {
+      "max": 0.5454392541330257,
+      "mean": 0.5015218505702935,
+      "min": 0.4248366013071896,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.05441537007770146
+    },
+    "rq2.tail_learnability.persistent_failure.real_plus_synthetic_gain_over_real.auprc": {
+      "max": -0.012147122364874918,
+      "mean": -0.022383371521609564,
+      "min": -0.028219698589094247,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.007261836884904418
+    },
+    "rq2.tail_learnability.persistent_failure.real_plus_synthetic_gain_over_real.auroc": {
+      "max": -0.02734525182622083,
+      "mean": -0.03375304370114066,
+      "min": -0.039095540176855126,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0048558184889497345
+    },
+    "rq2.tail_learnability.persistent_failure.synthetic_utility_gap.auprc": {
+      "max": 0.11657803361146496,
+      "mean": 0.10756894461605558,
+      "min": 0.09934307317222524,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.007057905148855698
+    },
+    "rq2.tail_learnability.persistent_failure.synthetic_utility_gap.auroc": {
+      "max": 0.3581795463283353,
+      "mean": 0.28118191721132907,
+      "min": 0.2425269127258748,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.05444569503963448
+    },
+    "rq2.tail_learnability.persistent_failure.tail_targeted_tstr_gain.auprc": {
+      "max": 0.010971862983860867,
+      "mean": -0.005826532875085934,
+      "min": -0.02057499622443147,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.012960266173897173
+    },
+    "rq2.tail_learnability.persistent_failure.tail_targeted_tstr_gain.auroc": {
+      "max": 0.08145905420991922,
+      "mean": -0.03945597846981932,
+      "min": -0.15448385236447515,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.09641320023597713
+    },
+    "rq2.tail_learnability.persistent_failure.targeted_augmentation_gain_over_real.auprc": {
+      "max": -0.027520720783295233,
+      "mean": -0.035195168588065116,
+      "min": -0.040847006466723845,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0056252813686067365
+    },
+    "rq2.tail_learnability.persistent_failure.targeted_augmentation_gain_over_real.auroc": {
+      "max": -0.044333910034602075,
+      "mean": -0.06636870434448298,
+      "min": -0.0880190311418686,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.017836447945901092
+    },
+    "rq2.tail_learnability.rapid_guessing.arms.real_plus_synthetic.auprc": {
+      "max": 0.303354713975244,
+      "mean": 0.29591203421045414,
+      "min": 0.2913576938018064,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.005306536939640044
+    },
+    "rq2.tail_learnability.rapid_guessing.arms.real_plus_synthetic.auroc": {
+      "max": 0.861087150980768,
+      "mean": 0.8593433859391305,
+      "min": 0.8580841479777649,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0012729445203016525
+    },
+    "rq2.tail_learnability.rapid_guessing.arms.real_plus_tail_targeted_synthetic.auprc": {
+      "max": 0.2911475286752526,
+      "mean": 0.28284320889167763,
+      "min": 0.27206655588610595,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.00798353323266002
+    },
+    "rq2.tail_learnability.rapid_guessing.arms.real_plus_tail_targeted_synthetic.auroc": {
+      "max": 0.8539390454284072,
+      "mean": 0.8447942623474538,
+      "min": 0.8328301705961281,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.008845244492770651
+    },
+    "rq2.tail_learnability.rapid_guessing.arms.real_train.auprc": {
+      "max": 0.34086476224871176,
+      "mean": 0.34086476224871176,
+      "min": 0.34086476224871176,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.tail_learnability.rapid_guessing.arms.real_train.auroc": {
+      "max": 0.8809900325857773,
+      "mean": 0.8809900325857773,
+      "min": 0.8809900325857773,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.tail_learnability.rapid_guessing.arms.synthetic_train.auprc": {
+      "max": 0.09297276055403458,
+      "mean": 0.08698142371124691,
+      "min": 0.07879577816915334,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.005992103158112651
+    },
+    "rq2.tail_learnability.rapid_guessing.arms.synthetic_train.auroc": {
+      "max": 0.5608986646220689,
+      "mean": 0.5215800907290269,
+      "min": 0.47898696568909327,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.03352037807495433
+    },
+    "rq2.tail_learnability.rapid_guessing.arms.tail_targeted_synthetic.auprc": {
+      "max": 0.09219873349138441,
+      "mean": 0.07432380218678654,
+      "min": 0.06230252575190667,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.012887843517590057
+    },
+    "rq2.tail_learnability.rapid_guessing.arms.tail_targeted_synthetic.auroc": {
+      "max": 0.5548207782250335,
+      "mean": 0.45412966157647006,
+      "min": 0.3798798798798799,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.07382609125047039
+    },
+    "rq2.tail_learnability.rapid_guessing.real_plus_synthetic_gain_over_real.auprc": {
+      "max": -0.037510048273467766,
+      "mean": -0.044952728038257596,
+      "min": -0.049507068446905333,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.005306536939640044
+    },
+    "rq2.tail_learnability.rapid_guessing.real_plus_synthetic_gain_over_real.auroc": {
+      "max": -0.019902881605009304,
+      "mean": -0.021646646646646766,
+      "min": -0.02290588460801246,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0012729445203016525
+    },
+    "rq2.tail_learnability.rapid_guessing.synthetic_utility_gap.auprc": {
+      "max": 0.2620689840795584,
+      "mean": 0.25388333853746486,
+      "min": 0.24789200169467718,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.005992103158112653
+    },
+    "rq2.tail_learnability.rapid_guessing.synthetic_utility_gap.auroc": {
+      "max": 0.4020030668966841,
+      "mean": 0.35940994185675046,
+      "min": 0.3200913679637084,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.03352037807495433
+    },
+    "rq2.tail_learnability.rapid_guessing.tail_targeted_tstr_gain.auprc": {
+      "max": 0.01340295532223107,
+      "mean": -0.012657621524460367,
+      "min": -0.03067023480212791,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.018871297608462175
+    },
+    "rq2.tail_learnability.rapid_guessing.tail_targeted_tstr_gain.auroc": {
+      "max": 0.07583381253594024,
+      "mean": -0.06745042915255679,
+      "min": -0.18101878474218902,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.10694418979732916
+    },
+    "rq2.tail_learnability.rapid_guessing.targeted_augmentation_gain_over_real.auprc": {
+      "max": -0.04971723357345914,
+      "mean": -0.05802155335703411,
+      "min": -0.06879820636260581,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.00798353323266002
+    },
+    "rq2.tail_learnability.rapid_guessing.targeted_augmentation_gain_over_real.auroc": {
+      "max": -0.0270509871573702,
+      "mean": -0.03619577023832351,
+      "min": -0.04815986198964928,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.008845244492770651
+    },
+    "rq2.tail_learnability.rare_skill_path.arms.real_plus_synthetic.auprc": {
+      "max": 0.8889843979289079,
+      "mean": 0.8804507033644051,
+      "min": 0.8754758315198091,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.006061861978581163
+    },
+    "rq2.tail_learnability.rare_skill_path.arms.real_plus_synthetic.auroc": {
+      "max": 0.7080378250591016,
+      "mean": 0.7038538031445833,
+      "min": 0.7001576044129235,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.003235526536378444
+    },
+    "rq2.tail_learnability.rare_skill_path.arms.real_plus_tail_targeted_synthetic.auprc": {
+      "max": 0.8958046753715831,
+      "mean": 0.8953141273945192,
+      "min": 0.894695796262309,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0004616272816898402
+    },
+    "rq2.tail_learnability.rare_skill_path.arms.real_plus_tail_targeted_synthetic.auroc": {
+      "max": 0.7373072160306202,
+      "mean": 0.7309467522233479,
+      "min": 0.7222222222222222,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.006381267704594038
+    },
+    "rq2.tail_learnability.rare_skill_path.arms.real_train.auprc": {
+      "max": 0.9009482365279129,
+      "mean": 0.9009482365279129,
+      "min": 0.9009482365279129,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.tail_learnability.rare_skill_path.arms.real_train.auroc": {
+      "max": 0.7239108409321175,
+      "mean": 0.7239108409321174,
+      "min": 0.7239108409321175,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 1.1102230246251565e-16
+    },
+    "rq2.tail_learnability.rare_skill_path.arms.synthetic_train.auprc": {
+      "max": 0.8327945928273832,
+      "mean": 0.7866345926081326,
+      "min": 0.7486870123406733,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.03482436077355939
+    },
+    "rq2.tail_learnability.rare_skill_path.arms.synthetic_train.auroc": {
+      "max": 0.5605651243949117,
+      "mean": 0.4845772824496229,
+      "min": 0.42260497579646517,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.05718727756223459
+    },
+    "rq2.tail_learnability.rare_skill_path.arms.tail_targeted_synthetic.auprc": {
+      "max": 0.8323374642024465,
+      "mean": 0.8085203693624187,
+      "min": 0.7963603981272394,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.01684248039727701
+    },
+    "rq2.tail_learnability.rare_skill_path.arms.tail_targeted_synthetic.auroc": {
+      "max": 0.6086907576269278,
+      "mean": 0.5412961086719953,
+      "min": 0.5005628729032985,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.048000229711374034
+    },
+    "rq2.tail_learnability.rare_skill_path.real_plus_synthetic_gain_over_real.auprc": {
+      "max": -0.011963838599004961,
+      "mean": -0.020497533163507775,
+      "min": -0.02547240500810377,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.006061861978581163
+    },
+    "rq2.tail_learnability.rare_skill_path.real_plus_synthetic_gain_over_real.auroc": {
+      "max": -0.015873015873015928,
+      "mean": -0.020057037787534277,
+      "min": -0.023753236519194032,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.003235526536378444
+    },
+    "rq2.tail_learnability.rare_skill_path.synthetic_utility_gap.auprc": {
+      "max": 0.15226122418723964,
+      "mean": 0.11431364391978027,
+      "min": 0.06815364370052968,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.03482436077355939
+    },
+    "rq2.tail_learnability.rare_skill_path.synthetic_utility_gap.auroc": {
+      "max": 0.3013058651356524,
+      "mean": 0.23933355848249463,
+      "min": 0.16334571653720587,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.05718727756223459
+    },
+    "rq2.tail_learnability.rare_skill_path.tail_targeted_tstr_gain.auprc": {
+      "max": 0.08365045186177322,
+      "mean": 0.021885776754286084,
+      "min": -0.035931347069812936,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0488988004609507
+    },
+    "rq2.tail_learnability.rare_skill_path.tail_targeted_tstr_gain.auroc": {
+      "max": 0.18608578183046265,
+      "mean": 0.05671882622237232,
+      "min": -0.0600022514916132,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.10086217892704294
+    },
+    "rq2.tail_learnability.rare_skill_path.targeted_augmentation_gain_over_real.auprc": {
+      "max": -0.005143561156329746,
+      "mean": -0.005634109133393646,
+      "min": -0.006252440265603898,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0004616272816898402
+    },
+    "rq2.tail_learnability.rare_skill_path.targeted_augmentation_gain_over_real.auroc": {
+      "max": 0.013396375098502666,
+      "mean": 0.007035911291230416,
+      "min": -0.0016886187098953398,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.006381267704594038
+    },
+    "rq2.tail_learnability.recovery.arms.real_plus_synthetic.auprc": {
+      "max": 0.7605206461086487,
+      "mean": 0.7538149027454312,
+      "min": 0.7467223642171754,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.005639760849770879
+    },
+    "rq2.tail_learnability.recovery.arms.real_plus_synthetic.auroc": {
+      "max": 0.7404286308780691,
+      "mean": 0.7352753502566237,
+      "min": 0.7311277569704536,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.003863083321527024
+    },
+    "rq2.tail_learnability.recovery.arms.real_plus_tail_targeted_synthetic.auprc": {
+      "max": 0.7477311591988101,
+      "mean": 0.7379347448148273,
+      "min": 0.7263599540814226,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.008814914212949908
+    },
+    "rq2.tail_learnability.recovery.arms.real_plus_tail_targeted_synthetic.auroc": {
+      "max": 0.7325426550145651,
+      "mean": 0.7245873214038009,
+      "min": 0.7167707032875573,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0064396193889121895
+    },
+    "rq2.tail_learnability.recovery.arms.real_train.auprc": {
+      "max": 0.7444827844984065,
+      "mean": 0.7444827844984067,
+      "min": 0.7444827844984065,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 1.1102230246251565e-16
+    },
+    "rq2.tail_learnability.recovery.arms.real_train.auroc": {
+      "max": 0.7328547648772367,
+      "mean": 0.7328547648772367,
+      "min": 0.7328547648772367,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.tail_learnability.recovery.arms.synthetic_train.auprc": {
+      "max": 0.7110167987835153,
+      "mean": 0.5885730790809776,
+      "min": 0.5228770132861753,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.08665782091948526
+    },
+    "rq2.tail_learnability.recovery.arms.synthetic_train.auroc": {
+      "max": 0.6609654598418644,
+      "mean": 0.5290123456790123,
+      "min": 0.4598626716604245,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.09334090537398522
+    },
+    "rq2.tail_learnability.recovery.arms.tail_targeted_synthetic.auprc": {
+      "max": 0.5395932330691058,
+      "mean": 0.5214858659711524,
+      "min": 0.4858785690935253,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.025179382282898517
+    },
+    "rq2.tail_learnability.recovery.arms.tail_targeted_synthetic.auroc": {
+      "max": 0.4702455264253017,
+      "mean": 0.42598834789846024,
+      "min": 0.3676446109030379,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0430546963262487
+    },
+    "rq2.tail_learnability.recovery.real_plus_synthetic_gain_over_real.auprc": {
+      "max": 0.01603786161024212,
+      "mean": 0.009332118247024734,
+      "min": 0.0022395797187688693,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.005639760849770879
+    },
+    "rq2.tail_learnability.recovery.real_plus_synthetic_gain_over_real.auroc": {
+      "max": 0.00757386600083243,
+      "mean": 0.0024205853793870524,
+      "min": -0.0017270079067830402,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.003863083321527024
+    },
+    "rq2.tail_learnability.recovery.synthetic_utility_gap.auprc": {
+      "max": 0.22160577121223124,
+      "mean": 0.15590970541742896,
+      "min": 0.03346598571489123,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.08665782091948526
+    },
+    "rq2.tail_learnability.recovery.synthetic_utility_gap.auroc": {
+      "max": 0.27299209321681217,
+      "mean": 0.2038424191982243,
+      "min": 0.07188930503537228,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.09334090537398522
+    },
+    "rq2.tail_learnability.recovery.tail_targeted_tstr_gain.auprc": {
+      "max": 0.007767807895863621,
+      "mean": -0.06708721310982518,
+      "min": -0.17203100303268914,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.07642383403992824
+    },
+    "rq2.tail_learnability.recovery.tail_targeted_tstr_gain.auroc": {
+      "max": 0.004036620890553455,
+      "mean": -0.10302399778055212,
+      "min": -0.22089055347482323,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.09214349189609869
+    },
+    "rq2.tail_learnability.recovery.targeted_augmentation_gain_over_real.auprc": {
+      "max": 0.0032483747004035113,
+      "mean": -0.006548039683579199,
+      "min": -0.018122830416983926,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.008814914212949908
+    },
+    "rq2.tail_learnability.recovery.targeted_augmentation_gain_over_real.auroc": {
+      "max": -0.0003121098626716057,
+      "mean": -0.00826744347343585,
+      "min": -0.016084061589679344,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.006439619388912189
+    },
+    "rq2.tail_targeting_fidelity_gain.high_hint_use.prevalence_error_reduction": {
+      "max": 0.004374453193350836,
+      "mean": 0.002041411490230391,
+      "min": 0.0005832604257801147,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0016668055020396867
+    },
+    "rq2.tail_targeting_fidelity_gain.high_hint_use.primary_signal_curve_mae_reduction": {
+      "max": 0.04112077294685995,
+      "mean": 0.04112077294685995,
+      "min": 0.04112077294685995,
+      "missing_runs": 2,
+      "n": 1,
+      "std": 0.0
+    },
+    "rq2.tail_targeting_fidelity_gain.late_failure.prevalence_error_reduction": {
+      "max": 0.007582385535141439,
+      "mean": 0.0038884028385340725,
+      "min": -0.0029163021289005525,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.004817541243652713
+    },
+    "rq2.tail_targeting_fidelity_gain.late_failure.primary_signal_curve_mae_reduction": {
+      "max": 0.030916251730040284,
+      "mean": 0.01431814817364043,
+      "min": -0.01340721007387674,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.019731601798326243
+    },
+    "rq2.tail_targeting_fidelity_gain.persistent_failure.prevalence_error_reduction": {
+      "max": 0.00029163021289005733,
+      "mean": 9.721007096335245e-05,
+      "min": 0.0,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.00013747580075562402
+    },
+    "rq2.tail_targeting_fidelity_gain.rapid_guessing.prevalence_error_reduction": {
+      "max": 0.0014581510644502763,
+      "mean": 9.721007096335128e-05,
+      "min": -0.0008748906386701685,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0009913520975197406
+    },
+    "rq2.tail_targeting_fidelity_gain.rare_skill_path.prevalence_error_reduction": {
+      "max": -0.0032079323417906203,
+      "mean": -0.0045688733352775195,
+      "min": -0.0064158646835812405,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.001353979612830201
+    },
+    "rq2.tail_targeting_fidelity_gain.rare_skill_path.primary_signal_curve_mae_reduction": {
+      "max": -0.02405157633857183,
+      "mean": -0.028237604866701543,
+      "min": -0.033259181354107485,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0038051371262822534
+    },
+    "rq2.tail_targeting_fidelity_gain.recovery.prevalence_error_reduction": {
+      "max": 0.0058326042578011085,
+      "mean": 0.0022358316321570934,
+      "min": -0.002916302128900549,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.003737218389567624
+    },
+    "rq2.tail_targeting_fidelity_gain.recovery.primary_signal_curve_mae_reduction": {
+      "max": -0.002028448458880963,
+      "mean": -0.012645640740033394,
+      "min": -0.032648007781455,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.014152749608886437
+    }
+  },
+  "metric_summary_scope": "publication_only",
+  "model": "sequence_vae_timevae",
+  "publication_schema_version": "publication_metrics_v2",
+  "publication_status_summary": {
+    "rq2.learner_level_outcome_tasks.persistent_failure_prediction": {
+      "counts": {
+        "completed": 2,
+        "completed_with_model_collapse": 1
+      },
+      "seeds_by_status": {
+        "completed": [
+          20260703,
+          20260705
+        ],
+        "completed_with_model_collapse": [
+          20260704
+        ]
+      }
+    },
+    "rq2.learner_level_outcome_tasks.persistent_failure_prediction.non_estimable_arms.synthetic_train": {
+      "counts": {
+        "not_estimable_model_collapse": 1
+      },
+      "seeds_by_status": {
+        "not_estimable_model_collapse": [
+          20260704
+        ]
+      }
+    },
+    "rq2.learner_level_outcome_tasks.recovery_prediction": {
+      "counts": {
+        "completed": 3
+      },
+      "seeds_by_status": {
+        "completed": [
+          20260703,
+          20260704,
+          20260705
+        ]
+      }
+    }
+  },
+  "rare_group_metric_refresh": {
+    "generator_retrained": false,
+    "script": "experiments/scripts/refresh_rare_group_metrics.py",
+    "script_sha256": "812341d438d507c31d0aa4cc118afbd48fa95f1b8c1d1a3830d2d6a19cb81929",
+    "synthetic_artifacts_changed": false,
+    "tail_reference_scope": "complete_real_train",
+    "trajectory_curve": "learner_equal_ten_position_linear_interpolation"
+  },
+  "runs": [
+    {
+      "data_provenance": {
+        "generation_columns": [
+          "learner_id",
+          "order",
+          "skill_id",
+          "correct",
+          "attempt_bin",
+          "hint_bin",
+          "response_time_bin",
+          "opportunity_bin"
+        ],
+        "runtime": {
+          "config_path": "experiments/configs/assistments_preprocessing.yaml",
+          "config_sha256": "079175cbee2556c0dbedfbc81e5c4cd7c60775651ed9f69d0fc0bf204c9825c6",
+          "pandas": "2.3.3",
+          "platform": "macOS-26.5.2-arm64-arm-64bit",
+          "preprocessing_script_sha256": "9297f401f810fe7fd7d01675d4deac22545a10506506102597178db688c31735",
+          "python": "3.9.6",
+          "pyyaml": "6.0.3"
+        },
+        "test_generation_sha256": "e526befa3097065abdde78b65f7a51033e958caac705b8502eb14f74b1390360",
+        "test_rows": 64742,
+        "test_source": "experiments/data/datasets/assistments/clean_test.csv",
+        "test_source_sha256": "e63c08b711fba7401fa97c27fbacff941b965a5f1695a916c84873ddece466b7",
+        "train_generation_sha256": "cc432ce7d6876541305b63bf149d825fbfd5ee47ea6fc4a65a15c75f048b2138",
+        "train_rows": 282118,
+        "train_source": "experiments/data/datasets/assistments/clean_train.csv",
+        "train_source_sha256": "bf3a2fa391f44ecbe4c161829f253c2e7845320035933c3193af20e51b09d5be"
+      },
+      "dataset": "assistments_2009_2010_skill_builder",
+      "evaluation_report": "experiments/runs/standard_vs_tail_targeted/evaluation/assistments_2009_2010_skill_builder/sequence_vae_timevae/seed_20260703/generation_evaluation_report.json",
+      "experiment_design": "standard_vs_tail_targeted",
+      "generation_metadata": {
+        "adapter_normalized_invariants": false,
+        "beta": 1.0,
+        "column_vocab_sizes": {
+          "attempt_bin": 5,
+          "correct": 2,
+          "hint_bin": 4,
+          "opportunity_bin": 5,
+          "response_time_bin": 6,
+          "skill_id": 101
+        },
+        "columns": [
+          "learner_id",
+          "order",
+          "skill_id",
+          "correct",
+          "attempt_bin",
+          "hint_bin",
+          "response_time_bin",
+          "opportunity_bin"
+        ],
+        "device": "cpu",
+        "epochs": 50,
+        "framework": "pytorch",
+        "generator_script": "synthetic_generation.generator_scripts.sequence_vae_timevae",
+        "generator_script_path": "experiments/synthetic_generation/generator_scripts/sequence_vae_timevae.py",
+        "generator_script_sha256": "1a916def82b547825ccb009f5d9f40b85e113cede5f97c9aa171680cbe3d1660",
+        "generator_source_bundle_sha256": "b0fc0185002561c48a4b266cb14131bb78bab01f00cb8428018bec46509fc333",
+        "generator_source_files_sha256": {
+          "experiments/synthetic_generation/generator_scripts/__init__.py": "204bd9955fd11043132a1490eac7cacfcfb7cb97a49329fa41973e02ae47919b",
+          "experiments/synthetic_generation/generator_scripts/block_bootstrap.py": "dbfceda662432d8a7982f6d4e2de69943aa1558cccf052f9b1b751c32034cd0b",
+          "experiments/synthetic_generation/generator_scripts/common.py": "8273839ab1ccacf56e3cce5b466558a32c6a2932cec37a293b7ef97486ca0f56",
+          "experiments/synthetic_generation/generator_scripts/markov_ngram.py": "bc496eeae237f045cea6fa5b6f9118cffaa462cdce6f4c80f78d0a52f73ea6e1",
+          "experiments/synthetic_generation/generator_scripts/sequence_vae_timevae.py": "1a916def82b547825ccb009f5d9f40b85e113cede5f97c9aa171680cbe3d1660",
+          "experiments/synthetic_generation/generator_scripts/timegan.py": "24c2b6bebecaed5d3fc7f07c9fb631dacd8303c82f99245e609e5d2fd3415836",
+          "experiments/synthetic_generation/run_generator.py": "2f529075f78816bd22b0d697fba33552f1b1e572070b5ebfad8a0de334b53b5b"
+        },
+        "hidden_dim": 256,
+        "latent_dim": 16,
+        "length_model": {
+          "fitted_learner_count": 3429,
+          "fitted_log_mean": 3.244985550080458,
+          "fitted_log_std": 1.524051071589591,
+          "learner_count": 3429,
+          "length_cap": 1502,
+          "max_sampled_length": 1502,
+          "method": "mean_calibrated_truncated_lognormal",
+          "shape_override": false,
+          "synthetic_rows_from_length_model": 282118,
+          "target_rows": 282118
+        },
+        "max_vocab": 100,
+        "method": "sequence_vae_timevae_mlp",
+        "model": "sequence_vae_timevae",
+        "output": "experiments/outputs/assistments/sequence_vae_timevae/seed_20260703/synth_generation.csv",
+        "padded_training_rows": 36182,
+        "pipeline_added_columns": [],
+        "pipeline_normalized_output": "experiments/outputs/assistments/sequence_vae_timevae/seed_20260703/synth_generation.csv",
+        "pipeline_script_path": "experiments/pipeline.py",
+        "pipeline_script_sha256": "cdd21ac9bcb4d74996cc80b7d6df9c81d331d1c8a3f05d76b1ba65a7e7569467",
+        "seed": 20260703,
+        "standard_artifact_reuse": {
+          "artifact_sha256": "0b9f337ba143b676af8af1a1bc249fd737bd414a290074f383863dd4d2d18b0f",
+          "reused": true,
+          "source_namespace": "standard",
+          "validation": "artifact, generator source, dataset provenance, and normalization matched"
+        },
+        "synthetic_learners": 3429,
+        "synthetic_output_sha256": "0b9f337ba143b676af8af1a1bc249fd737bd414a290074f383863dd4d2d18b0f",
+        "synthetic_rows": 282118,
+        "tail_targeted": {
+          "oversample": 3,
+          "synthetic_rows": 282118,
+          "tail_selection": {
+            "base_learners": 3429,
+            "base_rows": 282118,
+            "candidate_learners_by_group": {
+              "high_hint_use": 144,
+              "late_failure": 91,
+              "persistent_failure": 84,
+              "persistent_misconception": 1134,
+              "rapid_guessing": 88,
+              "rare_skill_path": 167,
+              "recovery": 114
+            },
+            "candidate_tail_groups": [
+              "high_hint_use",
+              "late_failure",
+              "persistent_failure",
+              "persistent_misconception",
+              "rapid_guessing",
+              "rare_skill_path",
+              "recovery"
+            ],
+            "eligible_tail_groups": [
+              "high_hint_use",
+              "late_failure",
+              "long_inactivity",
+              "persistent_failure",
+              "persistent_misconception",
+              "rapid_guessing",
+              "rare_skill_path",
+              "recovery"
+            ],
+            "excluded_observed_tail_groups": {
+              "long_trajectory": "shared_trajectory_length_sampler",
+              "short_trajectory": "shared_trajectory_length_sampler"
+            },
+            "excluded_target_groups": {
+              "persistent_misconception": "learner_prevalence_0.330709_exceeds_target_ceiling_0.100000"
+            },
+            "implemented_tail_groups": [
+              "high_hint_use",
+              "late_failure",
+              "persistent_failure",
+              "rapid_guessing",
+              "rare_skill_path",
+              "recovery"
+            ],
+            "maximum_percentile_tail_prevalence": 0.1,
+            "maximum_target_group_prevalence": 0.1,
+            "oversample": 3,
+            "oversampled_train_rows": 311268,
+            "quantile": 0.05,
+            "selected_learners_by_group": {
+              "high_hint_use": 144,
+              "late_failure": 91,
+              "persistent_failure": 84,
+              "rapid_guessing": 88,
+              "rare_skill_path": 167,
+              "recovery": 114
+            },
+            "selected_tail_learner_fraction": 0.1589384660250802,
+            "selected_tail_learners": 545,
+            "selected_tail_rows": 14575,
+            "selection_contract": "maximum_10_percent_per_target_group",
+            "selection_policy": "proposal_aligned_generator_attributable_tails",
+            "status": "completed",
+            "tail_learner_set_sha256": "9f4ca52eaf25ee70b0df49641ffd045889fcd08ba673e234fcf4ca5d18e64d31",
+            "unavailable_percentile_tail_groups": {}
+          },
+          "train_rows": 311268
+        },
+        "torch_version": "2.2.2",
+        "train_learners": 3429,
+        "train_rows": 282118,
+        "training_budget": {
+          "batch_size": 200,
+          "batches_per_epoch": 80,
+          "effective_epochs": 50,
+          "max_epochs": 50,
+          "projected_batch_steps": 4000,
+          "target_batch_steps": 4000,
+          "training_windows": 15915
+        },
+        "training_windows": 15915,
+        "trajectory_boundaries": "learner_isolated_masked_windows",
+        "window": 20
+      },
+      "ignore_columns": [
+        "learner_id",
+        "order"
+      ],
+      "model": "sequence_vae_timevae",
+      "seed": 20260703,
+      "standard_artifact_reuse_namespace": "standard",
+      "standard_artifact_reused": true,
+      "standard_synthetic": "experiments/outputs/standard/assistments/sequence_vae_timevae/seed_20260703/synth_generation.csv",
+      "tail_targeted_generation_metadata": {
+        "adapter_normalized_invariants": false,
+        "beta": 1.0,
+        "column_vocab_sizes": {
+          "attempt_bin": 5,
+          "correct": 2,
+          "hint_bin": 4,
+          "opportunity_bin": 5,
+          "response_time_bin": 6,
+          "skill_id": 101
+        },
+        "columns": [
+          "learner_id",
+          "order",
+          "skill_id",
+          "correct",
+          "attempt_bin",
+          "hint_bin",
+          "response_time_bin",
+          "opportunity_bin"
+        ],
+        "data_provenance": {
+          "generation_columns": [
+            "learner_id",
+            "order",
+            "skill_id",
+            "correct",
+            "attempt_bin",
+            "hint_bin",
+            "response_time_bin",
+            "opportunity_bin"
+          ],
+          "runtime": {
+            "config_path": "experiments/configs/assistments_preprocessing.yaml",
+            "config_sha256": "079175cbee2556c0dbedfbc81e5c4cd7c60775651ed9f69d0fc0bf204c9825c6",
+            "pandas": "2.3.3",
+            "platform": "macOS-26.5.2-arm64-arm-64bit",
+            "preprocessing_script_sha256": "9297f401f810fe7fd7d01675d4deac22545a10506506102597178db688c31735",
+            "python": "3.9.6",
+            "pyyaml": "6.0.3"
+          },
+          "test_generation_sha256": "e526befa3097065abdde78b65f7a51033e958caac705b8502eb14f74b1390360",
+          "test_rows": 64742,
+          "test_source": "experiments/data/datasets/assistments/clean_test.csv",
+          "test_source_sha256": "e63c08b711fba7401fa97c27fbacff941b965a5f1695a916c84873ddece466b7",
+          "train_generation_sha256": "cc432ce7d6876541305b63bf149d825fbfd5ee47ea6fc4a65a15c75f048b2138",
+          "train_rows": 282118,
+          "train_source": "experiments/data/datasets/assistments/clean_train.csv",
+          "train_source_sha256": "bf3a2fa391f44ecbe4c161829f253c2e7845320035933c3193af20e51b09d5be"
+        },
+        "device": "cpu",
+        "epochs": 43,
+        "experiment_design": "standard_vs_tail_targeted",
+        "framework": "pytorch",
+        "generation_arm": "tail_targeted",
+        "generator_script": "synthetic_generation.generator_scripts.sequence_vae_timevae",
+        "generator_script_path": "experiments/synthetic_generation/generator_scripts/sequence_vae_timevae.py",
+        "generator_script_sha256": "1a916def82b547825ccb009f5d9f40b85e113cede5f97c9aa171680cbe3d1660",
+        "generator_source_bundle_sha256": "b0fc0185002561c48a4b266cb14131bb78bab01f00cb8428018bec46509fc333",
+        "generator_source_files_sha256": {
+          "experiments/synthetic_generation/generator_scripts/__init__.py": "204bd9955fd11043132a1490eac7cacfcfb7cb97a49329fa41973e02ae47919b",
+          "experiments/synthetic_generation/generator_scripts/block_bootstrap.py": "dbfceda662432d8a7982f6d4e2de69943aa1558cccf052f9b1b751c32034cd0b",
+          "experiments/synthetic_generation/generator_scripts/common.py": "8273839ab1ccacf56e3cce5b466558a32c6a2932cec37a293b7ef97486ca0f56",
+          "experiments/synthetic_generation/generator_scripts/markov_ngram.py": "bc496eeae237f045cea6fa5b6f9118cffaa462cdce6f4c80f78d0a52f73ea6e1",
+          "experiments/synthetic_generation/generator_scripts/sequence_vae_timevae.py": "1a916def82b547825ccb009f5d9f40b85e113cede5f97c9aa171680cbe3d1660",
+          "experiments/synthetic_generation/generator_scripts/timegan.py": "24c2b6bebecaed5d3fc7f07c9fb631dacd8303c82f99245e609e5d2fd3415836",
+          "experiments/synthetic_generation/run_generator.py": "2f529075f78816bd22b0d697fba33552f1b1e572070b5ebfad8a0de334b53b5b"
+        },
+        "hidden_dim": 256,
+        "latent_dim": 16,
+        "length_model": {
+          "fitted_learner_count": 4519,
+          "fitted_log_mean": 3.0685260183986713,
+          "fitted_log_std": 1.4773663954770642,
+          "learner_count": 3429,
+          "length_cap": 1368,
+          "max_sampled_length": 1368,
+          "method": "mean_calibrated_truncated_lognormal",
+          "shape_override": true,
+          "synthetic_rows_from_length_model": 282118,
+          "target_rows": 282118
+        },
+        "max_vocab": 100,
+        "method": "sequence_vae_timevae_mlp",
+        "model": "sequence_vae_timevae",
+        "output": "experiments/outputs/tail_targeted/assistments/sequence_vae_timevae/seed_20260703/synth_generation.csv",
+        "padded_training_rows": 48752,
+        "pipeline_added_columns": [],
+        "pipeline_normalized_output": "experiments/outputs/tail_targeted/assistments/sequence_vae_timevae/seed_20260703/synth_generation.csv",
+        "pipeline_script_path": "experiments/pipeline.py",
+        "pipeline_script_sha256": "878b30a700e2128544aef7ba07e0f64e0eafa8013bb52e11cd8bf8f1a48af250",
+        "seed": 20260703,
+        "synthetic_learners": 3429,
+        "synthetic_output_sha256": "271ea59b8a6154f3962a942a8f03221ebba54d73634f39e71e265178e40fdd2c",
+        "synthetic_rows": 282118,
+        "tail_selection": {
+          "base_learners": 3429,
+          "base_rows": 282118,
+          "candidate_learners_by_group": {
+            "high_hint_use": 144,
+            "late_failure": 91,
+            "persistent_failure": 84,
+            "persistent_misconception": 1134,
+            "rapid_guessing": 88,
+            "rare_skill_path": 167,
+            "recovery": 114
+          },
+          "candidate_tail_groups": [
+            "high_hint_use",
+            "late_failure",
+            "persistent_failure",
+            "persistent_misconception",
+            "rapid_guessing",
+            "rare_skill_path",
+            "recovery"
+          ],
+          "eligible_tail_groups": [
+            "high_hint_use",
+            "late_failure",
+            "long_inactivity",
+            "persistent_failure",
+            "persistent_misconception",
+            "rapid_guessing",
+            "rare_skill_path",
+            "recovery"
+          ],
+          "excluded_observed_tail_groups": {
+            "long_trajectory": "shared_trajectory_length_sampler",
+            "short_trajectory": "shared_trajectory_length_sampler"
+          },
+          "excluded_target_groups": {
+            "persistent_misconception": "learner_prevalence_0.330709_exceeds_target_ceiling_0.100000"
+          },
+          "implemented_tail_groups": [
+            "high_hint_use",
+            "late_failure",
+            "persistent_failure",
+            "rapid_guessing",
+            "rare_skill_path",
+            "recovery"
+          ],
+          "maximum_percentile_tail_prevalence": 0.1,
+          "maximum_target_group_prevalence": 0.1,
+          "oversample": 3,
+          "oversampled_train_rows": 311268,
+          "quantile": 0.05,
+          "selected_learners_by_group": {
+            "high_hint_use": 144,
+            "late_failure": 91,
+            "persistent_failure": 84,
+            "rapid_guessing": 88,
+            "rare_skill_path": 167,
+            "recovery": 114
+          },
+          "selected_tail_learner_fraction": 0.1589384660250802,
+          "selected_tail_learners": 545,
+          "selected_tail_rows": 14575,
+          "selection_contract": "maximum_10_percent_per_target_group",
+          "selection_policy": "proposal_aligned_generator_attributable_tails",
+          "status": "completed",
+          "tail_learner_set_sha256": "9f4ca52eaf25ee70b0df49641ffd045889fcd08ba673e234fcf4ca5d18e64d31",
+          "unavailable_percentile_tail_groups": {}
+        },
+        "torch_version": "2.2.2",
+        "train_learners": 4519,
+        "train_rows": 311268,
+        "training_budget": {
+          "batch_size": 200,
+          "batches_per_epoch": 91,
+          "effective_epochs": 43,
+          "max_epochs": 50,
+          "projected_batch_steps": 3913,
+          "target_batch_steps": 4000,
+          "training_windows": 18001
+        },
+        "training_windows": 18001,
+        "trajectory_boundaries": "learner_isolated_masked_windows",
+        "window": 20
+      },
+      "tail_targeted_synthetic": "experiments/outputs/tail_targeted/assistments/sequence_vae_timevae/seed_20260703/synth_generation.csv",
+      "test": "experiments/data/datasets/assistments/test.csv",
+      "train": "experiments/data/datasets/assistments/train.csv"
+    },
+    {
+      "data_provenance": {
+        "generation_columns": [
+          "learner_id",
+          "order",
+          "skill_id",
+          "correct",
+          "attempt_bin",
+          "hint_bin",
+          "response_time_bin",
+          "opportunity_bin"
+        ],
+        "runtime": {
+          "config_path": "experiments/configs/assistments_preprocessing.yaml",
+          "config_sha256": "079175cbee2556c0dbedfbc81e5c4cd7c60775651ed9f69d0fc0bf204c9825c6",
+          "pandas": "2.3.3",
+          "platform": "macOS-26.5.2-arm64-arm-64bit",
+          "preprocessing_script_sha256": "9297f401f810fe7fd7d01675d4deac22545a10506506102597178db688c31735",
+          "python": "3.9.6",
+          "pyyaml": "6.0.3"
+        },
+        "test_generation_sha256": "e526befa3097065abdde78b65f7a51033e958caac705b8502eb14f74b1390360",
+        "test_rows": 64742,
+        "test_source": "experiments/data/datasets/assistments/clean_test.csv",
+        "test_source_sha256": "e63c08b711fba7401fa97c27fbacff941b965a5f1695a916c84873ddece466b7",
+        "train_generation_sha256": "cc432ce7d6876541305b63bf149d825fbfd5ee47ea6fc4a65a15c75f048b2138",
+        "train_rows": 282118,
+        "train_source": "experiments/data/datasets/assistments/clean_train.csv",
+        "train_source_sha256": "bf3a2fa391f44ecbe4c161829f253c2e7845320035933c3193af20e51b09d5be"
+      },
+      "dataset": "assistments_2009_2010_skill_builder",
+      "evaluation_report": "experiments/runs/standard_vs_tail_targeted/evaluation/assistments_2009_2010_skill_builder/sequence_vae_timevae/seed_20260704/generation_evaluation_report.json",
+      "experiment_design": "standard_vs_tail_targeted",
+      "generation_metadata": {
+        "adapter_normalized_invariants": false,
+        "beta": 1.0,
+        "column_vocab_sizes": {
+          "attempt_bin": 5,
+          "correct": 2,
+          "hint_bin": 4,
+          "opportunity_bin": 5,
+          "response_time_bin": 6,
+          "skill_id": 101
+        },
+        "columns": [
+          "learner_id",
+          "order",
+          "skill_id",
+          "correct",
+          "attempt_bin",
+          "hint_bin",
+          "response_time_bin",
+          "opportunity_bin"
+        ],
+        "device": "cpu",
+        "epochs": 50,
+        "framework": "pytorch",
+        "generator_script": "synthetic_generation.generator_scripts.sequence_vae_timevae",
+        "generator_script_path": "experiments/synthetic_generation/generator_scripts/sequence_vae_timevae.py",
+        "generator_script_sha256": "1a916def82b547825ccb009f5d9f40b85e113cede5f97c9aa171680cbe3d1660",
+        "generator_source_bundle_sha256": "b0fc0185002561c48a4b266cb14131bb78bab01f00cb8428018bec46509fc333",
+        "generator_source_files_sha256": {
+          "experiments/synthetic_generation/generator_scripts/__init__.py": "204bd9955fd11043132a1490eac7cacfcfb7cb97a49329fa41973e02ae47919b",
+          "experiments/synthetic_generation/generator_scripts/block_bootstrap.py": "dbfceda662432d8a7982f6d4e2de69943aa1558cccf052f9b1b751c32034cd0b",
+          "experiments/synthetic_generation/generator_scripts/common.py": "8273839ab1ccacf56e3cce5b466558a32c6a2932cec37a293b7ef97486ca0f56",
+          "experiments/synthetic_generation/generator_scripts/markov_ngram.py": "bc496eeae237f045cea6fa5b6f9118cffaa462cdce6f4c80f78d0a52f73ea6e1",
+          "experiments/synthetic_generation/generator_scripts/sequence_vae_timevae.py": "1a916def82b547825ccb009f5d9f40b85e113cede5f97c9aa171680cbe3d1660",
+          "experiments/synthetic_generation/generator_scripts/timegan.py": "24c2b6bebecaed5d3fc7f07c9fb631dacd8303c82f99245e609e5d2fd3415836",
+          "experiments/synthetic_generation/run_generator.py": "2f529075f78816bd22b0d697fba33552f1b1e572070b5ebfad8a0de334b53b5b"
+        },
+        "hidden_dim": 256,
+        "latent_dim": 16,
+        "length_model": {
+          "fitted_learner_count": 3429,
+          "fitted_log_mean": 3.244985550080458,
+          "fitted_log_std": 1.524051071589591,
+          "learner_count": 3429,
+          "length_cap": 1502,
+          "max_sampled_length": 1502,
+          "method": "mean_calibrated_truncated_lognormal",
+          "shape_override": false,
+          "synthetic_rows_from_length_model": 282118,
+          "target_rows": 282118
+        },
+        "max_vocab": 100,
+        "method": "sequence_vae_timevae_mlp",
+        "model": "sequence_vae_timevae",
+        "output": "experiments/outputs/assistments/sequence_vae_timevae/seed_20260704/synth_generation.csv",
+        "padded_training_rows": 36182,
+        "pipeline_added_columns": [],
+        "pipeline_normalized_output": "experiments/outputs/assistments/sequence_vae_timevae/seed_20260704/synth_generation.csv",
+        "pipeline_script_path": "experiments/pipeline.py",
+        "pipeline_script_sha256": "cdd21ac9bcb4d74996cc80b7d6df9c81d331d1c8a3f05d76b1ba65a7e7569467",
+        "seed": 20260704,
+        "standard_artifact_reuse": {
+          "artifact_sha256": "51f8ea89dd960c2b6bf869db6adac926d54568080da732e3772f2eb644dd7add",
+          "reused": true,
+          "source_namespace": "standard",
+          "validation": "artifact, generator source, dataset provenance, and normalization matched"
+        },
+        "synthetic_learners": 3429,
+        "synthetic_output_sha256": "51f8ea89dd960c2b6bf869db6adac926d54568080da732e3772f2eb644dd7add",
+        "synthetic_rows": 282118,
+        "tail_targeted": {
+          "oversample": 3,
+          "synthetic_rows": 282118,
+          "tail_selection": {
+            "base_learners": 3429,
+            "base_rows": 282118,
+            "candidate_learners_by_group": {
+              "high_hint_use": 144,
+              "late_failure": 91,
+              "persistent_failure": 84,
+              "persistent_misconception": 1134,
+              "rapid_guessing": 88,
+              "rare_skill_path": 167,
+              "recovery": 114
+            },
+            "candidate_tail_groups": [
+              "high_hint_use",
+              "late_failure",
+              "persistent_failure",
+              "persistent_misconception",
+              "rapid_guessing",
+              "rare_skill_path",
+              "recovery"
+            ],
+            "eligible_tail_groups": [
+              "high_hint_use",
+              "late_failure",
+              "long_inactivity",
+              "persistent_failure",
+              "persistent_misconception",
+              "rapid_guessing",
+              "rare_skill_path",
+              "recovery"
+            ],
+            "excluded_observed_tail_groups": {
+              "long_trajectory": "shared_trajectory_length_sampler",
+              "short_trajectory": "shared_trajectory_length_sampler"
+            },
+            "excluded_target_groups": {
+              "persistent_misconception": "learner_prevalence_0.330709_exceeds_target_ceiling_0.100000"
+            },
+            "implemented_tail_groups": [
+              "high_hint_use",
+              "late_failure",
+              "persistent_failure",
+              "rapid_guessing",
+              "rare_skill_path",
+              "recovery"
+            ],
+            "maximum_percentile_tail_prevalence": 0.1,
+            "maximum_target_group_prevalence": 0.1,
+            "oversample": 3,
+            "oversampled_train_rows": 311268,
+            "quantile": 0.05,
+            "selected_learners_by_group": {
+              "high_hint_use": 144,
+              "late_failure": 91,
+              "persistent_failure": 84,
+              "rapid_guessing": 88,
+              "rare_skill_path": 167,
+              "recovery": 114
+            },
+            "selected_tail_learner_fraction": 0.1589384660250802,
+            "selected_tail_learners": 545,
+            "selected_tail_rows": 14575,
+            "selection_contract": "maximum_10_percent_per_target_group",
+            "selection_policy": "proposal_aligned_generator_attributable_tails",
+            "status": "completed",
+            "tail_learner_set_sha256": "9f4ca52eaf25ee70b0df49641ffd045889fcd08ba673e234fcf4ca5d18e64d31",
+            "unavailable_percentile_tail_groups": {}
+          },
+          "train_rows": 311268
+        },
+        "torch_version": "2.2.2",
+        "train_learners": 3429,
+        "train_rows": 282118,
+        "training_budget": {
+          "batch_size": 200,
+          "batches_per_epoch": 80,
+          "effective_epochs": 50,
+          "max_epochs": 50,
+          "projected_batch_steps": 4000,
+          "target_batch_steps": 4000,
+          "training_windows": 15915
+        },
+        "training_windows": 15915,
+        "trajectory_boundaries": "learner_isolated_masked_windows",
+        "window": 20
+      },
+      "ignore_columns": [
+        "learner_id",
+        "order"
+      ],
+      "model": "sequence_vae_timevae",
+      "seed": 20260704,
+      "standard_artifact_reuse_namespace": "standard",
+      "standard_artifact_reused": true,
+      "standard_synthetic": "experiments/outputs/standard/assistments/sequence_vae_timevae/seed_20260704/synth_generation.csv",
+      "tail_targeted_generation_metadata": {
+        "adapter_normalized_invariants": false,
+        "beta": 1.0,
+        "column_vocab_sizes": {
+          "attempt_bin": 5,
+          "correct": 2,
+          "hint_bin": 4,
+          "opportunity_bin": 5,
+          "response_time_bin": 6,
+          "skill_id": 101
+        },
+        "columns": [
+          "learner_id",
+          "order",
+          "skill_id",
+          "correct",
+          "attempt_bin",
+          "hint_bin",
+          "response_time_bin",
+          "opportunity_bin"
+        ],
+        "data_provenance": {
+          "generation_columns": [
+            "learner_id",
+            "order",
+            "skill_id",
+            "correct",
+            "attempt_bin",
+            "hint_bin",
+            "response_time_bin",
+            "opportunity_bin"
+          ],
+          "runtime": {
+            "config_path": "experiments/configs/assistments_preprocessing.yaml",
+            "config_sha256": "079175cbee2556c0dbedfbc81e5c4cd7c60775651ed9f69d0fc0bf204c9825c6",
+            "pandas": "2.3.3",
+            "platform": "macOS-26.5.2-arm64-arm-64bit",
+            "preprocessing_script_sha256": "9297f401f810fe7fd7d01675d4deac22545a10506506102597178db688c31735",
+            "python": "3.9.6",
+            "pyyaml": "6.0.3"
+          },
+          "test_generation_sha256": "e526befa3097065abdde78b65f7a51033e958caac705b8502eb14f74b1390360",
+          "test_rows": 64742,
+          "test_source": "experiments/data/datasets/assistments/clean_test.csv",
+          "test_source_sha256": "e63c08b711fba7401fa97c27fbacff941b965a5f1695a916c84873ddece466b7",
+          "train_generation_sha256": "cc432ce7d6876541305b63bf149d825fbfd5ee47ea6fc4a65a15c75f048b2138",
+          "train_rows": 282118,
+          "train_source": "experiments/data/datasets/assistments/clean_train.csv",
+          "train_source_sha256": "bf3a2fa391f44ecbe4c161829f253c2e7845320035933c3193af20e51b09d5be"
+        },
+        "device": "cpu",
+        "epochs": 43,
+        "experiment_design": "standard_vs_tail_targeted",
+        "framework": "pytorch",
+        "generation_arm": "tail_targeted",
+        "generator_script": "synthetic_generation.generator_scripts.sequence_vae_timevae",
+        "generator_script_path": "experiments/synthetic_generation/generator_scripts/sequence_vae_timevae.py",
+        "generator_script_sha256": "1a916def82b547825ccb009f5d9f40b85e113cede5f97c9aa171680cbe3d1660",
+        "generator_source_bundle_sha256": "b0fc0185002561c48a4b266cb14131bb78bab01f00cb8428018bec46509fc333",
+        "generator_source_files_sha256": {
+          "experiments/synthetic_generation/generator_scripts/__init__.py": "204bd9955fd11043132a1490eac7cacfcfb7cb97a49329fa41973e02ae47919b",
+          "experiments/synthetic_generation/generator_scripts/block_bootstrap.py": "dbfceda662432d8a7982f6d4e2de69943aa1558cccf052f9b1b751c32034cd0b",
+          "experiments/synthetic_generation/generator_scripts/common.py": "8273839ab1ccacf56e3cce5b466558a32c6a2932cec37a293b7ef97486ca0f56",
+          "experiments/synthetic_generation/generator_scripts/markov_ngram.py": "bc496eeae237f045cea6fa5b6f9118cffaa462cdce6f4c80f78d0a52f73ea6e1",
+          "experiments/synthetic_generation/generator_scripts/sequence_vae_timevae.py": "1a916def82b547825ccb009f5d9f40b85e113cede5f97c9aa171680cbe3d1660",
+          "experiments/synthetic_generation/generator_scripts/timegan.py": "24c2b6bebecaed5d3fc7f07c9fb631dacd8303c82f99245e609e5d2fd3415836",
+          "experiments/synthetic_generation/run_generator.py": "2f529075f78816bd22b0d697fba33552f1b1e572070b5ebfad8a0de334b53b5b"
+        },
+        "hidden_dim": 256,
+        "latent_dim": 16,
+        "length_model": {
+          "fitted_learner_count": 4519,
+          "fitted_log_mean": 3.0685260183986713,
+          "fitted_log_std": 1.4773663954770642,
+          "learner_count": 3429,
+          "length_cap": 1368,
+          "max_sampled_length": 1368,
+          "method": "mean_calibrated_truncated_lognormal",
+          "shape_override": true,
+          "synthetic_rows_from_length_model": 282118,
+          "target_rows": 282118
+        },
+        "max_vocab": 100,
+        "method": "sequence_vae_timevae_mlp",
+        "model": "sequence_vae_timevae",
+        "output": "experiments/outputs/tail_targeted/assistments/sequence_vae_timevae/seed_20260704/synth_generation.csv",
+        "padded_training_rows": 48752,
+        "pipeline_added_columns": [],
+        "pipeline_normalized_output": "experiments/outputs/tail_targeted/assistments/sequence_vae_timevae/seed_20260704/synth_generation.csv",
+        "pipeline_script_path": "experiments/pipeline.py",
+        "pipeline_script_sha256": "878b30a700e2128544aef7ba07e0f64e0eafa8013bb52e11cd8bf8f1a48af250",
+        "seed": 20260704,
+        "synthetic_learners": 3429,
+        "synthetic_output_sha256": "33b8996ad260de52c677c941acc4eaaeb5712d6ad85c32f715ba280d0dd3aea0",
+        "synthetic_rows": 282118,
+        "tail_selection": {
+          "base_learners": 3429,
+          "base_rows": 282118,
+          "candidate_learners_by_group": {
+            "high_hint_use": 144,
+            "late_failure": 91,
+            "persistent_failure": 84,
+            "persistent_misconception": 1134,
+            "rapid_guessing": 88,
+            "rare_skill_path": 167,
+            "recovery": 114
+          },
+          "candidate_tail_groups": [
+            "high_hint_use",
+            "late_failure",
+            "persistent_failure",
+            "persistent_misconception",
+            "rapid_guessing",
+            "rare_skill_path",
+            "recovery"
+          ],
+          "eligible_tail_groups": [
+            "high_hint_use",
+            "late_failure",
+            "long_inactivity",
+            "persistent_failure",
+            "persistent_misconception",
+            "rapid_guessing",
+            "rare_skill_path",
+            "recovery"
+          ],
+          "excluded_observed_tail_groups": {
+            "long_trajectory": "shared_trajectory_length_sampler",
+            "short_trajectory": "shared_trajectory_length_sampler"
+          },
+          "excluded_target_groups": {
+            "persistent_misconception": "learner_prevalence_0.330709_exceeds_target_ceiling_0.100000"
+          },
+          "implemented_tail_groups": [
+            "high_hint_use",
+            "late_failure",
+            "persistent_failure",
+            "rapid_guessing",
+            "rare_skill_path",
+            "recovery"
+          ],
+          "maximum_percentile_tail_prevalence": 0.1,
+          "maximum_target_group_prevalence": 0.1,
+          "oversample": 3,
+          "oversampled_train_rows": 311268,
+          "quantile": 0.05,
+          "selected_learners_by_group": {
+            "high_hint_use": 144,
+            "late_failure": 91,
+            "persistent_failure": 84,
+            "rapid_guessing": 88,
+            "rare_skill_path": 167,
+            "recovery": 114
+          },
+          "selected_tail_learner_fraction": 0.1589384660250802,
+          "selected_tail_learners": 545,
+          "selected_tail_rows": 14575,
+          "selection_contract": "maximum_10_percent_per_target_group",
+          "selection_policy": "proposal_aligned_generator_attributable_tails",
+          "status": "completed",
+          "tail_learner_set_sha256": "9f4ca52eaf25ee70b0df49641ffd045889fcd08ba673e234fcf4ca5d18e64d31",
+          "unavailable_percentile_tail_groups": {}
+        },
+        "torch_version": "2.2.2",
+        "train_learners": 4519,
+        "train_rows": 311268,
+        "training_budget": {
+          "batch_size": 200,
+          "batches_per_epoch": 91,
+          "effective_epochs": 43,
+          "max_epochs": 50,
+          "projected_batch_steps": 3913,
+          "target_batch_steps": 4000,
+          "training_windows": 18001
+        },
+        "training_windows": 18001,
+        "trajectory_boundaries": "learner_isolated_masked_windows",
+        "window": 20
+      },
+      "tail_targeted_synthetic": "experiments/outputs/tail_targeted/assistments/sequence_vae_timevae/seed_20260704/synth_generation.csv",
+      "test": "experiments/data/datasets/assistments/test.csv",
+      "train": "experiments/data/datasets/assistments/train.csv"
+    },
+    {
+      "data_provenance": {
+        "generation_columns": [
+          "learner_id",
+          "order",
+          "skill_id",
+          "correct",
+          "attempt_bin",
+          "hint_bin",
+          "response_time_bin",
+          "opportunity_bin"
+        ],
+        "runtime": {
+          "config_path": "experiments/configs/assistments_preprocessing.yaml",
+          "config_sha256": "079175cbee2556c0dbedfbc81e5c4cd7c60775651ed9f69d0fc0bf204c9825c6",
+          "pandas": "2.3.3",
+          "platform": "macOS-26.5.2-arm64-arm-64bit",
+          "preprocessing_script_sha256": "9297f401f810fe7fd7d01675d4deac22545a10506506102597178db688c31735",
+          "python": "3.9.6",
+          "pyyaml": "6.0.3"
+        },
+        "test_generation_sha256": "e526befa3097065abdde78b65f7a51033e958caac705b8502eb14f74b1390360",
+        "test_rows": 64742,
+        "test_source": "experiments/data/datasets/assistments/clean_test.csv",
+        "test_source_sha256": "e63c08b711fba7401fa97c27fbacff941b965a5f1695a916c84873ddece466b7",
+        "train_generation_sha256": "cc432ce7d6876541305b63bf149d825fbfd5ee47ea6fc4a65a15c75f048b2138",
+        "train_rows": 282118,
+        "train_source": "experiments/data/datasets/assistments/clean_train.csv",
+        "train_source_sha256": "bf3a2fa391f44ecbe4c161829f253c2e7845320035933c3193af20e51b09d5be"
+      },
+      "dataset": "assistments_2009_2010_skill_builder",
+      "evaluation_report": "experiments/runs/standard_vs_tail_targeted/evaluation/assistments_2009_2010_skill_builder/sequence_vae_timevae/seed_20260705/generation_evaluation_report.json",
+      "experiment_design": "standard_vs_tail_targeted",
+      "generation_metadata": {
+        "adapter_normalized_invariants": false,
+        "beta": 1.0,
+        "column_vocab_sizes": {
+          "attempt_bin": 5,
+          "correct": 2,
+          "hint_bin": 4,
+          "opportunity_bin": 5,
+          "response_time_bin": 6,
+          "skill_id": 101
+        },
+        "columns": [
+          "learner_id",
+          "order",
+          "skill_id",
+          "correct",
+          "attempt_bin",
+          "hint_bin",
+          "response_time_bin",
+          "opportunity_bin"
+        ],
+        "device": "cpu",
+        "epochs": 50,
+        "framework": "pytorch",
+        "generator_script": "synthetic_generation.generator_scripts.sequence_vae_timevae",
+        "generator_script_path": "experiments/synthetic_generation/generator_scripts/sequence_vae_timevae.py",
+        "generator_script_sha256": "1a916def82b547825ccb009f5d9f40b85e113cede5f97c9aa171680cbe3d1660",
+        "generator_source_bundle_sha256": "b0fc0185002561c48a4b266cb14131bb78bab01f00cb8428018bec46509fc333",
+        "generator_source_files_sha256": {
+          "experiments/synthetic_generation/generator_scripts/__init__.py": "204bd9955fd11043132a1490eac7cacfcfb7cb97a49329fa41973e02ae47919b",
+          "experiments/synthetic_generation/generator_scripts/block_bootstrap.py": "dbfceda662432d8a7982f6d4e2de69943aa1558cccf052f9b1b751c32034cd0b",
+          "experiments/synthetic_generation/generator_scripts/common.py": "8273839ab1ccacf56e3cce5b466558a32c6a2932cec37a293b7ef97486ca0f56",
+          "experiments/synthetic_generation/generator_scripts/markov_ngram.py": "bc496eeae237f045cea6fa5b6f9118cffaa462cdce6f4c80f78d0a52f73ea6e1",
+          "experiments/synthetic_generation/generator_scripts/sequence_vae_timevae.py": "1a916def82b547825ccb009f5d9f40b85e113cede5f97c9aa171680cbe3d1660",
+          "experiments/synthetic_generation/generator_scripts/timegan.py": "24c2b6bebecaed5d3fc7f07c9fb631dacd8303c82f99245e609e5d2fd3415836",
+          "experiments/synthetic_generation/run_generator.py": "2f529075f78816bd22b0d697fba33552f1b1e572070b5ebfad8a0de334b53b5b"
+        },
+        "hidden_dim": 256,
+        "latent_dim": 16,
+        "length_model": {
+          "fitted_learner_count": 3429,
+          "fitted_log_mean": 3.244985550080458,
+          "fitted_log_std": 1.524051071589591,
+          "learner_count": 3429,
+          "length_cap": 1502,
+          "max_sampled_length": 1502,
+          "method": "mean_calibrated_truncated_lognormal",
+          "shape_override": false,
+          "synthetic_rows_from_length_model": 282118,
+          "target_rows": 282118
+        },
+        "max_vocab": 100,
+        "method": "sequence_vae_timevae_mlp",
+        "model": "sequence_vae_timevae",
+        "output": "experiments/outputs/assistments/sequence_vae_timevae/seed_20260705/synth_generation.csv",
+        "padded_training_rows": 36182,
+        "pipeline_added_columns": [],
+        "pipeline_normalized_output": "experiments/outputs/assistments/sequence_vae_timevae/seed_20260705/synth_generation.csv",
+        "pipeline_script_path": "experiments/pipeline.py",
+        "pipeline_script_sha256": "cdd21ac9bcb4d74996cc80b7d6df9c81d331d1c8a3f05d76b1ba65a7e7569467",
+        "seed": 20260705,
+        "standard_artifact_reuse": {
+          "artifact_sha256": "222421dc7a23de70f9824119411df52f6758b4d1a3edb2049e52a9851fbf3d33",
+          "reused": true,
+          "source_namespace": "standard",
+          "validation": "artifact, generator source, dataset provenance, and normalization matched"
+        },
+        "synthetic_learners": 3429,
+        "synthetic_output_sha256": "222421dc7a23de70f9824119411df52f6758b4d1a3edb2049e52a9851fbf3d33",
+        "synthetic_rows": 282118,
+        "tail_targeted": {
+          "oversample": 3,
+          "synthetic_rows": 282118,
+          "tail_selection": {
+            "base_learners": 3429,
+            "base_rows": 282118,
+            "candidate_learners_by_group": {
+              "high_hint_use": 144,
+              "late_failure": 91,
+              "persistent_failure": 84,
+              "persistent_misconception": 1134,
+              "rapid_guessing": 88,
+              "rare_skill_path": 167,
+              "recovery": 114
+            },
+            "candidate_tail_groups": [
+              "high_hint_use",
+              "late_failure",
+              "persistent_failure",
+              "persistent_misconception",
+              "rapid_guessing",
+              "rare_skill_path",
+              "recovery"
+            ],
+            "eligible_tail_groups": [
+              "high_hint_use",
+              "late_failure",
+              "long_inactivity",
+              "persistent_failure",
+              "persistent_misconception",
+              "rapid_guessing",
+              "rare_skill_path",
+              "recovery"
+            ],
+            "excluded_observed_tail_groups": {
+              "long_trajectory": "shared_trajectory_length_sampler",
+              "short_trajectory": "shared_trajectory_length_sampler"
+            },
+            "excluded_target_groups": {
+              "persistent_misconception": "learner_prevalence_0.330709_exceeds_target_ceiling_0.100000"
+            },
+            "implemented_tail_groups": [
+              "high_hint_use",
+              "late_failure",
+              "persistent_failure",
+              "rapid_guessing",
+              "rare_skill_path",
+              "recovery"
+            ],
+            "maximum_percentile_tail_prevalence": 0.1,
+            "maximum_target_group_prevalence": 0.1,
+            "oversample": 3,
+            "oversampled_train_rows": 311268,
+            "quantile": 0.05,
+            "selected_learners_by_group": {
+              "high_hint_use": 144,
+              "late_failure": 91,
+              "persistent_failure": 84,
+              "rapid_guessing": 88,
+              "rare_skill_path": 167,
+              "recovery": 114
+            },
+            "selected_tail_learner_fraction": 0.1589384660250802,
+            "selected_tail_learners": 545,
+            "selected_tail_rows": 14575,
+            "selection_contract": "maximum_10_percent_per_target_group",
+            "selection_policy": "proposal_aligned_generator_attributable_tails",
+            "status": "completed",
+            "tail_learner_set_sha256": "9f4ca52eaf25ee70b0df49641ffd045889fcd08ba673e234fcf4ca5d18e64d31",
+            "unavailable_percentile_tail_groups": {}
+          },
+          "train_rows": 311268
+        },
+        "torch_version": "2.2.2",
+        "train_learners": 3429,
+        "train_rows": 282118,
+        "training_budget": {
+          "batch_size": 200,
+          "batches_per_epoch": 80,
+          "effective_epochs": 50,
+          "max_epochs": 50,
+          "projected_batch_steps": 4000,
+          "target_batch_steps": 4000,
+          "training_windows": 15915
+        },
+        "training_windows": 15915,
+        "trajectory_boundaries": "learner_isolated_masked_windows",
+        "window": 20
+      },
+      "ignore_columns": [
+        "learner_id",
+        "order"
+      ],
+      "model": "sequence_vae_timevae",
+      "seed": 20260705,
+      "standard_artifact_reuse_namespace": "standard",
+      "standard_artifact_reused": true,
+      "standard_synthetic": "experiments/outputs/standard/assistments/sequence_vae_timevae/seed_20260705/synth_generation.csv",
+      "tail_targeted_generation_metadata": {
+        "adapter_normalized_invariants": false,
+        "beta": 1.0,
+        "column_vocab_sizes": {
+          "attempt_bin": 5,
+          "correct": 2,
+          "hint_bin": 4,
+          "opportunity_bin": 5,
+          "response_time_bin": 6,
+          "skill_id": 101
+        },
+        "columns": [
+          "learner_id",
+          "order",
+          "skill_id",
+          "correct",
+          "attempt_bin",
+          "hint_bin",
+          "response_time_bin",
+          "opportunity_bin"
+        ],
+        "data_provenance": {
+          "generation_columns": [
+            "learner_id",
+            "order",
+            "skill_id",
+            "correct",
+            "attempt_bin",
+            "hint_bin",
+            "response_time_bin",
+            "opportunity_bin"
+          ],
+          "runtime": {
+            "config_path": "experiments/configs/assistments_preprocessing.yaml",
+            "config_sha256": "079175cbee2556c0dbedfbc81e5c4cd7c60775651ed9f69d0fc0bf204c9825c6",
+            "pandas": "2.3.3",
+            "platform": "macOS-26.5.2-arm64-arm-64bit",
+            "preprocessing_script_sha256": "9297f401f810fe7fd7d01675d4deac22545a10506506102597178db688c31735",
+            "python": "3.9.6",
+            "pyyaml": "6.0.3"
+          },
+          "test_generation_sha256": "e526befa3097065abdde78b65f7a51033e958caac705b8502eb14f74b1390360",
+          "test_rows": 64742,
+          "test_source": "experiments/data/datasets/assistments/clean_test.csv",
+          "test_source_sha256": "e63c08b711fba7401fa97c27fbacff941b965a5f1695a916c84873ddece466b7",
+          "train_generation_sha256": "cc432ce7d6876541305b63bf149d825fbfd5ee47ea6fc4a65a15c75f048b2138",
+          "train_rows": 282118,
+          "train_source": "experiments/data/datasets/assistments/clean_train.csv",
+          "train_source_sha256": "bf3a2fa391f44ecbe4c161829f253c2e7845320035933c3193af20e51b09d5be"
+        },
+        "device": "cpu",
+        "epochs": 43,
+        "experiment_design": "standard_vs_tail_targeted",
+        "framework": "pytorch",
+        "generation_arm": "tail_targeted",
+        "generator_script": "synthetic_generation.generator_scripts.sequence_vae_timevae",
+        "generator_script_path": "experiments/synthetic_generation/generator_scripts/sequence_vae_timevae.py",
+        "generator_script_sha256": "1a916def82b547825ccb009f5d9f40b85e113cede5f97c9aa171680cbe3d1660",
+        "generator_source_bundle_sha256": "b0fc0185002561c48a4b266cb14131bb78bab01f00cb8428018bec46509fc333",
+        "generator_source_files_sha256": {
+          "experiments/synthetic_generation/generator_scripts/__init__.py": "204bd9955fd11043132a1490eac7cacfcfb7cb97a49329fa41973e02ae47919b",
+          "experiments/synthetic_generation/generator_scripts/block_bootstrap.py": "dbfceda662432d8a7982f6d4e2de69943aa1558cccf052f9b1b751c32034cd0b",
+          "experiments/synthetic_generation/generator_scripts/common.py": "8273839ab1ccacf56e3cce5b466558a32c6a2932cec37a293b7ef97486ca0f56",
+          "experiments/synthetic_generation/generator_scripts/markov_ngram.py": "bc496eeae237f045cea6fa5b6f9118cffaa462cdce6f4c80f78d0a52f73ea6e1",
+          "experiments/synthetic_generation/generator_scripts/sequence_vae_timevae.py": "1a916def82b547825ccb009f5d9f40b85e113cede5f97c9aa171680cbe3d1660",
+          "experiments/synthetic_generation/generator_scripts/timegan.py": "24c2b6bebecaed5d3fc7f07c9fb631dacd8303c82f99245e609e5d2fd3415836",
+          "experiments/synthetic_generation/run_generator.py": "2f529075f78816bd22b0d697fba33552f1b1e572070b5ebfad8a0de334b53b5b"
+        },
+        "hidden_dim": 256,
+        "latent_dim": 16,
+        "length_model": {
+          "fitted_learner_count": 4519,
+          "fitted_log_mean": 3.0685260183986713,
+          "fitted_log_std": 1.4773663954770642,
+          "learner_count": 3429,
+          "length_cap": 1368,
+          "max_sampled_length": 1368,
+          "method": "mean_calibrated_truncated_lognormal",
+          "shape_override": true,
+          "synthetic_rows_from_length_model": 282118,
+          "target_rows": 282118
+        },
+        "max_vocab": 100,
+        "method": "sequence_vae_timevae_mlp",
+        "model": "sequence_vae_timevae",
+        "output": "experiments/outputs/tail_targeted/assistments/sequence_vae_timevae/seed_20260705/synth_generation.csv",
+        "padded_training_rows": 48752,
+        "pipeline_added_columns": [],
+        "pipeline_normalized_output": "experiments/outputs/tail_targeted/assistments/sequence_vae_timevae/seed_20260705/synth_generation.csv",
+        "pipeline_script_path": "experiments/pipeline.py",
+        "pipeline_script_sha256": "878b30a700e2128544aef7ba07e0f64e0eafa8013bb52e11cd8bf8f1a48af250",
+        "seed": 20260705,
+        "synthetic_learners": 3429,
+        "synthetic_output_sha256": "b9def87ec5b3442e28dc999b51f78b50a103b2394ed4f339f38f15685fd552f2",
+        "synthetic_rows": 282118,
+        "tail_selection": {
+          "base_learners": 3429,
+          "base_rows": 282118,
+          "candidate_learners_by_group": {
+            "high_hint_use": 144,
+            "late_failure": 91,
+            "persistent_failure": 84,
+            "persistent_misconception": 1134,
+            "rapid_guessing": 88,
+            "rare_skill_path": 167,
+            "recovery": 114
+          },
+          "candidate_tail_groups": [
+            "high_hint_use",
+            "late_failure",
+            "persistent_failure",
+            "persistent_misconception",
+            "rapid_guessing",
+            "rare_skill_path",
+            "recovery"
+          ],
+          "eligible_tail_groups": [
+            "high_hint_use",
+            "late_failure",
+            "long_inactivity",
+            "persistent_failure",
+            "persistent_misconception",
+            "rapid_guessing",
+            "rare_skill_path",
+            "recovery"
+          ],
+          "excluded_observed_tail_groups": {
+            "long_trajectory": "shared_trajectory_length_sampler",
+            "short_trajectory": "shared_trajectory_length_sampler"
+          },
+          "excluded_target_groups": {
+            "persistent_misconception": "learner_prevalence_0.330709_exceeds_target_ceiling_0.100000"
+          },
+          "implemented_tail_groups": [
+            "high_hint_use",
+            "late_failure",
+            "persistent_failure",
+            "rapid_guessing",
+            "rare_skill_path",
+            "recovery"
+          ],
+          "maximum_percentile_tail_prevalence": 0.1,
+          "maximum_target_group_prevalence": 0.1,
+          "oversample": 3,
+          "oversampled_train_rows": 311268,
+          "quantile": 0.05,
+          "selected_learners_by_group": {
+            "high_hint_use": 144,
+            "late_failure": 91,
+            "persistent_failure": 84,
+            "rapid_guessing": 88,
+            "rare_skill_path": 167,
+            "recovery": 114
+          },
+          "selected_tail_learner_fraction": 0.1589384660250802,
+          "selected_tail_learners": 545,
+          "selected_tail_rows": 14575,
+          "selection_contract": "maximum_10_percent_per_target_group",
+          "selection_policy": "proposal_aligned_generator_attributable_tails",
+          "status": "completed",
+          "tail_learner_set_sha256": "9f4ca52eaf25ee70b0df49641ffd045889fcd08ba673e234fcf4ca5d18e64d31",
+          "unavailable_percentile_tail_groups": {}
+        },
+        "torch_version": "2.2.2",
+        "train_learners": 4519,
+        "train_rows": 311268,
+        "training_budget": {
+          "batch_size": 200,
+          "batches_per_epoch": 91,
+          "effective_epochs": 43,
+          "max_epochs": 50,
+          "projected_batch_steps": 3913,
+          "target_batch_steps": 4000,
+          "training_windows": 18001
+        },
+        "training_windows": 18001,
+        "trajectory_boundaries": "learner_isolated_masked_windows",
+        "window": 20
+      },
+      "tail_targeted_synthetic": "experiments/outputs/tail_targeted/assistments/sequence_vae_timevae/seed_20260705/synth_generation.csv",
+      "test": "experiments/data/datasets/assistments/test.csv",
+      "train": "experiments/data/datasets/assistments/train.csv"
+    }
+  ],
+  "seeds": [
+    20260703,
+    20260704,
+    20260705
+  ],
+  "summary_report": "experiments/reports/standard_vs_tail_targeted/assistments_2009_2010_skill_builder/sequence_vae_timevae/multi_seed_summary.json",
+  "test": "experiments/data/datasets/assistments/test.csv",
+  "train": "experiments/data/datasets/assistments/train.csv"
+}

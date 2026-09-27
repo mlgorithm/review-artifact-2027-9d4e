@@ -1,0 +1,2643 @@
+{
+  "curated_snapshot": {
+    "evaluator_rerun": false,
+    "generator_retrained": false,
+    "metric_values_changed": false,
+    "paths_portabilized": true,
+    "promotion_script": "experiments/scripts/promote_final_reports.py",
+    "promotion_script_sha256": "d3b616fa0f80fbe01b68c967ae447604053416f0776867f46b4cfdc7fa87cdff",
+    "source_report": "experiments/runs/standard_vs_tail_targeted/evaluation/ednet_kt1/markov_ngram/multi_seed_summary.json",
+    "source_report_sha256": "216e01bb9c97604321bc8eb7a8920b48219418fa0562901257ec977b700a6860",
+    "targeted_provenance_embedded": true
+  },
+  "data_provenance": {
+    "available_learner_files": 784309,
+    "clean_rows": 1286363,
+    "columns": [
+      "learner_id",
+      "order",
+      "question_id",
+      "skill_id",
+      "part",
+      "correct",
+      "elapsed_time_bin",
+      "timestamp_gap_bin",
+      "attempt_bin",
+      "hint_bin"
+    ],
+    "contents_zip": "experiments/data/datasets/ednet/raw/contents.zip",
+    "contents_zip_sha256": "aa910a0436d9dbac0ba232f55e27b37ad8d39da285fcf15f1c1eb5d064be98e7",
+    "dataset": "ednet_kt1",
+    "kept_learners": 9666,
+    "kt1_zip": "experiments/data/datasets/ednet/raw/ednet_kt1.zip",
+    "kt1_zip_sha256": "0d13933f90201c5101c7fe8659e44474fa049e3fb93181a8ba6fb3e63267b535",
+    "learner_overlap": 0,
+    "main_sha256": "aa9569978bf7a2f287ecbaf8ec634c41c15c664baf91da854d7d02c1d6615a0a",
+    "max_raw_learner_files": 10000,
+    "min_interactions": 2,
+    "preprocessing_script_sha256": "fea5e95ed118bcff8290210bc7755db2b9d8f5bf46fea4af2cb4f25168272ef4",
+    "question_metadata_rows": 13169,
+    "raw_learner_files": 10000,
+    "runtime": {
+      "pandas": "2.3.3",
+      "platform": "macOS-26.5.2-arm64-arm-64bit",
+      "python": "3.9.6"
+    },
+    "selection_method": "stable_hash_sample",
+    "split_seed": 20260703,
+    "split_unit": "learner_id",
+    "target": "correct",
+    "test_learners": 1963,
+    "test_rows": 264798,
+    "test_sha256": "3eea633fad97a0d11a3516fb3934d7ead56b2391c5b16d5b95984e7d8ddc7903",
+    "train_learners": 7703,
+    "train_ratio": 0.8,
+    "train_rows": 1021565,
+    "train_sha256": "fe4e6dc9556a67676626451c800dbceb0e4ca5c822db7314bf3ff04bf78f0b20"
+  },
+  "dataset": "ednet_kt1",
+  "experiment_design": "standard_vs_tail_targeted",
+  "ignore_columns": [
+    "learner_id",
+    "order"
+  ],
+  "metric_summary": {
+    "rq1.average_fidelity.modeled_value_marginal_js_mean": {
+      "max": 0.015271244493074857,
+      "mean": 0.015236235302674312,
+      "min": 0.015182124929764342,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 3.8809066991344954e-05
+    },
+    "rq1.average_fidelity.primary_signal_rate_error": {
+      "max": 0.017291666666666705,
+      "mean": 0.01632777777777783,
+      "min": 0.014433333333333409,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0013396436323621108
+    },
+    "rq1.average_fidelity.skill_frequency_js": {
+      "max": 0.01408082013673237,
+      "mean": 0.013079084774106435,
+      "min": 0.012189930850597677,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0007760461792230377
+    },
+    "rq1.cross_signal_dependence.prespecified_signal_nmi_mae": {
+      "max": 0.002995785192435764,
+      "mean": 0.0028649350892328614,
+      "min": 0.0027525236427229996,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.00010016331143902538
+    },
+    "rq1.detectability.detectability_auc": {
+      "max": 0.5805828822222222,
+      "mean": 0.5794124842592593,
+      "min": 0.578358783888889,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.000911726236385914
+    },
+    "rq1.subgroup_fidelity.future_primary_signal_rate_mae": {
+      "max": 0.020846745331748056,
+      "mean": 0.019411103593528403,
+      "min": 0.017274155117167123,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.001540502854276702
+    },
+    "rq1.subgroup_fidelity.learner_share_mae": {
+      "max": 0.08847639320220362,
+      "mean": 0.07551406768556508,
+      "min": 0.0681764526363673,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.009192385349698406
+    },
+    "rq1.tail_fidelity.late_failure.prevalence_error": {
+      "max": 0.05712060236271582,
+      "mean": 0.0553896750183911,
+      "min": 0.05361547449045827,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0014312895762292781
+    },
+    "rq1.tail_fidelity.late_failure.primary_signal_curve_mae": {
+      "max": 0.08650786229681925,
+      "mean": 0.07051378959383776,
+      "min": 0.06140935835700469,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.011345603984312617
+    },
+    "rq1.tail_fidelity.persistent_failure.prevalence_error": {
+      "max": 0.04556666233934831,
+      "mean": 0.04413864728028041,
+      "min": 0.043359729975334285,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0010111490281317175
+    },
+    "rq1.tail_fidelity.persistent_failure.primary_signal_curve_mae": {
+      "max": 0.04549841053587648,
+      "mean": 0.03425745305002798,
+      "min": 0.016491894421049737,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.012708850179766418
+    },
+    "rq1.tail_fidelity.rapid_guessing.prevalence_error": {
+      "max": 0.03621965467999481,
+      "mean": 0.035310917824224325,
+      "min": 0.03388290276515643,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0010222001653916418
+    },
+    "rq1.tail_fidelity.rapid_guessing.primary_signal_curve_mae": {
+      "max": 0.09329823965585564,
+      "mean": 0.07185825722130172,
+      "min": 0.05525002399462512,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.015904423473921632
+    },
+    "rq1.tail_fidelity.rare_skill_path.prevalence_error": {
+      "max": 0.04102297806049591,
+      "mean": 0.032541434073304766,
+      "min": 0.028041022978060492,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.006001102885753505
+    },
+    "rq1.tail_fidelity.rare_skill_path.primary_signal_curve_mae": {
+      "max": 0.22972298418503848,
+      "mean": 0.2190957881928531,
+      "min": 0.20027387120651366,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.01334610187619095
+    },
+    "rq1.tail_fidelity.recovery.prevalence_error": {
+      "max": 0.02310788004673504,
+      "mean": 0.022155870007356443,
+      "min": 0.021290406335194082,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0007445000014749774
+    },
+    "rq1.tail_fidelity.recovery.primary_signal_curve_mae": {
+      "max": 0.04444754783586934,
+      "mean": 0.04222759921025768,
+      "min": 0.038631048578762206,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0025663450942192034
+    },
+    "rq1.temporal_fidelity.correctness_autocorrelation_mae": {
+      "max": 0.024892806708898887,
+      "mean": 0.02296202042280407,
+      "min": 0.021766603927323592,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0013781297724557518
+    },
+    "rq1.temporal_fidelity.correctness_curve_mae": {
+      "max": 0.16087963555380486,
+      "mean": 0.1550303805761981,
+      "min": 0.1488558131366352,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0049140918135728694
+    },
+    "rq1.temporal_fidelity.correctness_transition_js": {
+      "max": 0.0005179374103600775,
+      "mean": 0.00045291808289799827,
+      "min": 0.00035769332652489227,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 6.88177184200832e-05
+    },
+    "rq1.temporal_fidelity.inter_event_time_js": {
+      "max": 0.003650993110283241,
+      "mean": 0.0035803834548681092,
+      "min": 0.0034633983912198416,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 8.331047761921025e-05
+    },
+    "rq1.temporal_fidelity.skill_trigram_js": {
+      "max": 0.44552518222161097,
+      "mean": 0.44377633411633727,
+      "min": 0.44279250920685786,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0012398442963983622
+    },
+    "rq2.downstream_utility.arms.real_plus_synthetic.auprc": {
+      "max": 0.7667536863150815,
+      "mean": 0.7663577093606913,
+      "min": 0.7661027354727603,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.000283837568975408
+    },
+    "rq2.downstream_utility.arms.real_plus_synthetic.auroc": {
+      "max": 0.6688717662984964,
+      "mean": 0.6684088645200889,
+      "min": 0.6681577637897343,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0003277139592153711
+    },
+    "rq2.downstream_utility.arms.real_plus_tail_targeted_synthetic.auprc": {
+      "max": 0.761405045426472,
+      "mean": 0.760729464782998,
+      "min": 0.760224513589032,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0004968230144843557
+    },
+    "rq2.downstream_utility.arms.real_plus_tail_targeted_synthetic.auroc": {
+      "max": 0.6611690012627821,
+      "mean": 0.6609200126573795,
+      "min": 0.660643870371163,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.00021524188737243776
+    },
+    "rq2.downstream_utility.arms.real_train.auprc": {
+      "max": 0.7687385589902873,
+      "mean": 0.7687385589902873,
+      "min": 0.7687385589902873,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.downstream_utility.arms.real_train.auroc": {
+      "max": 0.6721514547821162,
+      "mean": 0.6721514547821162,
+      "min": 0.6721514547821162,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.downstream_utility.arms.synthetic_train.auprc": {
+      "max": 0.7388403388607562,
+      "mean": 0.7379521648253912,
+      "min": 0.7362519442495469,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0012026391406022045
+    },
+    "rq2.downstream_utility.arms.synthetic_train.auroc": {
+      "max": 0.6371366967246599,
+      "mean": 0.6359217250462773,
+      "min": 0.6335168050946439,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0017005658907207628
+    },
+    "rq2.downstream_utility.arms.tail_targeted_synthetic.auprc": {
+      "max": 0.7333481454601816,
+      "mean": 0.7313490300707787,
+      "min": 0.7293628481217596,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0016270165281517604
+    },
+    "rq2.downstream_utility.arms.tail_targeted_synthetic.auroc": {
+      "max": 0.6255052621419799,
+      "mean": 0.6245458147562584,
+      "min": 0.6229863905344882,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0011124021145260796
+    },
+    "rq2.downstream_utility.real_plus_synthetic_gain_over_real.auprc": {
+      "max": -0.001984872675205862,
+      "mean": -0.002380849629595986,
+      "min": -0.002635823517527003,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.000283837568975408
+    },
+    "rq2.downstream_utility.real_plus_synthetic_gain_over_real.auroc": {
+      "max": -0.0032796884836198137,
+      "mean": -0.00374259026202739,
+      "min": -0.003993690992381893,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0003277139592153711
+    },
+    "rq2.downstream_utility.synthetic_utility_gap.auprc": {
+      "max": 0.03248661474074044,
+      "mean": 0.030786394164896147,
+      "min": 0.02989822012953114,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0012026391406022045
+    },
+    "rq2.downstream_utility.synthetic_utility_gap.auroc": {
+      "max": 0.03863464968747232,
+      "mean": 0.036229729735838934,
+      "min": 0.03501475805745635,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0017005658907207628
+    },
+    "rq2.downstream_utility.tail_targeted_tstr_gain.auprc": {
+      "max": -0.004915847619151981,
+      "mean": -0.006603134754612494,
+      "min": -0.009477490738996619,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0020427100181327914
+    },
+    "rq2.downstream_utility.tail_targeted_tstr_gain.auroc": {
+      "max": -0.008371013502336822,
+      "mean": -0.011375910290018906,
+      "min": -0.014125282785039883,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0023561088320321667
+    },
+    "rq2.downstream_utility.targeted_augmentation_gain_over_real.auprc": {
+      "max": -0.007333513563815286,
+      "mean": -0.008009094207289383,
+      "min": -0.008514045401255332,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0004968230144843557
+    },
+    "rq2.downstream_utility.targeted_augmentation_gain_over_real.auroc": {
+      "max": -0.010982453519334134,
+      "mean": -0.011231442124736738,
+      "min": -0.011507584410953231,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.00021524188737243776
+    },
+    "rq2.learner_level_outcome_tasks.persistent_failure_prediction.arms.real_plus_synthetic.auprc": {
+      "max": 0.11486551952329208,
+      "mean": 0.11304927892306992,
+      "min": 0.11137427882605525,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0014287878455344375
+    },
+    "rq2.learner_level_outcome_tasks.persistent_failure_prediction.arms.real_plus_synthetic.auroc": {
+      "max": 0.5653391977123116,
+      "mean": 0.5595570748748618,
+      "min": 0.5518576581676718,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.005668332439123435
+    },
+    "rq2.learner_level_outcome_tasks.persistent_failure_prediction.arms.real_train.auprc": {
+      "max": 0.1309541241815329,
+      "mean": 0.1309541241815329,
+      "min": 0.1309541241815329,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.learner_level_outcome_tasks.persistent_failure_prediction.arms.real_train.auroc": {
+      "max": 0.585850008346579,
+      "mean": 0.585850008346579,
+      "min": 0.585850008346579,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.learner_level_outcome_tasks.persistent_failure_prediction.arms.synthetic_train.auprc": {
+      "max": 0.09221582220892277,
+      "mean": 0.08774536076469512,
+      "min": 0.08184794800506878,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.004351271570405117
+    },
+    "rq2.learner_level_outcome_tasks.persistent_failure_prediction.arms.synthetic_train.auroc": {
+      "max": 0.5007366763196668,
+      "mean": 0.4889081223100427,
+      "min": 0.4694243037864437,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.013882086166448001
+    },
+    "rq2.learner_level_outcome_tasks.persistent_failure_prediction.arms.tail_targeted_synthetic.auprc": {
+      "max": 0.10190357660966805,
+      "mean": 0.09428600194800889,
+      "min": 0.08903365213922862,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.005513888852840068
+    },
+    "rq2.learner_level_outcome_tasks.persistent_failure_prediction.arms.tail_targeted_synthetic.auroc": {
+      "max": 0.5121497158534195,
+      "mean": 0.4945354100589583,
+      "min": 0.47222766564330354,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.016632574421155975
+    },
+    "rq2.learner_level_outcome_tasks.persistent_failure_prediction.real_plus_synthetic_gain_over_real.auprc": {
+      "max": -0.01608860465824083,
+      "mean": -0.017904845258463,
+      "min": -0.01957984535547766,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0014287878455344375
+    },
+    "rq2.learner_level_outcome_tasks.persistent_failure_prediction.real_plus_synthetic_gain_over_real.auroc": {
+      "max": -0.020510810634267407,
+      "mean": -0.026292933471717166,
+      "min": -0.033992350178907116,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.005668332439123435
+    },
+    "rq2.learner_level_outcome_tasks.persistent_failure_prediction.synthetic_utility_gap.auprc": {
+      "max": 0.04910617617646412,
+      "mean": 0.0432087634168378,
+      "min": 0.038738301972610134,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.004351271570405117
+    },
+    "rq2.learner_level_outcome_tasks.persistent_failure_prediction.synthetic_utility_gap.auroc": {
+      "max": 0.11642570456013529,
+      "mean": 0.09694188603653621,
+      "min": 0.08511333202691218,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.013882086166448001
+    },
+    "rq2.learner_level_outcome_tasks.recovery_prediction.arms.real_plus_synthetic.auprc": {
+      "max": 0.22590077164193567,
+      "mean": 0.21298712781507131,
+      "min": 0.19774298754336866,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.011612883982741783
+    },
+    "rq2.learner_level_outcome_tasks.recovery_prediction.arms.real_plus_synthetic.auroc": {
+      "max": 0.4897992078843142,
+      "mean": 0.4764130668385988,
+      "min": 0.4553744128212214,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.01505960036809467
+    },
+    "rq2.learner_level_outcome_tasks.recovery_prediction.arms.real_train.auprc": {
+      "max": 0.21941810939829257,
+      "mean": 0.21941810939829257,
+      "min": 0.21941810939829257,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.learner_level_outcome_tasks.recovery_prediction.arms.real_train.auroc": {
+      "max": 0.4910196186791931,
+      "mean": 0.4910196186791931,
+      "min": 0.4910196186791931,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.learner_level_outcome_tasks.recovery_prediction.arms.synthetic_train.auprc": {
+      "max": 0.2294000313618988,
+      "mean": 0.22390851447852148,
+      "min": 0.21695845935499583,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.005182900015063578
+    },
+    "rq2.learner_level_outcome_tasks.recovery_prediction.arms.synthetic_train.auroc": {
+      "max": 0.5285990605139541,
+      "mean": 0.5052116913819041,
+      "min": 0.4810030395136779,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.01943967048356255
+    },
+    "rq2.learner_level_outcome_tasks.recovery_prediction.arms.tail_targeted_synthetic.auprc": {
+      "max": 0.22669769393960915,
+      "mean": 0.2142165812306374,
+      "min": 0.19712553623780882,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.012505111875585019
+    },
+    "rq2.learner_level_outcome_tasks.recovery_prediction.arms.tail_targeted_synthetic.auroc": {
+      "max": 0.5153817813392282,
+      "mean": 0.49236283810751896,
+      "min": 0.4668877222068712,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.01987365141618193
+    },
+    "rq2.learner_level_outcome_tasks.recovery_prediction.real_plus_synthetic_gain_over_real.auprc": {
+      "max": 0.006482662243643106,
+      "mean": -0.006430981583221279,
+      "min": -0.0216751218549239,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.011612883982741783
+    },
+    "rq2.learner_level_outcome_tasks.recovery_prediction.real_plus_synthetic_gain_over_real.auroc": {
+      "max": -0.00122041079487889,
+      "mean": -0.01460655184059432,
+      "min": -0.03564520585797171,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.015059600368094672
+    },
+    "rq2.learner_level_outcome_tasks.recovery_prediction.synthetic_utility_gap.auprc": {
+      "max": 0.002459650043296735,
+      "mean": -0.0044904050802289,
+      "min": -0.009981921963606227,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.005182900015063577
+    },
+    "rq2.learner_level_outcome_tasks.recovery_prediction.synthetic_utility_gap.auroc": {
+      "max": 0.010016579165515183,
+      "mean": -0.014192072702711112,
+      "min": -0.03757944183476103,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.01943967048356255
+    },
+    "rq2.privacy_risk.standard.exact_duplicate_rate": {
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.privacy_risk.standard.mean_nearest_neighbor_distance": {
+      "max": 0.9947768874601454,
+      "mean": 0.9937128729832482,
+      "min": 0.9931185347487073,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0007540911785538344
+    },
+    "rq2.privacy_risk.standard.membership_inference_attack_advantage": {
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.privacy_risk.standard.near_duplicate_rate": {
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.privacy_risk.tail_targeted.exact_duplicate_rate": {
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.privacy_risk.tail_targeted.mean_nearest_neighbor_distance": {
+      "max": 0.9929093571683,
+      "mean": 0.9922553348026183,
+      "min": 0.9910253084805942,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0008703429525970655
+    },
+    "rq2.privacy_risk.tail_targeted.membership_inference_attack_advantage": {
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.privacy_risk.tail_targeted.near_duplicate_rate": {
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.privacy_risk.tail_targeted_minus_standard_risk.exact_duplicate_rate_risk_delta": {
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.privacy_risk.tail_targeted_minus_standard_risk.mean_nearest_exposure_risk_delta": {
+      "max": 0.0022178882602974515,
+      "mean": 0.0014575381806297694,
+      "min": 0.0002871959897464693,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0008398266921754775
+    },
+    "rq2.privacy_risk.tail_targeted_minus_standard_risk.membership_inference_attack_advantage_risk_delta": {
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.privacy_risk.tail_targeted_minus_standard_risk.near_duplicate_rate_risk_delta": {
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.tail_learnability.late_failure.arms.real_plus_synthetic.auprc": {
+      "max": 0.6315083790677134,
+      "mean": 0.6295498022357916,
+      "min": 0.6280135677786158,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0014576708127993071
+    },
+    "rq2.tail_learnability.late_failure.arms.real_plus_synthetic.auroc": {
+      "max": 0.6849655147510201,
+      "mean": 0.6825861099504258,
+      "min": 0.6802686083641559,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0019180035466945103
+    },
+    "rq2.tail_learnability.late_failure.arms.real_plus_tail_targeted_synthetic.auprc": {
+      "max": 0.633644544604128,
+      "mean": 0.6280198412153317,
+      "min": 0.6217286039655077,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.00488744042532854
+    },
+    "rq2.tail_learnability.late_failure.arms.real_plus_tail_targeted_synthetic.auroc": {
+      "max": 0.6841530350630123,
+      "mean": 0.681311505572149,
+      "min": 0.6791272678500497,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.002103744023035434
+    },
+    "rq2.tail_learnability.late_failure.arms.real_train.auprc": {
+      "max": 0.6426180934799993,
+      "mean": 0.6426180934799993,
+      "min": 0.6426180934799993,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.tail_learnability.late_failure.arms.real_train.auroc": {
+      "max": 0.6901847295087464,
+      "mean": 0.6901847295087465,
+      "min": 0.6901847295087464,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 1.1102230246251565e-16
+    },
+    "rq2.tail_learnability.late_failure.arms.synthetic_train.auprc": {
+      "max": 0.6385746412988754,
+      "mean": 0.6285791223661419,
+      "min": 0.6143288622886075,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.01034541981138299
+    },
+    "rq2.tail_learnability.late_failure.arms.synthetic_train.auroc": {
+      "max": 0.6904375009672377,
+      "mean": 0.6818819608874858,
+      "min": 0.6691801950982972,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.009160118409955849
+    },
+    "rq2.tail_learnability.late_failure.arms.tail_targeted_synthetic.auprc": {
+      "max": 0.6239400231055244,
+      "mean": 0.6197307396972099,
+      "min": 0.6125064495452237,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.005131559239191085
+    },
+    "rq2.tail_learnability.late_failure.arms.tail_targeted_synthetic.auroc": {
+      "max": 0.6674327189439312,
+      "mean": 0.6618730365074206,
+      "min": 0.6570187927841487,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.004280630588200185
+    },
+    "rq2.tail_learnability.late_failure.real_plus_synthetic_gain_over_real.auprc": {
+      "max": -0.01110971441228592,
+      "mean": -0.013068291244207683,
+      "min": -0.014604525701383486,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0014576708127993071
+    },
+    "rq2.tail_learnability.late_failure.real_plus_synthetic_gain_over_real.auroc": {
+      "max": -0.005219214757726354,
+      "mean": -0.007598619558320603,
+      "min": -0.009916121144590506,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0019180035466945103
+    },
+    "rq2.tail_learnability.late_failure.synthetic_utility_gap.auprc": {
+      "max": 0.028289231191391817,
+      "mean": 0.014038971113857398,
+      "min": 0.004043452181123897,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.01034541981138299
+    },
+    "rq2.tail_learnability.late_failure.synthetic_utility_gap.auroc": {
+      "max": 0.02100453441044925,
+      "mean": 0.00830276862126067,
+      "min": -0.00025277145849122995,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.009160118409955849
+    },
+    "rq2.tail_learnability.late_failure.tail_targeted_tstr_gain.auprc": {
+      "max": -0.0018224127433837944,
+      "mean": -0.008848382668932028,
+      "min": -0.01582889485799388,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.005718212722583745
+    },
+    "rq2.tail_learnability.late_failure.tail_targeted_tstr_gain.auroc": {
+      "max": -0.012161402314148528,
+      "mean": -0.020008924380065147,
+      "min": -0.029269903173055667,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0070556641713963595
+    },
+    "rq2.tail_learnability.late_failure.targeted_augmentation_gain_over_real.auprc": {
+      "max": -0.008973548875871318,
+      "mean": -0.014598252264667563,
+      "min": -0.020889489514491655,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.00488744042532854
+    },
+    "rq2.tail_learnability.late_failure.targeted_augmentation_gain_over_real.auroc": {
+      "max": -0.006031694445734148,
+      "mean": -0.008873223936597396,
+      "min": -0.011057461658696699,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.002103744023035434
+    },
+    "rq2.tail_learnability.persistent_failure.arms.real_plus_synthetic.auprc": {
+      "max": 0.1069077946252235,
+      "mean": 0.10646622281467048,
+      "min": 0.10601638336056042,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0003639640789414495
+    },
+    "rq2.tail_learnability.persistent_failure.arms.real_plus_synthetic.auroc": {
+      "max": 0.5445304153582181,
+      "mean": 0.543648224286963,
+      "min": 0.5431707080190359,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0006245116942555654
+    },
+    "rq2.tail_learnability.persistent_failure.arms.real_plus_tail_targeted_synthetic.auprc": {
+      "max": 0.09529176968430912,
+      "mean": 0.0946511530740249,
+      "min": 0.09429103396519814,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0004541491173018374
+    },
+    "rq2.tail_learnability.persistent_failure.arms.real_plus_tail_targeted_synthetic.auroc": {
+      "max": 0.5258991874129949,
+      "mean": 0.5237813892755782,
+      "min": 0.5199666547962059,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0027028911093868392
+    },
+    "rq2.tail_learnability.persistent_failure.arms.real_train.auprc": {
+      "max": 0.11320628493874693,
+      "mean": 0.11320628493874692,
+      "min": 0.11320628493874693,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 1.3877787807814457e-17
+    },
+    "rq2.tail_learnability.persistent_failure.arms.real_train.auroc": {
+      "max": 0.5416248502703228,
+      "mean": 0.5416248502703228,
+      "min": 0.5416248502703228,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.tail_learnability.persistent_failure.arms.synthetic_train.auprc": {
+      "max": 0.10365068909264834,
+      "mean": 0.10091873790339707,
+      "min": 0.0980829364793582,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0022742113569541515
+    },
+    "rq2.tail_learnability.persistent_failure.arms.synthetic_train.auroc": {
+      "max": 0.5234306711126938,
+      "mean": 0.5186339257772454,
+      "min": 0.5120026546667098,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.00484245141686279
+    },
+    "rq2.tail_learnability.persistent_failure.arms.tail_targeted_synthetic.auprc": {
+      "max": 0.09458778741399944,
+      "mean": 0.08865564098370438,
+      "min": 0.08535055823608244,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.00420378388407042
+    },
+    "rq2.tail_learnability.persistent_failure.arms.tail_targeted_synthetic.auroc": {
+      "max": 0.5057221017190585,
+      "mean": 0.4885530987298607,
+      "min": 0.4744326459257341,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.012954478109487196
+    },
+    "rq2.tail_learnability.persistent_failure.real_plus_synthetic_gain_over_real.auprc": {
+      "max": -0.006298490313523433,
+      "mean": -0.006740062124076458,
+      "min": -0.007189901578186511,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0003639640789414495
+    },
+    "rq2.tail_learnability.persistent_failure.real_plus_synthetic_gain_over_real.auroc": {
+      "max": 0.002905565087895301,
+      "mean": 0.0020233740166401746,
+      "min": 0.0015458577487130754,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0006245116942555654
+    },
+    "rq2.tail_learnability.persistent_failure.synthetic_utility_gap.auprc": {
+      "max": 0.01512334845938873,
+      "mean": 0.012287547035349858,
+      "min": 0.009555595846098594,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0022742113569541515
+    },
+    "rq2.tail_learnability.persistent_failure.synthetic_utility_gap.auroc": {
+      "max": 0.02962219560361301,
+      "mean": 0.02299092449307742,
+      "min": 0.018194179157628998,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.00484245141686279
+    },
+    "rq2.tail_learnability.persistent_failure.tail_targeted_tstr_gain.auprc": {
+      "max": -0.003495149065358763,
+      "mean": -0.01226309691969269,
+      "min": -0.01762211179161706,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0062507805926509475
+    },
+    "rq2.tail_learnability.persistent_failure.tail_targeted_tstr_gain.auroc": {
+      "max": -0.006280552947651286,
+      "mean": -0.030080827047384722,
+      "min": -0.048998025186959726,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.017777868859034252
+    },
+    "rq2.tail_learnability.persistent_failure.targeted_augmentation_gain_over_real.auprc": {
+      "max": -0.01791451525443781,
+      "mean": -0.018555131864722036,
+      "min": -0.01891525097354879,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0004541491173018374
+    },
+    "rq2.tail_learnability.persistent_failure.targeted_augmentation_gain_over_real.auroc": {
+      "max": -0.015725662857327904,
+      "mean": -0.017843460994744653,
+      "min": -0.02165819547411696,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0027028911093868392
+    },
+    "rq2.tail_learnability.rapid_guessing.arms.real_plus_synthetic.auprc": {
+      "max": 0.3065340097615448,
+      "mean": 0.301912957225305,
+      "min": 0.29762084658240895,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0036462100452728835
+    },
+    "rq2.tail_learnability.rapid_guessing.arms.real_plus_synthetic.auroc": {
+      "max": 0.5631744456835476,
+      "mean": 0.5621754187439867,
+      "min": 0.560985059695618,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0009039943705323522
+    },
+    "rq2.tail_learnability.rapid_guessing.arms.real_plus_tail_targeted_synthetic.auprc": {
+      "max": 0.3111477087311605,
+      "mean": 0.30961063427921176,
+      "min": 0.3086959171469099,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.001093409642094852
+    },
+    "rq2.tail_learnability.rapid_guessing.arms.real_plus_tail_targeted_synthetic.auroc": {
+      "max": 0.5897771254263973,
+      "mean": 0.5848783401119566,
+      "min": 0.5806013841511415,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.003771698184848202
+    },
+    "rq2.tail_learnability.rapid_guessing.arms.real_train.auprc": {
+      "max": 0.3091806925453089,
+      "mean": 0.3091806925453089,
+      "min": 0.3091806925453089,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.tail_learnability.rapid_guessing.arms.real_train.auroc": {
+      "max": 0.5619014038310155,
+      "mean": 0.5619014038310155,
+      "min": 0.5619014038310155,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.tail_learnability.rapid_guessing.arms.synthetic_train.auprc": {
+      "max": 0.30032387785516546,
+      "mean": 0.2954407699890152,
+      "min": 0.29281502252813585,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.003456152396334084
+    },
+    "rq2.tail_learnability.rapid_guessing.arms.synthetic_train.auroc": {
+      "max": 0.5665589740225662,
+      "mean": 0.5631245626694655,
+      "min": 0.5592876705589085,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0029821084917936885
+    },
+    "rq2.tail_learnability.rapid_guessing.arms.tail_targeted_synthetic.auprc": {
+      "max": 0.31522105311942805,
+      "mean": 0.31095117016966817,
+      "min": 0.30617774391291325,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0037090454520153416
+    },
+    "rq2.tail_learnability.rapid_guessing.arms.tail_targeted_synthetic.auroc": {
+      "max": 0.5935409013382316,
+      "mean": 0.5904228712936238,
+      "min": 0.5843426102072947,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.004299864299468887
+    },
+    "rq2.tail_learnability.rapid_guessing.real_plus_synthetic_gain_over_real.auprc": {
+      "max": -0.002646682783764065,
+      "mean": -0.0072677353200038914,
+      "min": -0.01155984596289994,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0036462100452728835
+    },
+    "rq2.tail_learnability.rapid_guessing.real_plus_synthetic_gain_over_real.auroc": {
+      "max": 0.0012730418525320752,
+      "mean": 0.00027401491297118774,
+      "min": -0.0009163441353975399,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0009039943705323522
+    },
+    "rq2.tail_learnability.rapid_guessing.synthetic_utility_gap.auprc": {
+      "max": 0.01636567001717304,
+      "mean": 0.013739922556293674,
+      "min": 0.008856814690143433,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.003456152396334084
+    },
+    "rq2.tail_learnability.rapid_guessing.synthetic_utility_gap.auroc": {
+      "max": 0.0026137332721070106,
+      "mean": -0.0012231588384500336,
+      "min": -0.004657570191550664,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0029821084917936885
+    },
+    "rq2.tail_learnability.rapid_guessing.tail_targeted_tstr_gain.auprc": {
+      "max": 0.018639690948527465,
+      "mean": 0.015510400180652991,
+      "min": 0.01299433432916891,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.002345143412600513
+    },
+    "rq2.tail_learnability.rapid_guessing.tail_targeted_tstr_gain.auroc": {
+      "max": 0.02985805890842308,
+      "mean": 0.027298308624158236,
+      "min": 0.025054939648386232,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.001973585823791635
+    },
+    "rq2.tail_learnability.rapid_guessing.targeted_augmentation_gain_over_real.auprc": {
+      "max": 0.0019670161858516,
+      "mean": 0.00042994173390289064,
+      "min": -0.0004847753983989733,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.001093409642094852
+    },
+    "rq2.tail_learnability.rapid_guessing.targeted_augmentation_gain_over_real.auroc": {
+      "max": 0.027875721595381764,
+      "mean": 0.022976936280941145,
+      "min": 0.018699980320125986,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.003771698184848201
+    },
+    "rq2.tail_learnability.rare_skill_path.arms.real_plus_synthetic.auprc": {
+      "max": 0.5404981751981373,
+      "mean": 0.5332957950175838,
+      "min": 0.5281833466074248,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.005240204315885336
+    },
+    "rq2.tail_learnability.rare_skill_path.arms.real_plus_synthetic.auroc": {
+      "max": 0.587645844908326,
+      "mean": 0.5798922533534407,
+      "min": 0.5746438209381697,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0055958331858758864
+    },
+    "rq2.tail_learnability.rare_skill_path.arms.real_plus_tail_targeted_synthetic.auprc": {
+      "max": 0.5291400908095351,
+      "mean": 0.5212220403087746,
+      "min": 0.5071816058794705,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.009955114391853597
+    },
+    "rq2.tail_learnability.rare_skill_path.arms.real_plus_tail_targeted_synthetic.auroc": {
+      "max": 0.5538782839907929,
+      "mean": 0.5504173611662301,
+      "min": 0.5478162949440433,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.002548390712222792
+    },
+    "rq2.tail_learnability.rare_skill_path.arms.real_train.auprc": {
+      "max": 0.5203203302398243,
+      "mean": 0.5203203302398243,
+      "min": 0.5203203302398243,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.tail_learnability.rare_skill_path.arms.real_train.auroc": {
+      "max": 0.589233272481943,
+      "mean": 0.589233272481943,
+      "min": 0.589233272481943,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.tail_learnability.rare_skill_path.arms.synthetic_train.auprc": {
+      "max": 0.5259636928563034,
+      "mean": 0.5229942577192962,
+      "min": 0.5189666981440715,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0029528747852237375
+    },
+    "rq2.tail_learnability.rare_skill_path.arms.synthetic_train.auroc": {
+      "max": 0.5632341852527978,
+      "mean": 0.5555731936397068,
+      "min": 0.5487489086435432,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.005943111871949572
+    },
+    "rq2.tail_learnability.rare_skill_path.arms.tail_targeted_synthetic.auprc": {
+      "max": 0.5519943567911934,
+      "mean": 0.5314944003038484,
+      "min": 0.5103694485156796,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.016999043337411143
+    },
+    "rq2.tail_learnability.rare_skill_path.arms.tail_targeted_synthetic.auroc": {
+      "max": 0.5883056194936106,
+      "mean": 0.5611407651400905,
+      "min": 0.5425976267957775,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0196308539349643
+    },
+    "rq2.tail_learnability.rare_skill_path.real_plus_synthetic_gain_over_real.auprc": {
+      "max": 0.020177844958312985,
+      "mean": 0.012975464777759571,
+      "min": 0.007863016367600562,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.005240204315885336
+    },
+    "rq2.tail_learnability.rare_skill_path.real_plus_synthetic_gain_over_real.auroc": {
+      "max": -0.0015874275736169619,
+      "mean": -0.00934101912850227,
+      "min": -0.014589451543773335,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0055958331858758864
+    },
+    "rq2.tail_learnability.rare_skill_path.synthetic_utility_gap.auprc": {
+      "max": 0.001353632095752788,
+      "mean": -0.002673927479471927,
+      "min": -0.005643362616479131,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0029528747852237375
+    },
+    "rq2.tail_learnability.rare_skill_path.synthetic_utility_gap.auroc": {
+      "max": 0.04048436383839982,
+      "mean": 0.03366007884223617,
+      "min": 0.025999087229145235,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.005943111871949572
+    },
+    "rq2.tail_learnability.rare_skill_path.tail_targeted_tstr_gain.auprc": {
+      "max": 0.027941974633679645,
+      "mean": 0.008500142584552228,
+      "min": -0.008597249628391923,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.015008909043800221
+    },
+    "rq2.tail_learnability.rare_skill_path.tail_targeted_tstr_gain.auroc": {
+      "max": 0.03356913247083104,
+      "mean": 0.005567571500383635,
+      "min": -0.010715136121914437,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.019887563183141686
+    },
+    "rq2.tail_learnability.rare_skill_path.targeted_augmentation_gain_over_real.auprc": {
+      "max": 0.008819760569710788,
+      "mean": 0.0009017100689503454,
+      "min": -0.013138724360353793,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.009955114391853597
+    },
+    "rq2.tail_learnability.rare_skill_path.targeted_augmentation_gain_over_real.auroc": {
+      "max": -0.03535498849115015,
+      "mean": -0.0388159113157129,
+      "min": -0.041416977537899746,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.002548390712222792
+    },
+    "rq2.tail_learnability.recovery.arms.real_plus_synthetic.auprc": {
+      "max": 0.7196423012948736,
+      "mean": 0.7185585511086213,
+      "min": 0.7173716022219088,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0009298767118363516
+    },
+    "rq2.tail_learnability.recovery.arms.real_plus_synthetic.auroc": {
+      "max": 0.7027840155149536,
+      "mean": 0.7010139158245722,
+      "min": 0.6993263243850159,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0014128016364900028
+    },
+    "rq2.tail_learnability.recovery.arms.real_plus_tail_targeted_synthetic.auprc": {
+      "max": 0.6897882953053119,
+      "mean": 0.6883224328534411,
+      "min": 0.6863037094658894,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0014753137584318735
+    },
+    "rq2.tail_learnability.recovery.arms.real_plus_tail_targeted_synthetic.auroc": {
+      "max": 0.6721113606205981,
+      "mean": 0.6688773774284645,
+      "min": 0.6636929672348678,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.003703193299055452
+    },
+    "rq2.tail_learnability.recovery.arms.real_train.auprc": {
+      "max": 0.7116954905779048,
+      "mean": 0.7116954905779048,
+      "min": 0.7116954905779048,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.tail_learnability.recovery.arms.real_train.auroc": {
+      "max": 0.6912345616004898,
+      "mean": 0.6912345616004898,
+      "min": 0.6912345616004898,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq2.tail_learnability.recovery.arms.synthetic_train.auprc": {
+      "max": 0.7182694953099749,
+      "mean": 0.7122043754440804,
+      "min": 0.7084758663367352,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.00432616878188969
+    },
+    "rq2.tail_learnability.recovery.arms.synthetic_train.auroc": {
+      "max": 0.6973639889762173,
+      "mean": 0.6953148923139737,
+      "min": 0.6927426763294886,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0019225630485856587
+    },
+    "rq2.tail_learnability.recovery.arms.tail_targeted_synthetic.auprc": {
+      "max": 0.6792387951897016,
+      "mean": 0.6669565145990445,
+      "min": 0.6586131559333164,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.008869069027868727
+    },
+    "rq2.tail_learnability.recovery.arms.tail_targeted_synthetic.auroc": {
+      "max": 0.6671225885475145,
+      "mean": 0.6455751760743084,
+      "min": 0.6287639073185669,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.016013960563424308
+    },
+    "rq2.tail_learnability.recovery.real_plus_synthetic_gain_over_real.auprc": {
+      "max": 0.007946810716968788,
+      "mean": 0.00686306053071654,
+      "min": 0.005676111644003945,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0009298767118363516
+    },
+    "rq2.tail_learnability.recovery.real_plus_synthetic_gain_over_real.auroc": {
+      "max": 0.011549453914463825,
+      "mean": 0.009779354224082382,
+      "min": 0.008091762784526058,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0014128016364900028
+    },
+    "rq2.tail_learnability.recovery.synthetic_utility_gap.auprc": {
+      "max": 0.0032196242411696163,
+      "mean": -0.0005088848661756554,
+      "min": -0.006574004732070038,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.00432616878188969
+    },
+    "rq2.tail_learnability.recovery.synthetic_utility_gap.auroc": {
+      "max": -0.0015081147289988106,
+      "mean": -0.004080330713483904,
+      "min": -0.006129427375727525,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0019225630485856587
+    },
+    "rq2.tail_learnability.recovery.tail_targeted_tstr_gain.auprc": {
+      "max": -0.029237071147033555,
+      "mean": -0.04524786084503599,
+      "min": -0.059656339376658485,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.012470191677540394
+    },
+    "rq2.tail_learnability.recovery.tail_targeted_tstr_gain.auroc": {
+      "max": -0.02562008778197411,
+      "mean": -0.0497397162396653,
+      "min": -0.06860008165765041,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.01793627338066461
+    },
+    "rq2.tail_learnability.recovery.targeted_augmentation_gain_over_real.auprc": {
+      "max": -0.021907195272592883,
+      "mean": -0.023373057724463703,
+      "min": -0.025391781112015455,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0014753137584318735
+    },
+    "rq2.tail_learnability.recovery.targeted_augmentation_gain_over_real.auroc": {
+      "max": -0.01912320097989173,
+      "mean": -0.02235718417202533,
+      "min": -0.02754159436562198,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.003703193299055452
+    },
+    "rq2.tail_targeting_fidelity_gain.late_failure.prevalence_error_reduction": {
+      "max": 0.014539789692327658,
+      "mean": 0.01172703275779999,
+      "min": 0.009736466311826564,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.00204531607565822
+    },
+    "rq2.tail_targeting_fidelity_gain.late_failure.primary_signal_curve_mae_reduction": {
+      "max": -0.0030636204487249213,
+      "mean": -0.007846466991256837,
+      "min": -0.01165521992251431,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0035744966221039464
+    },
+    "rq2.tail_targeting_fidelity_gain.persistent_failure.prevalence_error_reduction": {
+      "max": 0.004543684278852392,
+      "mean": 0.004327318360811801,
+      "min": 0.004154225626379328,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.00016191342709654055
+    },
+    "rq2.tail_targeting_fidelity_gain.persistent_failure.primary_signal_curve_mae_reduction": {
+      "max": 0.004351158038147146,
+      "mean": -0.00024027867048253526,
+      "min": -0.00310683840596495,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.003279921560999838
+    },
+    "rq2.tail_targeting_fidelity_gain.rapid_guessing.prevalence_error_reduction": {
+      "max": 0.0028560301181357953,
+      "mean": -0.0017742005279328375,
+      "min": -0.008438270803583017,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.00482995417899086
+    },
+    "rq2.tail_targeting_fidelity_gain.rapid_guessing.primary_signal_curve_mae_reduction": {
+      "max": 0.026702984770727814,
+      "mean": 0.003510277800967139,
+      "min": -0.013540494657282735,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.016993664089417614
+    },
+    "rq2.tail_targeting_fidelity_gain.rare_skill_path.prevalence_error_reduction": {
+      "max": 0.009217188108529145,
+      "mean": 0.0031156692197845,
+      "min": -0.00038945865247306394,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0043303464242128616
+    },
+    "rq2.tail_targeting_fidelity_gain.rare_skill_path.primary_signal_curve_mae_reduction": {
+      "max": 0.11351523742026935,
+      "mean": 0.10972100113786774,
+      "min": 0.10776314308229257,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.002683388537181771
+    },
+    "rq2.tail_targeting_fidelity_gain.recovery.prevalence_error_reduction": {
+      "max": 0.0006490977541217732,
+      "mean": -0.0009087368557704779,
+      "min": -0.0023367519148383732,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.001222419567426158
+    },
+    "rq2.tail_targeting_fidelity_gain.recovery.primary_signal_curve_mae_reduction": {
+      "max": 0.003865232141613391,
+      "mean": -0.0009482481427534652,
+      "min": -0.007679930144042689,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.004904577210500196
+    }
+  },
+  "metric_summary_scope": "publication_only",
+  "model": "markov_ngram",
+  "publication_schema_version": "publication_metrics_v2",
+  "publication_status_summary": {
+    "rq2.learner_level_outcome_tasks.persistent_failure_prediction": {
+      "counts": {
+        "completed": 3
+      },
+      "seeds_by_status": {
+        "completed": [
+          20260703,
+          20260704,
+          20260705
+        ]
+      }
+    },
+    "rq2.learner_level_outcome_tasks.recovery_prediction": {
+      "counts": {
+        "completed": 3
+      },
+      "seeds_by_status": {
+        "completed": [
+          20260703,
+          20260704,
+          20260705
+        ]
+      }
+    }
+  },
+  "rare_group_metric_refresh": {
+    "generator_retrained": false,
+    "script": "experiments/scripts/refresh_rare_group_metrics.py",
+    "script_sha256": "812341d438d507c31d0aa4cc118afbd48fa95f1b8c1d1a3830d2d6a19cb81929",
+    "synthetic_artifacts_changed": false,
+    "tail_reference_scope": "complete_real_train",
+    "trajectory_curve": "learner_equal_ten_position_linear_interpolation"
+  },
+  "runs": [
+    {
+      "data_provenance": {
+        "available_learner_files": 784309,
+        "clean_rows": 1286363,
+        "columns": [
+          "learner_id",
+          "order",
+          "question_id",
+          "skill_id",
+          "part",
+          "correct",
+          "elapsed_time_bin",
+          "timestamp_gap_bin",
+          "attempt_bin",
+          "hint_bin"
+        ],
+        "contents_zip": "experiments/data/datasets/ednet/raw/contents.zip",
+        "contents_zip_sha256": "aa910a0436d9dbac0ba232f55e27b37ad8d39da285fcf15f1c1eb5d064be98e7",
+        "dataset": "ednet_kt1",
+        "kept_learners": 9666,
+        "kt1_zip": "experiments/data/datasets/ednet/raw/ednet_kt1.zip",
+        "kt1_zip_sha256": "0d13933f90201c5101c7fe8659e44474fa049e3fb93181a8ba6fb3e63267b535",
+        "learner_overlap": 0,
+        "main_sha256": "aa9569978bf7a2f287ecbaf8ec634c41c15c664baf91da854d7d02c1d6615a0a",
+        "max_raw_learner_files": 10000,
+        "min_interactions": 2,
+        "preprocessing_script_sha256": "fea5e95ed118bcff8290210bc7755db2b9d8f5bf46fea4af2cb4f25168272ef4",
+        "question_metadata_rows": 13169,
+        "raw_learner_files": 10000,
+        "runtime": {
+          "pandas": "2.3.3",
+          "platform": "macOS-26.5.2-arm64-arm-64bit",
+          "python": "3.9.6"
+        },
+        "selection_method": "stable_hash_sample",
+        "split_seed": 20260703,
+        "split_unit": "learner_id",
+        "target": "correct",
+        "test_learners": 1963,
+        "test_rows": 264798,
+        "test_sha256": "3eea633fad97a0d11a3516fb3934d7ead56b2391c5b16d5b95984e7d8ddc7903",
+        "train_learners": 7703,
+        "train_ratio": 0.8,
+        "train_rows": 1021565,
+        "train_sha256": "fe4e6dc9556a67676626451c800dbceb0e4ca5c822db7314bf3ff04bf78f0b20"
+      },
+      "dataset": "ednet_kt1",
+      "evaluation_report": "experiments/runs/standard_vs_tail_targeted/evaluation/ednet_kt1/markov_ngram/seed_20260703/generation_evaluation_report.json",
+      "experiment_design": "standard_vs_tail_targeted",
+      "generation_metadata": {
+        "adapter_normalized_invariants": false,
+        "columns": [
+          "learner_id",
+          "order",
+          "question_id",
+          "skill_id",
+          "part",
+          "correct",
+          "elapsed_time_bin",
+          "timestamp_gap_bin",
+          "attempt_bin",
+          "hint_bin"
+        ],
+        "distinct_rows": 181645,
+        "generator_script": "synthetic_generation.generator_scripts.markov_ngram",
+        "generator_script_path": "experiments/synthetic_generation/generator_scripts/markov_ngram.py",
+        "generator_script_sha256": "bc496eeae237f045cea6fa5b6f9118cffaa462cdce6f4c80f78d0a52f73ea6e1",
+        "generator_source_bundle_sha256": "b0fc0185002561c48a4b266cb14131bb78bab01f00cb8428018bec46509fc333",
+        "generator_source_files_sha256": {
+          "experiments/synthetic_generation/generator_scripts/__init__.py": "204bd9955fd11043132a1490eac7cacfcfb7cb97a49329fa41973e02ae47919b",
+          "experiments/synthetic_generation/generator_scripts/block_bootstrap.py": "dbfceda662432d8a7982f6d4e2de69943aa1558cccf052f9b1b751c32034cd0b",
+          "experiments/synthetic_generation/generator_scripts/common.py": "8273839ab1ccacf56e3cce5b466558a32c6a2932cec37a293b7ef97486ca0f56",
+          "experiments/synthetic_generation/generator_scripts/markov_ngram.py": "bc496eeae237f045cea6fa5b6f9118cffaa462cdce6f4c80f78d0a52f73ea6e1",
+          "experiments/synthetic_generation/generator_scripts/sequence_vae_timevae.py": "1a916def82b547825ccb009f5d9f40b85e113cede5f97c9aa171680cbe3d1660",
+          "experiments/synthetic_generation/generator_scripts/timegan.py": "24c2b6bebecaed5d3fc7f07c9fb631dacd8303c82f99245e609e5d2fd3415836",
+          "experiments/synthetic_generation/run_generator.py": "2f529075f78816bd22b0d697fba33552f1b1e572070b5ebfad8a0de334b53b5b"
+        },
+        "length_model": {
+          "fitted_learner_count": 7703,
+          "fitted_log_mean": 2.9883410117106433,
+          "fitted_log_std": 1.559608183449837,
+          "learner_count": 7703,
+          "length_cap": 5514,
+          "max_sampled_length": 5514,
+          "method": "mean_calibrated_truncated_lognormal",
+          "shape_override": false,
+          "synthetic_rows_from_length_model": 1021565,
+          "target_rows": 1021565
+        },
+        "method": "order_k_markov_ngram_stupid_backoff",
+        "min_context_count": 2,
+        "model": "markov_ngram",
+        "order": 2,
+        "output": "experiments/outputs/ednet/markov_ngram/seed_20260703/synth_generation.csv",
+        "pipeline_added_columns": [
+          "skill_id",
+          "part"
+        ],
+        "pipeline_normalized_output": "experiments/outputs/ednet/markov_ngram/seed_20260703/synth_generation.csv",
+        "pipeline_script_path": "experiments/pipeline.py",
+        "pipeline_script_sha256": "cdd21ac9bcb4d74996cc80b7d6df9c81d331d1c8a3f05d76b1ba65a7e7569467",
+        "seed": 20260703,
+        "standard_artifact_reuse": {
+          "artifact_sha256": "f394ba0e6a393ec3eb5131c715f317d554ba24393c3c812cd9265b9aaf118436",
+          "reused": true,
+          "source_namespace": "standard",
+          "validation": "artifact, generator source, dataset provenance, and normalization matched"
+        },
+        "synthetic_learners": 7703,
+        "synthetic_output_sha256": "f394ba0e6a393ec3eb5131c715f317d554ba24393c3c812cd9265b9aaf118436",
+        "synthetic_rows": 1021565,
+        "tail_targeted": {
+          "oversample": 3,
+          "synthetic_rows": 1021565,
+          "tail_selection": {
+            "base_learners": 7703,
+            "base_rows": 1021565,
+            "candidate_learners_by_group": {
+              "late_failure": 586,
+              "persistent_failure": 367,
+              "persistent_misconception": 2361,
+              "rapid_guessing": 302,
+              "rare_skill_path": 386,
+              "recovery": 335
+            },
+            "candidate_tail_groups": [
+              "late_failure",
+              "persistent_failure",
+              "persistent_misconception",
+              "rapid_guessing",
+              "rare_skill_path",
+              "recovery"
+            ],
+            "eligible_tail_groups": [
+              "high_hint_use",
+              "late_failure",
+              "long_inactivity",
+              "persistent_failure",
+              "persistent_misconception",
+              "rapid_guessing",
+              "rare_skill_path",
+              "recovery"
+            ],
+            "excluded_observed_tail_groups": {
+              "long_trajectory": "shared_trajectory_length_sampler",
+              "short_trajectory": "shared_trajectory_length_sampler"
+            },
+            "excluded_target_groups": {
+              "persistent_misconception": "learner_prevalence_0.306504_exceeds_target_ceiling_0.100000"
+            },
+            "implemented_tail_groups": [
+              "late_failure",
+              "persistent_failure",
+              "rapid_guessing",
+              "rare_skill_path",
+              "recovery"
+            ],
+            "maximum_percentile_tail_prevalence": 0.1,
+            "maximum_target_group_prevalence": 0.1,
+            "oversample": 3,
+            "oversampled_train_rows": 1076733,
+            "quantile": 0.05,
+            "selected_learners_by_group": {
+              "late_failure": 586,
+              "persistent_failure": 367,
+              "rapid_guessing": 302,
+              "rare_skill_path": 386,
+              "recovery": 335
+            },
+            "selected_tail_learner_fraction": 0.23237699597559391,
+            "selected_tail_learners": 1790,
+            "selected_tail_rows": 27584,
+            "selection_contract": "maximum_10_percent_per_target_group",
+            "selection_policy": "proposal_aligned_generator_attributable_tails",
+            "status": "completed",
+            "tail_learner_set_sha256": "900a3bce718dec30420e14ada77a16d7f53ad53942ab5d6f9a2e63b12a8a7975",
+            "unavailable_percentile_tail_groups": {
+              "long_inactivity": "coarse_tie_minimum_nonempty_prevalence_0.330780_exceeds_0.100000"
+            }
+          },
+          "train_rows": 1076733
+        },
+        "train_learners": 7703,
+        "train_rows": 1021565,
+        "trajectory_boundaries": "learner_isolated_contexts",
+        "unigram_backoff_rows": 50770
+      },
+      "ignore_columns": [
+        "learner_id",
+        "order"
+      ],
+      "model": "markov_ngram",
+      "seed": 20260703,
+      "standard_artifact_reuse_namespace": "standard",
+      "standard_artifact_reused": true,
+      "standard_synthetic": "experiments/outputs/standard/ednet/markov_ngram/seed_20260703/synth_generation.csv",
+      "tail_targeted_generation_metadata": {
+        "adapter_normalized_invariants": false,
+        "columns": [
+          "learner_id",
+          "order",
+          "question_id",
+          "skill_id",
+          "part",
+          "correct",
+          "elapsed_time_bin",
+          "timestamp_gap_bin",
+          "attempt_bin",
+          "hint_bin"
+        ],
+        "data_provenance": {
+          "available_learner_files": 784309,
+          "clean_rows": 1286363,
+          "columns": [
+            "learner_id",
+            "order",
+            "question_id",
+            "skill_id",
+            "part",
+            "correct",
+            "elapsed_time_bin",
+            "timestamp_gap_bin",
+            "attempt_bin",
+            "hint_bin"
+          ],
+          "contents_zip": "experiments/data/datasets/ednet/raw/contents.zip",
+          "contents_zip_sha256": "aa910a0436d9dbac0ba232f55e27b37ad8d39da285fcf15f1c1eb5d064be98e7",
+          "dataset": "ednet_kt1",
+          "kept_learners": 9666,
+          "kt1_zip": "experiments/data/datasets/ednet/raw/ednet_kt1.zip",
+          "kt1_zip_sha256": "0d13933f90201c5101c7fe8659e44474fa049e3fb93181a8ba6fb3e63267b535",
+          "learner_overlap": 0,
+          "main_sha256": "aa9569978bf7a2f287ecbaf8ec634c41c15c664baf91da854d7d02c1d6615a0a",
+          "max_raw_learner_files": 10000,
+          "min_interactions": 2,
+          "preprocessing_script_sha256": "fea5e95ed118bcff8290210bc7755db2b9d8f5bf46fea4af2cb4f25168272ef4",
+          "question_metadata_rows": 13169,
+          "raw_learner_files": 10000,
+          "runtime": {
+            "pandas": "2.3.3",
+            "platform": "macOS-26.5.2-arm64-arm-64bit",
+            "python": "3.9.6"
+          },
+          "selection_method": "stable_hash_sample",
+          "split_seed": 20260703,
+          "split_unit": "learner_id",
+          "target": "correct",
+          "test_learners": 1963,
+          "test_rows": 264798,
+          "test_sha256": "3eea633fad97a0d11a3516fb3934d7ead56b2391c5b16d5b95984e7d8ddc7903",
+          "train_learners": 7703,
+          "train_ratio": 0.8,
+          "train_rows": 1021565,
+          "train_sha256": "fe4e6dc9556a67676626451c800dbceb0e4ca5c822db7314bf3ff04bf78f0b20"
+        },
+        "distinct_rows": 181645,
+        "experiment_design": "standard_vs_tail_targeted",
+        "generation_arm": "tail_targeted",
+        "generator_script": "synthetic_generation.generator_scripts.markov_ngram",
+        "generator_script_path": "experiments/synthetic_generation/generator_scripts/markov_ngram.py",
+        "generator_script_sha256": "bc496eeae237f045cea6fa5b6f9118cffaa462cdce6f4c80f78d0a52f73ea6e1",
+        "generator_source_bundle_sha256": "b0fc0185002561c48a4b266cb14131bb78bab01f00cb8428018bec46509fc333",
+        "generator_source_files_sha256": {
+          "experiments/synthetic_generation/generator_scripts/__init__.py": "204bd9955fd11043132a1490eac7cacfcfb7cb97a49329fa41973e02ae47919b",
+          "experiments/synthetic_generation/generator_scripts/block_bootstrap.py": "dbfceda662432d8a7982f6d4e2de69943aa1558cccf052f9b1b751c32034cd0b",
+          "experiments/synthetic_generation/generator_scripts/common.py": "8273839ab1ccacf56e3cce5b466558a32c6a2932cec37a293b7ef97486ca0f56",
+          "experiments/synthetic_generation/generator_scripts/markov_ngram.py": "bc496eeae237f045cea6fa5b6f9118cffaa462cdce6f4c80f78d0a52f73ea6e1",
+          "experiments/synthetic_generation/generator_scripts/sequence_vae_timevae.py": "1a916def82b547825ccb009f5d9f40b85e113cede5f97c9aa171680cbe3d1660",
+          "experiments/synthetic_generation/generator_scripts/timegan.py": "24c2b6bebecaed5d3fc7f07c9fb631dacd8303c82f99245e609e5d2fd3415836",
+          "experiments/synthetic_generation/run_generator.py": "2f529075f78816bd22b0d697fba33552f1b1e572070b5ebfad8a0de334b53b5b"
+        },
+        "length_model": {
+          "fitted_learner_count": 11283,
+          "fitted_log_mean": 2.6934967628104034,
+          "fitted_log_std": 1.413102309345015,
+          "learner_count": 7703,
+          "length_cap": 4592,
+          "max_sampled_length": 4592,
+          "method": "mean_calibrated_truncated_lognormal",
+          "shape_override": true,
+          "synthetic_rows_from_length_model": 1021565,
+          "target_rows": 1021565
+        },
+        "method": "order_k_markov_ngram_stupid_backoff",
+        "min_context_count": 2,
+        "model": "markov_ngram",
+        "order": 2,
+        "output": "experiments/outputs/tail_targeted/ednet/markov_ngram/seed_20260703/synth_generation.csv",
+        "pipeline_added_columns": [
+          "skill_id",
+          "part"
+        ],
+        "pipeline_normalized_output": "experiments/outputs/tail_targeted/ednet/markov_ngram/seed_20260703/synth_generation.csv",
+        "pipeline_script_path": "experiments/pipeline.py",
+        "pipeline_script_sha256": "556b66f8dbc930da59ddb22abe723b42b870b3a5987a4056f52ce294b51272f7",
+        "seed": 20260703,
+        "synthetic_learners": 7703,
+        "synthetic_output_sha256": "ca192167e2a04c5a18e0a41be3065f1d9f4040e339ec293b059e1ee5b18fb305",
+        "synthetic_rows": 1021565,
+        "tail_selection": {
+          "base_learners": 7703,
+          "base_rows": 1021565,
+          "candidate_learners_by_group": {
+            "late_failure": 586,
+            "persistent_failure": 367,
+            "persistent_misconception": 2361,
+            "rapid_guessing": 302,
+            "rare_skill_path": 386,
+            "recovery": 335
+          },
+          "candidate_tail_groups": [
+            "late_failure",
+            "persistent_failure",
+            "persistent_misconception",
+            "rapid_guessing",
+            "rare_skill_path",
+            "recovery"
+          ],
+          "eligible_tail_groups": [
+            "high_hint_use",
+            "late_failure",
+            "long_inactivity",
+            "persistent_failure",
+            "persistent_misconception",
+            "rapid_guessing",
+            "rare_skill_path",
+            "recovery"
+          ],
+          "excluded_observed_tail_groups": {
+            "long_trajectory": "shared_trajectory_length_sampler",
+            "short_trajectory": "shared_trajectory_length_sampler"
+          },
+          "excluded_target_groups": {
+            "persistent_misconception": "learner_prevalence_0.306504_exceeds_target_ceiling_0.100000"
+          },
+          "implemented_tail_groups": [
+            "late_failure",
+            "persistent_failure",
+            "rapid_guessing",
+            "rare_skill_path",
+            "recovery"
+          ],
+          "maximum_percentile_tail_prevalence": 0.1,
+          "maximum_target_group_prevalence": 0.1,
+          "oversample": 3,
+          "oversampled_train_rows": 1076733,
+          "quantile": 0.05,
+          "selected_learners_by_group": {
+            "late_failure": 586,
+            "persistent_failure": 367,
+            "rapid_guessing": 302,
+            "rare_skill_path": 386,
+            "recovery": 335
+          },
+          "selected_tail_learner_fraction": 0.23237699597559391,
+          "selected_tail_learners": 1790,
+          "selected_tail_rows": 27584,
+          "selection_contract": "maximum_10_percent_per_target_group",
+          "selection_policy": "proposal_aligned_generator_attributable_tails",
+          "status": "completed",
+          "tail_learner_set_sha256": "900a3bce718dec30420e14ada77a16d7f53ad53942ab5d6f9a2e63b12a8a7975",
+          "unavailable_percentile_tail_groups": {
+            "long_inactivity": "coarse_tie_minimum_nonempty_prevalence_0.330780_exceeds_0.100000"
+          }
+        },
+        "train_learners": 11283,
+        "train_rows": 1076733,
+        "trajectory_boundaries": "learner_isolated_contexts",
+        "unigram_backoff_rows": 34697
+      },
+      "tail_targeted_synthetic": "experiments/outputs/tail_targeted/ednet/markov_ngram/seed_20260703/synth_generation.csv",
+      "test": "experiments/data/datasets/ednet/test.csv",
+      "train": "experiments/data/datasets/ednet/train.csv"
+    },
+    {
+      "data_provenance": {
+        "available_learner_files": 784309,
+        "clean_rows": 1286363,
+        "columns": [
+          "learner_id",
+          "order",
+          "question_id",
+          "skill_id",
+          "part",
+          "correct",
+          "elapsed_time_bin",
+          "timestamp_gap_bin",
+          "attempt_bin",
+          "hint_bin"
+        ],
+        "contents_zip": "experiments/data/datasets/ednet/raw/contents.zip",
+        "contents_zip_sha256": "aa910a0436d9dbac0ba232f55e27b37ad8d39da285fcf15f1c1eb5d064be98e7",
+        "dataset": "ednet_kt1",
+        "kept_learners": 9666,
+        "kt1_zip": "experiments/data/datasets/ednet/raw/ednet_kt1.zip",
+        "kt1_zip_sha256": "0d13933f90201c5101c7fe8659e44474fa049e3fb93181a8ba6fb3e63267b535",
+        "learner_overlap": 0,
+        "main_sha256": "aa9569978bf7a2f287ecbaf8ec634c41c15c664baf91da854d7d02c1d6615a0a",
+        "max_raw_learner_files": 10000,
+        "min_interactions": 2,
+        "preprocessing_script_sha256": "fea5e95ed118bcff8290210bc7755db2b9d8f5bf46fea4af2cb4f25168272ef4",
+        "question_metadata_rows": 13169,
+        "raw_learner_files": 10000,
+        "runtime": {
+          "pandas": "2.3.3",
+          "platform": "macOS-26.5.2-arm64-arm-64bit",
+          "python": "3.9.6"
+        },
+        "selection_method": "stable_hash_sample",
+        "split_seed": 20260703,
+        "split_unit": "learner_id",
+        "target": "correct",
+        "test_learners": 1963,
+        "test_rows": 264798,
+        "test_sha256": "3eea633fad97a0d11a3516fb3934d7ead56b2391c5b16d5b95984e7d8ddc7903",
+        "train_learners": 7703,
+        "train_ratio": 0.8,
+        "train_rows": 1021565,
+        "train_sha256": "fe4e6dc9556a67676626451c800dbceb0e4ca5c822db7314bf3ff04bf78f0b20"
+      },
+      "dataset": "ednet_kt1",
+      "evaluation_report": "experiments/runs/standard_vs_tail_targeted/evaluation/ednet_kt1/markov_ngram/seed_20260704/generation_evaluation_report.json",
+      "experiment_design": "standard_vs_tail_targeted",
+      "generation_metadata": {
+        "adapter_normalized_invariants": false,
+        "columns": [
+          "learner_id",
+          "order",
+          "question_id",
+          "skill_id",
+          "part",
+          "correct",
+          "elapsed_time_bin",
+          "timestamp_gap_bin",
+          "attempt_bin",
+          "hint_bin"
+        ],
+        "distinct_rows": 181645,
+        "generator_script": "synthetic_generation.generator_scripts.markov_ngram",
+        "generator_script_path": "experiments/synthetic_generation/generator_scripts/markov_ngram.py",
+        "generator_script_sha256": "bc496eeae237f045cea6fa5b6f9118cffaa462cdce6f4c80f78d0a52f73ea6e1",
+        "generator_source_bundle_sha256": "b0fc0185002561c48a4b266cb14131bb78bab01f00cb8428018bec46509fc333",
+        "generator_source_files_sha256": {
+          "experiments/synthetic_generation/generator_scripts/__init__.py": "204bd9955fd11043132a1490eac7cacfcfb7cb97a49329fa41973e02ae47919b",
+          "experiments/synthetic_generation/generator_scripts/block_bootstrap.py": "dbfceda662432d8a7982f6d4e2de69943aa1558cccf052f9b1b751c32034cd0b",
+          "experiments/synthetic_generation/generator_scripts/common.py": "8273839ab1ccacf56e3cce5b466558a32c6a2932cec37a293b7ef97486ca0f56",
+          "experiments/synthetic_generation/generator_scripts/markov_ngram.py": "bc496eeae237f045cea6fa5b6f9118cffaa462cdce6f4c80f78d0a52f73ea6e1",
+          "experiments/synthetic_generation/generator_scripts/sequence_vae_timevae.py": "1a916def82b547825ccb009f5d9f40b85e113cede5f97c9aa171680cbe3d1660",
+          "experiments/synthetic_generation/generator_scripts/timegan.py": "24c2b6bebecaed5d3fc7f07c9fb631dacd8303c82f99245e609e5d2fd3415836",
+          "experiments/synthetic_generation/run_generator.py": "2f529075f78816bd22b0d697fba33552f1b1e572070b5ebfad8a0de334b53b5b"
+        },
+        "length_model": {
+          "fitted_learner_count": 7703,
+          "fitted_log_mean": 2.9883410117106433,
+          "fitted_log_std": 1.559608183449837,
+          "learner_count": 7703,
+          "length_cap": 5514,
+          "max_sampled_length": 5514,
+          "method": "mean_calibrated_truncated_lognormal",
+          "shape_override": false,
+          "synthetic_rows_from_length_model": 1021565,
+          "target_rows": 1021565
+        },
+        "method": "order_k_markov_ngram_stupid_backoff",
+        "min_context_count": 2,
+        "model": "markov_ngram",
+        "order": 2,
+        "output": "experiments/outputs/ednet/markov_ngram/seed_20260704/synth_generation.csv",
+        "pipeline_added_columns": [
+          "skill_id",
+          "part"
+        ],
+        "pipeline_normalized_output": "experiments/outputs/ednet/markov_ngram/seed_20260704/synth_generation.csv",
+        "pipeline_script_path": "experiments/pipeline.py",
+        "pipeline_script_sha256": "cdd21ac9bcb4d74996cc80b7d6df9c81d331d1c8a3f05d76b1ba65a7e7569467",
+        "seed": 20260704,
+        "standard_artifact_reuse": {
+          "artifact_sha256": "bfe00b7cdf0e23e4a03f8e3b6b8b4fe7f5cc53fc7303f54bcfdc9678a8182adb",
+          "reused": true,
+          "source_namespace": "standard",
+          "validation": "artifact, generator source, dataset provenance, and normalization matched"
+        },
+        "synthetic_learners": 7703,
+        "synthetic_output_sha256": "bfe00b7cdf0e23e4a03f8e3b6b8b4fe7f5cc53fc7303f54bcfdc9678a8182adb",
+        "synthetic_rows": 1021565,
+        "tail_targeted": {
+          "oversample": 3,
+          "synthetic_rows": 1021565,
+          "tail_selection": {
+            "base_learners": 7703,
+            "base_rows": 1021565,
+            "candidate_learners_by_group": {
+              "late_failure": 586,
+              "persistent_failure": 367,
+              "persistent_misconception": 2361,
+              "rapid_guessing": 302,
+              "rare_skill_path": 386,
+              "recovery": 335
+            },
+            "candidate_tail_groups": [
+              "late_failure",
+              "persistent_failure",
+              "persistent_misconception",
+              "rapid_guessing",
+              "rare_skill_path",
+              "recovery"
+            ],
+            "eligible_tail_groups": [
+              "high_hint_use",
+              "late_failure",
+              "long_inactivity",
+              "persistent_failure",
+              "persistent_misconception",
+              "rapid_guessing",
+              "rare_skill_path",
+              "recovery"
+            ],
+            "excluded_observed_tail_groups": {
+              "long_trajectory": "shared_trajectory_length_sampler",
+              "short_trajectory": "shared_trajectory_length_sampler"
+            },
+            "excluded_target_groups": {
+              "persistent_misconception": "learner_prevalence_0.306504_exceeds_target_ceiling_0.100000"
+            },
+            "implemented_tail_groups": [
+              "late_failure",
+              "persistent_failure",
+              "rapid_guessing",
+              "rare_skill_path",
+              "recovery"
+            ],
+            "maximum_percentile_tail_prevalence": 0.1,
+            "maximum_target_group_prevalence": 0.1,
+            "oversample": 3,
+            "oversampled_train_rows": 1076733,
+            "quantile": 0.05,
+            "selected_learners_by_group": {
+              "late_failure": 586,
+              "persistent_failure": 367,
+              "rapid_guessing": 302,
+              "rare_skill_path": 386,
+              "recovery": 335
+            },
+            "selected_tail_learner_fraction": 0.23237699597559391,
+            "selected_tail_learners": 1790,
+            "selected_tail_rows": 27584,
+            "selection_contract": "maximum_10_percent_per_target_group",
+            "selection_policy": "proposal_aligned_generator_attributable_tails",
+            "status": "completed",
+            "tail_learner_set_sha256": "900a3bce718dec30420e14ada77a16d7f53ad53942ab5d6f9a2e63b12a8a7975",
+            "unavailable_percentile_tail_groups": {
+              "long_inactivity": "coarse_tie_minimum_nonempty_prevalence_0.330780_exceeds_0.100000"
+            }
+          },
+          "train_rows": 1076733
+        },
+        "train_learners": 7703,
+        "train_rows": 1021565,
+        "trajectory_boundaries": "learner_isolated_contexts",
+        "unigram_backoff_rows": 50732
+      },
+      "ignore_columns": [
+        "learner_id",
+        "order"
+      ],
+      "model": "markov_ngram",
+      "seed": 20260704,
+      "standard_artifact_reuse_namespace": "standard",
+      "standard_artifact_reused": true,
+      "standard_synthetic": "experiments/outputs/standard/ednet/markov_ngram/seed_20260704/synth_generation.csv",
+      "tail_targeted_generation_metadata": {
+        "adapter_normalized_invariants": false,
+        "columns": [
+          "learner_id",
+          "order",
+          "question_id",
+          "skill_id",
+          "part",
+          "correct",
+          "elapsed_time_bin",
+          "timestamp_gap_bin",
+          "attempt_bin",
+          "hint_bin"
+        ],
+        "data_provenance": {
+          "available_learner_files": 784309,
+          "clean_rows": 1286363,
+          "columns": [
+            "learner_id",
+            "order",
+            "question_id",
+            "skill_id",
+            "part",
+            "correct",
+            "elapsed_time_bin",
+            "timestamp_gap_bin",
+            "attempt_bin",
+            "hint_bin"
+          ],
+          "contents_zip": "experiments/data/datasets/ednet/raw/contents.zip",
+          "contents_zip_sha256": "aa910a0436d9dbac0ba232f55e27b37ad8d39da285fcf15f1c1eb5d064be98e7",
+          "dataset": "ednet_kt1",
+          "kept_learners": 9666,
+          "kt1_zip": "experiments/data/datasets/ednet/raw/ednet_kt1.zip",
+          "kt1_zip_sha256": "0d13933f90201c5101c7fe8659e44474fa049e3fb93181a8ba6fb3e63267b535",
+          "learner_overlap": 0,
+          "main_sha256": "aa9569978bf7a2f287ecbaf8ec634c41c15c664baf91da854d7d02c1d6615a0a",
+          "max_raw_learner_files": 10000,
+          "min_interactions": 2,
+          "preprocessing_script_sha256": "fea5e95ed118bcff8290210bc7755db2b9d8f5bf46fea4af2cb4f25168272ef4",
+          "question_metadata_rows": 13169,
+          "raw_learner_files": 10000,
+          "runtime": {
+            "pandas": "2.3.3",
+            "platform": "macOS-26.5.2-arm64-arm-64bit",
+            "python": "3.9.6"
+          },
+          "selection_method": "stable_hash_sample",
+          "split_seed": 20260703,
+          "split_unit": "learner_id",
+          "target": "correct",
+          "test_learners": 1963,
+          "test_rows": 264798,
+          "test_sha256": "3eea633fad97a0d11a3516fb3934d7ead56b2391c5b16d5b95984e7d8ddc7903",
+          "train_learners": 7703,
+          "train_ratio": 0.8,
+          "train_rows": 1021565,
+          "train_sha256": "fe4e6dc9556a67676626451c800dbceb0e4ca5c822db7314bf3ff04bf78f0b20"
+        },
+        "distinct_rows": 181645,
+        "experiment_design": "standard_vs_tail_targeted",
+        "generation_arm": "tail_targeted",
+        "generator_script": "synthetic_generation.generator_scripts.markov_ngram",
+        "generator_script_path": "experiments/synthetic_generation/generator_scripts/markov_ngram.py",
+        "generator_script_sha256": "bc496eeae237f045cea6fa5b6f9118cffaa462cdce6f4c80f78d0a52f73ea6e1",
+        "generator_source_bundle_sha256": "b0fc0185002561c48a4b266cb14131bb78bab01f00cb8428018bec46509fc333",
+        "generator_source_files_sha256": {
+          "experiments/synthetic_generation/generator_scripts/__init__.py": "204bd9955fd11043132a1490eac7cacfcfb7cb97a49329fa41973e02ae47919b",
+          "experiments/synthetic_generation/generator_scripts/block_bootstrap.py": "dbfceda662432d8a7982f6d4e2de69943aa1558cccf052f9b1b751c32034cd0b",
+          "experiments/synthetic_generation/generator_scripts/common.py": "8273839ab1ccacf56e3cce5b466558a32c6a2932cec37a293b7ef97486ca0f56",
+          "experiments/synthetic_generation/generator_scripts/markov_ngram.py": "bc496eeae237f045cea6fa5b6f9118cffaa462cdce6f4c80f78d0a52f73ea6e1",
+          "experiments/synthetic_generation/generator_scripts/sequence_vae_timevae.py": "1a916def82b547825ccb009f5d9f40b85e113cede5f97c9aa171680cbe3d1660",
+          "experiments/synthetic_generation/generator_scripts/timegan.py": "24c2b6bebecaed5d3fc7f07c9fb631dacd8303c82f99245e609e5d2fd3415836",
+          "experiments/synthetic_generation/run_generator.py": "2f529075f78816bd22b0d697fba33552f1b1e572070b5ebfad8a0de334b53b5b"
+        },
+        "length_model": {
+          "fitted_learner_count": 11283,
+          "fitted_log_mean": 2.6934967628104034,
+          "fitted_log_std": 1.413102309345015,
+          "learner_count": 7703,
+          "length_cap": 4592,
+          "max_sampled_length": 4592,
+          "method": "mean_calibrated_truncated_lognormal",
+          "shape_override": true,
+          "synthetic_rows_from_length_model": 1021565,
+          "target_rows": 1021565
+        },
+        "method": "order_k_markov_ngram_stupid_backoff",
+        "min_context_count": 2,
+        "model": "markov_ngram",
+        "order": 2,
+        "output": "experiments/outputs/tail_targeted/ednet/markov_ngram/seed_20260704/synth_generation.csv",
+        "pipeline_added_columns": [
+          "skill_id",
+          "part"
+        ],
+        "pipeline_normalized_output": "experiments/outputs/tail_targeted/ednet/markov_ngram/seed_20260704/synth_generation.csv",
+        "pipeline_script_path": "experiments/pipeline.py",
+        "pipeline_script_sha256": "556b66f8dbc930da59ddb22abe723b42b870b3a5987a4056f52ce294b51272f7",
+        "seed": 20260704,
+        "synthetic_learners": 7703,
+        "synthetic_output_sha256": "ffb510b8c76b040f3f6269c23acd8384b7ab77c27e7e11c0e31fed48b39a1ef8",
+        "synthetic_rows": 1021565,
+        "tail_selection": {
+          "base_learners": 7703,
+          "base_rows": 1021565,
+          "candidate_learners_by_group": {
+            "late_failure": 586,
+            "persistent_failure": 367,
+            "persistent_misconception": 2361,
+            "rapid_guessing": 302,
+            "rare_skill_path": 386,
+            "recovery": 335
+          },
+          "candidate_tail_groups": [
+            "late_failure",
+            "persistent_failure",
+            "persistent_misconception",
+            "rapid_guessing",
+            "rare_skill_path",
+            "recovery"
+          ],
+          "eligible_tail_groups": [
+            "high_hint_use",
+            "late_failure",
+            "long_inactivity",
+            "persistent_failure",
+            "persistent_misconception",
+            "rapid_guessing",
+            "rare_skill_path",
+            "recovery"
+          ],
+          "excluded_observed_tail_groups": {
+            "long_trajectory": "shared_trajectory_length_sampler",
+            "short_trajectory": "shared_trajectory_length_sampler"
+          },
+          "excluded_target_groups": {
+            "persistent_misconception": "learner_prevalence_0.306504_exceeds_target_ceiling_0.100000"
+          },
+          "implemented_tail_groups": [
+            "late_failure",
+            "persistent_failure",
+            "rapid_guessing",
+            "rare_skill_path",
+            "recovery"
+          ],
+          "maximum_percentile_tail_prevalence": 0.1,
+          "maximum_target_group_prevalence": 0.1,
+          "oversample": 3,
+          "oversampled_train_rows": 1076733,
+          "quantile": 0.05,
+          "selected_learners_by_group": {
+            "late_failure": 586,
+            "persistent_failure": 367,
+            "rapid_guessing": 302,
+            "rare_skill_path": 386,
+            "recovery": 335
+          },
+          "selected_tail_learner_fraction": 0.23237699597559391,
+          "selected_tail_learners": 1790,
+          "selected_tail_rows": 27584,
+          "selection_contract": "maximum_10_percent_per_target_group",
+          "selection_policy": "proposal_aligned_generator_attributable_tails",
+          "status": "completed",
+          "tail_learner_set_sha256": "900a3bce718dec30420e14ada77a16d7f53ad53942ab5d6f9a2e63b12a8a7975",
+          "unavailable_percentile_tail_groups": {
+            "long_inactivity": "coarse_tie_minimum_nonempty_prevalence_0.330780_exceeds_0.100000"
+          }
+        },
+        "train_learners": 11283,
+        "train_rows": 1076733,
+        "trajectory_boundaries": "learner_isolated_contexts",
+        "unigram_backoff_rows": 35509
+      },
+      "tail_targeted_synthetic": "experiments/outputs/tail_targeted/ednet/markov_ngram/seed_20260704/synth_generation.csv",
+      "test": "experiments/data/datasets/ednet/test.csv",
+      "train": "experiments/data/datasets/ednet/train.csv"
+    },
+    {
+      "data_provenance": {
+        "available_learner_files": 784309,
+        "clean_rows": 1286363,
+        "columns": [
+          "learner_id",
+          "order",
+          "question_id",
+          "skill_id",
+          "part",
+          "correct",
+          "elapsed_time_bin",
+          "timestamp_gap_bin",
+          "attempt_bin",
+          "hint_bin"
+        ],
+        "contents_zip": "experiments/data/datasets/ednet/raw/contents.zip",
+        "contents_zip_sha256": "aa910a0436d9dbac0ba232f55e27b37ad8d39da285fcf15f1c1eb5d064be98e7",
+        "dataset": "ednet_kt1",
+        "kept_learners": 9666,
+        "kt1_zip": "experiments/data/datasets/ednet/raw/ednet_kt1.zip",
+        "kt1_zip_sha256": "0d13933f90201c5101c7fe8659e44474fa049e3fb93181a8ba6fb3e63267b535",
+        "learner_overlap": 0,
+        "main_sha256": "aa9569978bf7a2f287ecbaf8ec634c41c15c664baf91da854d7d02c1d6615a0a",
+        "max_raw_learner_files": 10000,
+        "min_interactions": 2,
+        "preprocessing_script_sha256": "fea5e95ed118bcff8290210bc7755db2b9d8f5bf46fea4af2cb4f25168272ef4",
+        "question_metadata_rows": 13169,
+        "raw_learner_files": 10000,
+        "runtime": {
+          "pandas": "2.3.3",
+          "platform": "macOS-26.5.2-arm64-arm-64bit",
+          "python": "3.9.6"
+        },
+        "selection_method": "stable_hash_sample",
+        "split_seed": 20260703,
+        "split_unit": "learner_id",
+        "target": "correct",
+        "test_learners": 1963,
+        "test_rows": 264798,
+        "test_sha256": "3eea633fad97a0d11a3516fb3934d7ead56b2391c5b16d5b95984e7d8ddc7903",
+        "train_learners": 7703,
+        "train_ratio": 0.8,
+        "train_rows": 1021565,
+        "train_sha256": "fe4e6dc9556a67676626451c800dbceb0e4ca5c822db7314bf3ff04bf78f0b20"
+      },
+      "dataset": "ednet_kt1",
+      "evaluation_report": "experiments/runs/standard_vs_tail_targeted/evaluation/ednet_kt1/markov_ngram/seed_20260705/generation_evaluation_report.json",
+      "experiment_design": "standard_vs_tail_targeted",
+      "generation_metadata": {
+        "adapter_normalized_invariants": false,
+        "columns": [
+          "learner_id",
+          "order",
+          "question_id",
+          "skill_id",
+          "part",
+          "correct",
+          "elapsed_time_bin",
+          "timestamp_gap_bin",
+          "attempt_bin",
+          "hint_bin"
+        ],
+        "distinct_rows": 181645,
+        "generator_script": "synthetic_generation.generator_scripts.markov_ngram",
+        "generator_script_path": "experiments/synthetic_generation/generator_scripts/markov_ngram.py",
+        "generator_script_sha256": "bc496eeae237f045cea6fa5b6f9118cffaa462cdce6f4c80f78d0a52f73ea6e1",
+        "generator_source_bundle_sha256": "b0fc0185002561c48a4b266cb14131bb78bab01f00cb8428018bec46509fc333",
+        "generator_source_files_sha256": {
+          "experiments/synthetic_generation/generator_scripts/__init__.py": "204bd9955fd11043132a1490eac7cacfcfb7cb97a49329fa41973e02ae47919b",
+          "experiments/synthetic_generation/generator_scripts/block_bootstrap.py": "dbfceda662432d8a7982f6d4e2de69943aa1558cccf052f9b1b751c32034cd0b",
+          "experiments/synthetic_generation/generator_scripts/common.py": "8273839ab1ccacf56e3cce5b466558a32c6a2932cec37a293b7ef97486ca0f56",
+          "experiments/synthetic_generation/generator_scripts/markov_ngram.py": "bc496eeae237f045cea6fa5b6f9118cffaa462cdce6f4c80f78d0a52f73ea6e1",
+          "experiments/synthetic_generation/generator_scripts/sequence_vae_timevae.py": "1a916def82b547825ccb009f5d9f40b85e113cede5f97c9aa171680cbe3d1660",
+          "experiments/synthetic_generation/generator_scripts/timegan.py": "24c2b6bebecaed5d3fc7f07c9fb631dacd8303c82f99245e609e5d2fd3415836",
+          "experiments/synthetic_generation/run_generator.py": "2f529075f78816bd22b0d697fba33552f1b1e572070b5ebfad8a0de334b53b5b"
+        },
+        "length_model": {
+          "fitted_learner_count": 7703,
+          "fitted_log_mean": 2.9883410117106433,
+          "fitted_log_std": 1.559608183449837,
+          "learner_count": 7703,
+          "length_cap": 5514,
+          "max_sampled_length": 5514,
+          "method": "mean_calibrated_truncated_lognormal",
+          "shape_override": false,
+          "synthetic_rows_from_length_model": 1021565,
+          "target_rows": 1021565
+        },
+        "method": "order_k_markov_ngram_stupid_backoff",
+        "min_context_count": 2,
+        "model": "markov_ngram",
+        "order": 2,
+        "output": "experiments/outputs/ednet/markov_ngram/seed_20260705/synth_generation.csv",
+        "pipeline_added_columns": [
+          "skill_id",
+          "part"
+        ],
+        "pipeline_normalized_output": "experiments/outputs/ednet/markov_ngram/seed_20260705/synth_generation.csv",
+        "pipeline_script_path": "experiments/pipeline.py",
+        "pipeline_script_sha256": "cdd21ac9bcb4d74996cc80b7d6df9c81d331d1c8a3f05d76b1ba65a7e7569467",
+        "seed": 20260705,
+        "standard_artifact_reuse": {
+          "artifact_sha256": "15bb5450458b2d8610ce548f1ee4f82bdea7071aff895d7d27a7a99ca2c44958",
+          "reused": true,
+          "source_namespace": "standard",
+          "validation": "artifact, generator source, dataset provenance, and normalization matched"
+        },
+        "synthetic_learners": 7703,
+        "synthetic_output_sha256": "15bb5450458b2d8610ce548f1ee4f82bdea7071aff895d7d27a7a99ca2c44958",
+        "synthetic_rows": 1021565,
+        "tail_targeted": {
+          "oversample": 3,
+          "synthetic_rows": 1021565,
+          "tail_selection": {
+            "base_learners": 7703,
+            "base_rows": 1021565,
+            "candidate_learners_by_group": {
+              "late_failure": 586,
+              "persistent_failure": 367,
+              "persistent_misconception": 2361,
+              "rapid_guessing": 302,
+              "rare_skill_path": 386,
+              "recovery": 335
+            },
+            "candidate_tail_groups": [
+              "late_failure",
+              "persistent_failure",
+              "persistent_misconception",
+              "rapid_guessing",
+              "rare_skill_path",
+              "recovery"
+            ],
+            "eligible_tail_groups": [
+              "high_hint_use",
+              "late_failure",
+              "long_inactivity",
+              "persistent_failure",
+              "persistent_misconception",
+              "rapid_guessing",
+              "rare_skill_path",
+              "recovery"
+            ],
+            "excluded_observed_tail_groups": {
+              "long_trajectory": "shared_trajectory_length_sampler",
+              "short_trajectory": "shared_trajectory_length_sampler"
+            },
+            "excluded_target_groups": {
+              "persistent_misconception": "learner_prevalence_0.306504_exceeds_target_ceiling_0.100000"
+            },
+            "implemented_tail_groups": [
+              "late_failure",
+              "persistent_failure",
+              "rapid_guessing",
+              "rare_skill_path",
+              "recovery"
+            ],
+            "maximum_percentile_tail_prevalence": 0.1,
+            "maximum_target_group_prevalence": 0.1,
+            "oversample": 3,
+            "oversampled_train_rows": 1076733,
+            "quantile": 0.05,
+            "selected_learners_by_group": {
+              "late_failure": 586,
+              "persistent_failure": 367,
+              "rapid_guessing": 302,
+              "rare_skill_path": 386,
+              "recovery": 335
+            },
+            "selected_tail_learner_fraction": 0.23237699597559391,
+            "selected_tail_learners": 1790,
+            "selected_tail_rows": 27584,
+            "selection_contract": "maximum_10_percent_per_target_group",
+            "selection_policy": "proposal_aligned_generator_attributable_tails",
+            "status": "completed",
+            "tail_learner_set_sha256": "900a3bce718dec30420e14ada77a16d7f53ad53942ab5d6f9a2e63b12a8a7975",
+            "unavailable_percentile_tail_groups": {
+              "long_inactivity": "coarse_tie_minimum_nonempty_prevalence_0.330780_exceeds_0.100000"
+            }
+          },
+          "train_rows": 1076733
+        },
+        "train_learners": 7703,
+        "train_rows": 1021565,
+        "trajectory_boundaries": "learner_isolated_contexts",
+        "unigram_backoff_rows": 51070
+      },
+      "ignore_columns": [
+        "learner_id",
+        "order"
+      ],
+      "model": "markov_ngram",
+      "seed": 20260705,
+      "standard_artifact_reuse_namespace": "standard",
+      "standard_artifact_reused": true,
+      "standard_synthetic": "experiments/outputs/standard/ednet/markov_ngram/seed_20260705/synth_generation.csv",
+      "tail_targeted_generation_metadata": {
+        "adapter_normalized_invariants": false,
+        "columns": [
+          "learner_id",
+          "order",
+          "question_id",
+          "skill_id",
+          "part",
+          "correct",
+          "elapsed_time_bin",
+          "timestamp_gap_bin",
+          "attempt_bin",
+          "hint_bin"
+        ],
+        "data_provenance": {
+          "available_learner_files": 784309,
+          "clean_rows": 1286363,
+          "columns": [
+            "learner_id",
+            "order",
+            "question_id",
+            "skill_id",
+            "part",
+            "correct",
+            "elapsed_time_bin",
+            "timestamp_gap_bin",
+            "attempt_bin",
+            "hint_bin"
+          ],
+          "contents_zip": "experiments/data/datasets/ednet/raw/contents.zip",
+          "contents_zip_sha256": "aa910a0436d9dbac0ba232f55e27b37ad8d39da285fcf15f1c1eb5d064be98e7",
+          "dataset": "ednet_kt1",
+          "kept_learners": 9666,
+          "kt1_zip": "experiments/data/datasets/ednet/raw/ednet_kt1.zip",
+          "kt1_zip_sha256": "0d13933f90201c5101c7fe8659e44474fa049e3fb93181a8ba6fb3e63267b535",
+          "learner_overlap": 0,
+          "main_sha256": "aa9569978bf7a2f287ecbaf8ec634c41c15c664baf91da854d7d02c1d6615a0a",
+          "max_raw_learner_files": 10000,
+          "min_interactions": 2,
+          "preprocessing_script_sha256": "fea5e95ed118bcff8290210bc7755db2b9d8f5bf46fea4af2cb4f25168272ef4",
+          "question_metadata_rows": 13169,
+          "raw_learner_files": 10000,
+          "runtime": {
+            "pandas": "2.3.3",
+            "platform": "macOS-26.5.2-arm64-arm-64bit",
+            "python": "3.9.6"
+          },
+          "selection_method": "stable_hash_sample",
+          "split_seed": 20260703,
+          "split_unit": "learner_id",
+          "target": "correct",
+          "test_learners": 1963,
+          "test_rows": 264798,
+          "test_sha256": "3eea633fad97a0d11a3516fb3934d7ead56b2391c5b16d5b95984e7d8ddc7903",
+          "train_learners": 7703,
+          "train_ratio": 0.8,
+          "train_rows": 1021565,
+          "train_sha256": "fe4e6dc9556a67676626451c800dbceb0e4ca5c822db7314bf3ff04bf78f0b20"
+        },
+        "distinct_rows": 181645,
+        "experiment_design": "standard_vs_tail_targeted",
+        "generation_arm": "tail_targeted",
+        "generator_script": "synthetic_generation.generator_scripts.markov_ngram",
+        "generator_script_path": "experiments/synthetic_generation/generator_scripts/markov_ngram.py",
+        "generator_script_sha256": "bc496eeae237f045cea6fa5b6f9118cffaa462cdce6f4c80f78d0a52f73ea6e1",
+        "generator_source_bundle_sha256": "b0fc0185002561c48a4b266cb14131bb78bab01f00cb8428018bec46509fc333",
+        "generator_source_files_sha256": {
+          "experiments/synthetic_generation/generator_scripts/__init__.py": "204bd9955fd11043132a1490eac7cacfcfb7cb97a49329fa41973e02ae47919b",
+          "experiments/synthetic_generation/generator_scripts/block_bootstrap.py": "dbfceda662432d8a7982f6d4e2de69943aa1558cccf052f9b1b751c32034cd0b",
+          "experiments/synthetic_generation/generator_scripts/common.py": "8273839ab1ccacf56e3cce5b466558a32c6a2932cec37a293b7ef97486ca0f56",
+          "experiments/synthetic_generation/generator_scripts/markov_ngram.py": "bc496eeae237f045cea6fa5b6f9118cffaa462cdce6f4c80f78d0a52f73ea6e1",
+          "experiments/synthetic_generation/generator_scripts/sequence_vae_timevae.py": "1a916def82b547825ccb009f5d9f40b85e113cede5f97c9aa171680cbe3d1660",
+          "experiments/synthetic_generation/generator_scripts/timegan.py": "24c2b6bebecaed5d3fc7f07c9fb631dacd8303c82f99245e609e5d2fd3415836",
+          "experiments/synthetic_generation/run_generator.py": "2f529075f78816bd22b0d697fba33552f1b1e572070b5ebfad8a0de334b53b5b"
+        },
+        "length_model": {
+          "fitted_learner_count": 11283,
+          "fitted_log_mean": 2.6934967628104034,
+          "fitted_log_std": 1.413102309345015,
+          "learner_count": 7703,
+          "length_cap": 4592,
+          "max_sampled_length": 4592,
+          "method": "mean_calibrated_truncated_lognormal",
+          "shape_override": true,
+          "synthetic_rows_from_length_model": 1021565,
+          "target_rows": 1021565
+        },
+        "method": "order_k_markov_ngram_stupid_backoff",
+        "min_context_count": 2,
+        "model": "markov_ngram",
+        "order": 2,
+        "output": "experiments/outputs/tail_targeted/ednet/markov_ngram/seed_20260705/synth_generation.csv",
+        "pipeline_added_columns": [
+          "skill_id",
+          "part"
+        ],
+        "pipeline_normalized_output": "experiments/outputs/tail_targeted/ednet/markov_ngram/seed_20260705/synth_generation.csv",
+        "pipeline_script_path": "experiments/pipeline.py",
+        "pipeline_script_sha256": "556b66f8dbc930da59ddb22abe723b42b870b3a5987a4056f52ce294b51272f7",
+        "seed": 20260705,
+        "synthetic_learners": 7703,
+        "synthetic_output_sha256": "9325a8cc5439405cf56968788ecb5f112503c8f86a42a066dddc707da641b829",
+        "synthetic_rows": 1021565,
+        "tail_selection": {
+          "base_learners": 7703,
+          "base_rows": 1021565,
+          "candidate_learners_by_group": {
+            "late_failure": 586,
+            "persistent_failure": 367,
+            "persistent_misconception": 2361,
+            "rapid_guessing": 302,
+            "rare_skill_path": 386,
+            "recovery": 335
+          },
+          "candidate_tail_groups": [
+            "late_failure",
+            "persistent_failure",
+            "persistent_misconception",
+            "rapid_guessing",
+            "rare_skill_path",
+            "recovery"
+          ],
+          "eligible_tail_groups": [
+            "high_hint_use",
+            "late_failure",
+            "long_inactivity",
+            "persistent_failure",
+            "persistent_misconception",
+            "rapid_guessing",
+            "rare_skill_path",
+            "recovery"
+          ],
+          "excluded_observed_tail_groups": {
+            "long_trajectory": "shared_trajectory_length_sampler",
+            "short_trajectory": "shared_trajectory_length_sampler"
+          },
+          "excluded_target_groups": {
+            "persistent_misconception": "learner_prevalence_0.306504_exceeds_target_ceiling_0.100000"
+          },
+          "implemented_tail_groups": [
+            "late_failure",
+            "persistent_failure",
+            "rapid_guessing",
+            "rare_skill_path",
+            "recovery"
+          ],
+          "maximum_percentile_tail_prevalence": 0.1,
+          "maximum_target_group_prevalence": 0.1,
+          "oversample": 3,
+          "oversampled_train_rows": 1076733,
+          "quantile": 0.05,
+          "selected_learners_by_group": {
+            "late_failure": 586,
+            "persistent_failure": 367,
+            "rapid_guessing": 302,
+            "rare_skill_path": 386,
+            "recovery": 335
+          },
+          "selected_tail_learner_fraction": 0.23237699597559391,
+          "selected_tail_learners": 1790,
+          "selected_tail_rows": 27584,
+          "selection_contract": "maximum_10_percent_per_target_group",
+          "selection_policy": "proposal_aligned_generator_attributable_tails",
+          "status": "completed",
+          "tail_learner_set_sha256": "900a3bce718dec30420e14ada77a16d7f53ad53942ab5d6f9a2e63b12a8a7975",
+          "unavailable_percentile_tail_groups": {
+            "long_inactivity": "coarse_tie_minimum_nonempty_prevalence_0.330780_exceeds_0.100000"
+          }
+        },
+        "train_learners": 11283,
+        "train_rows": 1076733,
+        "trajectory_boundaries": "learner_isolated_contexts",
+        "unigram_backoff_rows": 34937
+      },
+      "tail_targeted_synthetic": "experiments/outputs/tail_targeted/ednet/markov_ngram/seed_20260705/synth_generation.csv",
+      "test": "experiments/data/datasets/ednet/test.csv",
+      "train": "experiments/data/datasets/ednet/train.csv"
+    }
+  ],
+  "seeds": [
+    20260703,
+    20260704,
+    20260705
+  ],
+  "summary_report": "experiments/reports/standard_vs_tail_targeted/ednet_kt1/markov_ngram/multi_seed_summary.json",
+  "test": "experiments/data/datasets/ednet/test.csv",
+  "train": "experiments/data/datasets/ednet/train.csv"
+}

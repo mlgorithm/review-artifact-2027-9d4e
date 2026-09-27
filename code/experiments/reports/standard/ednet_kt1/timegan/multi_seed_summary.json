@@ -1,0 +1,223 @@
+{
+  "data_provenance": {
+    "available_learner_files": 784309,
+    "clean_rows": 1286363,
+    "columns": [
+      "learner_id",
+      "order",
+      "question_id",
+      "skill_id",
+      "part",
+      "correct",
+      "elapsed_time_bin",
+      "timestamp_gap_bin",
+      "attempt_bin",
+      "hint_bin"
+    ],
+    "contents_zip": "experiments/data/datasets/ednet/raw/contents.zip",
+    "contents_zip_sha256": "aa910a0436d9dbac0ba232f55e27b37ad8d39da285fcf15f1c1eb5d064be98e7",
+    "dataset": "ednet_kt1",
+    "kept_learners": 9666,
+    "kt1_zip": "experiments/data/datasets/ednet/raw/ednet_kt1.zip",
+    "kt1_zip_sha256": "0d13933f90201c5101c7fe8659e44474fa049e3fb93181a8ba6fb3e63267b535",
+    "learner_overlap": 0,
+    "main_sha256": "aa9569978bf7a2f287ecbaf8ec634c41c15c664baf91da854d7d02c1d6615a0a",
+    "max_raw_learner_files": 10000,
+    "min_interactions": 2,
+    "preprocessing_script_sha256": "fea5e95ed118bcff8290210bc7755db2b9d8f5bf46fea4af2cb4f25168272ef4",
+    "question_metadata_rows": 13169,
+    "raw_learner_files": 10000,
+    "runtime": {
+      "pandas": "2.3.3",
+      "platform": "macOS-26.5.2-arm64-arm-64bit",
+      "python": "3.9.6"
+    },
+    "selection_method": "stable_hash_sample",
+    "split_seed": 20260703,
+    "split_unit": "learner_id",
+    "target": "correct",
+    "test_learners": 1963,
+    "test_rows": 264798,
+    "test_sha256": "3eea633fad97a0d11a3516fb3934d7ead56b2391c5b16d5b95984e7d8ddc7903",
+    "train_learners": 7703,
+    "train_ratio": 0.8,
+    "train_rows": 1021565,
+    "train_sha256": "fe4e6dc9556a67676626451c800dbceb0e4ca5c822db7314bf3ff04bf78f0b20"
+  },
+  "dataset": "ednet_kt1",
+  "dataset_key": "ednet",
+  "experiment_arm": "standard",
+  "final_audit": {
+    "issues": [],
+    "rq1_metric_count": 18,
+    "scope": "standard_arm_rq1_only",
+    "seed_report_count": 3,
+    "status": "passed"
+  },
+  "metric_summary": {
+    "rq1.average_fidelity.modeled_value_marginal_js_mean": {
+      "max": 0.12066844298821938,
+      "mean": 0.11966011011615842,
+      "min": 0.11787340789321706,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.001266872640367127
+    },
+    "rq1.average_fidelity.primary_signal_rate_error": {
+      "max": 0.33481666666666665,
+      "mean": 0.33446388888888884,
+      "min": 0.33385,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.00043569513069757185
+    },
+    "rq1.average_fidelity.skill_frequency_js": {
+      "max": 0.0101926906486634,
+      "mean": 0.010085586983322218,
+      "min": 0.009995381070764073,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 8.143266305989738e-05
+    },
+    "rq1.cross_signal_dependence.prespecified_signal_nmi_mae": {
+      "max": 0.008849738100584375,
+      "mean": 0.008746656392242693,
+      "min": 0.008688512756691441,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 7.30888758883651e-05
+    },
+    "rq1.detectability.detectability_auc": {
+      "max": 0.909734152777778,
+      "mean": 0.9091515420370371,
+      "min": 0.9080830272222222,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0007565848606087852
+    },
+    "rq1.subgroup_fidelity.future_primary_signal_rate_mae": {
+      "max": 0.32972930594364425,
+      "mean": 0.32582408710240507,
+      "min": 0.31846474955878035,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.005207095136738699
+    },
+    "rq1.subgroup_fidelity.learner_share_mae": {
+      "max": 0.43976115208991917,
+      "mean": 0.4388854672913199,
+      "min": 0.43783807516684226,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0007944259006091478
+    },
+    "rq1.tail_fidelity.late_failure.prevalence_error": {
+      "max": 0.07607425678307153,
+      "mean": 0.07607425678307153,
+      "min": 0.07607425678307153,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq1.tail_fidelity.persistent_failure.prevalence_error": {
+      "max": 0.047643775152537975,
+      "mean": 0.047643775152537975,
+      "min": 0.047643775152537975,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq1.tail_fidelity.rapid_guessing.prevalence_error": {
+      "max": 0.03920550434895495,
+      "mean": 0.03920550434895495,
+      "min": 0.03920550434895495,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq1.tail_fidelity.rare_skill_path.prevalence_error": {
+      "max": 0.8455147345190186,
+      "mean": 0.8304989398070016,
+      "min": 0.8164351551343633,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.011890759062774365
+    },
+    "rq1.tail_fidelity.rare_skill_path.primary_signal_curve_mae": {
+      "max": 0.581850471884238,
+      "mean": 0.5815606926549535,
+      "min": 0.5810806401951009,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0003418704765483227
+    },
+    "rq1.tail_fidelity.recovery.prevalence_error": {
+      "max": 0.04348954952615864,
+      "mean": 0.04348954952615864,
+      "min": 0.04348954952615864,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0
+    },
+    "rq1.temporal_fidelity.correctness_autocorrelation_mae": {
+      "max": 0.0952955115668284,
+      "mean": 0.09316461020742406,
+      "min": 0.0919557493217761,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0015113177340327602
+    },
+    "rq1.temporal_fidelity.correctness_curve_mae": {
+      "max": 0.5050174156506966,
+      "mean": 0.504734568501321,
+      "min": 0.5045075225383445,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.00021186957593242296
+    },
+    "rq1.temporal_fidelity.correctness_transition_js": {
+      "max": 0.3269638737457249,
+      "mean": 0.324773226276212,
+      "min": 0.32100378482462705,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.002677076491899178
+    },
+    "rq1.temporal_fidelity.inter_event_time_js": {
+      "max": 0.17522031639475302,
+      "mean": 0.17453281185953473,
+      "min": 0.17340834210905562,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0008016718582720713
+    },
+    "rq1.temporal_fidelity.skill_trigram_js": {
+      "max": 0.8925419828594445,
+      "mean": 0.8903788073513308,
+      "min": 0.8889497079972547,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0015556907407590528
+    }
+  },
+  "metric_summary_scope": "publication_rq1_only",
+  "model": "timegan",
+  "publication_reports": [
+    "experiments/reports/standard/ednet_kt1/timegan/seed_20260703/generation_evaluation_report.json",
+    "experiments/reports/standard/ednet_kt1/timegan/seed_20260704/generation_evaluation_report.json",
+    "experiments/reports/standard/ednet_kt1/timegan/seed_20260705/generation_evaluation_report.json"
+  ],
+  "publication_schema_version": "publication_metrics_v2",
+  "research_question": "RQ1",
+  "schema_version": "standard_rq1_report_v1",
+  "seeds": [
+    20260703,
+    20260704,
+    20260705
+  ],
+  "source_dataset": "ednet_kt1",
+  "source_snapshot": {
+    "summary_report": "experiments/reports/standard_vs_tail_targeted/ednet_kt1/timegan/multi_seed_summary.json",
+    "summary_report_sha256": "ad155501e9dcd01cb3d808730fbaf8332cf955aecb97cda77ec15b30fd869258"
+  }
+}

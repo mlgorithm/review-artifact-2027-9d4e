@@ -1,0 +1,255 @@
+{
+  "data_provenance": {
+    "available_learner_files": 784309,
+    "clean_rows": 1286363,
+    "columns": [
+      "learner_id",
+      "order",
+      "question_id",
+      "skill_id",
+      "part",
+      "correct",
+      "elapsed_time_bin",
+      "timestamp_gap_bin",
+      "attempt_bin",
+      "hint_bin"
+    ],
+    "contents_zip": "experiments/data/datasets/ednet/raw/contents.zip",
+    "contents_zip_sha256": "aa910a0436d9dbac0ba232f55e27b37ad8d39da285fcf15f1c1eb5d064be98e7",
+    "dataset": "ednet_kt1",
+    "kept_learners": 9666,
+    "kt1_zip": "experiments/data/datasets/ednet/raw/ednet_kt1.zip",
+    "kt1_zip_sha256": "0d13933f90201c5101c7fe8659e44474fa049e3fb93181a8ba6fb3e63267b535",
+    "learner_overlap": 0,
+    "main_sha256": "aa9569978bf7a2f287ecbaf8ec634c41c15c664baf91da854d7d02c1d6615a0a",
+    "max_raw_learner_files": 10000,
+    "min_interactions": 2,
+    "preprocessing_script_sha256": "fea5e95ed118bcff8290210bc7755db2b9d8f5bf46fea4af2cb4f25168272ef4",
+    "question_metadata_rows": 13169,
+    "raw_learner_files": 10000,
+    "runtime": {
+      "pandas": "2.3.3",
+      "platform": "macOS-26.5.2-arm64-arm-64bit",
+      "python": "3.9.6"
+    },
+    "selection_method": "stable_hash_sample",
+    "split_seed": 20260703,
+    "split_unit": "learner_id",
+    "target": "correct",
+    "test_learners": 1963,
+    "test_rows": 264798,
+    "test_sha256": "3eea633fad97a0d11a3516fb3934d7ead56b2391c5b16d5b95984e7d8ddc7903",
+    "train_learners": 7703,
+    "train_ratio": 0.8,
+    "train_rows": 1021565,
+    "train_sha256": "fe4e6dc9556a67676626451c800dbceb0e4ca5c822db7314bf3ff04bf78f0b20"
+  },
+  "dataset": "ednet_kt1",
+  "dataset_key": "ednet",
+  "experiment_arm": "standard",
+  "final_audit": {
+    "issues": [],
+    "rq1_metric_count": 22,
+    "scope": "standard_arm_rq1_only",
+    "seed_report_count": 3,
+    "status": "passed"
+  },
+  "metric_summary": {
+    "rq1.average_fidelity.modeled_value_marginal_js_mean": {
+      "max": 0.015271244493074857,
+      "mean": 0.015236235302674312,
+      "min": 0.015182124929764342,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 3.8809066991344954e-05
+    },
+    "rq1.average_fidelity.primary_signal_rate_error": {
+      "max": 0.017291666666666705,
+      "mean": 0.01632777777777783,
+      "min": 0.014433333333333409,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0013396436323621108
+    },
+    "rq1.average_fidelity.skill_frequency_js": {
+      "max": 0.01408082013673237,
+      "mean": 0.013079084774106435,
+      "min": 0.012189930850597677,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0007760461792230377
+    },
+    "rq1.cross_signal_dependence.prespecified_signal_nmi_mae": {
+      "max": 0.002995785192435764,
+      "mean": 0.0028649350892328614,
+      "min": 0.0027525236427229996,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.00010016331143902538
+    },
+    "rq1.detectability.detectability_auc": {
+      "max": 0.5805828822222222,
+      "mean": 0.5794124842592593,
+      "min": 0.578358783888889,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.000911726236385914
+    },
+    "rq1.subgroup_fidelity.future_primary_signal_rate_mae": {
+      "max": 0.020846745331748056,
+      "mean": 0.019411103593528403,
+      "min": 0.017274155117167123,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.001540502854276702
+    },
+    "rq1.subgroup_fidelity.learner_share_mae": {
+      "max": 0.08847639320220362,
+      "mean": 0.07551406768556508,
+      "min": 0.0681764526363673,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.009192385349698406
+    },
+    "rq1.tail_fidelity.late_failure.prevalence_error": {
+      "max": 0.05712060236271582,
+      "mean": 0.0553896750183911,
+      "min": 0.05361547449045827,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0014312895762292781
+    },
+    "rq1.tail_fidelity.late_failure.primary_signal_curve_mae": {
+      "max": 0.08650786229681925,
+      "mean": 0.07051378959383776,
+      "min": 0.06140935835700469,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.011345603984312617
+    },
+    "rq1.tail_fidelity.persistent_failure.prevalence_error": {
+      "max": 0.04556666233934831,
+      "mean": 0.04413864728028041,
+      "min": 0.043359729975334285,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0010111490281317175
+    },
+    "rq1.tail_fidelity.persistent_failure.primary_signal_curve_mae": {
+      "max": 0.04549841053587648,
+      "mean": 0.03425745305002798,
+      "min": 0.016491894421049737,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.012708850179766418
+    },
+    "rq1.tail_fidelity.rapid_guessing.prevalence_error": {
+      "max": 0.03621965467999481,
+      "mean": 0.035310917824224325,
+      "min": 0.03388290276515643,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0010222001653916418
+    },
+    "rq1.tail_fidelity.rapid_guessing.primary_signal_curve_mae": {
+      "max": 0.09329823965585564,
+      "mean": 0.07185825722130172,
+      "min": 0.05525002399462512,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.015904423473921632
+    },
+    "rq1.tail_fidelity.rare_skill_path.prevalence_error": {
+      "max": 0.04102297806049591,
+      "mean": 0.032541434073304766,
+      "min": 0.028041022978060492,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.006001102885753505
+    },
+    "rq1.tail_fidelity.rare_skill_path.primary_signal_curve_mae": {
+      "max": 0.22972298418503848,
+      "mean": 0.2190957881928531,
+      "min": 0.20027387120651366,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.01334610187619095
+    },
+    "rq1.tail_fidelity.recovery.prevalence_error": {
+      "max": 0.02310788004673504,
+      "mean": 0.022155870007356443,
+      "min": 0.021290406335194082,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0007445000014749774
+    },
+    "rq1.tail_fidelity.recovery.primary_signal_curve_mae": {
+      "max": 0.04444754783586934,
+      "mean": 0.04222759921025768,
+      "min": 0.038631048578762206,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0025663450942192034
+    },
+    "rq1.temporal_fidelity.correctness_autocorrelation_mae": {
+      "max": 0.024892806708898887,
+      "mean": 0.02296202042280407,
+      "min": 0.021766603927323592,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0013781297724557518
+    },
+    "rq1.temporal_fidelity.correctness_curve_mae": {
+      "max": 0.16087963555380486,
+      "mean": 0.1550303805761981,
+      "min": 0.1488558131366352,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0049140918135728694
+    },
+    "rq1.temporal_fidelity.correctness_transition_js": {
+      "max": 0.0005179374103600775,
+      "mean": 0.00045291808289799827,
+      "min": 0.00035769332652489227,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 6.88177184200832e-05
+    },
+    "rq1.temporal_fidelity.inter_event_time_js": {
+      "max": 0.003650993110283241,
+      "mean": 0.0035803834548681092,
+      "min": 0.0034633983912198416,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 8.331047761921025e-05
+    },
+    "rq1.temporal_fidelity.skill_trigram_js": {
+      "max": 0.44552518222161097,
+      "mean": 0.44377633411633727,
+      "min": 0.44279250920685786,
+      "missing_runs": 0,
+      "n": 3,
+      "std": 0.0012398442963983622
+    }
+  },
+  "metric_summary_scope": "publication_rq1_only",
+  "model": "markov_ngram",
+  "publication_reports": [
+    "experiments/reports/standard/ednet_kt1/markov_ngram/seed_20260703/generation_evaluation_report.json",
+    "experiments/reports/standard/ednet_kt1/markov_ngram/seed_20260704/generation_evaluation_report.json",
+    "experiments/reports/standard/ednet_kt1/markov_ngram/seed_20260705/generation_evaluation_report.json"
+  ],
+  "publication_schema_version": "publication_metrics_v2",
+  "research_question": "RQ1",
+  "schema_version": "standard_rq1_report_v1",
+  "seeds": [
+    20260703,
+    20260704,
+    20260705
+  ],
+  "source_dataset": "ednet_kt1",
+  "source_snapshot": {
+    "summary_report": "experiments/reports/standard_vs_tail_targeted/ednet_kt1/markov_ngram/multi_seed_summary.json",
+    "summary_report_sha256": "f73a08a714a165f828410cdbf5f6784b1895097ff32ea8453651ebf54e9db8d0"
+  }
+}

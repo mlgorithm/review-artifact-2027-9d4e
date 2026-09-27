@@ -1,0 +1,794 @@
+{
+  "dataset": "assistments_2009_2010_skill_builder",
+  "dataset_key": "assistments",
+  "diagnostics": {
+    "cross_signal_dependence": {
+      "columns": [
+        "skill_id",
+        "correct",
+        "attempt_bin",
+        "hint_bin",
+        "response_time_bin",
+        "opportunity_bin"
+      ],
+      "nmi_mae": 0.002666526993651703,
+      "pairwise_nmi": {
+        "attempt_bin__hint_bin": {
+          "abs_error": 0.004864975811561839,
+          "real": 0.11091122178020803,
+          "synthetic": 0.11577619759176987
+        },
+        "attempt_bin__opportunity_bin": {
+          "abs_error": 0.00031133165122675284,
+          "real": 0.0020817839402849604,
+          "synthetic": 0.0017704522890582075
+        },
+        "attempt_bin__response_time_bin": {
+          "abs_error": 0.0012392101494263213,
+          "real": 0.005835059695974722,
+          "synthetic": 0.007074269845401044
+        },
+        "correct__attempt_bin": {
+          "abs_error": 0.005648974048991784,
+          "real": 0.3632775818643266,
+          "synthetic": 0.3689265559133184
+        },
+        "correct__hint_bin": {
+          "abs_error": 0.002477278735057875,
+          "real": 0.3399651676805145,
+          "synthetic": 0.3374878889454566
+        },
+        "correct__opportunity_bin": {
+          "abs_error": 4.2805244867133224e-05,
+          "real": 0.0016568855896457175,
+          "synthetic": 0.0016996908345128508
+        },
+        "correct__response_time_bin": {
+          "abs_error": 0.0005182370197423687,
+          "real": 0.013242768009121384,
+          "synthetic": 0.012724530989379016
+        },
+        "hint_bin__opportunity_bin": {
+          "abs_error": 0.0005822466816413664,
+          "real": 0.0038170504607426574,
+          "synthetic": 0.004399297142384024
+        },
+        "hint_bin__response_time_bin": {
+          "abs_error": 0.0009863572008731378,
+          "real": 0.01969804712268696,
+          "synthetic": 0.0206844043235601
+        },
+        "response_time_bin__opportunity_bin": {
+          "abs_error": 0.0007043866641667906,
+          "real": 0.015379431157221663,
+          "synthetic": 0.016083817821388454
+        },
+        "skill_id__attempt_bin": {
+          "abs_error": 0.0012663504128469574,
+          "real": 0.035082326747918086,
+          "synthetic": 0.03634867716076504
+        },
+        "skill_id__correct": {
+          "abs_error": 0.0005258978555887934,
+          "real": 0.015959460588734105,
+          "synthetic": 0.015433562733145311
+        },
+        "skill_id__hint_bin": {
+          "abs_error": 0.0002947447657302149,
+          "real": 0.048111825719328975,
+          "synthetic": 0.04840657048505919
+        },
+        "skill_id__opportunity_bin": {
+          "abs_error": 0.0151186044772227,
+          "real": 0.07944244637558008,
+          "synthetic": 0.09456105085280278
+        },
+        "skill_id__response_time_bin": {
+          "abs_error": 0.0054165041858315055,
+          "real": 0.04588490429845751,
+          "synthetic": 0.05130140848428902
+        }
+      },
+      "real_sample_rows": 100000,
+      "synthetic_sample_rows": 100000
+    },
+    "dataset_sizes": {
+      "real_test_learners": 788,
+      "real_test_rows": 64742,
+      "real_train_learners": 1477,
+      "real_train_rows": 120000,
+      "synthetic_learners": 1465,
+      "synthetic_rows": 119996
+    },
+    "distinguishability": {
+      "accuracy": 0.5215,
+      "auroc": 0.5285288488888888,
+      "detectability_auc": 0.5285288488888888,
+      "evaluated_real_rows": 100000,
+      "evaluated_synthetic_rows": 100000,
+      "max_rows_per_class": 100000,
+      "note": "detectability_auc=max(raw_auroc, 1-raw_auroc): 0.5 means chance-level separation (good fidelity); 1.0 means trivially separable (poor fidelity).",
+      "raw_auroc": 0.5285288488888888,
+      "real_rows": 282118,
+      "real_test_learners": 980,
+      "real_train_learners": 2269,
+      "split_unit": "learner",
+      "status": "completed",
+      "synthetic_rows": 282118,
+      "synthetic_test_learners": 1023,
+      "synthetic_train_learners": 2381
+    },
+    "diversity_coverage": {
+      "real_skill_trigram_entropy": 9.248463064397813,
+      "skill_trigram_coverage": 0.5766939687267312,
+      "skill_trigram_entropy_abs_error": 0.031920892319908134,
+      "skill_trigram_jaccard": 0.3549089242754038,
+      "skill_trigram_precision": 0.4799380325329202,
+      "synthetic_skill_trigram_entropy": 9.216542172077904,
+      "unique_synthetic_full_trajectory_rate": 1.0,
+      "unique_synthetic_projected_trajectory_rate": 0.9993174061433447,
+      "unique_synthetic_skill_path_count": 1452
+    },
+    "evaluation_sampling": {
+      "max_learners_per_split": 4000,
+      "max_rows_per_split": 120000,
+      "note": "Rare-group fidelity, primary downstream models, and explicit outcome tasks use complete frames; memory-heavy diagnostics use the recorded whole-learner samples.",
+      "real_test": {
+        "evaluated_learners": 788,
+        "evaluated_rows": 64742,
+        "original_learners": 788,
+        "original_rows": 64742,
+        "whole_learner_sample": true
+      },
+      "real_train": {
+        "evaluated_learners": 1477,
+        "evaluated_rows": 120000,
+        "original_learners": 3429,
+        "original_rows": 282118,
+        "whole_learner_sample": true
+      },
+      "scope": "fidelity_temporal_dependence_subgroup_privacy_diversity_lightweight_utility",
+      "synthetic": {
+        "evaluated_learners": 1465,
+        "evaluated_rows": 119996,
+        "original_learners": 3429,
+        "original_rows": 282118,
+        "whole_learner_sample": true
+      },
+      "tail_fidelity": {
+        "real_test": {
+          "evaluated_learners": 788,
+          "evaluated_rows": 64742,
+          "original_learners": 788,
+          "original_rows": 64742,
+          "sampling_applied": false,
+          "whole_learner_sample": true
+        },
+        "real_train": {
+          "evaluated_learners": 3429,
+          "evaluated_rows": 282118,
+          "original_learners": 3429,
+          "original_rows": 282118,
+          "sampling_applied": false,
+          "whole_learner_sample": true
+        },
+        "reference": "complete_real_train",
+        "scope": "complete_frames",
+        "synthetic": {
+          "evaluated_learners": 3429,
+          "evaluated_rows": 282118,
+          "original_learners": 3429,
+          "original_rows": 282118,
+          "sampling_applied": false,
+          "whole_learner_sample": true
+        }
+      }
+    },
+    "global_fidelity": {
+      "all_value_marginals": {
+        "by_column": {
+          "attempt_bin": {
+            "jensen_shannon_divergence": 0.00015124878556753288,
+            "real_unique_count": 5,
+            "synthetic_unique_count": 5,
+            "total_variation": 0.009868537284576203
+          },
+          "correct": {
+            "jensen_shannon_divergence": 0.00020547716040323055,
+            "real_unique_count": 2,
+            "synthetic_unique_count": 2,
+            "total_variation": 0.01610525073057989
+          },
+          "hint_bin": {
+            "jensen_shannon_divergence": 0.00021456931335821585,
+            "real_unique_count": 4,
+            "synthetic_unique_count": 4,
+            "total_variation": 0.012461232041068004
+          },
+          "opportunity_bin": {
+            "jensen_shannon_divergence": 0.002200933634467314,
+            "real_unique_count": 5,
+            "synthetic_unique_count": 5,
+            "total_variation": 0.04828337000122227
+          },
+          "response_time_bin": {
+            "jensen_shannon_divergence": 0.00028558668895150294,
+            "real_unique_count": 6,
+            "synthetic_unique_count": 6,
+            "total_variation": 0.01606473882462749
+          },
+          "skill_id": {
+            "jensen_shannon_divergence": 0.005456905794977172,
+            "real_unique_count": 147,
+            "synthetic_unique_count": 143,
+            "total_variation": 0.06168779848217163
+          }
+        },
+        "jensen_shannon_divergence_mean": 0.001419120229620828,
+        "total_variation_mean": 0.027411821227374247
+      },
+      "attempt_count_histogram_tv": 0.009868537284576203,
+      "attempt_count_wasserstein": 0.026605035875299124,
+      "correctness_by_skill_mae": 0.08151276998110836,
+      "correctness_rate_error": 0.01610525073057989,
+      "hint_rate_error": 0.012461232041068027,
+      "sequence_length_histogram_tv": 0.020766658733111346,
+      "sequence_length_wasserstein": 12.738400735395267,
+      "skill_frequency_js": 0.005456905794977172,
+      "skill_frequency_total_variation": 0.06168779848217163
+    },
+    "primary_binary_signal": "correct",
+    "primary_binary_signal_semantics": "response_correctness",
+    "subgroup_fidelity": {
+      "behavior_window": "events_after_first_2",
+      "by_subgroup": {
+        "high": {
+          "abs_error": {
+            "future_correctness_rate": 0.028053875875576062,
+            "future_hint_rate": 0.020540182166363913,
+            "learner_share": 0.0518526392165653,
+            "mean_length": 25.66030880581326
+          },
+          "real": {
+            "future_correctness_rate": 0.6913639383778605,
+            "future_hint_rate": 0.13730549932784275,
+            "learner_share": 0.41367637102234256,
+            "mean_length": 107.89198036006546
+          },
+          "synthetic": {
+            "future_correctness_rate": 0.6633100625022844,
+            "future_hint_rate": 0.15784568149420666,
+            "learner_share": 0.46552901023890786,
+            "mean_length": 82.2316715542522
+          }
+        },
+        "low": {
+          "abs_error": {
+            "future_correctness_rate": 0.13240248458801962,
+            "future_hint_rate": 0.10894135535382174,
+            "learner_share": 0.08600266659888486,
+            "mean_length": 19.752641022765502
+          },
+          "real": {
+            "future_correctness_rate": 0.5052481178216189,
+            "future_hint_rate": 0.28839918667912295,
+            "learner_share": 0.25050778605280977,
+            "mean_length": 51.127027027027026
+          },
+          "synthetic": {
+            "future_correctness_rate": 0.6376506024096386,
+            "future_hint_rate": 0.17945783132530121,
+            "learner_share": 0.1645051194539249,
+            "mean_length": 70.87966804979253
+          }
+        },
+        "mid": {
+          "abs_error": {
+            "future_correctness_rate": 0.03394970071113723,
+            "future_hint_rate": 0.02075508149112179,
+            "learner_share": 0.03415002738231954,
+            "mean_length": 15.516791155814786
+          },
+          "real": {
+            "future_correctness_rate": 0.6243085838040329,
+            "future_hint_rate": 0.18399719043577512,
+            "learner_share": 0.3358158429248477,
+            "mean_length": 70.88911290322581
+          },
+          "synthetic": {
+            "future_correctness_rate": 0.6582582845151701,
+            "future_hint_rate": 0.16324210894465332,
+            "learner_share": 0.3699658703071672,
+            "mean_length": 86.4059040590406
+          }
+        }
+      },
+      "future_correctness_rate_mae_across_subgroups": 0.06480202039157763,
+      "future_hint_rate_mae_across_subgroups": 0.05007887300376915,
+      "learner_share_mae_across_subgroups": 0.05733511106592323,
+      "length_mae_across_subgroups": 20.309913661464517,
+      "partition": "by_fixed_prefix_performance",
+      "performance_reference": {
+        "high_cutoff": 1.0,
+        "low_cutoff": 0.5,
+        "prefix_length": 2
+      },
+      "subgroup_column": null
+    },
+    "tail_fidelity": {
+      "evaluated_real_learners": 3429,
+      "evaluated_synthetic_learners": 3429,
+      "implemented_tail_groups": [
+        "high_hint_use",
+        "late_failure",
+        "long_trajectory",
+        "persistent_failure",
+        "persistent_misconception",
+        "rapid_guessing",
+        "rare_skill_path",
+        "recovery",
+        "short_trajectory"
+      ],
+      "maximum_percentile_tail_prevalence": 0.1,
+      "operational_note": "Late failure and recovery are correctness-trajectory definitions. Dropout is emitted only when an explicit completion/non-participation outcome is supplied.",
+      "tail_prevalence_error": {
+        "high_hint_use": 0.02916302128900554,
+        "late_failure": 0.004374453193350829,
+        "long_trajectory": 0.016039661708953046,
+        "persistent_failure": 0.01837270341207349,
+        "persistent_misconception": 0.0032079323417905647,
+        "rapid_guessing": 0.013123359580052493,
+        "rare_skill_path": 0.028871391076115485,
+        "recovery": 0.004374453193350836,
+        "short_trajectory": 0.0673665791776028
+      },
+      "tail_prevalence_error_ci": {
+        "high_hint_use": {
+          "ci_high": 0.035294546515018954,
+          "ci_low": 0.02245552639253427,
+          "n_boot": 200
+        },
+        "late_failure": {
+          "ci_high": 0.012547389909594635,
+          "ci_low": 0.0005759696704578566,
+          "n_boot": 200
+        },
+        "long_trajectory": {
+          "ci_high": 0.026837270341207354,
+          "ci_low": 0.0049431321084864345,
+          "n_boot": 200
+        },
+        "persistent_failure": {
+          "ci_high": 0.0242053076698746,
+          "ci_low": 0.012248468941382328,
+          "n_boot": 200
+        },
+        "persistent_misconception": {
+          "ci_high": 0.024795858850976966,
+          "ci_low": 0.0002916302128900261,
+          "n_boot": 200
+        },
+        "rapid_guessing": {
+          "ci_high": 0.019247594050743656,
+          "ci_low": 0.006984543598716829,
+          "n_boot": 200
+        },
+        "rare_skill_path": {
+          "ci_high": 0.039384660250801985,
+          "ci_low": 0.019531933508311457,
+          "n_boot": 200
+        },
+        "recovery": {
+          "ci_high": 0.012846310877806945,
+          "ci_low": 0.00029163021289006064,
+          "n_boot": 200
+        },
+        "short_trajectory": {
+          "ci_high": 0.07527704870224557,
+          "ci_low": 0.059769612131816856,
+          "n_boot": 200
+        }
+      },
+      "tail_prevalence_mae": 0.02054372833025501,
+      "tail_prevalence_real": {
+        "high_hint_use": 0.04199475065616798,
+        "late_failure": 0.026538349372995044,
+        "long_trajectory": 0.05016039661708953,
+        "persistent_failure": 0.024496937882764653,
+        "persistent_misconception": 0.33070866141732286,
+        "rapid_guessing": 0.025663458734324875,
+        "rare_skill_path": 0.04870224555263925,
+        "recovery": 0.033245844269466314,
+        "short_trajectory": 0.0673665791776028
+      },
+      "tail_prevalence_synthetic": {
+        "high_hint_use": 0.012831729367162438,
+        "late_failure": 0.030912802566345873,
+        "long_trajectory": 0.03412073490813648,
+        "persistent_failure": 0.006124234470691163,
+        "persistent_misconception": 0.3339165937591134,
+        "rapid_guessing": 0.012540099154272382,
+        "rare_skill_path": 0.019830854476523767,
+        "recovery": 0.03762029746281715,
+        "short_trajectory": 0.0
+      },
+      "tail_reference": {
+        "fast_response_cutoff": 15.0,
+        "fast_response_cutoff_inclusive": true,
+        "high_gap_cutoff": null,
+        "high_gap_cutoff_inclusive": true,
+        "high_hint_cutoff": 1.1729868793413942,
+        "high_hint_cutoff_inclusive": true,
+        "long_cutoff": 429.79999999999836,
+        "long_cutoff_inclusive": true,
+        "low_correctness_cutoff": 0.053007518796992475,
+        "low_correctness_cutoff_inclusive": true,
+        "maximum_percentile_tail_prevalence": 0.1,
+        "quantile": 0.05,
+        "rapid_guessing_max_primary_signal_rate": 0.5,
+        "rare_path_cutoff": -10.926965984833954,
+        "rare_path_cutoff_inclusive": true,
+        "rare_path_transition_model": "global_add_one_smoothed_log2_probability",
+        "short_cutoff": 2.0,
+        "short_cutoff_inclusive": true,
+        "transition_floor_logp": -18.114316794022223,
+        "transition_model_sha256": "c702a1bed8ebbc9b2ca727822591a386318a2081d1d3e680fc2351acd78c1c01",
+        "transition_observation_count": 278689,
+        "transition_vocabulary_size": 5071,
+        "unavailable_percentile_tail_groups": {}
+      },
+      "tail_reference_scope": "complete_real_train",
+      "tail_reference_split": "real_train",
+      "tail_shape": {
+        "by_tail_group": {
+          "high_hint_use": {
+            "correctness_curve_mae": 0.04779040404040401,
+            "correctness_curve_mae_ci": {
+              "ci_high": 0.10327914562289563,
+              "ci_low": 0.039956334175084145,
+              "n_boot": 200
+            },
+            "exploratory": false,
+            "real_learners": 144,
+            "synthetic_learners": 44
+          },
+          "late_failure": {
+            "correctness_curve_mae": 0.06509894717441891,
+            "correctness_curve_mae_ci": {
+              "ci_high": 0.10967534038288754,
+              "ci_low": 0.049123067707973506,
+              "n_boot": 200
+            },
+            "exploratory": false,
+            "real_learners": 91,
+            "synthetic_learners": 106
+          },
+          "long_trajectory": {
+            "correctness_curve_mae": 0.08306389275381496,
+            "correctness_curve_mae_ci": {
+              "ci_high": 0.11422357770710354,
+              "ci_low": 0.05961814527706072,
+              "n_boot": 200
+            },
+            "exploratory": false,
+            "real_learners": 172,
+            "synthetic_learners": 117
+          },
+          "persistent_failure": {
+            "correctness_curve_mae": 0.012433862433862432,
+            "correctness_curve_mae_ci": {
+              "ci_high": 0.02659060846560849,
+              "ci_low": 0.004761904761904768,
+              "n_boot": 200
+            },
+            "exploratory": false,
+            "real_learners": 84,
+            "synthetic_learners": 21
+          },
+          "persistent_misconception": {
+            "correctness_curve_mae": 0.13296796045138276,
+            "correctness_curve_mae_ci": {
+              "ci_high": 0.16766759259259253,
+              "ci_low": 0.10395833333333304,
+              "n_boot": 200
+            },
+            "exploratory": false,
+            "real_learners": 1134,
+            "synthetic_learners": 1145
+          },
+          "rapid_guessing": {
+            "correctness_curve_mae": 0.074301151045337,
+            "correctness_curve_mae_ci": {
+              "ci_high": 0.12860098073760856,
+              "ci_low": 0.04586695442800096,
+              "n_boot": 200
+            },
+            "exploratory": false,
+            "real_learners": 88,
+            "synthetic_learners": 43
+          },
+          "rare_skill_path": {
+            "correctness_curve_mae": 0.08336953543892604,
+            "correctness_curve_mae_ci": {
+              "ci_high": 0.1273164944620562,
+              "ci_low": 0.0641728552698524,
+              "n_boot": 200
+            },
+            "exploratory": false,
+            "real_learners": 167,
+            "synthetic_learners": 68
+          },
+          "recovery": {
+            "correctness_curve_mae": 0.07681898544811644,
+            "correctness_curve_mae_ci": {
+              "ci_high": 0.1116238270093839,
+              "ci_low": 0.0541959064327485,
+              "n_boot": 200
+            },
+            "exploratory": false,
+            "real_learners": 114,
+            "synthetic_learners": 129
+          },
+          "short_trajectory": {
+            "correctness_curve_mae": 0.5670995670995671,
+            "exploratory": true,
+            "real_learners": 231,
+            "synthetic_learners": 0
+          }
+        },
+        "correctness_curve_mae_mean": 0.07198059234828282
+      },
+      "unavailable_percentile_tail_groups": {},
+      "unsupported_proposal_tail_groups": [
+        "dropout"
+      ]
+    },
+    "temporal_fidelity": {
+      "correct_hint_cross_correlation_lag1_real": -0.27098063976322156,
+      "correct_hint_cross_correlation_lag1_synthetic": -0.25729192696126313,
+      "correct_hint_cross_correlation_mae": 0.009621652567617461,
+      "correct_hint_cross_correlation_real": -0.6168186821874254,
+      "correct_hint_cross_correlation_synthetic": -0.6112640898541489,
+      "correct_streak_wasserstein": 0.1990541353651212,
+      "correctness_autocorrelation_mae": 0.033973493194742695,
+      "correctness_autocorrelation_real": {
+        "1": 0.23554522046621873,
+        "2": 0.202103871943215,
+        "3": 0.1656012220956038
+      },
+      "correctness_autocorrelation_synthetic": {
+        "1": 0.21753301534316982,
+        "2": 0.16892149556415545,
+        "3": 0.11487532401348417
+      },
+      "correctness_curve_mae": 0.046748482418702234,
+      "correctness_transition_js": 0.00034944651453233373,
+      "correctness_transition_tv": 0.01596094995467842,
+      "failure_streak_wasserstein": 0.11410872439060686,
+      "hint_transition_js": 0.0002751897143159067,
+      "hint_transition_tv": 0.015178919209771068,
+      "skill_trigram_js": 0.08225874104289702
+    }
+  },
+  "evaluation_seed": 20260703,
+  "experiment_arm": "standard",
+  "final_audit": {
+    "checks": [
+      "source strict audit passed",
+      "publication.metrics.rq1 is present",
+      "active standard artifact hash matches generation metadata",
+      "generation seed matches"
+    ],
+    "issues": [],
+    "scope": "standard_arm_rq1_only",
+    "status": "passed"
+  },
+  "generation_seed": 20260703,
+  "model": "markov_ngram",
+  "publication": {
+    "direction_contract": {
+      "detectability_auc": "closer_to_0.5_is_better",
+      "fidelity_errors": "lower_is_better"
+    },
+    "excluded_from_publication": {
+      "diversity_uniqueness_rates": "Novelty is not monotonic quality; retained only in the raw diagnostic report.",
+      "omitted_standard_tail_groups": {
+        "long_trajectory": "Shared trajectory-length sampler; not attributable to the generator model.",
+        "persistent_misconception": "Real-train learner prevalence 0.330709 exceeds the rare-group ceiling 0.100000.",
+        "short_trajectory": "Shared trajectory-length sampler; not attributable to the generator model."
+      },
+      "raw_diagnostic_aggregates": "Unfiltered all-column marginals/NMI, detector accuracy, and minimum-NN extremes are not table metrics.",
+      "raw_test_fidelity_duplicates": "Held-out real data is reserved for downstream generalization; primary fidelity is against real train.",
+      "sequence_length_model_ranking": "All generators use the same trajectory-length sampler, so length metrics are pipeline diagnostics.",
+      "short_and_long_trajectory_tails": "Shared length sampler prevents attribution to a generator architecture."
+    },
+    "metrics": {
+      "rq1": {
+        "average_fidelity": {
+          "modeled_value_marginal_js_mean": 0.001419120229620828,
+          "primary_signal_rate_error": 0.01610525073057989,
+          "skill_frequency_js": 0.005456905794977172
+        },
+        "cross_signal_dependence": {
+          "prespecified_signal_nmi_mae": 0.00232385301856508
+        },
+        "detectability": {
+          "detectability_auc": 0.5285288488888888
+        },
+        "subgroup_fidelity": {
+          "future_hint_rate_mae": 0.05007887300376915,
+          "future_primary_signal_rate_mae": 0.06480202039157763,
+          "learner_share_mae": 0.05733511106592323
+        },
+        "tail_fidelity": {
+          "high_hint_use": {
+            "prevalence_error": 0.02916302128900554,
+            "prevalence_error_ci": {
+              "ci_high": 0.035294546515018954,
+              "ci_low": 0.02245552639253427,
+              "n_boot": 200
+            },
+            "primary_signal_curve_mae": 0.04779040404040401,
+            "primary_signal_curve_mae_ci": {
+              "ci_high": 0.10327914562289563,
+              "ci_low": 0.039956334175084145,
+              "n_boot": 200
+            },
+            "primary_signal_curve_mae_status": "estimable",
+            "real_learners": 144,
+            "source_tail_group": "high_hint_use",
+            "synthetic_learners": 44
+          },
+          "late_failure": {
+            "prevalence_error": 0.004374453193350829,
+            "prevalence_error_ci": {
+              "ci_high": 0.012547389909594635,
+              "ci_low": 0.0005759696704578566,
+              "n_boot": 200
+            },
+            "primary_signal_curve_mae": 0.06509894717441891,
+            "primary_signal_curve_mae_ci": {
+              "ci_high": 0.10967534038288754,
+              "ci_low": 0.049123067707973506,
+              "n_boot": 200
+            },
+            "primary_signal_curve_mae_status": "estimable",
+            "real_learners": 91,
+            "source_tail_group": "late_failure",
+            "synthetic_learners": 106
+          },
+          "persistent_failure": {
+            "prevalence_error": 0.01837270341207349,
+            "prevalence_error_ci": {
+              "ci_high": 0.0242053076698746,
+              "ci_low": 0.012248468941382328,
+              "n_boot": 200
+            },
+            "primary_signal_curve_mae": 0.012433862433862432,
+            "primary_signal_curve_mae_ci": {
+              "ci_high": 0.02659060846560849,
+              "ci_low": 0.004761904761904768,
+              "n_boot": 200
+            },
+            "primary_signal_curve_mae_status": "estimable",
+            "real_learners": 84,
+            "source_tail_group": "persistent_failure",
+            "synthetic_learners": 21
+          },
+          "rapid_guessing": {
+            "prevalence_error": 0.013123359580052493,
+            "prevalence_error_ci": {
+              "ci_high": 0.019247594050743656,
+              "ci_low": 0.006984543598716829,
+              "n_boot": 200
+            },
+            "primary_signal_curve_mae": 0.074301151045337,
+            "primary_signal_curve_mae_ci": {
+              "ci_high": 0.12860098073760856,
+              "ci_low": 0.04586695442800096,
+              "n_boot": 200
+            },
+            "primary_signal_curve_mae_status": "estimable",
+            "real_learners": 88,
+            "source_tail_group": "rapid_guessing",
+            "synthetic_learners": 43
+          },
+          "rare_skill_path": {
+            "prevalence_error": 0.028871391076115485,
+            "prevalence_error_ci": {
+              "ci_high": 0.039384660250801985,
+              "ci_low": 0.019531933508311457,
+              "n_boot": 200
+            },
+            "primary_signal_curve_mae": 0.08336953543892604,
+            "primary_signal_curve_mae_ci": {
+              "ci_high": 0.1273164944620562,
+              "ci_low": 0.0641728552698524,
+              "n_boot": 200
+            },
+            "primary_signal_curve_mae_status": "estimable",
+            "real_learners": 167,
+            "source_tail_group": "rare_skill_path",
+            "synthetic_learners": 68
+          },
+          "recovery": {
+            "prevalence_error": 0.004374453193350836,
+            "prevalence_error_ci": {
+              "ci_high": 0.012846310877806945,
+              "ci_low": 0.00029163021289006064,
+              "n_boot": 200
+            },
+            "primary_signal_curve_mae": 0.07681898544811644,
+            "primary_signal_curve_mae_ci": {
+              "ci_high": 0.1116238270093839,
+              "ci_low": 0.0541959064327485,
+              "n_boot": 200
+            },
+            "primary_signal_curve_mae_status": "estimable",
+            "real_learners": 114,
+            "source_tail_group": "recovery",
+            "synthetic_learners": 129
+          }
+        },
+        "temporal_fidelity": {
+          "correct_hint_cross_correlation_mae": 0.009621652567617461,
+          "correctness_autocorrelation_mae": 0.033973493194742695,
+          "correctness_curve_mae": 0.046748482418702234,
+          "correctness_transition_js": 0.00034944651453233373,
+          "skill_trigram_js": 0.08225874104289702
+        }
+      }
+    },
+    "research_question_mapping": {
+      "rq1": "Average, temporal, dependence, subgroup, and rare-pathway preservation."
+    },
+    "schema_version": "publication_metrics_v2",
+    "selection_metadata": {
+      "modeled_marginal_columns": [
+        "attempt_bin",
+        "correct",
+        "hint_bin",
+        "opportunity_bin",
+        "response_time_bin",
+        "skill_id"
+      ],
+      "prespecified_dependence_pairs": [
+        "attempt_bin__hint_bin",
+        "attempt_bin__response_time_bin",
+        "correct__attempt_bin",
+        "correct__hint_bin",
+        "correct__response_time_bin",
+        "hint_bin__response_time_bin",
+        "skill_id__attempt_bin",
+        "skill_id__correct",
+        "skill_id__hint_bin",
+        "skill_id__response_time_bin"
+      ],
+      "raw_report_retained_for_diagnostics": true
+    },
+    "status": "completed"
+  },
+  "research_question": {
+    "id": "RQ1",
+    "scope": "Preservation of average learner behaviour and rare educational pathways by unmodified synthetic trajectory generators."
+  },
+  "schema_version": "standard_rq1_report_v1",
+  "source_dataset": "assistments_2009_2010_skill_builder",
+  "source_snapshot": {
+    "report": "experiments/reports/standard_vs_tail_targeted/assistments_2009_2010_skill_builder/markov_ngram/seed_20260703/generation_evaluation_report.json",
+    "report_sha256": "cb1fc7fc1330e5171e13866fbefb9c9b4b0fa22c2ac20031dba6739ab90618c6",
+    "source_final_audit": {
+      "issues": [],
+      "status": "passed",
+      "strict_mode": true
+    }
+  },
+  "standard_artifact": {
+    "generation_metadata": "experiments/outputs/standard/assistments/markov_ngram/seed_20260703/generation_metadata.json",
+    "generation_metadata_sha256": "bc46dae42bc1be553efff03c0d93dc8d145ed2814014b46c2333e55b164c32f3",
+    "standard_provenance": "experiments/outputs/standard/assistments/markov_ngram/seed_20260703/standard_provenance.json",
+    "standard_provenance_sha256": "f7cbd6442eb0209e0ec8405fe9e09b221643809babfc1f9ab3ac0495a1fc4b7b",
+    "synthetic_csv": "experiments/outputs/standard/assistments/markov_ngram/seed_20260703/synth_generation.csv",
+    "synthetic_csv_sha256": "18a104d1305faee4754fe54c9d7ab455217fbf6c0e9379238b6143321b8c10b1"
+  }
+}

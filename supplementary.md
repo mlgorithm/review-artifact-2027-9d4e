@@ -1,6 +1,6 @@
 # Supplementary Material: Pathway-Centric Evaluation of Synthetic Educational Time-Series Data
 
-This Markdown companion contains the supplement's text and numerical tables. The [PDF supplement](supplementary.pdf) is authoritative for the supporting figure and final reference formatting. Machine-readable aggregate results are in [supplement-generated](supplement-generated/) and additional CSVs are in [tables](tables/).
+This Markdown companion contains the supplement's text, numerical tables, and references. The [PDF supplement](supplementary.pdf) is authoritative for the supporting figure and final layout. Machine-readable aggregate results are in [supplement-generated](supplement-generated/) and additional CSVs are in [tables](tables/).
 
 ## How to Read This Supplement
 
@@ -170,21 +170,32 @@ zero.
 
 #### Authoritative reports and schema.
 
-The final paired reports are under . Dataset keys are , , and ; model
-keys are , , and . Each contains the seed-level result, and contains the
-aggregate. The immutable `experiments/reports/standard/` directory is
-the RQ1 audit snapshot; it is neither averaged into the paired results
-nor counted as additional runs. Runtime manifests are under the
-corresponding `experiments/runs/` tree and are git-ignored.
+The final paired reports are under
+`experiments/reports/standard_vs_tail_targeted/<dataset>/<model>/`.
+Dataset keys are `assistments_2009_2010_skill_builder`, `ednet_kt1`, and
+`oulad_weekly_engagement`; model keys are `markov_ngram`,
+`sequence_vae_timevae`, and `timegan`. Each
+`seed_<seed>/generation_evaluation_report.json` contains the seed-level
+result, and `multi_seed_summary.json` contains the aggregate. The
+immutable `experiments/reports/standard/` directory is the RQ1 audit
+snapshot; it is neither averaged into the paired results nor counted as
+additional runs. Runtime manifests are under the corresponding
+`experiments/runs/` tree and are git-ignored.
 
-Seed reports declare , organize promoted results under and , retain
-exact exclusions and reasons under ; every must equal with an empty
-issues list. Aggregates declare and . Their flattened numeric paths
+Seed reports declare
+`publication.schema_version=publication_metrics_v2`, organize promoted
+results under `publication.metrics.rq1` and `publication.metrics.rq2`,
+retain exact exclusions and reasons under
+`publication.excluded_from_publication`; every `final_audit.status` must
+equal `passed` with an empty issues list. Aggregates declare
+`publication_schema_version=publication_metrics_v2` and
+`metric_summary_scope=publication_only`. Their flattened numeric paths
 retain mean, population SD, minimum, maximum, estimable-seed count, and
-missing runs; retains nonnumeric collapse and support states with their
-exact seeds. The deterministic learner split uses seed 20260703, and
-generator seeds are 20260703, 20260704, and 20260705. Seed-level
-bootstrap intervals remain in the seed reports and are not averaged.
+missing runs; `publication_status_summary` retains nonnumeric collapse
+and support states with their exact seeds. The deterministic learner
+split uses seed 20260703, and generator seeds are 20260703, 20260704,
+and 20260705. Seed-level bootstrap intervals remain in the seed reports
+and are not averaged.
 
 # Notation and Shared Comparison Measures
 
@@ -197,13 +208,17 @@ and weekly engagement in OULAD. The categorical event type $`c`$ is a
 skill, question, or activity. The vector $`\mathbf{v}`$ contains the
 other modeled signals, and $`\theta`$ is event time or week when a
 meaningful time signal is available. Jensen–Shannon divergence follows
-Lin ; the geometric-mean normalization of mutual information follows
-Strehl and Ghosh ; source detectability follows classifier two-sample
-testing ; precision–recall and ROC interpretation follows Davis and
-Goadrich , Saito and Rehmsmeier , and Fawcett ; train-on-synthetic,
-test-on-real evaluation follows prior time-series work ; and the
-disclosure audit follows the membership-inference threat model of Shokri
-et al.  and synthetic-data privacy cautions of Stadler et al. .
+Lin (Lin 1991); the geometric-mean normalization of mutual information
+follows Strehl and Ghosh (Strehl and Ghosh 2002); source detectability
+follows classifier two-sample testing (Lopez-Paz and Oquab 2017);
+precision–recall and ROC interpretation follows Davis and
+Goadrich (Davis and Goadrich 2006), Saito and Rehmsmeier (Saito and
+Rehmsmeier 2015), and Fawcett (Fawcett 2006); train-on-synthetic,
+test-on-real evaluation follows prior time-series work (Esteban et al.
+2017; Yoon et al. 2019); and the disclosure audit follows the
+membership-inference threat model of Shokri et al. (Shokri et al. 2017)
+and synthetic-data privacy cautions of Stadler et al. (Stadler et al.
+2022).
 
 | Quantity | Definition | Intuition |
 |:---|:---|:---|
@@ -437,20 +452,20 @@ status remains a publication result.
 | Report exclusion key | Excluded item | Reason |
 |:---|:---|:---|
 | Report exclusion key | Excluded item | Reason |
-|  | Accuracy, precision, recall, and F1 at an untuned 0.5 threshold | Threshold-free AUPRC and AUROC are the prespecified predictive comparisons. |
-|  | Targeting and augmentation contrasts for fixed-threshold scores | Only AUPRC/AUROC gaps are promoted. |
-|  | Skill-mean probability baseline | It is a smoke-test diagnostic superseded by the declared histogram-gradient-boosting model. |
-|  | Length-distribution metrics | All generators use the same train-fitted length sampler, so the result is not architecture-attributable. |
-|  | Length-based uncommon pathways | The shared length sampler prevents generator attribution. |
-|  | Raw diversity/coverage, uniqueness, entropy, and cardinality diagnostics | Novelty is not monotonic quality and remains a raw diagnostic. |
-|  | Flipping a below-chance membership AUROC | Attack orientation is fixed before labels are inspected; the published advantage is not post-hoc inverted. |
-|  | Fidelity recomputed against held-out real test | Real train is the generator’s fidelity reference; held-out real learners are reserved for generalization and nonmembership evaluation. |
-|  | Unfiltered all-column marginals/dependence, detector accuracy, and minimum-distance extremes | These broad exploratory outputs do not belong to the prespecified construct metrics. |
-|  | Inapplicable or unsupported standard-arm pathway blocks | Reasons include absent signals, postprocessed outcomes, and fewer than ten qualifying learners; prevalence is retained when defined. |
-|  | The corresponding targeted-arm pathway blocks | The same frozen applicability and support rules apply to both generation arms. |
-|  | Ineligible held-out-real pathway slices | Groups above the rarity ceiling, outside the dataset semantics, or below predictive support are not included in pathway-level prediction comparisons. |
-|  | Percentile pathways for which ties cannot yield a nonempty group at or below 10% | A common discretized behavior is not relabeled as rare. |
-|  | OULAD full-record source detection | Independently resampled profiles and constructed outcomes confound generator attribution. |
+| `fixed_threshold_classification_scores` | Accuracy, precision, recall, and F1 at an untuned 0.5 threshold | Threshold-free AUPRC and AUROC are the prespecified predictive comparisons. |
+| `threshold_metric_deltas` | Targeting and augmentation contrasts for fixed-threshold scores | Only AUPRC/AUROC gaps are promoted. |
+| `lightweight_downstream_utility` | Skill-mean probability baseline | It is a smoke-test diagnostic superseded by the declared histogram-gradient-boosting model. |
+| `sequence_length_model_ranking` | Length-distribution metrics | All generators use the same train-fitted length sampler, so the result is not architecture-attributable. |
+| `short_and_long_trajectory_tails` | Length-based uncommon pathways | The shared length sampler prevents generator attribution. |
+| `diversity_uniqueness_rates` | Raw diversity/coverage, uniqueness, entropy, and cardinality diagnostics | Novelty is not monotonic quality and remains a raw diagnostic. |
+| `raw_membership_auc_inversion` | Flipping a below-chance membership AUROC | Attack orientation is fixed before labels are inspected; the published advantage is not post-hoc inverted. |
+| `raw_test_fidelity_duplicates` | Fidelity recomputed against held-out real test | Real train is the generator’s fidelity reference; held-out real learners are reserved for generalization and nonmembership evaluation. |
+| `raw_diagnostic_aggregates` | Unfiltered all-column marginals/dependence, detector accuracy, and minimum-distance extremes | These broad exploratory outputs do not belong to the prespecified construct metrics. |
+| `omitted_standard_tail_groups` | Inapplicable or unsupported standard-arm pathway blocks | Reasons include absent signals, postprocessed outcomes, and fewer than ten qualifying learners; prevalence is retained when defined. |
+| `omitted_targeted_tail_groups` | The corresponding targeted-arm pathway blocks | The same frozen applicability and support rules apply to both generation arms. |
+| `omitted_tail_learnability_groups` | Ineligible held-out-real pathway slices | Groups above the rarity ceiling, outside the dataset semantics, or below predictive support are not included in pathway-level prediction comparisons. |
+| `unavailable_percentile_tail_groups` | Percentile pathways for which ties cannot yield a nonempty group at or below 10% | A common discretized behavior is not relabeled as rare. |
+| `distinguishability` | OULAD full-record source detection | Independently resampled profiles and constructed outcomes confound generator attribution. |
 
 Complete publication-exclusion dictionary. Dataset-specific
 omitted-group reasons and fitted prevalences remain verbatim in each
@@ -17225,3 +17240,94 @@ below zero. The audit does not estimate disclosure risk specifically for
 learners on uncommon pathways. These are empirical memorization
 indicators, not formal privacy guarantees.</figcaption>
 </figure>
+
+<div id="refs" class="references csl-bib-body hanging-indent">
+
+<div id="ref-davis2006precision" class="csl-entry">
+
+Davis, Jesse, and Mark Goadrich. 2006. “The Relationship Between
+Precision-Recall and ROC Curves.” *<span class="nocase">Proceedings of
+the 23rd International Conference on Machine Learning</span>*, 233–40.
+<https://doi.org/10.1145/1143844.1143874>.
+
+</div>
+
+<div id="ref-esteban2017realvalued" class="csl-entry">
+
+Esteban, Cristóbal, Stephanie L. Hyland, and Gunnar Rätsch. 2017.
+“Real-Valued (Medical) Time Series Generation with Recurrent Conditional
+GANs.” *arXiv Preprint arXiv:1706.02633*, ahead of print.
+<https://doi.org/10.48550/arXiv.1706.02633>.
+
+</div>
+
+<div id="ref-fawcett2006roc" class="csl-entry">
+
+Fawcett, Tom. 2006. “An Introduction to ROC Analysis.” *Pattern
+Recognition Letters* 27 (8): 861–74.
+<https://doi.org/10.1016/j.patrec.2005.10.010>.
+
+</div>
+
+<div id="ref-lin1991divergence" class="csl-entry">
+
+Lin, Jianhua. 1991. “Divergence Measures Based on the Shannon Entropy.”
+*IEEE Transactions on Information Theory* 37 (1): 145–51.
+<https://doi.org/10.1109/18.61115>.
+
+</div>
+
+<div id="ref-lopezpaz2017c2st" class="csl-entry">
+
+Lopez-Paz, David, and Maxime Oquab. 2017. “Revisiting Classifier
+Two-Sample Tests.” *<span class="nocase">International Conference on
+Learning Representations</span>*.
+<https://openreview.net/forum?id=SJkXfE5xx>.
+
+</div>
+
+<div id="ref-saito2015precision" class="csl-entry">
+
+Saito, Takaya, and Marc Rehmsmeier. 2015. “The Precision-Recall Plot Is
+More Informative Than the ROC Plot When Evaluating Binary Classifiers on
+Imbalanced Datasets.” *PLOS ONE* 10 (3): e0118432.
+<https://doi.org/10.1371/journal.pone.0118432>.
+
+</div>
+
+<div id="ref-shokri2017membership" class="csl-entry">
+
+Shokri, Reza, Marco Stronati, Congzheng Song, and Vitaly Shmatikov.
+2017. “Membership Inference Attacks Against Machine Learning Models.”
+*<span class="nocase">2017 IEEE Symposium on Security and
+Privacy</span>*, 3–18. <https://doi.org/10.1109/SP.2017.41>.
+
+</div>
+
+<div id="ref-stadler2022synthetic" class="csl-entry">
+
+Stadler, Theresa, Bristena Oprisanu, and Carmela Troncoso. 2022.
+“Synthetic Data—Anonymisation Groundhog Day.” *31st USENIX Security
+Symposium*, 1451–68.
+
+</div>
+
+<div id="ref-strehl2002cluster" class="csl-entry">
+
+Strehl, Alexander, and Joydeep Ghosh. 2002. “Cluster Ensembles—a
+Knowledge Reuse Framework for Combining Multiple Partitions.”
+*<span class="nocase">Journal of Machine Learning Research</span>* 3:
+583–617.
+
+</div>
+
+<div id="ref-yoon2019timegan" class="csl-entry">
+
+Yoon, Jinsung, Daniel Jarrett, and Mihaela van der Schaar. 2019.
+“Time-Series Generative Adversarial Networks.”
+*<span class="nocase">Advances in Neural Information Processing
+Systems</span>* 32: 5508–18.
+
+</div>
+
+</div>

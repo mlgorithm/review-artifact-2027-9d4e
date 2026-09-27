@@ -1,0 +1,30 @@
+% Source: supplement-generated/complete-publication-results.csv, rq2.tail_learnability.*.synthetic_utility_gap.auprc
+\begin{table}[!htbp]
+\centering
+\caption{Baseline within-pathway prediction gaps: real-only minus standard synthetic-only AUPRC for the same held-out real learners in each pathway group. Positive values mean lower synthetic-trained performance; negative values mean higher synthetic-trained performance. Entries are mean $\pm$ population SD over three runs; these are descriptive differences, not significance tests.}
+\label{tab:within-pathway-gaps}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}llrrr@{}}
+\toprule
+Dataset & Pathway & Markov & SeqVAE & TimeGAN \\
+\midrule
+ASSISTments & High hint use & $+0.0847\pm0.0169$ & $+0.3313\pm0.0087$ & $+0.2850\pm0.0671$ \\
+ & Late correctness decline & $-0.0008\pm0.0032$ & $+0.1860\pm0.0143$ & $+0.1898\pm0.0491$ \\
+ & Persistent low correctness & $+0.0621\pm0.0070$ & $+0.1076\pm0.0071$ & $+0.0603\pm0.0670$ \\
+ & Rapid low-accuracy responding & $+0.1244\pm0.0181$ & $+0.2539\pm0.0060$ & $+0.2112\pm0.0627$ \\
+ & Rare skill path & $+0.0224\pm0.0078$ & $+0.1143\pm0.0348$ & $+0.0907\pm0.0480$ \\
+ & Recovery & $-0.0089\pm0.0096$ & $+0.1559\pm0.0867$ & $+0.1532\pm0.0318$ \\
+\addlinespace
+EdNet & Late correctness decline & $+0.0140\pm0.0103$ & $+0.2451\pm0.0139$ & $+0.1602\pm0.0294$ \\
+ & Persistent low correctness & $+0.0123\pm0.0023$ & $+0.0141\pm0.0021$ & $+0.0084\pm0.0134$ \\
+ & Rapid low-accuracy responding & $+0.0137\pm0.0035$ & $+0.0130\pm0.0156$ & $+0.0269\pm0.0059$ \\
+ & Rare skill path & $-0.0027\pm0.0030$ & $+0.0360\pm0.0154$ & $+0.0643\pm0.0178$ \\
+ & Recovery & $-0.0005\pm0.0043$ & $+0.1297\pm0.0102$ & $+0.1974\pm0.0159$ \\
+\addlinespace
+OULAD & Late disengagement & $+0.0307\pm0.0008$ & $+0.0256\pm0.0017$ & $+0.1046\pm0.1029$ \\
+ & Rare activity path & $+0.0213\pm0.0014$ & $+0.0165\pm0.0004$ & $+0.0393\pm0.0222$ \\
+ & Reengagement & $-0.0443\pm0.0034$ & $+0.0096\pm0.0025$ & $+0.0597\pm0.1331$ \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,10 @@
+dataset,model,estimable_group_seed_shapes,eligible_group_seed_shapes,estimable_share
+ASSISTments,Markov,17,18,0.9444444444444444
+ASSISTments,SeqVAE,10,18,0.5555555555555556
+ASSISTments,TimeGAN,4,18,0.2222222222222222
+EdNet,Markov,15,15,1.0
+EdNet,SeqVAE,11,15,0.7333333333333333
+EdNet,TimeGAN,3,15,0.2
+OULAD,Markov,9,9,1.0
+OULAD,SeqVAE,9,9,1.0
+OULAD,TimeGAN,6,9,0.6666666666666666

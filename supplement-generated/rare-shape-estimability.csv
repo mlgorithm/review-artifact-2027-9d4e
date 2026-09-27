@@ -1,0 +1,127 @@
+dataset,model,seed,rare_group,source_tail_group,standard_status,standard_real_learners,standard_synthetic_learners,targeted_status,targeted_real_learners,targeted_synthetic_learners,paired_reduction_status
+ASSISTments,Markov,20260703,High Hint Use,high_hint_use,estimable,144,44,estimable,144,190,estimable
+ASSISTments,Markov,20260703,Late Correctness Decline,late_failure,estimable,91,106,estimable,91,173,estimable
+ASSISTments,Markov,20260703,Persistent Low Correctness,persistent_failure,estimable,84,21,estimable,84,77,estimable
+ASSISTments,Markov,20260703,Rapid Low-Accuracy Responding,rapid_guessing,estimable,88,43,estimable,88,151,estimable
+ASSISTments,Markov,20260703,Rare Skill Path,rare_skill_path,estimable,167,68,estimable,167,101,estimable
+ASSISTments,Markov,20260703,Recovery,recovery,estimable,114,129,estimable,114,134,estimable
+ASSISTments,Markov,20260704,High Hint Use,high_hint_use,estimable,144,37,estimable,144,193,estimable
+ASSISTments,Markov,20260704,Late Correctness Decline,late_failure,estimable,91,114,estimable,91,150,estimable
+ASSISTments,Markov,20260704,Persistent Low Correctness,persistent_failure,not_estimable,84,8,estimable,84,53,not_estimable
+ASSISTments,Markov,20260704,Rapid Low-Accuracy Responding,rapid_guessing,estimable,88,33,estimable,88,125,estimable
+ASSISTments,Markov,20260704,Rare Skill Path,rare_skill_path,estimable,167,43,estimable,167,64,estimable
+ASSISTments,Markov,20260704,Recovery,recovery,estimable,114,103,estimable,114,139,estimable
+ASSISTments,Markov,20260705,High Hint Use,high_hint_use,estimable,144,50,estimable,144,213,estimable
+ASSISTments,Markov,20260705,Late Correctness Decline,late_failure,estimable,91,104,estimable,91,156,estimable
+ASSISTments,Markov,20260705,Persistent Low Correctness,persistent_failure,estimable,84,20,estimable,84,99,estimable
+ASSISTments,Markov,20260705,Rapid Low-Accuracy Responding,rapid_guessing,estimable,88,44,estimable,88,148,estimable
+ASSISTments,Markov,20260705,Rare Skill Path,rare_skill_path,estimable,167,106,estimable,167,120,estimable
+ASSISTments,Markov,20260705,Recovery,recovery,estimable,114,120,estimable,114,170,estimable
+ASSISTments,SeqVAE,20260703,High Hint Use,high_hint_use,not_estimable,144,6,estimable,144,21,not_estimable
+ASSISTments,SeqVAE,20260703,Late Correctness Decline,late_failure,estimable,91,89,estimable,91,103,estimable
+ASSISTments,SeqVAE,20260703,Persistent Low Correctness,persistent_failure,not_estimable,84,1,not_estimable,84,1,not_estimable
+ASSISTments,SeqVAE,20260703,Rapid Low-Accuracy Responding,rapid_guessing,not_estimable,88,4,not_estimable,88,1,not_estimable
+ASSISTments,SeqVAE,20260703,Rare Skill Path,rare_skill_path,estimable,167,3385,estimable,167,3396,estimable
+ASSISTments,SeqVAE,20260703,Recovery,recovery,estimable,114,88,estimable,114,101,estimable
+ASSISTments,SeqVAE,20260704,High Hint Use,high_hint_use,not_estimable,144,2,not_estimable,144,6,not_estimable
+ASSISTments,SeqVAE,20260704,Late Correctness Decline,late_failure,estimable,91,31,estimable,91,57,estimable
+ASSISTments,SeqVAE,20260704,Persistent Low Correctness,persistent_failure,not_estimable,84,0,not_estimable,84,0,not_estimable
+ASSISTments,SeqVAE,20260704,Rapid Low-Accuracy Responding,rapid_guessing,not_estimable,88,1,not_estimable,88,0,not_estimable
+ASSISTments,SeqVAE,20260704,Rare Skill Path,rare_skill_path,estimable,167,3405,estimable,167,3419,estimable
+ASSISTments,SeqVAE,20260704,Recovery,recovery,estimable,114,36,estimable,114,56,estimable
+ASSISTments,SeqVAE,20260705,High Hint Use,high_hint_use,estimable,144,23,estimable,144,25,estimable
+ASSISTments,SeqVAE,20260705,Late Correctness Decline,late_failure,estimable,91,66,estimable,91,90,estimable
+ASSISTments,SeqVAE,20260705,Persistent Low Correctness,persistent_failure,not_estimable,84,7,not_estimable,84,8,not_estimable
+ASSISTments,SeqVAE,20260705,Rapid Low-Accuracy Responding,rapid_guessing,not_estimable,88,6,estimable,88,11,not_estimable
+ASSISTments,SeqVAE,20260705,Rare Skill Path,rare_skill_path,estimable,167,3345,estimable,167,3367,estimable
+ASSISTments,SeqVAE,20260705,Recovery,recovery,estimable,114,116,estimable,114,102,estimable
+ASSISTments,TimeGAN,20260703,High Hint Use,high_hint_use,not_estimable,144,0,not_estimable,144,0,not_estimable
+ASSISTments,TimeGAN,20260703,Late Correctness Decline,late_failure,not_estimable,91,0,not_estimable,91,0,not_estimable
+ASSISTments,TimeGAN,20260703,Persistent Low Correctness,persistent_failure,not_estimable,84,0,not_estimable,84,0,not_estimable
+ASSISTments,TimeGAN,20260703,Rapid Low-Accuracy Responding,rapid_guessing,not_estimable,88,0,not_estimable,88,0,not_estimable
+ASSISTments,TimeGAN,20260703,Rare Skill Path,rare_skill_path,not_estimable,167,3,not_estimable,167,2,not_estimable
+ASSISTments,TimeGAN,20260703,Recovery,recovery,not_estimable,114,0,not_estimable,114,0,not_estimable
+ASSISTments,TimeGAN,20260704,High Hint Use,high_hint_use,not_estimable,144,2,not_estimable,144,1,not_estimable
+ASSISTments,TimeGAN,20260704,Late Correctness Decline,late_failure,estimable,91,29,not_estimable,91,5,not_estimable
+ASSISTments,TimeGAN,20260704,Persistent Low Correctness,persistent_failure,not_estimable,84,0,not_estimable,84,0,not_estimable
+ASSISTments,TimeGAN,20260704,Rapid Low-Accuracy Responding,rapid_guessing,not_estimable,88,0,not_estimable,88,0,not_estimable
+ASSISTments,TimeGAN,20260704,Rare Skill Path,rare_skill_path,estimable,167,1495,estimable,167,845,estimable
+ASSISTments,TimeGAN,20260704,Recovery,recovery,estimable,114,37,not_estimable,114,8,not_estimable
+ASSISTments,TimeGAN,20260705,High Hint Use,high_hint_use,not_estimable,144,0,not_estimable,144,0,not_estimable
+ASSISTments,TimeGAN,20260705,Late Correctness Decline,late_failure,not_estimable,91,0,not_estimable,91,0,not_estimable
+ASSISTments,TimeGAN,20260705,Persistent Low Correctness,persistent_failure,not_estimable,84,0,not_estimable,84,0,not_estimable
+ASSISTments,TimeGAN,20260705,Rapid Low-Accuracy Responding,rapid_guessing,not_estimable,88,0,not_estimable,88,0,not_estimable
+ASSISTments,TimeGAN,20260705,Rare Skill Path,rare_skill_path,estimable,167,35,estimable,167,21,estimable
+ASSISTments,TimeGAN,20260705,Recovery,recovery,not_estimable,114,0,not_estimable,114,0,not_estimable
+EdNet,Markov,20260703,Late Correctness Decline,late_failure,estimable,586,173,estimable,586,248,estimable
+EdNet,Markov,20260703,Persistent Low Correctness,persistent_failure,estimable,367,33,estimable,367,66,estimable
+EdNet,Markov,20260703,Rapid Low-Accuracy Responding,rapid_guessing,estimable,302,26,estimable,302,576,estimable
+EdNet,Markov,20260703,Rare Skill Path,rare_skill_path,estimable,386,170,estimable,386,167,estimable
+EdNet,Markov,20260703,Recovery,recovery,estimable,335,171,estimable,335,176,estimable
+EdNet,Markov,20260704,Late Correctness Decline,late_failure,estimable,586,146,estimable,586,258,estimable
+EdNet,Markov,20260704,Persistent Low Correctness,persistent_failure,estimable,367,16,estimable,367,51,estimable
+EdNet,Markov,20260704,Rapid Low-Accuracy Responding,rapid_guessing,estimable,302,23,estimable,302,559,estimable
+EdNet,Markov,20260704,Rare Skill Path,rare_skill_path,estimable,386,70,estimable,386,141,estimable
+EdNet,Markov,20260704,Recovery,recovery,estimable,335,157,estimable,335,139,estimable
+EdNet,Markov,20260705,Late Correctness Decline,late_failure,estimable,586,159,estimable,586,243,estimable
+EdNet,Markov,20260705,Persistent Low Correctness,persistent_failure,estimable,367,32,estimable,367,64,estimable
+EdNet,Markov,20260705,Rapid Low-Accuracy Responding,rapid_guessing,estimable,302,41,estimable,302,628,estimable
+EdNet,Markov,20260705,Rare Skill Path,rare_skill_path,estimable,386,166,estimable,386,170,estimable
+EdNet,Markov,20260705,Recovery,recovery,estimable,335,165,estimable,335,157,estimable
+EdNet,SeqVAE,20260703,Late Correctness Decline,late_failure,estimable,586,143,estimable,586,149,estimable
+EdNet,SeqVAE,20260703,Persistent Low Correctness,persistent_failure,estimable,367,20,estimable,367,10,estimable
+EdNet,SeqVAE,20260703,Rapid Low-Accuracy Responding,rapid_guessing,not_estimable,302,3,not_estimable,302,2,not_estimable
+EdNet,SeqVAE,20260703,Rare Skill Path,rare_skill_path,estimable,386,6907,estimable,386,7016,estimable
+EdNet,SeqVAE,20260703,Recovery,recovery,estimable,335,195,estimable,335,129,estimable
+EdNet,SeqVAE,20260704,Late Correctness Decline,late_failure,estimable,586,77,estimable,586,125,estimable
+EdNet,SeqVAE,20260704,Persistent Low Correctness,persistent_failure,not_estimable,367,5,not_estimable,367,5,not_estimable
+EdNet,SeqVAE,20260704,Rapid Low-Accuracy Responding,rapid_guessing,not_estimable,302,0,not_estimable,302,0,not_estimable
+EdNet,SeqVAE,20260704,Rare Skill Path,rare_skill_path,estimable,386,7063,estimable,386,7101,estimable
+EdNet,SeqVAE,20260704,Recovery,recovery,estimable,335,128,estimable,335,153,estimable
+EdNet,SeqVAE,20260705,Late Correctness Decline,late_failure,estimable,586,105,estimable,586,119,estimable
+EdNet,SeqVAE,20260705,Persistent Low Correctness,persistent_failure,estimable,367,15,estimable,367,11,estimable
+EdNet,SeqVAE,20260705,Rapid Low-Accuracy Responding,rapid_guessing,not_estimable,302,1,not_estimable,302,3,not_estimable
+EdNet,SeqVAE,20260705,Rare Skill Path,rare_skill_path,estimable,386,6895,estimable,386,7031,estimable
+EdNet,SeqVAE,20260705,Recovery,recovery,estimable,335,131,estimable,335,156,estimable
+EdNet,TimeGAN,20260703,Late Correctness Decline,late_failure,not_estimable,586,0,not_estimable,586,0,not_estimable
+EdNet,TimeGAN,20260703,Persistent Low Correctness,persistent_failure,not_estimable,367,0,not_estimable,367,0,not_estimable
+EdNet,TimeGAN,20260703,Rapid Low-Accuracy Responding,rapid_guessing,not_estimable,302,0,not_estimable,302,0,not_estimable
+EdNet,TimeGAN,20260703,Rare Skill Path,rare_skill_path,estimable,386,6675,estimable,386,6871,estimable
+EdNet,TimeGAN,20260703,Recovery,recovery,not_estimable,335,0,not_estimable,335,0,not_estimable
+EdNet,TimeGAN,20260704,Late Correctness Decline,late_failure,not_estimable,586,0,not_estimable,586,0,not_estimable
+EdNet,TimeGAN,20260704,Persistent Low Correctness,persistent_failure,not_estimable,367,0,not_estimable,367,0,not_estimable
+EdNet,TimeGAN,20260704,Rapid Low-Accuracy Responding,rapid_guessing,not_estimable,302,0,not_estimable,302,0,not_estimable
+EdNet,TimeGAN,20260704,Rare Skill Path,rare_skill_path,estimable,386,6899,estimable,386,6964,estimable
+EdNet,TimeGAN,20260704,Recovery,recovery,not_estimable,335,0,not_estimable,335,0,not_estimable
+EdNet,TimeGAN,20260705,Late Correctness Decline,late_failure,not_estimable,586,0,not_estimable,586,0,not_estimable
+EdNet,TimeGAN,20260705,Persistent Low Correctness,persistent_failure,not_estimable,367,0,not_estimable,367,0,not_estimable
+EdNet,TimeGAN,20260705,Rapid Low-Accuracy Responding,rapid_guessing,not_estimable,302,0,not_estimable,302,0,not_estimable
+EdNet,TimeGAN,20260705,Rare Skill Path,rare_skill_path,estimable,386,6776,estimable,386,6913,estimable
+EdNet,TimeGAN,20260705,Recovery,recovery,not_estimable,335,0,not_estimable,335,0,not_estimable
+OULAD,Markov,20260703,Late Disengagement,late_failure,estimable,1756,2446,estimable,1756,2112,estimable
+OULAD,Markov,20260703,Rare Activity Path,rare_skill_path,estimable,1164,447,estimable,1164,2788,estimable
+OULAD,Markov,20260703,Reengagement,recovery,estimable,58,909,estimable,58,747,estimable
+OULAD,Markov,20260704,Late Disengagement,late_failure,estimable,1756,2373,estimable,1756,2102,estimable
+OULAD,Markov,20260704,Rare Activity Path,rare_skill_path,estimable,1164,475,estimable,1164,2854,estimable
+OULAD,Markov,20260704,Reengagement,recovery,estimable,58,913,estimable,58,795,estimable
+OULAD,Markov,20260705,Late Disengagement,late_failure,estimable,1756,2454,estimable,1756,2131,estimable
+OULAD,Markov,20260705,Rare Activity Path,rare_skill_path,estimable,1164,433,estimable,1164,2702,estimable
+OULAD,Markov,20260705,Reengagement,recovery,estimable,58,861,estimable,58,731,estimable
+OULAD,SeqVAE,20260703,Late Disengagement,late_failure,estimable,1756,1387,estimable,1756,1157,estimable
+OULAD,SeqVAE,20260703,Rare Activity Path,rare_skill_path,estimable,1164,586,estimable,1164,1133,estimable
+OULAD,SeqVAE,20260703,Reengagement,recovery,estimable,58,591,estimable,58,654,estimable
+OULAD,SeqVAE,20260704,Late Disengagement,late_failure,estimable,1756,1215,estimable,1756,1276,estimable
+OULAD,SeqVAE,20260704,Rare Activity Path,rare_skill_path,estimable,1164,628,estimable,1164,957,estimable
+OULAD,SeqVAE,20260704,Reengagement,recovery,estimable,58,667,estimable,58,654,estimable
+OULAD,SeqVAE,20260705,Late Disengagement,late_failure,estimable,1756,1192,estimable,1756,1127,estimable
+OULAD,SeqVAE,20260705,Rare Activity Path,rare_skill_path,estimable,1164,645,estimable,1164,1067,estimable
+OULAD,SeqVAE,20260705,Reengagement,recovery,estimable,58,626,estimable,58,586,estimable
+OULAD,TimeGAN,20260703,Late Disengagement,late_failure,estimable,1756,2875,estimable,1756,2687,estimable
+OULAD,TimeGAN,20260703,Rare Activity Path,rare_skill_path,estimable,1164,89,estimable,1164,93,estimable
+OULAD,TimeGAN,20260703,Reengagement,recovery,estimable,58,1184,estimable,58,1186,estimable
+OULAD,TimeGAN,20260704,Late Disengagement,late_failure,estimable,1756,3243,estimable,1756,2759,estimable
+OULAD,TimeGAN,20260704,Rare Activity Path,rare_skill_path,estimable,1164,72,estimable,1164,66,estimable
+OULAD,TimeGAN,20260704,Reengagement,recovery,estimable,58,1103,estimable,58,1224,estimable
+OULAD,TimeGAN,20260705,Late Disengagement,late_failure,not_estimable,1756,0,not_estimable,1756,0,not_estimable
+OULAD,TimeGAN,20260705,Rare Activity Path,rare_skill_path,not_estimable,1164,0,not_estimable,1164,0,not_estimable
+OULAD,TimeGAN,20260705,Reengagement,recovery,not_estimable,58,0,not_estimable,58,0,not_estimable

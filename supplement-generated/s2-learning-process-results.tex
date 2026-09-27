@@ -1,0 +1,73 @@
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{@{}p{2.25cm}p{2.05cm}p{4.7cm}p{5.0cm}p{2.6cm}p{1.25cm}@{}}
+\caption{Complete publication results for learning process. Every numeric metric-summary entry is shown; SD is the population SD across the fixed seeds and $n$ is the number of estimable seeds.}\label{tab:supp-learning-process}\\
+\toprule
+Dataset & Generator & Scope / comparison & Metric & Mean $\pm$ SD ($n$) & Direction \\
+\midrule
+\endfirsthead
+\multicolumn{6}{l}{\textit{Continued from previous page}}\\
+\toprule
+Dataset & Generator & Scope / comparison & Metric & Mean $\pm$ SD ($n$) & Direction \\
+\midrule
+\endhead
+\midrule
+\multicolumn{6}{r}{\textit{Continued on next page}}\\
+\endfoot
+\bottomrule
+\endlastfoot
+ASSISTments & Markov & All eligible learners/events & Feature-dependence error & $0.0017 \mathbin{\pm} 0.0004$ (3) & Lower \\
+ASSISTments & Markov & All eligible learners/events & Behavior--hint lag error & $0.0071 \mathbin{\pm} 0.0021$ (3) & Lower \\
+ASSISTments & Markov & All eligible learners/events & Behavior-persistence error & $0.0293 \mathbin{\pm} 0.0042$ (3) & Lower \\
+ASSISTments & Markov & All eligible learners/events & Trajectory-shape error & $0.0409 \mathbin{\pm} 0.0041$ (3) & Lower \\
+ASSISTments & Markov & All eligible learners/events & Behavior-transition divergence & $0.0002 \mathbin{\pm} 0.0001$ (3) & Lower \\
+ASSISTments & Markov & All eligible learners/events & Three-event sequence divergence & $0.0828 \mathbin{\pm} 0.0006$ (3) & Lower \\
+ASSISTments & SeqVAE & All eligible learners/events & Feature-dependence error & $0.0993 \mathbin{\pm} 0.0000$ (3) & Lower \\
+ASSISTments & SeqVAE & All eligible learners/events & Behavior--hint lag error & $0.4437 \mathbin{\pm} 0.0026$ (3) & Lower \\
+ASSISTments & SeqVAE & All eligible learners/events & Behavior-persistence error & $0.2017 \mathbin{\pm} 0.0009$ (3) & Lower \\
+ASSISTments & SeqVAE & All eligible learners/events & Trajectory-shape error & $0.0272 \mathbin{\pm} 0.0029$ (3) & Lower \\
+ASSISTments & SeqVAE & All eligible learners/events & Behavior-transition divergence & $0.0100 \mathbin{\pm} 0.0002$ (3) & Lower \\
+ASSISTments & SeqVAE & All eligible learners/events & Three-event sequence divergence & $0.8635 \mathbin{\pm} 0.0032$ (3) & Lower \\
+ASSISTments & TimeGAN & All eligible learners/events & Feature-dependence error & $0.1029 \mathbin{\pm} 0.0123$ (3) & Lower \\
+ASSISTments & TimeGAN & All eligible learners/events & Behavior--hint lag error & $0.3507 \mathbin{\pm} 0.1340$ (3) & Lower \\
+ASSISTments & TimeGAN & All eligible learners/events & Behavior-persistence error & $0.1881 \mathbin{\pm} 0.0192$ (3) & Lower \\
+ASSISTments & TimeGAN & All eligible learners/events & Trajectory-shape error & $0.3307 \mathbin{\pm} 0.0760$ (3) & Lower \\
+ASSISTments & TimeGAN & All eligible learners/events & Behavior-transition divergence & $0.2366 \mathbin{\pm} 0.1211$ (3) & Lower \\
+ASSISTments & TimeGAN & All eligible learners/events & Three-event sequence divergence & $0.7653 \mathbin{\pm} 0.0025$ (3) & Lower \\
+EdNet & Markov & All eligible learners/events & Feature-dependence error & $0.0029 \mathbin{\pm} 0.0001$ (3) & Lower \\
+EdNet & Markov & All eligible learners/events & Behavior-persistence error & $0.0230 \mathbin{\pm} 0.0014$ (3) & Lower \\
+EdNet & Markov & All eligible learners/events & Trajectory-shape error & $0.1550 \mathbin{\pm} 0.0049$ (3) & Lower \\
+EdNet & Markov & All eligible learners/events & Behavior-transition divergence & $0.0005 \mathbin{\pm} 0.0001$ (3) & Lower \\
+EdNet & Markov & All eligible learners/events & Response/inactivity-gap distribution divergence & $0.0036 \mathbin{\pm} 0.0001$ (3) & Lower \\
+EdNet & Markov & All eligible learners/events & Three-event sequence divergence & $0.4438 \mathbin{\pm} 0.0012$ (3) & Lower \\
+EdNet & SeqVAE & All eligible learners/events & Feature-dependence error & $0.0088 \mathbin{\pm} 0.0000$ (3) & Lower \\
+EdNet & SeqVAE & All eligible learners/events & Behavior-persistence error & $0.0941 \mathbin{\pm} 0.0006$ (3) & Lower \\
+EdNet & SeqVAE & All eligible learners/events & Trajectory-shape error & $0.1460 \mathbin{\pm} 0.0126$ (3) & Lower \\
+EdNet & SeqVAE & All eligible learners/events & Behavior-transition divergence & $0.0028 \mathbin{\pm} 0.0008$ (3) & Lower \\
+EdNet & SeqVAE & All eligible learners/events & Response/inactivity-gap distribution divergence & $0.0008 \mathbin{\pm} 0.0002$ (3) & Lower \\
+EdNet & SeqVAE & All eligible learners/events & Three-event sequence divergence & $0.8978 \mathbin{\pm} 0.0003$ (3) & Lower \\
+EdNet & TimeGAN & All eligible learners/events & Feature-dependence error & $0.0087 \mathbin{\pm} 0.0001$ (3) & Lower \\
+EdNet & TimeGAN & All eligible learners/events & Behavior-persistence error & $0.0932 \mathbin{\pm} 0.0015$ (3) & Lower \\
+EdNet & TimeGAN & All eligible learners/events & Trajectory-shape error & $0.5047 \mathbin{\pm} 0.0002$ (3) & Lower \\
+EdNet & TimeGAN & All eligible learners/events & Behavior-transition divergence & $0.3248 \mathbin{\pm} 0.0027$ (3) & Lower \\
+EdNet & TimeGAN & All eligible learners/events & Response/inactivity-gap distribution divergence & $0.1745 \mathbin{\pm} 0.0008$ (3) & Lower \\
+EdNet & TimeGAN & All eligible learners/events & Three-event sequence divergence & $0.8904 \mathbin{\pm} 0.0016$ (3) & Lower \\
+OULAD & Markov & All eligible learners/events & Feature-dependence error & $0.0842 \mathbin{\pm} 0.0018$ (3) & Lower \\
+OULAD & Markov & All eligible learners/events & Behavior-persistence error & $0.0269 \mathbin{\pm} 0.0017$ (3) & Lower \\
+OULAD & Markov & All eligible learners/events & Trajectory-shape error & $0.1043 \mathbin{\pm} 0.0033$ (3) & Lower \\
+OULAD & Markov & All eligible learners/events & Behavior-transition divergence & $0.0282 \mathbin{\pm} 0.0012$ (3) & Lower \\
+OULAD & Markov & All eligible learners/events & Response/inactivity-gap distribution divergence & $0.0294 \mathbin{\pm} 0.0009$ (3) & Lower \\
+OULAD & Markov & All eligible learners/events & Three-event sequence divergence & $0.0420 \mathbin{\pm} 0.0014$ (3) & Lower \\
+OULAD & SeqVAE & All eligible learners/events & Feature-dependence error & $0.1971 \mathbin{\pm} 0.0036$ (3) & Lower \\
+OULAD & SeqVAE & All eligible learners/events & Behavior-persistence error & $0.2506 \mathbin{\pm} 0.0033$ (3) & Lower \\
+OULAD & SeqVAE & All eligible learners/events & Trajectory-shape error & $0.0841 \mathbin{\pm} 0.0090$ (3) & Lower \\
+OULAD & SeqVAE & All eligible learners/events & Behavior-transition divergence & $0.0161 \mathbin{\pm} 0.0003$ (3) & Lower \\
+OULAD & SeqVAE & All eligible learners/events & Response/inactivity-gap distribution divergence & $0.0091 \mathbin{\pm} 0.0006$ (3) & Lower \\
+OULAD & SeqVAE & All eligible learners/events & Three-event sequence divergence & $0.1053 \mathbin{\pm} 0.0056$ (3) & Lower \\
+OULAD & TimeGAN & All eligible learners/events & Feature-dependence error & $0.2012 \mathbin{\pm} 0.1637$ (3) & Lower \\
+OULAD & TimeGAN & All eligible learners/events & Behavior-persistence error & $0.3582 \mathbin{\pm} 0.0930$ (3) & Lower \\
+OULAD & TimeGAN & All eligible learners/events & Trajectory-shape error & $0.2853 \mathbin{\pm} 0.1825$ (3) & Lower \\
+OULAD & TimeGAN & All eligible learners/events & Behavior-transition divergence & $0.2215 \mathbin{\pm} 0.2116$ (3) & Lower \\
+OULAD & TimeGAN & All eligible learners/events & Response/inactivity-gap distribution divergence & $0.3152 \mathbin{\pm} 0.3144$ (3) & Lower \\
+OULAD & TimeGAN & All eligible learners/events & Three-event sequence divergence & $0.4071 \mathbin{\pm} 0.1321$ (3) & Lower \\
+\end{longtable}

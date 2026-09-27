@@ -1,0 +1,26 @@
+% Verified against experiments/evaluation/{general_evaluation,learner_tasks,outcome_tasks}.py
+% and per-seed downstream_utility_models.feature_columns in the source run reports.
+\begin{table}[!htbp]
+\centering
+\caption{Implemented prediction tasks. Inputs exclude future behavior, terminal labels, and whole-trajectory pathway membership. Primary tasks use all prior observations (at least one). Minimum counts are calculation rules, not reliability guarantees.}
+\label{tab:prediction-specification}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{2.15cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{2.85cm}>{\raggedright\arraybackslash}p{3.8cm}@{}}
+\toprule
+Task / dataset & Predictor inputs and early-history windows & Positive outcome & Minimum counts / eligibility \\
+\midrule
+Next response: ASSISTments & Current skill; interaction index; previous correctness; cumulative correct count, interaction count, and correct rate; previous attempt, hint, response-time, and opportunity bins. & Correct next response. & Primary-task rules below; pathway counts refer to learners. \\
+\addlinespace
+Next response: EdNet & Current skill, question, and part; interaction index; previous correctness and part; cumulative correct count, interaction count, and correct rate; previous elapsed-time and timestamp-gap bins. & Correct next response. & Primary-task rules below; pathway counts refer to learners. \\
+\addlinespace
+Next week: OULAD & Course; week index; previous dominant activity, engagement, registration, click bin, active-days bin, and gap bin; cumulative engagement count, week count, and engagement rate. & Registered week with nonzero clicks. & Primary-task rules below; pathway counts refer to course enrollments. \\
+\addlinespace
+Later low correctness / recovery: tutoring datasets & First 2 attempts, with at least 2 later attempts: early correct rate, hint-use rate, mean attempt-bin value, distinct skill count, first skill, and mean response-time-bin value when available. Absent hint/attempt signals are zero constants. & Later correct rate at or below the real-training low-correctness cutoff; recovery: later rate at least 65\%. & At least 10 positive and 10 negative learners in each real train/test set. Recovery requires early correct rate at most 35\%. \\
+\addlinespace
+Later dropout / course failure: OULAD & First 4 weeks: course; engagement rate and last engagement; first and last dominant activity; distinct activity count; last gap bin. & Subsequent dropout; course failure among non-dropouts. & At least 10 positive and 10 negative enrollments in each real train/test set. Dropout requires registration throughout the first 4 weeks; failure excludes dropouts. \\
+\bottomrule
+\end{tabularx}
+\par\smallskip\raggedright
+Primary-task rules: nonempty train/test sets and both outcome classes for fitting and ranking. Within-pathway publication additionally requires 10 real test learners (or OULAD enrollments), not 10 per outcome class.
+\end{table}

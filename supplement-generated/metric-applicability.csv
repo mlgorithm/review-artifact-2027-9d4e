@@ -1,0 +1,100 @@
+construct,measure,dataset,status,display
+Population composition,Behavior-rate error,ASSISTments,reported,Reported
+Population composition,Behavior-rate error,EdNet,reported,Reported
+Population composition,Behavior-rate error,OULAD,reported,Reported
+Population composition,Event-type frequency divergence,ASSISTments,reported,Reported
+Population composition,Event-type frequency divergence,EdNet,reported,Reported
+Population composition,Event-type frequency divergence,OULAD,reported,Reported
+Population composition,Average feature-distribution divergence,ASSISTments,reported,Reported
+Population composition,Average feature-distribution divergence,EdNet,reported,Reported
+Population composition,Average feature-distribution divergence,OULAD,reported,Reported
+Population composition,Real-versus-synthetic detectability AUROC,ASSISTments,reported,Reported
+Population composition,Real-versus-synthetic detectability AUROC,EdNet,reported,Reported
+Population composition,Real-versus-synthetic detectability AUROC,OULAD,excluded_postprocessing,Excluded: postprocessing confounds comparison
+Learning process,Behavior-transition divergence,ASSISTments,reported,Reported
+Learning process,Behavior-transition divergence,EdNet,reported,Reported
+Learning process,Behavior-transition divergence,OULAD,reported,Reported
+Learning process,Three-event sequence divergence,ASSISTments,reported,Reported
+Learning process,Three-event sequence divergence,EdNet,reported,Reported
+Learning process,Three-event sequence divergence,OULAD,reported,Reported
+Learning process,Trajectory-shape error,ASSISTments,reported,Reported
+Learning process,Trajectory-shape error,EdNet,reported,Reported
+Learning process,Trajectory-shape error,OULAD,reported,Reported
+Learning process,Behavior-persistence error,ASSISTments,reported,Reported
+Learning process,Behavior-persistence error,EdNet,reported,Reported
+Learning process,Behavior-persistence error,OULAD,reported,Reported
+Learning process,Response/inactivity-gap distribution divergence,ASSISTments,not_applicable_no_gap,N/A: no declared gap signal
+Learning process,Response/inactivity-gap distribution divergence,EdNet,reported,Reported
+Learning process,Response/inactivity-gap distribution divergence,OULAD,reported,Reported
+Learning process,Behavior--hint lag error,ASSISTments,reported,Reported
+Learning process,Behavior--hint lag error,EdNet,not_applicable_constant_hint,N/A: hint is constant zero
+Learning process,Behavior--hint lag error,OULAD,not_applicable_no_hint,N/A: no hint signal
+Learning process,Feature-dependence error,ASSISTments,reported,Reported
+Learning process,Feature-dependence error,EdNet,reported,Reported
+Learning process,Feature-dependence error,OULAD,reported,Reported
+Learner-pathway representation,Subgroup behavior error,ASSISTments,reported,Reported
+Learner-pathway representation,Subgroup behavior error,EdNet,reported,Reported
+Learner-pathway representation,Subgroup behavior error,OULAD,reported,Reported
+Learner-pathway representation,Subgroup-size error,ASSISTments,reported,Reported
+Learner-pathway representation,Subgroup-size error,EdNet,reported,Reported
+Learner-pathway representation,Subgroup-size error,OULAD,reported,Reported
+Learner-pathway representation,Subgroup hint-use error,ASSISTments,reported,Reported
+Learner-pathway representation,Subgroup hint-use error,EdNet,not_applicable_constant_hint,N/A: hint is constant zero
+Learner-pathway representation,Subgroup hint-use error,OULAD,not_applicable_no_hint,N/A: no hint signal
+Learner-pathway representation,Rare-group prevalence error,ASSISTments,reported,Reported
+Learner-pathway representation,Rare-group prevalence error,EdNet,reported,Reported
+Learner-pathway representation,Rare-group prevalence error,OULAD,reported,Reported
+Learner-pathway representation,Signed rare-group prevalence difference,ASSISTments,reported,Reported
+Learner-pathway representation,Signed rare-group prevalence difference,EdNet,reported,Reported
+Learner-pathway representation,Signed rare-group prevalence difference,OULAD,reported,Reported
+Learner-pathway representation,Rare-group trajectory-shape error,ASSISTments,support_dependent,Reported when support permits
+Learner-pathway representation,Rare-group trajectory-shape error,EdNet,support_dependent,Reported when support permits
+Learner-pathway representation,Rare-group trajectory-shape error,OULAD,support_dependent,Reported when support permits
+Analytic usefulness,AUPRC,ASSISTments,reported,Reported
+Analytic usefulness,AUPRC,EdNet,reported,Reported
+Analytic usefulness,AUPRC,OULAD,reported,Reported
+Analytic usefulness,AUROC,ASSISTments,reported,Reported
+Analytic usefulness,AUROC,EdNet,reported,Reported
+Analytic usefulness,AUROC,OULAD,reported,Reported
+Analytic usefulness,Standard synthetic utility loss,ASSISTments,reported,Reported
+Analytic usefulness,Standard synthetic utility loss,EdNet,reported,Reported
+Analytic usefulness,Standard synthetic utility loss,OULAD,reported,Reported
+Analytic usefulness,Standard augmentation gain,ASSISTments,reported,Reported
+Analytic usefulness,Standard augmentation gain,EdNet,reported,Reported
+Analytic usefulness,Standard augmentation gain,OULAD,reported,Reported
+Analytic usefulness,Targeted-vs-standard TSTR gain,ASSISTments,reported,Reported
+Analytic usefulness,Targeted-vs-standard TSTR gain,EdNet,reported,Reported
+Analytic usefulness,Targeted-vs-standard TSTR gain,OULAD,reported,Reported
+Analytic usefulness,Targeted augmentation gain,ASSISTments,reported,Reported
+Analytic usefulness,Targeted augmentation gain,EdNet,reported,Reported
+Analytic usefulness,Targeted augmentation gain,OULAD,reported,Reported
+Analytic usefulness,Pathway-level predictive usefulness,ASSISTments,support_dependent,Reported when support permits
+Analytic usefulness,Pathway-level predictive usefulness,EdNet,support_dependent,Reported when support permits
+Analytic usefulness,Pathway-level predictive usefulness,OULAD,support_dependent,Reported when support permits
+Analytic usefulness,Rare-group prevalence-match change,ASSISTments,reported,Reported
+Analytic usefulness,Rare-group prevalence-match change,EdNet,reported,Reported
+Analytic usefulness,Rare-group prevalence-match change,OULAD,reported,Reported
+Analytic usefulness,Rare-group shape-error reduction,ASSISTments,support_dependent,Reported when support permits
+Analytic usefulness,Rare-group shape-error reduction,EdNet,support_dependent,Reported when support permits
+Analytic usefulness,Rare-group shape-error reduction,OULAD,support_dependent,Reported when support permits
+Analytic usefulness,Learner-level outcome-task AUPRC/AUROC and contrasts,ASSISTments,model_dependent,Reported or status if model collapses
+Analytic usefulness,Learner-level outcome-task AUPRC/AUROC and contrasts,EdNet,model_dependent,Reported or status if model collapses
+Analytic usefulness,Learner-level outcome-task AUPRC/AUROC and contrasts,OULAD,model_dependent,Reported or status if model collapses
+Disclosure risk,Exact-duplicate rate,ASSISTments,full_trajectory,Reported on full modeled trajectory
+Disclosure risk,Exact-duplicate rate,EdNet,full_trajectory,Reported on full modeled trajectory
+Disclosure risk,Exact-duplicate rate,OULAD,excluded_postprocessing,Excluded: postprocessing confounds comparison
+Disclosure risk,Near-duplicate rate,ASSISTments,full_trajectory,Reported on full modeled trajectory
+Disclosure risk,Near-duplicate rate,EdNet,full_trajectory,Reported on full modeled trajectory
+Disclosure risk,Near-duplicate rate,OULAD,excluded_postprocessing,Excluded: postprocessing confounds comparison
+Disclosure risk,Mean nearest-training distance,ASSISTments,full_trajectory,Reported on full modeled trajectory
+Disclosure risk,Mean nearest-training distance,EdNet,full_trajectory,Reported on full modeled trajectory
+Disclosure risk,Mean nearest-training distance,OULAD,excluded_postprocessing,Excluded: postprocessing confounds comparison
+Disclosure risk,Membership-inference advantage,ASSISTments,full_trajectory,Reported on full modeled trajectory
+Disclosure risk,Membership-inference advantage,EdNet,full_trajectory,Reported on full modeled trajectory
+Disclosure risk,Membership-inference advantage,OULAD,excluded_postprocessing,Excluded: postprocessing confounds comparison
+Disclosure risk,Behavior-projection exact-duplicate rate,ASSISTments,not_applicable_full_trajectory,N/A: full-trajectory audit used
+Disclosure risk,Behavior-projection exact-duplicate rate,EdNet,not_applicable_full_trajectory,N/A: full-trajectory audit used
+Disclosure risk,Behavior-projection exact-duplicate rate,OULAD,behavior_projection,Reported on behavior projection only
+Disclosure risk,Targeted-minus-standard privacy-risk change,ASSISTments,full_trajectory,Reported on full modeled trajectory
+Disclosure risk,Targeted-minus-standard privacy-risk change,EdNet,full_trajectory,Reported on full modeled trajectory
+Disclosure risk,Targeted-minus-standard privacy-risk change,OULAD,behavior_projection,Reported on behavior projection only

@@ -1,0 +1,49 @@
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{@{}p{2.8cm}p{5.2cm}p{4.65cm}p{4.65cm}p{4.65cm}@{}}
+\caption{Complete dataset-level applicability grid for the publication metrics. ``Reported'' means a numeric row is emitted when estimable; support- and model-dependent cases retain explicit statuses. N/A denotes a missing or constant required signal, whereas excluded quantities exist diagnostically but are not generator-comparable under the declared postprocessing contract.}\label{tab:supp-applicability}\\
+\toprule
+Construct & Metric & ASSISTments & EdNet & OULAD \\
+\midrule
+\endfirsthead
+\multicolumn{5}{l}{\textit{Continued from previous page}}\\
+\toprule
+Construct & Metric & ASSISTments & EdNet & OULAD \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+Population composition & Behavior-rate error & Reported & Reported & Reported \\
+Population composition & Event-type frequency divergence & Reported & Reported & Reported \\
+Population composition & Average feature-distribution divergence & Reported & Reported & Reported \\
+Population composition & Real-versus-synthetic detectability AUROC & Reported & Reported & Excluded: postprocessing confounds comparison \\
+Learning process & Behavior-transition divergence & Reported & Reported & Reported \\
+Learning process & Three-event sequence divergence & Reported & Reported & Reported \\
+Learning process & Trajectory-shape error & Reported & Reported & Reported \\
+Learning process & Behavior-persistence error & Reported & Reported & Reported \\
+Learning process & Response/inactivity-gap distribution divergence & N/A: no declared gap signal & Reported & Reported \\
+Learning process & Behavior--hint lag error & Reported & N/A: hint is constant zero & N/A: no hint signal \\
+Learning process & Feature-dependence error & Reported & Reported & Reported \\
+Learner-pathway representation & Subgroup behavior error & Reported & Reported & Reported \\
+Learner-pathway representation & Subgroup-size error & Reported & Reported & Reported \\
+Learner-pathway representation & Subgroup hint-use error & Reported & N/A: hint is constant zero & N/A: no hint signal \\
+Learner-pathway representation & Rare-group prevalence error & Reported & Reported & Reported \\
+Learner-pathway representation & Signed rare-group prevalence difference & Reported & Reported & Reported \\
+Learner-pathway representation & Rare-group trajectory-shape error & Reported when support permits & Reported when support permits & Reported when support permits \\
+Analytic usefulness & AUPRC & Reported & Reported & Reported \\
+Analytic usefulness & AUROC & Reported & Reported & Reported \\
+Analytic usefulness & Standard synthetic utility loss & Reported & Reported & Reported \\
+Analytic usefulness & Standard augmentation gain & Reported & Reported & Reported \\
+Analytic usefulness & Targeted-vs-standard TSTR gain & Reported & Reported & Reported \\
+Analytic usefulness & Targeted augmentation gain & Reported & Reported & Reported \\
+Analytic usefulness & Pathway-level predictive usefulness & Reported when support permits & Reported when support permits & Reported when support permits \\
+Analytic usefulness & Rare-group prevalence-match change & Reported & Reported & Reported \\
+Analytic usefulness & Rare-group shape-error reduction & Reported when support permits & Reported when support permits & Reported when support permits \\
+Analytic usefulness & Learner-level outcome-task AUPRC/AUROC and contrasts & Reported or status if model collapses & Reported or status if model collapses & Reported or status if model collapses \\
+Disclosure risk & Exact-duplicate rate & Reported on full modeled trajectory & Reported on full modeled trajectory & Excluded: postprocessing confounds comparison \\
+Disclosure risk & Near-duplicate rate & Reported on full modeled trajectory & Reported on full modeled trajectory & Excluded: postprocessing confounds comparison \\
+Disclosure risk & Mean nearest-training distance & Reported on full modeled trajectory & Reported on full modeled trajectory & Excluded: postprocessing confounds comparison \\
+Disclosure risk & Membership-inference advantage & Reported on full modeled trajectory & Reported on full modeled trajectory & Excluded: postprocessing confounds comparison \\
+Disclosure risk & Behavior-projection exact-duplicate rate & N/A: full-trajectory audit used & N/A: full-trajectory audit used & Reported on behavior projection only \\
+Disclosure risk & Targeted-minus-standard privacy-risk change & Reported on full modeled trajectory & Reported on full modeled trajectory & Reported on behavior projection only \\
+\end{longtable}

@@ -1,0 +1,44 @@
+{
+  "publication_schema": "publication_metrics_v2",
+  "source_report_root": "experiments/reports/standard_vs_tail_targeted",
+  "numeric_rows_emitted": 1451,
+  "numeric_rows_expected": 1451,
+  "numeric_summary_fields_emitted": [
+    "mean",
+    "std",
+    "min",
+    "max",
+    "n",
+    "missing_runs"
+  ],
+  "numeric_csv_sha256": "cdb7f4a1cea1114fc671720ef7bc663eb3007be1aaf099cecc86f6000f18883e",
+  "outcome_status_rows_emitted": 27,
+  "rare_shape_seed_status_rows_emitted": 126,
+  "rare_shape_seed_status_rows_expected": 126,
+  "rare_shape_incomplete_dataset_model_pathway_groups": 19,
+  "applicability_rows_emitted": 99,
+  "applicability_contract_validated_against_numeric_export": true,
+  "signed_prevalence_rows_emitted": 42,
+  "rows_by_construct": {
+    "Population composition": 33,
+    "Learning process": 54,
+    "Learner-pathway representation": 95,
+    "Analytic usefulness": 1188,
+    "Disclosure risk": 81
+  },
+  "datasets": [
+    "ASSISTments",
+    "EdNet",
+    "OULAD"
+  ],
+  "generators": [
+    "Markov",
+    "SeqVAE",
+    "TimeGAN"
+  ],
+  "seeds": [
+    20260703,
+    20260704,
+    20260705
+  ]
+}

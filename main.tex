@@ -1,0 +1,357 @@
+\documentclass[fleqn,10pt]{JLA_article}
+
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage{longtable}
+\usepackage{pdflscape}
+\usepackage{placeins}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,positioning,shapes.geometric}
+\hypersetup{hidelinks,breaklinks=true,pdftitle={Pathway-Centric Evaluation of Synthetic Educational Time-Series Data},pdfauthor={Anonymous}}
+
+\PaperTitle{Pathway-Centric Evaluation of Synthetic Educational Time-Series Data}
+\Authors{Anonymous author(s)}
+\Keywords{synthetic data, learning analytics, educational trajectories, rare learner pathways, evaluation, privacy}
+\Submitted{Under review}
+\Accepted{}
+\Published{}
+\Volume{0}
+\Number{0}
+\Pages{1---14}
+\Doi{TBD}
+
+\Notesname{Notes for Practice}
+\note{Synthetic educational data are often judged by aggregate similarity, although learning-analytics uses also depend on sequential structure and uncommon learner pathways that may matter for intervention.}
+\note{Across the evaluated datasets and generators, matching overall patterns did not ensure realistic learning sequences or uncommon pathways. Standard synthetic-only training lowered mean overall next-step prediction in every tested combination; neither standard nor targeted augmentation improved that mean.}
+\note{Before using or sharing synthetic learner records, check pathway frequencies and behavior, prediction on separate real learners, and possible disclosure of training records; emphasizing rare pathways is not an automatic correction.}
+
+\Abstract{Learning analytics depends on detailed records of how learners interact, progress, struggle, and disengage over time. However, these records often contain sensitive information and can be difficult to share, limiting replication, benchmarking, and the development of learning-analytics models. In recent years, synthetic data have attracted growing attention in privacy-sensitive fields such as healthcare and finance, where access to real data is often restricted. Similar interest is emerging in education, where synthetic data can provide artificial learner records that resemble real data without directly distributing the original records.
+
+Yet educational data pose a particular challenge: learner behavior unfolds over time. Reproducing overall statistics is therefore not enough. Important learning-analytics questions often concern uncommon patterns in learner sequences, which we call \emph{pathways}, such as persistent struggle, recovery, or late disengagement. If synthetic data distort or omit these pathways, researchers may build models or draw conclusions that appear valid overall but fail for the learners or situations that motivate intervention.
+
+We address this gap by assessing \emph{pathway-level predictive usefulness}: how well models trained on synthetic learner trajectories predict outcomes for real learners following uncommon pathways. We also assess pathway prevalence and behavior among learners matching each pathway. We examine population patterns, temporal structure, pathway representation, and predictive performance on held-out real learners across multiple educational datasets and contrasting generation methods. We find that synthetic data that appear realistic overall can still distort learning processes and provide limited support for uncommon learner pathways. Standard synthetic-only training reduced mean overall next-step predictive performance in every tested dataset--generator combination; neither standard nor targeted augmentation improved mean overall next-step performance. Pathway-specific and additional learner-level results were mixed. Our study provides a practical approach for determining when synthetic educational data are fit for learning-analytics research.}
+
+\emergencystretch=2em
+% Layout-only: let floats use available space without changing JLA typography.
+\setlength{\textfloatsep}{10pt plus 2pt minus 2pt}
+\setlength{\floatsep}{8pt plus 2pt minus 2pt}
+\setlength{\intextsep}{8pt plus 2pt minus 2pt}
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.8}
+\renewcommand{\textfraction}{0.08}
+\renewcommand{\floatpagefraction}{0.9}
+\setcounter{topnumber}{4}
+\setcounter{bottomnumber}{3}
+\setcounter{totalnumber}{5}
+% Reduce heading whitespace; retain the class's heading fonts and labels.
+\titlespacing*{\section}{0pc}{2ex plus 2pt minus 1pt}{5pt}
+\titlespacing*{\subsection}{0pc}{1.5ex plus 2pt minus 1pt}{0pt}
+\titlespacing*{\subsubsection}{0pc}{1.5ex plus 1pt minus 1pt}{0pt}
+\titlespacing*{\paragraph}{0pc}{1ex plus 1pt minus 1pt}{10pt}
+\widowpenalty=10000
+
+\newcommand{\msd}[2]{\ensuremath{#1 \mathbin{\pm} #2}}
+\newcommand{\msdn}[3]{\ensuremath{#1 \mathbin{\pm} #2_{\scriptscriptstyle n=#3}}}
+\newcommand{\bmsd}[2]{\ensuremath{\mathbf{#1 \mathbin{\pm} #2}}}
+\newcommand{\R}{\mathcal{R}}
+\newcommand{\SYN}{\mathcal{S}}
+\newcommand{\MAE}{\operatorname{MAE}}
+\newcommand{\JS}{\operatorname{JS}}
+\newcommand{\NMI}{\operatorname{NMI}}
+
+\begin{document}
+
+\raggedbottom
+\maketitle
+\thispagestyle{fancy}
+
+\section{Introduction}
+
+Learning analytics (LA) uses data on learners' responses and activities over time to study progress, struggle, and disengagement~\cite{siemens2013emergence,knight2017time,molenaar2014sequential}. Learner records are sensitive, and removing identifiers alone does not resolve disclosure concerns~\cite{slade2013ethics,liu2023understanding}. A \emph{learner trajectory} is one learner's sequence of responses or activities in a course or system. A \emph{synthetic trajectory} is a generated sequence of the same kind, based on patterns in real data. A \emph{pathway} is a behavioral pattern that multiple trajectories can share, such as recovery after early difficulty. Synthetic trajectories could support replication, benchmarking, and comparisons across instructional contexts without distributing the original learner records~\cite{haim2023openscience,gasevic2016context}. The value of synthetic trajectories depends on whether the generated records preserve the behavior needed for a particular analysis.
+
+For example, the sequences \emph{incorrect, incorrect, correct, correct} and \emph{correct, correct, incorrect, incorrect} both have an overall correctness rate of 50\%. The first sequence suggests recovery from early difficulty, whereas the second suggests declining performance. Sequence, duration, and timing matter for understanding learning~\cite{knight2017time,molenaar2014sequential,saint2020combining}. A synthetic dataset can match aggregate rates of correctness or engagement while omitting, overproducing, or distorting pathways such as persistent struggle, recovery, and late disengagement. Misrepresented pathways can distort conclusions about learning processes and weaken predictions for real learners within those pathways.
+
+Prior LA research has evaluated synthetic educational data through resemblance to real records, predictive utility, and disclosure risk~\cite{liu2024scaling,liu2025fairprivate}. Recent LAK work has also generated longitudinal learner sequences~\cite{huang2026pathways}. Aggregate-only evaluations, however, do not show whether an uncommon pathway occurs at a plausible rate, whether behavior within the pathway resembles real behavior, or whether models trained on synthetic data predict well for real learners who follow the pathway. Disclosure requires a separate audit because synthetic records can retain information about training learners~\cite{stadler2022synthetic,vanbreugel2023membership}.
+
+The limits of aggregate-only evaluation motivate two research questions:
+
+\begin{samepage}
+\begin{enumerate}[label=\textbf{RQ\arabic*.}, leftmargin=*,topsep=4pt,itemsep=4pt,parsep=0pt]
+    \item How well do synthetic trajectories reflect real learner behavior, including uncommon pathways?
+    \item How does pathway targeting affect the representation of uncommon pathways and prediction for real learners, both overall and within those pathways?
+\end{enumerate}
+\end{samepage}
+
+To address these questions, we use the \emph{Pathway-Centric Evaluation Lens}, which treats pathway representation and pathway-level prediction as central to judging synthetic-data quality, rather than relying on population averages alone. The lens checks how often responses and activities occur, how they unfold over time, whether uncommon pathways are represented, whether synthetic data support prediction, and whether training records might be exposed. RQ1 applies the first three checks to standard generation, which gives no extra weight to any pathway. In RQ2, pathway-targeted generation gives more weight to training learners whose trajectories match uncommon pathway rules. Disclosure is audited separately.
+
+We assess pathway prevalence, behavior within each pathway group, and prediction for held-out real learners who follow each pathway. We call the prediction check \emph{pathway-level predictive usefulness}, extending train-on-synthetic/test-on-real evaluation~\cite{esteban2017realvalued,yoon2019timegan,flanagan2022fine} from the full test population to uncommon pathways. A \emph{rare pathway} is a pattern matched by only a small share of trajectories under a stated dataset-specific rule. The term \emph{rare} describes a pattern of activity, not a learner identity or an assumed need for intervention. Pathway rules classify complete trajectories into retrospective evaluation groups. Predictors use only earlier behavior and known task context; no predictor receives pathway membership as an input.
+
+We compare Markov, a sequence variational autoencoder (SeqVAE), and TimeGAN on ASSISTments, EdNet KT1, and weekly OULAD. Pathway rules are estimated from real training learners, and prediction is evaluated on separate real test learners. Across three ASSISTments runs, SeqVAE's synthetic data differed from real training data by a mean of only 0.12 percentage points in overall correctness. Across the same runs, a pathway defined by unusual skill ordering appeared in an average of 98.52\% of synthetic learners, compared with 4.87\% of real training learners. Our contribution is an evaluation protocol that connects population and temporal checks to pathway representation and predictive usefulness for real learners (Table~\ref{tab:evaluation-lens}).
+% Keep explanatory paragraphs intact when floats move to a page boundary.
+\interlinepenalty=10000
+
+Table~\ref{tab:evaluation-lens} is a roadmap from each research question to the comparisons used to answer it and the corresponding Results section. Disclosure appears separately because it is a supporting audit, not a third research question.
+
+\begin{table}[!htbp]
+\centering
+\caption{Study roadmap: the comparisons used to answer each research question and where the results appear.}
+\label{tab:evaluation-lens}
+\label{tab:rq-design}
+\small
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabularx}{\linewidth}{|>{\raggedright\arraybackslash}p{3.4cm}|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}p{2.4cm}|}
+\hline
+Question or audit & Comparison & Results \\ \hline
+RQ1\newline Reflecting real behavior & Compare standard synthetic trajectories with real training trajectories: response and activity rates, event order and timing, and the frequency and within-group behavior of uncommon pathways. & Section~\ref{sec:rq1-results} \\ \hline
+RQ2\newline Effect of targeting & Compare standard and targeted synthetic trajectories against real training data for pathway representation. Train predictors on real data, synthetic data, or both; test all predictors on the same held-out real learners, overall and within uncommon pathways. & Section~\ref{sec:rq2-results} \\ \hline
+Separate audit\newline Disclosure & Check standard and targeted synthetic trajectories for close copying of real training trajectories and signals revealing who was in the training set. & Section~\ref{sec:disclosure-results} \\ \hline
+\end{tabularx}
+\end{table}
+\FloatBarrier
+
+\section{Methodology}
+
+Figure~\ref{fig:pipeline} summarizes the study. In the tutoring datasets, each trajectory is a sequence of attempts; in OULAD, each trajectory tracks weekly activity for one course enrollment. A pathway rule groups trajectories that share a behavioral pattern, such as recovery after early difficulty.
+
+A \emph{generator} creates synthetic trajectories from patterns in real training records; a \emph{predictor} estimates an educational outcome from recorded history and known context. We assess synthetic resemblance against real training data (RQ1) and prediction on separate real test learners (RQ2). Standard and pathway-targeted generation produce matching numbers of learners and records.
+
+We combine established measures of distributional similarity, temporal dependence, detectability, prediction, and membership inference~\cite{lin1991divergence,strehl2002cluster,lopezpaz2017c2st,davis2006precision,fawcett2006roc,saito2015precision,shokri2017membership} with a pathway-level prediction check. Pathway rules, thresholds, and minimum counts are benchmark choices, not universal standards; the Supplementary Material gives complete calculation rules and results.
+
+
+\subsection{Data, Temporal Units, and Learner Separation}
+
+The benchmark uses ordered tutoring attempts from ASSISTments 2009--2010 Skill Builder~\cite{feng2009assistments} (3{,}429 training / 788 test trajectories), question-answering attempts from EdNet KT1~\cite{choi2020ednet} (7{,}703 / 1{,}963), and weekly course engagement from the Open University Learning Analytics Dataset (OULAD)~\cite{kuzilek2017oulad} (26{,}072 / 6{,}521). Each OULAD trajectory is a course enrollment with one record per observed week. The supplement gives record and variable counts; Table~\ref{tab:prediction-specification} specifies the prediction tasks.
+
+We use a nominal 80/20 \emph{learner-disjoint split}: each learner's records belong entirely to training or test data. In OULAD, all enrollments of the same student remain together. This prevents \emph{data leakage}, or unintended use of test-learner information in model development.
+
+Preprocessing assigns consistent category codes and numerical intervals (\emph{bins}). All data-dependent transformations are estimated using real training data and applied unchanged to synthetic and test data. Prediction inputs contain prior behavior and known task context, not the response or activity being predicted; the first event is excluded because it has no history.
+
+\begin{figure}[!htbp]
+\centering
+\input{figures/pipeline.tex}
+\vspace{2pt}
+\caption{Leakage-safe benchmark pipeline. Tags identify reused data; ``+'' means training-data augmentation. [S] and [T] are finalized after shared processing. Pathway-level predictive usefulness is assessed on [H], with representation assessed against [R]. The same predictor settings apply to all five primary-task conditions; additional learner-level tasks use four (Section~\ref{sec:outcome-prediction}).}
+\label{fig:pipeline}
+\end{figure}
+
+\subsection{Generator Inputs, Outputs, and Comparison}
+\label{sec:generator-inputs}
+
+The data tables supplied to the generators contain the relevant behavior, event type, assistance, timing, and course variables. Learner identifiers and event order mark sequence boundaries but are not values the generator learns to reproduce. Fields determined by other generated values, such as question metadata, are rebuilt after generation.
+
+We compare three generators. An \emph{order-2 Markov/n-gram model} generates events from short recent histories, treating each event's attributes jointly. A \emph{sequence variational autoencoder} (SeqVAE)~\cite{kingma2014autoencoding} learns compact representations of short sequences and generates new sequences from the learned representations. \emph{TimeGAN}~\cite{yoon2019timegan}, implemented through SynthCity~\cite{qian2023synthcity}, learns temporal relationships using feedback from a second model that tries to distinguish real from generated sequences.
+
+SeqVAE and TimeGAN train on \emph{windows}, or consecutive sections containing 20 observations. Standard and targeted conditions have the same maximum number of model updates, so targeting receives no additional training. This shared limit does not establish best achievable performance.
+
+All generators share a real-training-estimated length procedure, adjusted to the required learner and record totals; individual learners' lengths are not directly resampled. Length measures therefore assess this shared procedure, not generator differences. Neural trajectories concatenate independently generated windows and truncate the last to the sampled length, without modeling continuity across window boundaries.
+
+In OULAD, shared postprocessing assigns learner profiles through independent field-wise samples from real training data, conditional on course where available, and constructs end-of-course outcomes using a procedure estimated from real training data. Terminal outcomes are never generator inputs. Demographic resemblance therefore does not rank generators, and OULAD outcome tasks evaluate the complete generation-and-processing procedure, not direct outcome generation. The supplement details the OULAD profile-assignment and outcome-construction procedures.
+
+Each dataset--generator combination uses three fixed random seeds, which control the random choices in each run. Test performance never determines generator or predictor settings or pathway cutoffs; Section~\ref{sec:uncertainty} describes uncertainty reporting.
+
+\subsection{Pathway Definitions and Pathway-Targeted Training}
+
+Pathway rules describe complete trajectories, such as low early correctness followed by recovery. The rules define retrospective evaluation groups, not information available for earlier prediction; separate early-history tasks predict later outcomes using only early observations (Section~\ref{sec:outcome-prediction}).
+
+Rules are prespecified, with data-dependent thresholds estimated from real training data and applied unchanged to all four sources: real training, real test, standard synthetic, and targeted synthetic. \emph{Prevalence} is the proportion of trajectories satisfying a rule. Recomputing a lowest-5\% cutoff separately in each source would conceal frequency distortions.
+
+Distribution-based rarity rules target the outer 5\% of real training data, with a 10\% ceiling to accommodate ties from binning. A pathway is unavailable if no nonempty real-training group meets this ceiling. Fixed thresholds distinguish changes between ordered trajectory halves; minimum lengths avoid single-event or empty-half classifications (Table~\ref{tab:rare-definitions}). Binned variables use their specified interval values. The supplement gives boundary conventions and exclusions.
+
+\begin{table}[!htbp]
+\centering
+\caption{Pathway definitions used in the comparisons. Percentile cutoffs and the transition model are estimated using real training data and kept fixed for synthetic and test data.}
+\label{tab:rare-definitions}
+\small
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.29\linewidth}p{0.64\linewidth}}
+\toprule
+Pathway & Rule for identifying a trajectory \\
+\midrule
+Persistent low correctness / disengagement & Bottom 5\% whole-trajectory correctness or engagement and at least three observations. \\
+Recovery / reengagement & First-half correctness or engagement at most 35\%, second-half rate at least 65\%, and at least four observations. \\
+Late correctness decline / disengagement & First-half correctness or engagement at least 65\%, second-half rate at most 35\%, and at least four observations. \\
+Rare skill / activity path & Unusual ordering of skills or activities: successive changes have low probability under a model estimated from real training data. Bottom 5\% of the resulting trajectory scores, with at least one transition; the exact calculation is in the supplement. \\
+High hint use & Top 5\% whole-trajectory hints per attempt and at least three interactions; unavailable without varying hint use. \\
+Rapid low-accuracy responding & Bottom 5\% mean response time, whole-trajectory correctness at most 50\%, and at least three interactions; an approximate behavioral indicator, not a validated diagnosis; unavailable without response time. \\
+Long inactivity & Top 5\% maximum within-learner response- or inactivity-gap signal and at least three observations; unavailable without a declared gap signal. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Targeted generator training assigns weight 3 to learners satisfying any eligible pathway rule and weight 1 otherwise; overlapping rules do not compound, and all learners remain eligible. This fixed emphasis is not tuned to datasets, generators, pathways, seeds, or results. Matched conditions retain generator family, learner/record totals, and neural training limit. Because pathways are emphasized together, changes do not isolate the causal effect of targeting one pathway. Selected groups and sizes are in the supplement.
+
+\subsection{RQ-Aligned Evaluation Design}
+
+Table~\ref{tab:rq-design} summarizes the comparisons. RQ1 uses standard synthetic data only: targeted data are excluded from its ranking because targeting deliberately changes the training distribution. RQ2 compares matched standard and targeted conditions, using real training data for representation checks and unchanged real test learners for prediction.
+
+Comparisons follow available variables: correctness and skill in ASSISTments/EdNet, engagement and activity in OULAD, plus selected relationships, assistance, and timing measures. Supporting subgroup analyses compare subsequent behavior in groups defined from the first two observations using real-training-estimated rules.
+
+\emph{Behavior-rate error} is the absolute difference between the real and synthetic proportions of correct responses or engaged weeks; zero indicates matching proportions. \emph{Three-event sequence divergence} compares the frequencies of three consecutive skills or activities; the implemented score ranges from 0 to 1, with zero indicating matching distributions. \emph{Trajectory-shape error} compares average behavioral development after aligning each trajectory to ten relative positions from beginning to end. We also calculate it separately within pathways; lower error indicates closer agreement.
+
+For \emph{real-versus-synthetic detectability}, a separate histogram-based gradient-boosting model~\cite{friedman2001greedy} learns to identify each record's source and is tested on different learners. This method successively fits decision trees, or branching prediction rules, using binned numerical inputs. The detector predicts source, not an educational outcome: AUROC near 0.5 indicates chance-level separation, while larger values indicate more detectable differences. This direction differs from outcome-prediction AUROC, where larger values are desirable.
+
+OULAD full-record detectability is excluded because independently assigned profiles and constructed outcomes prevent a fair comparison of the generators themselves. Only computationally costly diagnostics use reduced samples; generator training, pathway evaluation, and primary prediction tasks use their full specified data.
+
+\subsection{Outcome Prediction and Pathway-Level Predictive Usefulness}
+\label{sec:outcome-prediction}
+
+Primary tasks predict next-response correctness in ASSISTments/EdNet and next-week engagement in OULAD; correctness or engagement is the positive outcome (value 1). A rare pathway need not have a rare positive outcome. OULAD engagement means a registered week with nonzero clicks, measuring platform activity rather than cognitive or emotional engagement.
+
+We compare five predictor-training conditions: real only, standard synthetic only, real plus standard synthetic, targeted synthetic only, and real plus targeted synthetic. Synthetic-only conditions test replacement; combined conditions test \emph{augmentation}, or adding synthetic records to real training data. All use the same prespecified histogram-based gradient-boosting predictor settings and real test learners. Synthetic-only predictors use no real outcome records for fitting, but retain the common transformations estimated from real training data.
+
+Table~\ref{tab:prediction-specification} specifies the implemented inputs, history lengths, outcomes, and count requirements. Previous values refer to the immediately preceding observation; cumulative quantities summarize only earlier observations. Task context (such as the question being attempted) can be known before its outcome.
+
+\input{tables/prediction-specification.tex}
+
+Our primary measure is \emph{area under the precision--recall curve} (AUPRC)~\cite{davis2006precision,saito2015precision}. It summarizes the trade-off between precision (the fraction of predicted positives that actually have the positive outcome) and recall (the fraction of actual positives identified) across cutoffs. We prioritize it because outcome frequencies can be unequal, including within pathways. Higher values indicate better prediction on the same sample; the test sample's positive-outcome proportion provides the no-skill reference. We also report \emph{area under the receiver operating characteristic curve} (AUROC), which measures how well positives rank above negatives~\cite{fawcett2006roc}. Higher outcome AUROC is better.
+
+Each eligible next response or next week contributes one prediction to the score, so longer trajectories contribute more predictions. The uncertainty calculation keeps each learner's predictions together, but does not give all learners equal weight in the reported score.
+
+For pathway-level predictive usefulness, we score existing real-test predictions within groups subsequently identified by the fixed pathway rules; membership is not a predictor input. Four differences measure replacement loss (real only minus standard synthetic only), standard augmentation gain (real plus standard minus real only), targeted replacement gain (targeted synthetic only minus standard synthetic only), and targeted augmentation gain (real plus targeted minus real only). Separately, targeting-related prevalence and within-pathway behavior errors use the real-training reference.
+
+Additional learner-level tasks predict later low correctness or recovery from the first two tutoring interactions, and dropout or failure from the first four OULAD weeks (Table~\ref{tab:prediction-specification}). The named event is positive. These tasks use four conditions, excluding real plus targeted synthetic; OULAD results also assess shared outcome construction. Synthetic training data containing only one outcome prevent predictor comparison under our procedure. This \emph{single-class model collapse} is reported, never scored as zero.
+
+\subsection{Supporting Disclosure Audit}
+
+For ASSISTments and EdNet, we compare synthetic and real training trajectories on consistently formatted audit variables, checking exact matches, near matches under a fixed similarity rule, and closeness to training records.
+
+A \emph{membership-inference audit} tests whether proximity to synthetic data distinguishes training learners from excluded real test learners~\cite{shokri2017membership,stadler2022synthetic}. Its \emph{advantage} measures how far the attack's ranking exceeds chance; zero means no above-chance signal under this rule.
+
+For OULAD, independently assigned profiles and constructed outcomes prevent meaningful full-record distance comparisons between generators. We therefore compare only ordered weekly dominant-activity and engagement indicators, reporting exact matches in this reduced representation, not matches of complete learner records.
+
+The audit is dataset-level; adequately powered pathway-specific tests are outside the design.
+
+\subsection{Uncertainty, Exclusions, and Reproducibility}
+\label{sec:uncertainty}
+
+We separate learner-sampling uncertainty from variation across generation runs. A \emph{learner-clustered bootstrap} resamples learners with replacement, retaining all their observations, to obtain 95\% confidence intervals for prediction scores and matched differences. For OULAD, clusters are course enrollments, not physical students; each sampled enrollment retains all its prediction rows. Matching holds dataset, generator, seed, and, where applicable, test learners fixed; intervals are calculated separately for each generated dataset and seed. Pathway-prevalence and behavioral comparisons resample real and synthetic learners separately from the corresponding evaluation sets.
+
+Across up to three available runs, we report mean, population standard deviation (SD), range, and contributing run count. Single-run results are labeled rather than assigned zero SD. Real-only conditions are deterministic across generator seeds, so their reported SD is exactly zero by construction. Cross-run summaries describe generation variability, not learner-sampling uncertainty; neither addresses variation across training/test splits because the split is fixed. Confidence-interval endpoints are not averaged across seeds.
+
+A measure is \emph{not applicable} when its required variable or variation is absent. It is \emph{not estimable} when the available learners or outcome categories do not meet its stated calculation requirements. A pathway matched by no synthetic trajectories still has reportable prevalence: zero. Comparing average behavior within a pathway group requires at least ten qualifying real and ten qualifying synthetic learners; prediction requirements are specified in Table~\ref{tab:prediction-specification}.
+
+Only prespecified measures enter comparisons. Run counts retain reasons for missing values, including inadequate support or single-class outcomes. Automated checks verify run records and matched dataset sizes. The supplement supplies variable definitions, settings, calculation rules, software details, and all unavailable-result statuses.
+
+\paragraph{AI assistance.}
+OpenAI Codex assisted with manuscript drafting, restructuring, language editing, and revision of LaTeX figures and layout. The authors are responsible for the scientific claims, reported results, and final manuscript.
+
+\section{Results}
+
+All 27 paired benchmark runs passed consistency checks; standard/targeted pairs had identical learner and record counts. Results are descriptive three-seed means with population SD unless a smaller count is stated. Missing-result reasons are retained in the supplement, following the reporting rules in Section~\ref{sec:uncertainty}.
+
+\subsection{RQ1: Reproducing Real Learner Behavior}
+\label{sec:rq1-results}
+
+\textbf{Answer to RQ1.} No generator was uniformly closest to real training data across composition, temporal processes, and uncommon pathways. Similar variable distributions coexisted with distorted transitions or pathway prevalence, and a synthetic group large enough for comparison could still show behavior unlike the corresponding real group defined by the same pathway rule.
+
+Figure~\ref{fig:rq1-construct-profile} organizes preservation evidence under the first three lens checks. Within each dataset and metric, generators receive error ranks from 1 (lowest) to 3, averaged only within the labeled facet.
+
+\begin{figure}[!htbp]
+\centering
+\resizebox{\linewidth}{!}{\input{figures/rq1-construct-profile.tex}}
+\caption{RQ1 preservation profile. Cells average relative error ranks over metrics calculable for all generators and seeds (metric counts in parentheses); lower is closer to real training data. OULAD full-record detectability is not generator-comparable (n/a). Available pathway--run comparisons count standard-generation pathway--seed combinations with at least ten qualifying real and ten qualifying synthetic learners, out of all eligible combinations.}
+\label{fig:rq1-construct-profile}
+\end{figure}
+
+\paragraph{Responses and activities across learners.}
+SeqVAE most closely reproduced visible composition in the tutoring datasets, whereas Markov was closest for OULAD. Yet matching individual variables did not ensure realistic records: ASSISTments SeqVAE behavior-rate error was only \(0.12\pm0.08\) percentage points, while source-detection AUROC was \(0.8500\pm0.0008\), compared with Markov's near-chance \(0.5334\pm0.0037\). OULAD full-record detectability remains excluded because of shared profile and outcome construction.
+
+\paragraph{Learning over time.}
+Markov had the lowest aggregated local-process error rank in all datasets, although individual metrics varied. ASSISTments three-event sequence divergence was \(0.0828\pm0.0006\) for Markov versus \(0.8635\pm0.0032\) for SeqVAE. Conversely, SeqVAE most closely retained global early-to-late shape in every dataset, the EdNet response-gap signal, and the OULAD inactivity-gap signal. Local order and overall development therefore favored different generators.
+
+\paragraph{Uncommon pathways.}
+Pathway-prevalence errors included no qualifying synthetic trajectories and severe overproduction; Section~\ref{sec:window-assembly} relates the largest errors to window assembly. The rare-skill pathway occurred among 4.87\% of real ASSISTments learners but \(98.52\pm0.73\)\% of SeqVAE learners. TimeGAN also often produced too few qualifying learners for within-pathway behavioral comparisons (Figure~\ref{fig:rq1-construct-profile}). The supplement retains signed prevalence for all 42 comparisons and support counts for every included or omitted pathway--seed comparison.
+
+\subsection{RQ2: Prediction Within Pathways and Effects of Targeting}
+\label{sec:rq2-results}
+
+\textbf{Answer to RQ2.} Standard synthetic-only training reduced mean overall prediction performance in every dataset--generator combination, but within-pathway results included both losses and gains. Targeting did not consistently improve pathway representation and predictive usefulness together.
+
+\paragraph{Overall prediction.}
+Figure~\ref{fig:rq2-utility-targeting} shows overall primary-task performance. Every standard synthetic-only predictor had lower mean AUPRC than its real-only counterpart. Markov had the smallest loss on ASSISTments (\(0.0276\pm0.0002\)), EdNet (\(0.0308\pm0.0012\)), and OULAD (\(0.0234\pm0.0006\)); the other generators lost more utility in every dataset. Neither standard nor targeted augmentation had a positive mean change over real-only AUPRC in any of the nine dataset--generator combinations (Supplementary Table~S12). Thus, adding either type of synthetic data did not improve mean next-step prediction on real learners.
+
+\begin{figure}[!htbp]
+\centering
+\resizebox{\linewidth}{!}{\input{figures/rq2-utility-and-targeting.tex}}
+\caption{Overall primary-task prediction on held-out real learners. (a) Loss from training the primary predictor on standard synthetic rather than real data. (b) Targeted-minus-standard synthetic-only change. Bars show means, whiskers show population SD, and white points show the three fixed generator seeds. These are descriptive cross-seed summaries. Augmentation results are reported in Supplementary Table~S12, not in these panels.}
+\label{fig:rq2-utility-targeting}
+\end{figure}
+
+\paragraph{Prediction within uncommon pathways.}
+Table~\ref{tab:within-pathway-gaps} shows the baseline within-pathway prediction gap: real-only minus standard synthetic-only AUPRC for the same real test learners in each pathway group. Positive gaps indicate lower synthetic-trained performance; negative gaps indicate higher synthetic-trained performance. These differences are descriptive under one fixed split and three generator seeds.
+
+\input{tables/within-pathway-gaps.tex}
+
+For persistent low correctness in ASSISTments, the Markov synthetic-only predictor achieved mean next-response AUPRC of 0.0815, compared with 0.1436 for the real-only predictor. The real-test group matching this pathway contained 27 learners contributing 891 predictions, of which 2.69\% were correct responses. The positive proportion provides the relevant no-skill AUPRC reference.
+
+A pathway-specific gain can also occur despite an overall loss. For OULAD with Markov, standard synthetic-only training had lower overall AUPRC than real-only training (0.8991 versus 0.9225), while the standard synthetic-only predictor's mean AUPRC within reengagement was higher (0.7503 versus 0.7060); standard synthetic augmentation reached 0.7599. The real-test group matching reengagement contained 19 course enrollments contributing 357 predictions, with 50.14\% engaged weeks. Thus, overall evaluation can miss both pathway-specific losses and exceptions.
+
+\paragraph{Changes under targeting.}
+Targeting increased mean overall synthetic-only AUPRC in five of nine dataset--generator combinations but reduced it in the other four; the largest decrease was OULAD TimeGAN (\(-0.0344\pm0.0429\)).
+
+Pathway representation and predictive usefulness did not necessarily improve together. In the ASSISTments Markov persistent-low-correctness example, targeting brought pathway prevalence closer to the real-training reference---from 0.48\% to 2.23\%, compared with 2.45\% in real data---but within-pathway mean AUPRC was 0.0782, rather than recovering the real-only score of 0.1436. Closer prevalence agreement therefore did not recover the real-trained predictor's performance in these runs; the small standard-to-targeted difference alone does not establish harm.
+
+Figure~\ref{fig:rq2-targeting-effects} directly relates prevalence-error reduction to within-pathway AUPRC change. Both were positive in only 6/42 comparisons. The comparisons share datasets, generators, and sometimes learners and are not independent samples.
+
+Within-pathway shape-change means were unavailable in 12 of the 42 dataset--generator--pathway summaries because no paired run met the learner-count requirements. Of the 30 available means, seven used fewer than three paired runs. For example, ASSISTments SeqVAE high-hint-use shape-error reduction was 0.0411 from one available run, not evidence of zero variability. Supplementary Table~S16 summarizes support; the accompanying \texttt{rare-shape-estimability.csv} records individual pathway--seed calculations and missing-result reasons.
+
+\begin{figure}[!htbp]
+\centering
+\resizebox{\linewidth}{!}{\input{figures/rq2-targeting-effects.tex}}
+\caption{Descriptive targeting effects. (a) Dataset--generator--pathway means: right indicates reduced prevalence error (standard minus targeted); up indicates higher within-pathway AUPRC (targeted minus standard). Quadrant counts use unrounded means. (b) Shape-error reduction requires at least ten qualifying real and synthetic learners per condition in a paired run. Hollow points label contributing counts below three; 12 summaries have no available paired mean. A and O mark the two examples discussed in the text.}
+\label{fig:rq2-targeting-effects}
+\end{figure}
+
+\paragraph{Additional learner-level tasks.}
+These tasks predict a later learner-level outcome, distinct from predicting the next response within a same-named whole-trajectory pathway. TimeGAN's synthetic-only persistent-low-correctness conditions contained only one outcome class in every tutoring-data seed, and most recovery comparisons also could not be calculated; the affected comparisons remain missing rather than being scored as zero. For ASSISTments persistent-low-correctness prediction, standard augmentation produced larger positive mean changes with Markov and SeqVAE, while TimeGAN's mean AUPRC change was close to zero (\(+0.0004\pm0.0154\); Supplementary Table~S12). These descriptive patterns did not establish a consistent benefit across tasks and settings. OULAD outcomes evaluate the complete processing procedure because dropout and failure are constructed after behavioral generation.
+
+\subsection{Supporting Disclosure Audit}
+\label{sec:disclosure-results}
+No exact or threshold-defined near matches were found among evaluated ASSISTments or EdNet trajectories. Across standard and targeted tutoring conditions, mean membership-inference advantage ranged from 0.0000 to 0.0528; targeting increased the ASSISTments mean for all generators by 0.0178--0.0409. OULAD dominant-activity/engagement copying ranged from 0.31\% for standard SeqVAE to 15.57\% for standard TimeGAN. Supplementary Figure~S1 presents the detailed audit. These dataset-level findings neither estimate pathway-specific privacy nor certify release safety.
+\FloatBarrier
+
+\section{Discussion}
+
+Synthetic learner pathways can occur at plausible rates without preserving the behavior or predictive information they represent. For RQ1, agreement on overall behavior did not reliably preserve event order or uncommon pathways. For RQ2, targeting sometimes improved pathway frequency without improving prediction for corresponding real learners, and sometimes the reverse occurred (Figure~\ref{fig:rq2-targeting-effects}). The Pathway-Centric Evaluation Lens therefore evaluates pathway frequency, behavior within the pathway, and prediction for real learners separately, according to the intended use.
+
+\subsection{Temporal Fidelity and Behavioral Meaning}
+\label{sec:window-assembly}
+
+Matching response and activity rates did not establish event-order fidelity: recovery and decline can have the same correctness rate. Temporal learning-analytics research calls for aligning timing and order with the question being asked~\cite{knight2017time,molenaar2014sequential,saint2020combining}. Our findings extend that principle to generated records: required temporal properties must be checked directly, not inferred from aggregate similarity. Two trajectories can satisfy the same recovery rule yet differ between the early and late periods. Within-pathway checks therefore matter for claims about how recorded behavior develops. Prior work found that modeling cross-semester dependencies improved synthetic student pathways~\cite{huang2026pathways}. Here, Markov best preserved local-process measures, whereas SeqVAE more closely preserved early-to-late shape.
+
+Overproducing the rare-skill pathway need not mean better coverage of uncommon behavior; generated records could make an unusual ordering appear widespread. Joining independently generated 20-event windows might create unlikely transitions: overproduction was largest in longer trajectories requiring several joins, while Markov used no joins and showed no comparable overproduction. We did not vary assembly, so this remains a hypothesis. Although TimeGAN was designed to preserve temporal dynamics~\cite{yoon2019timegan}, our findings concern the tested pipeline, including assembly and postprocessing, not TimeGAN generally.
+
+\subsection{Pathway Frequency Is Not Predictive Usefulness}
+
+In the ASSISTments Markov example, targeting brought persistent-low-correctness prevalence close to the real reference, but within-pathway AUPRC remained below the real-trained benchmark. The small standard-to-targeted difference does not establish harm; better prevalence agreement did not recover predictive usefulness. Qualifying trajectories may still lack the history--outcome relationships needed for prediction, but we did not isolate the cause.
+
+Figure~\ref{fig:rq2-targeting-effects} also shows prediction gains without better prevalence fidelity. Descriptive research needs credible pathway frequencies, whereas predictor development may tolerate oversampling if performance improves on real learners. Thus, six joint gains among 42 descriptive comparisons are not a success rate for every use. This tradeoff resembles reported privacy--fairness--utility tensions~\cite{liu2025fairprivate}, but behavioral pathway representation is not demographic fairness.
+
+\subsection{Prediction, Access, and Privacy Are Different Claims}
+
+Our overall next-step losses contrast with near-real utility reported for some tabular learner-level tasks~\cite{liu2024scaling,khalil2025artificial}, but the studies differ in outcomes, generators, and evaluations. Poor real-data transfer for some models selected on synthetic validation data has also been reported~\cite{flanagan2022fine}; our findings extend that concern to pathway-specific evaluation. OULAD reengagement showed a pathway gain despite the overall loss, but the 19-enrollment test group cannot establish a general benefit.
+
+Augmentation did not improve mean overall next-step AUPRC when real training data were available. Synthetic records might still support tool development under restricted access, with controlled real-data evaluation; we did not test that arrangement. Access value does not establish release safety. Targeting increased the dataset-level membership-inference signal in ASSISTments, consistent with cautions against assuming synthesis guarantees anonymity~\cite{stadler2022synthetic,vie2022privacy,vanbreugel2023membership}. Our audit provides neither a pathway-specific risk estimate nor a formal privacy guarantee.
+
+\subsection{Implications for Use}
+
+The lens extends resemblance, utility, and privacy assessments~\cite{liu2024scaling,liu2025ensuring} by linking fixed pathway definitions to prevalence, within-pathway behavior, and real-learner prediction. Synthetic fidelity and educational construct validity remain distinct: recovery and disengagement are operational groupings, not diagnoses of mastery, motivation, or self-regulation. In OULAD, nonzero clicks indicate platform activity, not cognitive or emotional engagement. Preserving an indicator does not validate a broader interpretation; distorting the indicator during synthesis further weakens that interpretation.
+
+The checks inform decisions before use. Researchers estimating pathway frequencies need prevalence evidence; those studying behavioral development also need within-pathway temporal evidence. Developers need prediction tests on separate real learners, with pathway support counts. A failed or unavailable check calls for pipeline revision, further validation, or a narrower claim. Data stewards must assess disclosure separately. The lens sets no universal acceptance threshold and certifies no educational benefit. Prediction groups are defined retrospectively, so the scores show neither early identification of a pathway nor intervention benefit.
+
+\subsection{Limitations}
+
+The benchmark uses three datasets, three generators, three seeds, one learner split, one prespecified predictor, and one joint-targeting weighting scheme. Generator rankings and pathway-specific targeting effects may not transfer to other settings; predictive usefulness is conditional on the tested predictor. Small pathway groups limit precision. Event-level scoring gives longer trajectories more influence, so reported AUPRC is not an equal-weighted average across learners. OULAD resampling treats course enrollments as clusters rather than physical students, so uncertainty may not capture dependence between a student's enrollments. Shared OULAD outcome construction also limits generator-specific claims. Boundary diagnostics and a real-window assembly control could test the proposed explanation for inflated rare-skill counts. We assume benign source data and generation; adversarial manipulation requires separate integrity controls~\cite{liu2026quality}. The disclosure audit establishes neither pathway-specific safety nor differential privacy.
+
+\section{Conclusion}
+
+Reproducing a learner pathway's frequency did not ensure that synthetic trajectories preserved its behavior or supported prediction for corresponding real learners. Across three datasets and generators, overall resemblance did not consistently preserve temporal structure or uncommon pathways. Standard synthetic-only training lowered mean overall next-step AUPRC in all nine dataset--generator combinations; augmentation did not improve mean overall AUPRC. Targeting rarely improved pathway prevalence and prediction together.
+
+The Pathway-Centric Evaluation Lens treats prevalence, within-pathway behavior, and real-learner prediction as separate validity checks for a stated use, not a universal generator ranking. Predictive usefulness does not establish privacy safety or improved educational outcomes.
+
+
+\interlinepenalty=0
+\bibliography{references}
+
+\end{document}

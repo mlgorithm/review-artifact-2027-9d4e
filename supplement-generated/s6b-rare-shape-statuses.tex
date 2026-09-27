@@ -1,0 +1,25 @@
+\scriptsize
+\setlength{\tabcolsep}{5pt}
+\begin{longtable}{@{}p{2.3cm}p{1.8cm}p{2.7cm}p{3.0cm}p{3.0cm}p{3.1cm}p{3.3cm}@{}}
+\caption{Rare-pathway conditional-shape support summarized by dataset and generator. Each fraction is the number of estimable pathway--seed cells over all eligible cells; each arm requires at least 10 qualifying real and synthetic learners. ``Affected pathways'' counts pathways with at least one non-estimable standard, targeted, or paired cell. The accompanying \texttt{rare-shape-estimability.csv} retains all 126 seed-level records, exact statuses, and real/synthetic learner counts.}\label{tab:supp-shape-statuses}\\
+\toprule
+Dataset & Generator & Eligible cells & Standard shape & Targeted shape & Paired comparison & Affected pathways \\
+\midrule
+\endfirsthead
+\multicolumn{7}{l}{\textit{Continued from previous page}}\\
+\toprule
+Dataset & Generator & Eligible cells & Standard shape & Targeted shape & Paired comparison & Affected pathways \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+ASSISTments & Markov & 18 & 17/18 & 18/18 & 17/18 & 1/6 \\
+ASSISTments & SeqVAE & 18 & 10/18 & 12/18 & 10/18 & 3/6 \\
+ASSISTments & TimeGAN & 18 & 4/18 & 2/18 & 2/18 & 6/6 \\
+EdNet & Markov & 15 & 15/15 & 15/15 & 15/15 & 0/5 \\
+EdNet & SeqVAE & 15 & 11/15 & 11/15 & 11/15 & 2/5 \\
+EdNet & TimeGAN & 15 & 3/15 & 3/15 & 3/15 & 4/5 \\
+OULAD & Markov & 9 & 9/9 & 9/9 & 9/9 & 0/3 \\
+OULAD & SeqVAE & 9 & 9/9 & 9/9 & 9/9 & 0/3 \\
+OULAD & TimeGAN & 9 & 6/9 & 6/9 & 6/9 & 3/3 \\
+\end{longtable}

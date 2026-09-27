@@ -1,0 +1,33 @@
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{@{}p{2.2cm}p{2.0cm}p{3.6cm}p{7.05cm}p{7.65cm}@{}}
+\caption{Learner-level outcome-task statuses. Every source status entry is represented: overall task status and any non-estimable arm are shown together rather than replacing undefined metrics with zero.}\label{tab:supp-statuses}\\
+\toprule
+Dataset & Generator & Task & Overall task status and seeds & Non-estimable arms and seeds \\
+\midrule
+\endfirsthead
+\toprule
+Dataset & Generator & Task & Overall task status and seeds & Non-estimable arms and seeds \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+ASSISTments & Markov & Persistent Low-Correctness Prediction & completed (3): 20260703, 20260704, 20260705 & None \\
+ASSISTments & Markov & Recovery Prediction & completed (3): 20260703, 20260704, 20260705 & None \\
+ASSISTments & SeqVAE & Persistent Low-Correctness Prediction & completed (2): 20260703, 20260705; completed with model collapse (1): 20260704 & Standard synthetic only (TSTR): not estimable model collapse (1): 20260704 \\
+ASSISTments & SeqVAE & Recovery Prediction & completed (3): 20260703, 20260704, 20260705 & None \\
+ASSISTments & TimeGAN & Persistent Low-Correctness Prediction & completed with model collapse (3): 20260703, 20260704, 20260705 & Standard synthetic only (TSTR): not estimable model collapse (3): 20260703, 20260704, 20260705 Targeted synthetic only: not estimable model collapse (3): 20260703, 20260704, 20260705 \\
+ASSISTments & TimeGAN & Recovery Prediction & completed (1): 20260704; completed with model collapse (2): 20260703, 20260705 & Standard synthetic only (TSTR): not estimable model collapse (2): 20260703, 20260705 Targeted synthetic only: not estimable model collapse (2): 20260703, 20260705 \\
+EdNet & Markov & Persistent Low-Correctness Prediction & completed (3): 20260703, 20260704, 20260705 & None \\
+EdNet & Markov & Recovery Prediction & completed (3): 20260703, 20260704, 20260705 & None \\
+EdNet & SeqVAE & Persistent Low-Correctness Prediction & completed (3): 20260703, 20260704, 20260705 & None \\
+EdNet & SeqVAE & Recovery Prediction & completed (3): 20260703, 20260704, 20260705 & None \\
+EdNet & TimeGAN & Persistent Low-Correctness Prediction & completed with model collapse (3): 20260703, 20260704, 20260705 & Standard synthetic only (TSTR): not estimable model collapse (3): 20260703, 20260704, 20260705 Targeted synthetic only: not estimable model collapse (3): 20260703, 20260704, 20260705 \\
+EdNet & TimeGAN & Recovery Prediction & completed with model collapse (3): 20260703, 20260704, 20260705 & Standard synthetic only (TSTR): not estimable model collapse (3): 20260703, 20260704, 20260705 Targeted synthetic only: not estimable model collapse (3): 20260703, 20260704, 20260705 \\
+OULAD & Markov & Course Failure Prediction & completed (3): 20260703, 20260704, 20260705 & None \\
+OULAD & Markov & Dropout Prediction & completed (3): 20260703, 20260704, 20260705 & None \\
+OULAD & SeqVAE & Course Failure Prediction & completed (3): 20260703, 20260704, 20260705 & None \\
+OULAD & SeqVAE & Dropout Prediction & completed (3): 20260703, 20260704, 20260705 & None \\
+OULAD & TimeGAN & Course Failure Prediction & completed (3): 20260703, 20260704, 20260705 & None \\
+OULAD & TimeGAN & Dropout Prediction & completed (3): 20260703, 20260704, 20260705 & None \\
+\end{longtable}

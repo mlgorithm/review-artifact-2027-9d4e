@@ -1,0 +1,46 @@
+dataset,model,facet,mean_within_dataset_rank,metric_count
+ASSISTments,Markov,Marginal composition,2.0,3
+ASSISTments,Markov,Holistic detectability,1.0,1
+ASSISTments,Markov,Local process structure,1.0,5
+ASSISTments,Markov,Global trajectory shape,2.0,1
+ASSISTments,Markov,Pathway prevalence match,1.0,6
+ASSISTments,SeqVAE,Marginal composition,1.0,3
+ASSISTments,SeqVAE,Holistic detectability,2.0,1
+ASSISTments,SeqVAE,Local process structure,2.6,5
+ASSISTments,SeqVAE,Global trajectory shape,1.0,1
+ASSISTments,SeqVAE,Pathway prevalence match,2.1666666666666665,6
+ASSISTments,TimeGAN,Marginal composition,3.0,3
+ASSISTments,TimeGAN,Holistic detectability,3.0,1
+ASSISTments,TimeGAN,Local process structure,2.4,5
+ASSISTments,TimeGAN,Global trajectory shape,3.0,1
+ASSISTments,TimeGAN,Pathway prevalence match,2.8333333333333335,6
+EdNet,Markov,Marginal composition,2.0,3
+EdNet,Markov,Holistic detectability,1.0,1
+EdNet,Markov,Local process structure,1.2,5
+EdNet,Markov,Global trajectory shape,2.0,1
+EdNet,Markov,Pathway prevalence match,1.0,5
+EdNet,SeqVAE,Marginal composition,1.3333333333333333,3
+EdNet,SeqVAE,Holistic detectability,2.0,1
+EdNet,SeqVAE,Local process structure,2.4,5
+EdNet,SeqVAE,Global trajectory shape,1.0,1
+EdNet,SeqVAE,Pathway prevalence match,2.2,5
+EdNet,TimeGAN,Marginal composition,2.6666666666666665,3
+EdNet,TimeGAN,Holistic detectability,3.0,1
+EdNet,TimeGAN,Local process structure,2.4,5
+EdNet,TimeGAN,Global trajectory shape,3.0,1
+EdNet,TimeGAN,Pathway prevalence match,2.8,5
+OULAD,Markov,Marginal composition,1.3333333333333333,3
+OULAD,Markov,Holistic detectability,,0
+OULAD,Markov,Local process structure,1.4,5
+OULAD,Markov,Global trajectory shape,2.0,1
+OULAD,Markov,Pathway prevalence match,2.3333333333333335,3
+OULAD,SeqVAE,Marginal composition,1.6666666666666667,3
+OULAD,SeqVAE,Holistic detectability,,0
+OULAD,SeqVAE,Local process structure,1.6,5
+OULAD,SeqVAE,Global trajectory shape,1.0,1
+OULAD,SeqVAE,Pathway prevalence match,1.0,3
+OULAD,TimeGAN,Marginal composition,3.0,3
+OULAD,TimeGAN,Holistic detectability,,0
+OULAD,TimeGAN,Local process structure,3.0,5
+OULAD,TimeGAN,Global trajectory shape,3.0,1
+OULAD,TimeGAN,Pathway prevalence match,2.6666666666666665,3

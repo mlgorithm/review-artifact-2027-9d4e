@@ -1,0 +1,206 @@
+% Native vector icons and source tags keep the figure editable and legible in
+% grayscale. Repeated tags replace long, crossing reuse arrows.
+\begingroup
+\definecolor{pipeink}{HTML}{243547}
+\definecolor{pipemuted}{HTML}{586675}
+\definecolor{pipeblue}{HTML}{28658C}
+\definecolor{pipeteal}{HTML}{187A72}
+\definecolor{pipepurple}{HTML}{70549A}
+\definecolor{pipemagenta}{HTML}{9B527B}
+\definecolor{pipegold}{HTML}{916817}
+\definecolor{pipeslate}{HTML}{58677E}
+\colorlet{pipeR}{pipeblue}
+\colorlet{pipeF}{pipeteal}
+\colorlet{pipeH}{pipegold}
+\colorlet{pipeS}{pipepurple}
+\colorlet{pipeT}{pipemagenta}
+\hyphenpenalty=10000
+\newcommand{\pipetag}[1]{\textcolor{pipe#1}{\textbf{[#1]}}}
+
+% #1 name, #2 x, #3 y, #4 width, #5 height, #6 color,
+% #7 icon, #8 heading, #9 body. All process cards share one grid.
+\newcommand{\pipeprocess}[9]{%
+    \node[process, draw=#6!45, fill=#6!5,
+        minimum width=#4cm, minimum height=#5cm] (#1) at (#2,#3) {};
+    \fill[#6!13] ($(#1.north west)+(0.40,-0.37)$) circle (0.25cm);
+    \pic[draw=#6] at ($(#1.north west)+(0.40,-0.37)$) {#7};
+    \node[processtitle, text width={#4cm-1.03cm}]
+        at ($(#1.north west)+(0.82,-0.22)$) {#8};
+    \node[processbody, text width={#4cm-0.48cm}]
+        at ($(#1.north west)+(0.24,-0.68)$) {#9};
+}
+\newcommand{\pipestage}[4]{%
+    \fill[#3, rounded corners=3pt] (0,#1-0.31) rectangle (17.2,#1+0.31);
+    \node[font=\fontencoding{T1}\sffamily\bfseries\fontsize{9}{10}\selectfont,
+        text=white, inner sep=0pt] at (0.43,#1) {#2};
+    \draw[white!45!#3, line width=0.5pt] (0.86,#1-0.17) -- (0.86,#1+0.17);
+    \node[stage] at (1.10,#1) {#4};
+}
+% #1 x, #2 top y, #3 color, #4 icon, #5 title, #6 dimension label.
+\newcommand{\pipeeval}[6]{%
+    \draw[draw=#3!40, fill=white, rounded corners=3pt, line width=0.6pt]
+        (#1,#2) rectangle (#1+8.4,#2-3.61);
+    \fill[#3!9, rounded corners=3pt]
+        (#1+0.015,#2-0.015) rectangle (#1+8.385,#2-1.04);
+    \fill[#3!17] (#1+0.48,#2-0.48) circle (0.29cm);
+    \pic[draw=#3, scale=1.12] at (#1+0.48,#2-0.48) {#4};
+    \node[cardtitle, text=#3] at (#1+0.98,#2-0.22) {#5};
+    \node[dim] at (#1+0.98,#2-0.66) {#6};
+}
+
+\begin{tikzpicture}[
+    x=1cm, y=1cm, text=pipeink,
+    font=\fontencoding{T1}\sffamily\fontsize{8.5}{10.5}\selectfont,
+    process/.style={line width=0.6pt, rounded corners=3pt,
+        inner sep=0pt, outer sep=0pt},
+    processtitle/.style={anchor=north west, inner sep=0pt, align=left,
+        font=\fontencoding{T1}\sffamily\bfseries\fontsize{8.5}{10}\selectfont},
+    processbody/.style={anchor=north west, inner sep=0pt, align=left,
+        font=\fontencoding{T1}\sffamily\fontsize{8.3}{10.2}\selectfont},
+    flow/.style={draw=pipemuted!85, line width=0.85pt,
+        -{Stealth[length=1.7mm,width=1.3mm]}, shorten <=1.5pt, shorten >=1.5pt},
+    stage/.style={anchor=west, inner sep=0pt, text=white,
+        font=\fontencoding{T1}\sffamily\bfseries\fontsize{10}{12}\selectfont},
+    detail/.style={anchor=west, inner sep=0pt, text=pipemuted,
+        font=\fontencoding{T1}\sffamily\fontsize{8}{10}\selectfont},
+    cardtitle/.style={anchor=north west, inner sep=0pt, text width=7.08cm,
+        font=\fontencoding{T1}\sffamily\bfseries\fontsize{9}{11}\selectfont},
+    cardbody/.style={anchor=north west, inner sep=0pt,
+        align=left, text width=7.80cm},
+    dim/.style={anchor=north west, inner sep=0pt, text=pipemuted,
+        font=\fontencoding{T1}\sffamily\fontsize{8}{10}\selectfont},
+    % Consistent line icons, drawn natively rather than using an icon font.
+    every pic/.style={line width=0.75pt, line cap=round, line join=round},
+    pics/database/.style={code={
+        \draw (-0.16,0.11) -- (-0.16,-0.12)
+            arc[start angle=180,end angle=360,x radius=0.16,y radius=0.055]
+            -- (0.16,0.11);
+        \draw (0,0.11) ellipse[x radius=0.16,y radius=0.055];
+        \draw (-0.16,-0.005)
+            arc[start angle=180,end angle=360,x radius=0.16,y radius=0.055];
+    }},
+    pics/sequence/.style={code={
+        \draw (-0.18,-0.09) -- (-0.02,0.11) -- (0.17,-0.04);
+        \draw[fill=white] (-0.18,-0.09) circle (0.04);
+        \draw[fill=white] (-0.02,0.11) circle (0.04);
+        \draw[fill=white] (0.17,-0.04) circle (0.04);
+    }},
+    pics/split/.style={code={
+        \draw (0,0.16) -- (0,0.03);
+        \draw (-0.15,-0.14) -- (-0.15,0.03) -- (0.15,0.03) -- (0.15,-0.14);
+        \draw (-0.20,-0.08) -- (-0.15,-0.14) -- (-0.10,-0.08);
+        \draw (0.10,-0.08) -- (0.15,-0.14) -- (0.20,-0.08);
+    }},
+    pics/learners/.style={code={
+        \draw (0,0.105) circle (0.065);
+        \draw (-0.105,-0.16) -- (-0.105,-0.10)
+            .. controls (-0.105,0.005) and (0.105,0.005) .. (0.105,-0.10)
+            -- (0.105,-0.16) -- cycle;
+        \draw (-0.16,0.065) arc[start angle=90,end angle=265,radius=0.05];
+        \draw (0.16,0.065) arc[start angle=90,end angle=-85,radius=0.05];
+    }},
+    pics/lock/.style={code={
+        \draw[rounded corners=0.5pt] (-0.14,-0.16) rectangle (0.14,0.055);
+        \draw (-0.08,0.055) -- (-0.08,0.12)
+            arc[start angle=180,end angle=0,radius=0.08] -- (0.08,0.055);
+        \draw (0,-0.025) -- (0,-0.095);
+    }},
+    pics/check/.style={code={
+        \draw (0,0) circle (0.17);
+        \draw (-0.095,0) -- (-0.025,-0.07) -- (0.10,0.08);
+    }},
+    pics/target/.style={code={
+        \draw (0,0) circle (0.17);
+        \draw (0,0) circle (0.09);
+        \draw (0,0) -- (0.18,0.18);
+        \draw (0.11,0.18) -- (0.18,0.18) -- (0.18,0.11);
+    }},
+    pics/model/.style={code={
+        \draw (-0.14,0.13) -- (0.14,0.10) -- (-0.14,-0.13)
+            -- (0.14,-0.10) -- (-0.14,0.13);
+        \foreach \x/\y in {-0.14/0.13,-0.14/-0.13,0.14/0.10,0.14/-0.10}
+            \draw[fill=white] (\x,\y) circle (0.045);
+    }},
+    pics/synthetic/.style={code={
+        \draw[rounded corners=0.5pt] (-0.15,-0.16) rectangle (0.09,0.12);
+        \draw (-0.09,-0.08) -- (0.03,-0.08);
+        \draw (-0.09,-0.01) -- (0.03,-0.01);
+        \draw (0.14,0.035) -- (0.14,0.195);
+        \draw (0.06,0.115) -- (0.22,0.115);
+    }},
+    pics/chart/.style={code={
+        \draw (-0.17,0.16) -- (-0.17,-0.16) -- (0.18,-0.16);
+        \draw (-0.11,-0.10) -- (-0.01,0.015) -- (0.07,-0.025) -- (0.17,0.14);
+        \draw[densely dotted] (-0.11,-0.025) -- (-0.01,0.065)
+            -- (0.07,0.035) -- (0.17,0.095);
+    }},
+    pics/branches/.style={code={
+        \draw (-0.17,0) -- (-0.03,0) -- (0.12,0.13) -- (0.19,0.13);
+        \draw (-0.03,0) -- (0.12,-0.13) -- (0.19,-0.13);
+        \draw[fill=white] (-0.17,0) circle (0.035);
+        \draw[fill=white] (0.19,0.13) circle (0.035);
+        \draw[fill=white] (0.19,-0.13) circle (0.035);
+    }},
+    pics/shield/.style={code={
+        \draw (0,0.18) -- (0.16,0.11) -- (0.14,-0.045)
+            .. controls (0.12,-0.12) and (0.055,-0.16) .. (0,-0.19)
+            .. controls (-0.055,-0.16) and (-0.12,-0.12) .. (-0.14,-0.045)
+            -- (-0.16,0.11) -- cycle;
+        \draw (-0.07,0.015) -- (-0.015,-0.04) -- (0.075,0.06);
+    }},
+    pics/settings/.style={code={
+        \draw (-0.17,0.11) -- (0.17,0.11);
+        \draw (-0.17,-0.02) -- (0.17,-0.02);
+        \draw (-0.17,-0.15) -- (0.17,-0.15);
+        \draw[fill=white] (-0.06,0.11) circle (0.04);
+        \draw[fill=white] (0.08,-0.02) circle (0.04);
+        \draw[fill=white] (-0.025,-0.15) circle (0.04);
+    }}
+]
+
+% Compact overview: details remain in the methods and merged lens table.
+\pipestage{13.00}{01}{pipeblue}{Separate learners before fitting rules or models}
+\pipeprocess{raw}{2.60}{11.70}{5.20}{1.80}{pipeblue}{database}
+    {Ordered learner trajectories}{ASSISTments, EdNet KT1, OULAD\\Learner-disjoint 80/20 split}
+\pipeprocess{real}{8.50}{11.70}{5.60}{1.80}{pipeblue}{learners}
+    {\pipetag{R} Real training learners}{Estimate processing rules and\\\pipetag{F} fixed pathway rules}
+\pipeprocess{test}{14.50}{11.70}{5.40}{1.80}{pipegold}{check}
+    {\pipetag{H} Held-out real learners}{Evaluation only; all enrollments of an OULAD student stay together}
+\draw[flow] (raw.east) -- (real.west);
+\draw[flow] (raw.south) -- (2.60,10.55) -- (14.50,10.55) -- (test.south);
+
+\pipestage{9.97}{02}{pipepurple}{Generate matched datasets for each dataset, generator, and seed}
+\pipeprocess{standardinput}{3.10}{8.69}{6.20}{1.70}{pipeblue}{learners}
+    {Standard input: \pipetag{R}}{All learners have weight 1}
+\pipeprocess{standardout}{12.00}{8.69}{10.40}{1.70}{pipepurple}{synthetic}
+    {Fit generator $\rightarrow$ \pipetag{S} standard synthetic data}
+    {Markov, SeqVAE, or TimeGAN\\Generate learner trajectories}
+\draw[flow, draw=pipepurple!85] (standardinput) -- (standardout);
+\pipeprocess{targetinput}{3.10}{6.72}{6.20}{1.85}{pipemagenta}{target}
+    {Targeted input: \pipetag{R} with \pipetag{F}}
+    {Eligible pathway union: weight 3\\Other learners: weight 1\\Overlapping rules do not compound}
+\pipeprocess{targetout}{12.00}{6.72}{10.40}{1.85}{pipemagenta}{model}
+    {Fit same generator family $\rightarrow$ \pipetag{T} targeted data}
+    {All real-training learners remain eligible\\Same neural training-update limit as standard\\Matched seed and learner/record totals}
+\draw[flow, draw=pipemagenta!85] (targetinput) -- (targetout);
+\node[processbody, text width=17.0cm, text=pipemuted] at (0.10,5.57)
+    {Shared processing: lengths estimated from \pipetag{R}; common normalization; OULAD profiles and terminal outcomes assigned after generation (Section~\ref{sec:generator-inputs}).};
+
+\pipestage{4.57}{03}{pipeteal}{Evaluate preservation, predictive usefulness, and disclosure separately}
+\pipeprocess{preserve}{2.75}{2.16}{5.50}{3.85}{pipeblue}{chart}
+    {RQ1: Preservation}
+    {Compare \pipetag{S} with \pipetag{R}: population composition and temporal processes.\\[4pt]
+    Apply \pipetag{F} unchanged to compare pathway prevalence and within-pathway behavior.}
+\pipeprocess{predict}{8.60}{2.16}{5.70}{3.85}{pipepurple}{target}
+    {RQ2: Pathway-level prediction}
+    {Fit predictors on \pipetag{R}, \pipetag{S}, \pipetag{R}+\pipetag{S}, \pipetag{T}, \pipetag{R}+\pipetag{T}; test on \pipetag{H}.\\[4pt]
+    Apply \pipetag{F} to \pipetag{H} after prediction to score pathways; rules are not inputs.\\[4pt]
+    Interpret with \pipetag{S}/\pipetag{T} pathway errors against \pipetag{R}.}
+\pipeprocess{audit}{14.45}{2.16}{5.50}{3.85}{pipeslate}{shield}
+    {Supporting disclosure audit}
+    {Copying: \pipetag{S}/\pipetag{T} versus \pipetag{R}.\\[4pt]
+    Membership: \pipetag{R} vs.\ \pipetag{H} using proximity to \pipetag{S}/\pipetag{T}, where applicable.\\[4pt]
+    OULAD: exact copying in the activity/engagement projection only.}
+
+\end{tikzpicture}
+\endgroup

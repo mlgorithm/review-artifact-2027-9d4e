@@ -1,0 +1,65 @@
+\begingroup
+\fontsize{6.8}{7.6}\selectfont
+\renewcommand{\arraystretch}{0.90}
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTpre}{2pt}
+\setlength{\LTpost}{2pt}
+\begin{longtable}{@{}p{2.0cm}p{1.8cm}p{3.1cm}p{2.0cm}p{2.25cm}p{2.25cm}p{2.35cm}p{2.35cm}@{}}
+\caption{Signed rare-pathway prevalence results. Prevalences are learner percentages and differences are synthetic minus real in percentage points. Positive differences mean overrepresentation; negative differences mean underrepresentation. Values are mean $\pm$ population SD across the three fixed generator seeds.}\label{tab:supp-signed-prevalence}\\
+\toprule
+Dataset & Generator & Pathway & Real (\%) & Standard synth. (\%) & Targeted synth. (\%) & Standard signed diff. (pp) & Targeted signed diff. (pp) \\
+\midrule
+\endfirsthead
+\toprule
+Dataset & Generator & Pathway & Real (\%) & Standard synth. (\%) & Targeted synth. (\%) & Standard signed diff. (pp) & Targeted signed diff. (pp) \\
+\midrule
+\endhead
+\midrule
+\multicolumn{8}{r}{\textit{Continued on next page}}\\
+\endfoot
+\bottomrule
+\endlastfoot
+ASSISTments & Markov & High Hint Use & $4.20 \mathbin{\pm} 0.00$ & $1.27 \mathbin{\pm} 0.15$ & $5.79 \mathbin{\pm} 0.30$ & $-2.93 \mathbin{\pm} 0.15$ & $+1.59 \mathbin{\pm} 0.30$ \\
+ASSISTments & Markov & Late Correctness Decline & $2.65 \mathbin{\pm} 0.00$ & $3.15 \mathbin{\pm} 0.13$ & $4.66 \mathbin{\pm} 0.28$ & $+0.50 \mathbin{\pm} 0.13$ & $+2.00 \mathbin{\pm} 0.28$ \\
+ASSISTments & Markov & Persistent Low Correctness & $2.45 \mathbin{\pm} 0.00$ & $0.48 \mathbin{\pm} 0.17$ & $2.23 \mathbin{\pm} 0.55$ & $-1.97 \mathbin{\pm} 0.17$ & $-0.22 \mathbin{\pm} 0.55$ \\
+ASSISTments & Markov & Rapid Low-Accuracy Responding & $2.57 \mathbin{\pm} 0.00$ & $1.17 \mathbin{\pm} 0.14$ & $4.12 \mathbin{\pm} 0.34$ & $-1.40 \mathbin{\pm} 0.14$ & $+1.56 \mathbin{\pm} 0.34$ \\
+ASSISTments & Markov & Rare Skill Path & $4.87 \mathbin{\pm} 0.00$ & $2.11 \mathbin{\pm} 0.76$ & $2.77 \mathbin{\pm} 0.68$ & $-2.76 \mathbin{\pm} 0.76$ & $-2.10 \mathbin{\pm} 0.68$ \\
+ASSISTments & Markov & Recovery & $3.32 \mathbin{\pm} 0.00$ & $3.42 \mathbin{\pm} 0.31$ & $4.31 \mathbin{\pm} 0.46$ & $+0.10 \mathbin{\pm} 0.31$ & $+0.98 \mathbin{\pm} 0.46$ \\
+ASSISTments & SeqVAE & High Hint Use & $4.20 \mathbin{\pm} 0.00$ & $0.30 \mathbin{\pm} 0.27$ & $0.51 \mathbin{\pm} 0.24$ & $-3.90 \mathbin{\pm} 0.27$ & $-3.69 \mathbin{\pm} 0.24$ \\
+ASSISTments & SeqVAE & Late Correctness Decline & $2.65 \mathbin{\pm} 0.00$ & $1.81 \mathbin{\pm} 0.70$ & $2.43 \mathbin{\pm} 0.56$ & $-0.85 \mathbin{\pm} 0.70$ & $-0.22 \mathbin{\pm} 0.56$ \\
+ASSISTments & SeqVAE & Persistent Low Correctness & $2.45 \mathbin{\pm} 0.00$ & $0.08 \mathbin{\pm} 0.09$ & $0.09 \mathbin{\pm} 0.10$ & $-2.37 \mathbin{\pm} 0.09$ & $-2.36 \mathbin{\pm} 0.10$ \\
+ASSISTments & SeqVAE & Rapid Low-Accuracy Responding & $2.57 \mathbin{\pm} 0.00$ & $0.11 \mathbin{\pm} 0.06$ & $0.12 \mathbin{\pm} 0.14$ & $-2.46 \mathbin{\pm} 0.06$ & $-2.45 \mathbin{\pm} 0.14$ \\
+ASSISTments & SeqVAE & Rare Skill Path & $4.87 \mathbin{\pm} 0.00$ & $98.52 \mathbin{\pm} 0.73$ & $98.98 \mathbin{\pm} 0.62$ & $+93.65 \mathbin{\pm} 0.73$ & $+94.11 \mathbin{\pm} 0.62$ \\
+ASSISTments & SeqVAE & Recovery & $3.32 \mathbin{\pm} 0.00$ & $2.33 \mathbin{\pm} 0.97$ & $2.52 \mathbin{\pm} 0.63$ & $-0.99 \mathbin{\pm} 0.97$ & $-0.81 \mathbin{\pm} 0.63$ \\
+ASSISTments & TimeGAN & High Hint Use & $4.20 \mathbin{\pm} 0.00$ & $0.02 \mathbin{\pm} 0.03$ & $0.01 \mathbin{\pm} 0.01$ & $-4.18 \mathbin{\pm} 0.03$ & $-4.19 \mathbin{\pm} 0.01$ \\
+ASSISTments & TimeGAN & Late Correctness Decline & $2.65 \mathbin{\pm} 0.00$ & $0.28 \mathbin{\pm} 0.40$ & $0.05 \mathbin{\pm} 0.07$ & $-2.37 \mathbin{\pm} 0.40$ & $-2.61 \mathbin{\pm} 0.07$ \\
+ASSISTments & TimeGAN & Persistent Low Correctness & $2.45 \mathbin{\pm} 0.00$ & $0.00 \mathbin{\pm} 0.00$ & $0.00 \mathbin{\pm} 0.00$ & $-2.45 \mathbin{\pm} 0.00$ & $-2.45 \mathbin{\pm} 0.00$ \\
+ASSISTments & TimeGAN & Rapid Low-Accuracy Responding & $2.57 \mathbin{\pm} 0.00$ & $0.00 \mathbin{\pm} 0.00$ & $0.00 \mathbin{\pm} 0.00$ & $-2.57 \mathbin{\pm} 0.00$ & $-2.57 \mathbin{\pm} 0.00$ \\
+ASSISTments & TimeGAN & Rare Skill Path & $4.87 \mathbin{\pm} 0.00$ & $14.90 \mathbin{\pm} 20.30$ & $8.44 \mathbin{\pm} 11.46$ & $+10.03 \mathbin{\pm} 20.30$ & $+3.57 \mathbin{\pm} 11.46$ \\
+ASSISTments & TimeGAN & Recovery & $3.32 \mathbin{\pm} 0.00$ & $0.36 \mathbin{\pm} 0.51$ & $0.08 \mathbin{\pm} 0.11$ & $-2.96 \mathbin{\pm} 0.51$ & $-3.25 \mathbin{\pm} 0.11$ \\
+EdNet & Markov & Late Correctness Decline & $7.61 \mathbin{\pm} 0.00$ & $2.07 \mathbin{\pm} 0.14$ & $3.24 \mathbin{\pm} 0.08$ & $-5.54 \mathbin{\pm} 0.14$ & $-4.37 \mathbin{\pm} 0.08$ \\
+EdNet & Markov & Persistent Low Correctness & $4.76 \mathbin{\pm} 0.00$ & $0.35 \mathbin{\pm} 0.10$ & $0.78 \mathbin{\pm} 0.09$ & $-4.41 \mathbin{\pm} 0.10$ & $-3.98 \mathbin{\pm} 0.09$ \\
+EdNet & Markov & Rapid Low-Accuracy Responding & $3.92 \mathbin{\pm} 0.00$ & $0.39 \mathbin{\pm} 0.10$ & $7.63 \mathbin{\pm} 0.38$ & $-3.53 \mathbin{\pm} 0.10$ & $+3.71 \mathbin{\pm} 0.38$ \\
+EdNet & Markov & Rare Skill Path & $5.01 \mathbin{\pm} 0.00$ & $1.76 \mathbin{\pm} 0.60$ & $2.07 \mathbin{\pm} 0.17$ & $-3.25 \mathbin{\pm} 0.60$ & $-2.94 \mathbin{\pm} 0.17$ \\
+EdNet & Markov & Recovery & $4.35 \mathbin{\pm} 0.00$ & $2.13 \mathbin{\pm} 0.07$ & $2.04 \mathbin{\pm} 0.20$ & $-2.22 \mathbin{\pm} 0.07$ & $-2.31 \mathbin{\pm} 0.20$ \\
+EdNet & SeqVAE & Late Correctness Decline & $7.61 \mathbin{\pm} 0.00$ & $1.41 \mathbin{\pm} 0.35$ & $1.70 \mathbin{\pm} 0.17$ & $-6.20 \mathbin{\pm} 0.35$ & $-5.91 \mathbin{\pm} 0.17$ \\
+EdNet & SeqVAE & Persistent Low Correctness & $4.76 \mathbin{\pm} 0.00$ & $0.17 \mathbin{\pm} 0.08$ & $0.11 \mathbin{\pm} 0.03$ & $-4.59 \mathbin{\pm} 0.08$ & $-4.65 \mathbin{\pm} 0.03$ \\
+EdNet & SeqVAE & Rapid Low-Accuracy Responding & $3.92 \mathbin{\pm} 0.00$ & $0.02 \mathbin{\pm} 0.02$ & $0.02 \mathbin{\pm} 0.02$ & $-3.90 \mathbin{\pm} 0.02$ & $-3.90 \mathbin{\pm} 0.02$ \\
+EdNet & SeqVAE & Rare Skill Path & $5.01 \mathbin{\pm} 0.00$ & $90.29 \mathbin{\pm} 0.99$ & $91.51 \mathbin{\pm} 0.48$ & $+85.28 \mathbin{\pm} 0.99$ & $+86.50 \mathbin{\pm} 0.48$ \\
+EdNet & SeqVAE & Recovery & $4.35 \mathbin{\pm} 0.00$ & $1.96 \mathbin{\pm} 0.40$ & $1.90 \mathbin{\pm} 0.16$ & $-2.38 \mathbin{\pm} 0.40$ & $-2.45 \mathbin{\pm} 0.16$ \\
+EdNet & TimeGAN & Late Correctness Decline & $7.61 \mathbin{\pm} 0.00$ & $0.00 \mathbin{\pm} 0.00$ & $0.00 \mathbin{\pm} 0.00$ & $-7.61 \mathbin{\pm} 0.00$ & $-7.61 \mathbin{\pm} 0.00$ \\
+EdNet & TimeGAN & Persistent Low Correctness & $4.76 \mathbin{\pm} 0.00$ & $0.00 \mathbin{\pm} 0.00$ & $0.00 \mathbin{\pm} 0.00$ & $-4.76 \mathbin{\pm} 0.00$ & $-4.76 \mathbin{\pm} 0.00$ \\
+EdNet & TimeGAN & Rapid Low-Accuracy Responding & $3.92 \mathbin{\pm} 0.00$ & $0.00 \mathbin{\pm} 0.00$ & $0.00 \mathbin{\pm} 0.00$ & $-3.92 \mathbin{\pm} 0.00$ & $-3.92 \mathbin{\pm} 0.00$ \\
+EdNet & TimeGAN & Rare Skill Path & $5.01 \mathbin{\pm} 0.00$ & $88.06 \mathbin{\pm} 1.19$ & $89.78 \mathbin{\pm} 0.49$ & $+83.05 \mathbin{\pm} 1.19$ & $+84.77 \mathbin{\pm} 0.49$ \\
+EdNet & TimeGAN & Recovery & $4.35 \mathbin{\pm} 0.00$ & $0.00 \mathbin{\pm} 0.00$ & $0.00 \mathbin{\pm} 0.00$ & $-4.35 \mathbin{\pm} 0.00$ & $-4.35 \mathbin{\pm} 0.00$ \\
+OULAD & Markov & Late Disengagement & $6.74 \mathbin{\pm} 0.00$ & $9.30 \mathbin{\pm} 0.14$ & $8.11 \mathbin{\pm} 0.05$ & $+2.56 \mathbin{\pm} 0.14$ & $+1.38 \mathbin{\pm} 0.05$ \\
+OULAD & Markov & Rare Activity Path & $4.46 \mathbin{\pm} 0.00$ & $1.73 \mathbin{\pm} 0.07$ & $10.67 \mathbin{\pm} 0.24$ & $-2.73 \mathbin{\pm} 0.07$ & $+6.20 \mathbin{\pm} 0.24$ \\
+OULAD & Markov & Reengagement & $0.22 \mathbin{\pm} 0.00$ & $3.43 \mathbin{\pm} 0.09$ & $2.91 \mathbin{\pm} 0.10$ & $+3.21 \mathbin{\pm} 0.09$ & $+2.68 \mathbin{\pm} 0.10$ \\
+OULAD & SeqVAE & Late Disengagement & $6.74 \mathbin{\pm} 0.00$ & $4.85 \mathbin{\pm} 0.33$ & $4.55 \mathbin{\pm} 0.25$ & $-1.88 \mathbin{\pm} 0.33$ & $-2.18 \mathbin{\pm} 0.25$ \\
+OULAD & SeqVAE & Rare Activity Path & $4.46 \mathbin{\pm} 0.00$ & $2.38 \mathbin{\pm} 0.10$ & $4.04 \mathbin{\pm} 0.28$ & $-2.09 \mathbin{\pm} 0.10$ & $-0.43 \mathbin{\pm} 0.28$ \\
+OULAD & SeqVAE & Reengagement & $0.22 \mathbin{\pm} 0.00$ & $2.41 \mathbin{\pm} 0.12$ & $2.42 \mathbin{\pm} 0.12$ & $+2.19 \mathbin{\pm} 0.12$ & $+2.20 \mathbin{\pm} 0.12$ \\
+OULAD & TimeGAN & Late Disengagement & $6.74 \mathbin{\pm} 0.00$ & $7.82 \mathbin{\pm} 5.56$ & $6.96 \mathbin{\pm} 4.92$ & $+1.09 \mathbin{\pm} 5.56$ & $+0.23 \mathbin{\pm} 4.92$ \\
+OULAD & TimeGAN & Rare Activity Path & $4.46 \mathbin{\pm} 0.00$ & $0.21 \mathbin{\pm} 0.15$ & $0.20 \mathbin{\pm} 0.15$ & $-4.26 \mathbin{\pm} 0.15$ & $-4.26 \mathbin{\pm} 0.15$ \\
+OULAD & TimeGAN & Reengagement & $0.22 \mathbin{\pm} 0.00$ & $2.92 \mathbin{\pm} 2.07$ & $3.08 \mathbin{\pm} 2.18$ & $+2.70 \mathbin{\pm} 2.07$ & $+2.86 \mathbin{\pm} 2.18$ \\
+\end{longtable}
+\endgroup

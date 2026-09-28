@@ -1,6 +1,6 @@
 # Anonymous review materials
 
-This repository contains supplementary material, experiment code, and aggregate result tables for a learning-analytics submission. The main manuscript and its source files are not included. No student-level records or generated learner trajectories are included.
+This repository contains supplementary material, experiment code, and aggregate result tables for *Synthetic Data for Whom? Evaluating Synthetic Data for Uncommon Learning Pathways*. The main manuscript and its source files are not included. No student-level records or generated learner trajectories are included.
 
 - [Supplementary material (PDF)](supplementary.pdf) is the authoritative, paginated supplement, including the supporting disclosure-audit figure.
 - [Supplementary material (Markdown)](supplementary.md) provides searchable text and the complete numerical tables. The Markdown version was converted from the supplement source; consult the PDF for final figure layout and reference formatting.

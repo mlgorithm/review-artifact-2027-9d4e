@@ -1,4 +1,4 @@
-# Supplementary Material: Pathway-Centric Evaluation of Synthetic Educational Time-Series Data
+# Supplementary Material: Synthetic Data for Whom? Evaluating Synthetic Data for Uncommon Learning Pathways
 
 This Markdown companion contains the supplement's text, numerical tables, and references. The [PDF supplement](supplementary.pdf) is authoritative for the supporting figure and final layout. Machine-readable aggregate results are in [supplement-generated](supplement-generated/) and additional CSVs are in [tables](tables/).
 

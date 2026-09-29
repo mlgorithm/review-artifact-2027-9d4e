@@ -123,7 +123,7 @@ APPLICABILITY_ROWS = (
     ("Analytic usefulness", "Standard augmentation gain", "reported", "reported", "reported"),
     ("Analytic usefulness", "Targeted-vs-standard TSTR gain", "reported", "reported", "reported"),
     ("Analytic usefulness", "Targeted augmentation gain", "reported", "reported", "reported"),
-    ("Analytic usefulness", "Tail learnability", "support_dependent", "support_dependent", "support_dependent"),
+    ("Analytic usefulness", "Pathway-level predictive usefulness", "support_dependent", "support_dependent", "support_dependent"),
     ("Analytic usefulness", "Rare-group prevalence-match change", "reported", "reported", "reported"),
     ("Analytic usefulness", "Rare-group shape-error reduction", "support_dependent", "support_dependent", "support_dependent"),
     ("Analytic usefulness", "Learner-level outcome-task AUPRC/AUROC and contrasts", "model_dependent", "model_dependent", "model_dependent"),
@@ -475,6 +475,8 @@ def _load_signed_prevalence_rows(report_root: Path) -> list[dict]:
 
 
 def _result_text(row: dict) -> str:
+    if row["n"] == 1:
+        return rf"${float(row['mean']):.4f}$"
     return rf"${float(row['mean']):.4f} \mathbin{{\pm}} {float(row['std']):.4f}$"
 
 
@@ -501,7 +503,7 @@ def _write_construct_table(path: Path, construct: str, rows: list[dict]) -> None
         r"\endlastfoot",
     ]
     for row in selected:
-        n_text = str(row["n"])
+        n_text = "one available run" if row["n"] == 1 else str(row["n"])
         if row["missing_runs"]:
             n_text += rf"; {row['missing_runs']} missing"
         lines.append(

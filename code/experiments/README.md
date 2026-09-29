@@ -372,11 +372,14 @@ PYTHONPATH=experiments .venv/bin/python experiments/scripts/build_paper_suppleme
 ```
 
 `build_paper_figures.py` emits four TikZ figures plus the exact plotted values
-as CSV: the six-facet RQ1 profile grouped under the first three evaluation-lens
-questions, overall utility, per-pathway targeting effects with
-representation--utility concordance, and disclosure risk. The
+as CSV: the RQ1 profile with five ranked measures and one pathway-support
+column grouped under three plain-language checks, overall utility, per-pathway
+targeting effects with representation--utility concordance, and disclosure risk. The
 utility figure overlays the three fixed seed values rather than showing only a
-bar and SD. `build_paper_supplement.py` emits grouped LaTeX longtables, a
+bar and SD. The manuscript uses editorially styled targeting-effects and
+disclosure-risk figures based on these same CSVs; their TikZ layout is not
+byte-for-byte identical to this script's output. `build_paper_supplement.py`
+emits grouped LaTeX longtables, a
 complete CSV retaining every publication JSON path and its mean, population SD,
 minimum, maximum, estimable-seed count, and missing-seed count; an outcome-model
 status table; a compact rare-pathway shape-support summary plus a 126-row

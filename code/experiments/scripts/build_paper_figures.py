@@ -289,9 +289,9 @@ def _write_rq1_figure(
     cell_h = 0.63
     top = 0.0
     lens_groups = (
-        (r"Lens 1\\What occurs?", left, left + 2 * cell_w),
+        ("What occurs?", left, left + 2 * cell_w),
         (
-            r"Lens 2\\How does learning unfold?",
+            "How does learning unfold?",
             left + 2 * cell_w,
             left + 4 * cell_w,
         ),
@@ -300,7 +300,7 @@ def _write_rq1_figure(
     support_w = 2.30
     lens_groups += (
         (
-            r"Lens 3\\Who is represented?",
+            "Who is represented?",
             left + 4 * cell_w,
             support_left + support_w,
         ),
@@ -314,12 +314,15 @@ def _write_rq1_figure(
         )
     for j, column in enumerate(columns):
         x = left + (j + 0.5) * cell_w
-        display_column = column.replace(" ", r"\\")
+        display_column = {
+            "Marginal composition": r"Variable\\distributions",
+            "Holistic detectability": r"Real/synthetic\\detectability",
+        }.get(column, column.replace(" ", r"\\"))
         lines.append(
             rf"\node[align=center,font=\sffamily\bfseries\scriptsize] at ({x:.3f},{top + 0.53:.3f}) {{{_latex_escape(display_column)}}};"
         )
     lines.append(
-        rf"\node[align=center,font=\sffamily\bfseries\footnotesize] at ({support_left + support_w / 2:.3f},{top + 0.53:.3f}) {{Rare-shape\\support}};"
+        rf"\node[align=center,font=\sffamily\bfseries\scriptsize] at ({support_left + support_w / 2:.3f},{top + 0.53:.3f}) {{Pathway--run\\comparisons\\(standard)}};"
     )
     for i, (dataset, model) in enumerate(row_labels):
         y_top = top - i * cell_h
@@ -359,7 +362,7 @@ def _write_rq1_figure(
             rf"\draw[white,line width=0.7pt] ({support_left:.3f},{y_top:.3f}) rectangle ({support_left + support_w:.3f},{y_top - cell_h:.3f});"
         )
         lines.append(
-            rf"\node[align=center,font=\sffamily\scriptsize] at ({support_left + support_w / 2:.3f},{y_mid:.3f}) {{{support['estimable_group_seed_shapes']}/{support['eligible_group_seed_shapes']}\;\textnormal{{seed--groups}}}};"
+            rf"\node[align=center,font=\sffamily\scriptsize] at ({support_left + support_w / 2:.3f},{y_mid:.3f}) {{{support['estimable_group_seed_shapes']}/{support['eligible_group_seed_shapes']}}};"
         )
         if i in (2, 5):
             lines.append(
@@ -373,7 +376,7 @@ def _write_rq1_figure(
             rf"\fill[rankworst] ({left + 3.72:.3f},{legend_y:.3f}) rectangle ({left + 4.14:.3f},{legend_y - 0.25:.3f});",
             rf"\node[anchor=west,font=\sffamily\scriptsize] at ({left + 4.24:.3f},{legend_y - 0.125:.3f}) {{higher relative error rank}};",
             rf"\fill[supportbest] ({left + 7.58:.3f},{legend_y:.3f}) rectangle ({left + 8.00:.3f},{legend_y - 0.25:.3f});",
-            rf"\node[anchor=west,font=\sffamily\scriptsize] at ({left + 8.10:.3f},{legend_y - 0.125:.3f}) {{more conditional-shape estimates available}};",
+            rf"\node[anchor=west,font=\sffamily\scriptsize] at ({left + 8.10:.3f},{legend_y - 0.125:.3f}) {{more pathway comparisons available}};",
             r"\end{tikzpicture}",
             "",
         ]
@@ -469,20 +472,20 @@ def _tail_effect_rows(reports: dict[tuple[str, str], dict]) -> list[dict]:
 
 def _targeting_concordance(rows: list[dict]) -> list[dict]:
     counts = {
-        "Representation and tail AUPRC both improved": 0,
-        "Representation improved; tail AUPRC did not": 0,
-        "Tail AUPRC improved; representation did not": 0,
+        "Representation and within-pathway AUPRC both improved": 0,
+        "Representation improved; within-pathway AUPRC did not": 0,
+        "Within-pathway AUPRC improved; representation did not": 0,
         "Neither improved": 0,
     }
     for row in rows:
         representation = float(row["prevalence_match_change"]) > 0
         prediction = float(row["rare_group_auprc_change"]) > 0
         if representation and prediction:
-            label = "Representation and tail AUPRC both improved"
+            label = "Representation and within-pathway AUPRC both improved"
         elif representation:
-            label = "Representation improved; tail AUPRC did not"
+            label = "Representation improved; within-pathway AUPRC did not"
         elif prediction:
-            label = "Tail AUPRC improved; representation did not"
+            label = "Within-pathway AUPRC improved; representation did not"
         else:
             label = "Neither improved"
         counts[label] += 1
@@ -605,7 +608,7 @@ def _write_rq2_figure(utility_rows: list[dict], output_dir: Path) -> None:
         ticks=[-0.10, -0.05, 0.00],
         ylabel="AUPRC change; higher is better",
     )
-    legend_y = -0.78
+    legend_y = -0.33
     for index, model in enumerate(MODELS.values()):
         x = 1.30 + index * 1.72
         lines.append(
